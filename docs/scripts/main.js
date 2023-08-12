@@ -115,7 +115,7 @@ function displayWiki(i) {
 	var formationExists = champ.formation;
 	if (formationExists) {
 		content+="<h1 id=\"formation\">Formation</h1>";
-		content+="<p><span class=\"formationBorder\"><img src=\"/images/"+fName+"/formation/formation.png\" alt=\"Formation Layout\" /></span></p>";
+		content+="<p><span class=\"formationBorder\"><img src=\""+formationURL+"\" alt=\"Formation Layout\" /></span></p>";
 	}
 	content+="<h1 id=\"abilities\">Abilities</h1>";
 	
