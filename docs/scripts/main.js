@@ -73,9 +73,7 @@ function drawChampion(i) {
 	var name = data[i].name;
 	var fName = data[i].fName;
 	var nameShort = data[i].nameShort;
-	if (fName == "dhani") {
-		nameShort = dhaniEegg();
-	}
+	nameShort = runNameEegs(fName,nameShort);
 	var portrait = "images/"+fName+"/portraits/portrait.png";
 	if (fName == "nixie") {
 		portrait = nixiePortrait();
@@ -240,10 +238,16 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function dhaniEegg() {
-    var dhaniEegg = "Dhani";
-    dhaniEegg = ins(dhaniEegg, randInt(1,4), "'");
-    return dhaniEegg;
+function runNameEegs(fName,nameShort) {
+	if (fName == "dhani") {
+		var dhaniEegg = "Dhani";
+		dhaniEegg = ins(dhaniEegg, randInt(1,4), "'");
+		return dhaniEegg;
+	}
+	if (fName == "corazon") {
+		return "Côråzón";
+	}
+	return nameShort;
 }
 
 function isNixieBlue() {
