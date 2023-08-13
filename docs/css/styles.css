@@ -113,6 +113,20 @@ a:hover {
 	color: var(--light3);
 }
 
+summary {
+	cursor: pointer;
+	color: var(--light2);
+}
+summary:hover {
+	cursor: pointer;
+	color: var(--light3);
+}
+
+blockquote {
+	border-left: 4px solid var(--mid1);
+	margin-left: 10px;
+}
+
 .navbar {
 	display: flex;
 	flex-direction: row;
@@ -394,4 +408,49 @@ a:hover {
 	padding: 20px;
 	border: 1px solid black;
 	background-color: #1a1a1a;
+}
+
+.abilityBorder {
+	background-color: #1a1a1a;
+	border: 1px solid black;
+	max-width: 848px;
+	min-width: 348px;
+	margin: 4px;
+	margin-bottom: 20px;
+}
+
+.abilityBorderInner {
+	width: 100%;
+	margin: 5px;
+}
+
+.abilityBorderInner blockquote {
+	padding: 0 20px 0 20px;
+}
+
+.abilityBorderInner img {
+	width: 32px;
+	height: 32px;
+	object-fit: scale-down;
+	object-position: 50% 50%;
+	margin-right: 6px;
+}
+
+.abilityBorderName {
+	display: flex;
+	align-items: center;
+}
+.abilityBorderName strong {
+	margin-right: 5px;
+}
+
+.abilityBorder pre {
+	max-width: 100%;
+	margin: 5px;
+	margin-right: 15px;
+	box-shadow: none;
+	border: 1px solid black;
+	border-radius: 0px;
+	background-color: #202020;
+	text-wrap: balance;
 }

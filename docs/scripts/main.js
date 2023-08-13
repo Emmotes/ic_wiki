@@ -108,7 +108,7 @@ function displayWiki(i) {
 	}
 	var portraitExists = champ.portrait;
 	var content=(portraitExists?"<p><br /><img src=\""+portrait+"\" alt=\""+name+" Portrait\"></p>":"");
-	content+="<h1 id=\""+fName+"\">"+name+"</h1>";
+	content+="<h1 id=\""+fName+"\">"+champ.nameFull+"</h1>";
 	content+="<p>"+champ.backstory+"</p>";
 	content+="<h1 id=\"basic-information\">Basic Information</h1>";
 	if (champ.spoiler) {
@@ -126,6 +126,14 @@ function displayWiki(i) {
 		content+="<p><span class=\"formationBorder\"><img src=\""+formationURL+"\" alt=\"Formation Layout\" /></span></p>";
 	}
 	content+="<h1 id=\"abilities\">Abilities</h1>";
+	if (champ.attacks.base != undefined) {
+		var attack = champ.attacks.base;
+		content+=addAttackData(champ,attack);
+	}
+	if (champ.attacks.ult != undefined) {
+		var attack = champ.attacks.ult;
+		content+=addAttackData(champ,attack);
+	}
 	
 	document.getElementById("wikicontent").innerHTML = content;
 }
@@ -136,6 +144,10 @@ function createFullStatsTable(champ) {
 
 function createSmallStatsTable(champ) {
 	return "<p><span class=\"champStatsTableColumn\"><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Seat</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.seatSpoiler+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Race</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.race+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Class</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.classes+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Roles</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.roles+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Age</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.age+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Gender</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.gender+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Alignment</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.alignment+"</span></span></span><span class=\"champStatsTableRow\"><span class=\"champStatsTableInfoHeader\"><span style=\"margin-right:4px;\"><strong>Affiliation</strong>:</span></span><span class=\"champStatsTableInfoSmall\"><span style=\"margin-left:8px;\">"+champ.affiliations+"</span></span></span></span></p>";
+}
+
+function addAttackData(champ,attack) {
+	return "<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAttackImages(champ,attack)+" <strong>Base Attack: "+attack.name+"</strong>"+(attack.damage_types.length>0?"("+slashSeparate(attack.damage_types,true)+")":"")+"</p><blockquote><p>"+(attack.long_description!=undefined&&attack.long_description!=""?attack.long_description:attack.description)+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(attack, null, 4)+"</pre></p></details></div></div>";
 }
 
 function calcDay1Trials(stat, champ) {
@@ -230,12 +242,44 @@ function addFormation(fName) {
 	return content;
 }
 
+function addAttackImages(champ,attack) {
+	var prefix = "images/"+champ.fName+"/attacks/";
+	if (attack.graphic_id != undefined && attack.graphic_id > 0) {
+		return "<img src=\""+prefix+attack.id+".png\" alt=\""+attack.name+"\">";
+	}
+	var images = "";
+	for (let i=0;i<attack.damage_types.length;i++) {
+		let dmg = attack.damage_types[i];
+		images+="<img src=\"images/"+dmg+".png\" alt=\""+capitalise(dmg)+" Damage Icon\">";
+	}
+	return images;
+}
+
 function ins(str, index, value) {
     return str.substr(0, index) + value + str.substr(index);
 }
 
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function capitalise(input) {
+    return input.charAt(0).toUpperCase()+input.slice(1);
+}
+
+function slashSeparate(inputArr,capsFirstLetter) {
+	var output = "";
+	for (let i=0;i<inputArr.length;i++) {
+		if (i > 0) {
+			output += " / ";
+		}
+		if (capsFirstLetter) {
+			output+=capitalise(inputArr[i]);
+		} else {
+			output+=inputArr[i];
+		}
+	}
+	return output;
 }
 
 function runNameEegs(fName,nameShort) {
