@@ -72,7 +72,13 @@ function drawChampion(i) {
 	var name = data[i].name;
 	var fName = data[i].fName;
 	var nameShort = data[i].nameShort;
+	if (fName == "dhani") {
+		nameShort = dhaniEegg();
+	}
 	var portrait = "images/"+fName+"/portraits/portrait.png";
+	if (fName == "nixie") {
+		portrait = nixiePortrait();
+	}
 	var draw = "<div class=\"championHolder\" id=\""+fName+"\">";
 	draw+="<a onclick=\"displayWiki("+i+")\" id=\"link_"+fName+"\" href=\"#\">";
 	draw+="<div class=\"champion\" style=\"background-image:url("+portrait+"); background-size:68px; background-repeat: no-repeat;\" id=\"div_"+fName+"\">";
@@ -98,6 +104,9 @@ function displayWiki(i) {
 	var name = champ.name;
 	var fName = champ.fName;
 	var portrait = "images/"+fName+"/portraits/portrait.png";
+	if (fName == "nixie") {
+		portrait = nixiePortrait();
+	}
 	var portraitExists = champ.portrait;
 	var content=(portraitExists?"<p><br /><img src=\""+portrait+"\" alt=\""+name+" Portrait\"></p>":"");
 	content+="<h1 id=\""+fName+"\">"+name+"</h1>";
@@ -220,4 +229,26 @@ function addFormation(fName) {
 		content+="<p><img src=\""+image+"\" alt=\"Formation Layout\" /></p>";
 	}
 	return content;
+}
+
+function ins(str, index, value) {
+    return str.substr(0, index) + value + str.substr(index);
+}
+
+function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function dhaniEegg() {
+    var dhaniEegg = "Dhani";
+    dhaniEegg = ins(dhaniEegg, randInt(1,4), "'");
+    return dhaniEegg;
+}
+
+function nixiePortrait() {
+	var prefix = "images/nixie/portraits/portrait";
+    if (randInt(1,4) == 4) {
+        return prefix+"Blue.png";
+    }
+	return prefix+".png";
 }
