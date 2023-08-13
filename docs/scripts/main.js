@@ -2,6 +2,7 @@ var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
 var withFeat = " (with Feat)";
+var nixieBlue = isNixieBlue();
 
 async function loadDataVersion() {
 	var response = await fetch("championDataVersion.json")
@@ -245,9 +246,16 @@ function dhaniEegg() {
     return dhaniEegg;
 }
 
+function isNixieBlue() {
+	if (randInt(1,4) == 4) {
+		return true;
+	}
+	return false;
+}
+
 function nixiePortrait() {
 	var prefix = "images/nixie/portraits/portrait";
-    if (randInt(1,4) == 4) {
+    if (nixieBlue) {
         return prefix+"Blue.png";
     }
 	return prefix+".png";
