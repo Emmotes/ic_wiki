@@ -245,7 +245,9 @@ function runNameEegs(fName,nameShort) {
 		return dhaniEegg;
 	}
 	if (fName == "corazon") {
-		return "Côråzón";
+		if (randInt(1,4) == 4) {
+			return "CÃ´rÄƒzÃ³n";
+		}
 	}
 	return nameShort;
 }
