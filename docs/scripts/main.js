@@ -194,7 +194,7 @@ function addAbilityData(champ,ability) {
 			if (ability[i].description.desc!=undefined && ability[i].description.desc!="") {
 				description=ability[i].description.desc;
 				break;
-			} else if (ability[i].description.pre.conditions!=undefined && ability[i].description.pre.conditions.length!=undefined && ability[i].description.pre.conditions.length>0 && ability[i].description.pre.conditions[0].desc!=undefined && ability[i].description.pre.conditions[0].desc!="") {
+			} else if (ability[i].description.pre!=undefined && ability[i].description.pre.conditions!=undefined && ability[i].description.pre.conditions.length!=undefined && ability[i].description.pre.conditions.length>0 && ability[i].description.pre.conditions[0].desc!=undefined && ability[i].description.pre.conditions[0].desc!="") {
 				description=ability[i].description.pre.conditions[0].desc;
 			} else if (ability[i].description.pre!=undefined && ability[i].description.pre!="") {
 				description=ability[i].description.pre;
