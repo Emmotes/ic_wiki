@@ -134,6 +134,19 @@ function displayWiki(i) {
 		var attack = champ.attacks.ult;
 		content+=addAttackData(champ,attack);
 	}
+	if (champ.abilities != undefined) {
+		for (let i=0;i<champ.abilities.length;i++) {
+			var ability = champ.abilities[i];
+			content+=addAbilityData(champ,ability);
+		}
+	}
+	content+="<h1 id=\"specialisations\">Specialisations</h1>";
+	if (champ.specs != undefined) {
+		for (let i=0;i<champ.specs.length;i++) {
+			var spec = champ.specs[i];
+			content+=addAbilityData(champ,spec);
+		}
+	}
 	
 	document.getElementById("wikicontent").innerHTML = content;
 }
@@ -152,6 +165,50 @@ function addAttackData(champ,attack) {
 		type = "Ultimate";
 	}
 	return "<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAttackImages(champ,attack)+" <strong>"+type+" Attack: "+attack.name+"</strong>"+(attack.damage_types.length>0?"("+slashSeparate(attack.damage_types,true)+")":"")+"</p><blockquote><p>"+(attack.long_description!=undefined&&attack.long_description!=""?attack.long_description:attack.description)+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(attack, null, 4)+"</pre></p></details></div></div>";
+}
+
+function addAbilityData(champ,ability) {
+	var content="<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAbilityImages(champ,ability)+" <strong>";
+	var name = "";
+	for (let i=0;i<ability.length;i++) {
+		if (ability[i].name!=undefined && ability[i].name!="") {
+			name=ability[i].name;
+			break;
+		}
+	}
+	content+=name+"</strong>";
+	var reqLevel=-1;
+	for (let i=0; i<ability.length;i++) {
+		if (ability[i].required_level!=undefined) {
+			reqLevel=ability[i].required_level;
+			break;
+		}
+	}
+	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>";
+	var description="";
+	for (let i=0;i<ability.length;i++) {
+		if (ability[i].long_description!=undefined&&ability[i].long_description!="") {
+			description=ability[i].long_description;
+			break;
+		} else if (ability[i].description!=undefined) {
+			if (ability[i].description.desc!=undefined && ability[i].description.desc!="") {
+				description=ability[i].description.desc;
+				break;
+			} else if (ability[i].description.pre.conditions!=undefined && ability[i].description.pre.conditions.length!=undefined && ability[i].description.pre.conditions.length>0 && ability[i].description.pre.conditions[0].desc!=undefined && ability[i].description.pre.conditions[0].desc!="") {
+				description=ability[i].description.pre.conditions[0].desc;
+			} else if (ability[i].description.pre!=undefined && ability[i].description.pre!="") {
+				description=ability[i].description.pre;
+				break;
+			} else {
+				description=ability[i].description;
+				break;
+			}
+		} else if (ability[i].tip_text!=undefined && ability[i].tip_text!="") {
+			description=ability[i].tip_text;
+		}
+	}
+	content+=description+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(ability, null, 4)+"</pre></p></details></div></div>";
+	return content;
 }
 
 function calcDay1Trials(stat, champ) {
@@ -249,7 +306,7 @@ function addFormation(fName) {
 function addAttackImages(champ,attack) {
 	var prefix = "images/"+champ.fName+"/attacks/";
 	if (attack.graphic_id != undefined && attack.graphic_id > 0) {
-		return "<img src=\""+prefix+attack.id+".png\" alt=\""+attack.name+"\">";
+		return "<img src=\""+prefix+attack.id+".png\" alt=\""+attack.name+" Icon\">";
 	}
 	var images = "";
 	for (let i=0;i<attack.damage_types.length;i++) {
@@ -257,6 +314,23 @@ function addAttackImages(champ,attack) {
 		images+="<img src=\"images/"+dmg+".png\" alt=\""+capitalise(dmg)+" Damage Icon\">";
 	}
 	return images;
+}
+
+function addAbilityImages(champ,ability) {
+	var prefix="images/"+champ.fName+"/abilities/";
+	var graphicId = -3;
+	for (let i=0;i<ability.length;i++) {
+		if (graphicId<0 && ability[i].graphic_id!=undefined && ability[i].graphic_id>0) {
+			graphicId = ability[i].graphic_id;
+		}
+		if (graphicId<0 && ability[i].specialization_graphic_id!=undefined && ability[i].specialization_graphic_id>0) {
+			graphicId = ability[i].specialization_graphic_id;
+		}
+	}
+	if (ability.length==2 && graphicId>0 && ability[0].required_level>0) {
+		return "<img src=\""+prefix+ability[0].id+".png\" alt=\""+ability[0].name+" Icon\">";
+	}
+	return "";
 }
 
 function ins(str, index, value) {
