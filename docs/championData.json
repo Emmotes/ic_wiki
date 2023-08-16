@@ -30072,6 +30072,7 @@
                     },
                     {
                         "effect_keys": [{
+                            "off_when_benched": true,
                             "effect_scale_title": "Duplicated",
                             "effect_scale_description": "Duplicated by",
                             "effect_string": "valentine_socialite,50,dps"
@@ -30106,6 +30107,7 @@
                                 "slot_changed",
                                 "positional_formation_ability_changed"
                             ],
+                            "off_when_benched": true,
                             "show_bonus": true,
                             "amount_func": "mult",
                             "stack_func": "per_positional_formation_ability",
@@ -39145,14 +39147,11 @@
             "backstory": "Omin's Daughter - apparently. Possibly a new member of Acquisitions Incorporated affiliation and in time for their season.\r\n\r\nInfo from a wiki.\r\n> Certainty Dran is the Head Secretarian at Acquisitions Incorporated headquarters. She communicates with other franchise teams through their documancy ledgers, passing on orders from Omin Dran, who also happens to be her father.\r\n\r\n[Wiki Link](https://acquisitionsincorporated.fandom.com/wiki/Certainty_Dran)",
             "seatSpoiler": "Unknown",
             "gender": "Female (Guess)",
-            "race": "Unknown",
             "year": 7,
             "classes": "Bard / Fighter (Guess)",
             "roles": "Unknown",
             "affiliations": "Acquisitions Incorporated (Guess)",
-            "portrait": true,
-            "nameShort": "Certainty",
-            "seat": 0,
+            "formation": true,
             "abilities": [
                 [{
                     "effect_keys": [{
@@ -39321,7 +39320,11 @@
             "specs": [
                 [{
                     "effect_keys": [{
-                        "effect_string": "increase_ability_score,int,1",
+                        "amount_updated_listeners": [
+                            "slot_changed",
+                            "feat_changed"
+                        ],
+                        "effect_string": "increase_ability_score_not_always_on,int,1",
                         "targets": ["next_col"]
                     }],
                     "requirements": "",
@@ -39329,7 +39332,7 @@
                     "description": {"desc": "Certainty's preferred ability is Intelligence and she grants a +$(amount) INT bonus to all Champions in the column in front of her."},
                     "id": 1680,
                     "flavour_text": "",
-                    "graphic_id": 0,
+                    "graphic_id": 20842,
                     "properties": {
                         "is_formation_ability": true,
                         "owner_use_outgoing_description": true,
@@ -39338,7 +39341,11 @@
                 }],
                 [{
                     "effect_keys": [{
-                        "effect_string": "increase_ability_score,cha,1",
+                        "amount_updated_listeners": [
+                            "slot_changed",
+                            "feat_changed"
+                        ],
+                        "effect_string": "increase_ability_score_not_always_on,cha,1",
                         "targets": ["next_col"]
                     }],
                     "requirements": "",
@@ -39346,12 +39353,11 @@
                     "description": {"desc": "Certainty's preferred ability is Charisma and she grants a +$(amount) CHA bonus to all Champions in the column in front of her."},
                     "id": 1681,
                     "flavour_text": "",
-                    "graphic_id": 0,
+                    "graphic_id": 20843,
                     "properties": {
                         "is_formation_ability": true,
                         "owner_use_outgoing_description": true,
-                        "type": "upgrade",
-                        "formation_circle_icon": false
+                        "type": "upgrade"
                     }
                 }],
                 [{
@@ -39363,13 +39369,12 @@
                         "stacks_multiply": true,
                         "off_when_benched": true,
                         "show_bonus": true,
+                        "per_hero_targets": ["next_col"],
                         "amount_func": "mult",
                         "stack_func": "per_hero_attribute",
                         "min_stat_amount": 13,
                         "per_hero_expr": "cha",
                         "effect_string": "buff_upgrade,200,12505",
-                        "targets": ["next_col"],
-                        "per_effect_target": true,
                         "post_process_expr": "max(0,input/max(1,num_targets)-min_stat_amount)"
                     }],
                     "requirements": "",
@@ -39401,6 +39406,39 @@
                     ],
                     "num_targets": 0,
                     "animations": [{
+                        "projectile_details": {
+                            "trail": {
+                                "scale_lerp": [
+                                    {
+                                        "x": 0.5,
+                                        "y": 0.5
+                                    },
+                                    {
+                                        "x": 0,
+                                        "y": 0
+                                    }
+                                ],
+                                "lifespan": 0.5,
+                                "initial_velocity": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "alpha_lerp": {
+                                    "0": 0,
+                                    "1": 0,
+                                    "0.1": 0.5
+                                },
+                                "particle_graphic_ids": [693],
+                                "spawn_rate": 150,
+                                "velocity_jitter": {
+                                    "x": 30,
+                                    "y": 30
+                                }
+                            },
+                            "projectile_graphic_id": 20530,
+                            "projectile_speed": 2000,
+                            "hash": "9ba15ca9aad1c276fcc13c07c5633f04"
+                        },
                         "ultimate": "certainty",
                         "type": "ultimate_attack"
                     }],
@@ -39438,14 +39476,68 @@
                     "id": 682
                 }
             },
-            "name": "Certainty Dran",
             "retired": false,
             "spoiler": true,
             "id": 138,
+            "event": true,
+            "console": true,
+            "race": "Unknown",
+            "portrait": true,
+            "nameShort": "Certainty",
+            "seat": 0,
+            "name": "Certainty Dran",
+            "alignment": "Unknown",
+            "age": "19 (Guess)"
+        },
+        {
+            "backstory": "We currently know very little about this champion. We believe they will be part of the next (and sixth) Idle Champions Presents: `Fatebreaker`.",
+            "seatSpoiler": "Unknown",
+            "console": true,
+            "gender": "Unknown",
+            "race": "Centaur (Guess)",
+            "year": 7,
+            "classes": "Paladin (Guess)",
+            "roles": "Unknown",
+            "affiliations": "Unknown",
+            "nameShort": "Thellora",
+            "seat": 0,
+            "abilities": [],
+            "specs": [],
+            "fName": "thellora",
+            "nameFull": "Thellora",
+            "attacks": {},
+            "name": "Thellora",
+            "retired": false,
+            "spoiler": true,
+            "id": 139,
             "alignment": "Unknown",
             "event": true,
-            "age": "19 (Guess)"
+            "age": "Unknown"
+        },
+        {
+            "backstory": "We currently know very little about this champion. We believe they will be part of the next (and sixth) Idle Champions Presents: `Fatebreaker`.",
+            "seatSpoiler": "Unknown",
+            "gender": "Unknown",
+            "race": "Unknown",
+            "year": 7,
+            "classes": "Unknown",
+            "roles": "Unknown",
+            "affiliations": "Unknown",
+            "nameShort": "Jang Sao",
+            "seat": 0,
+            "abilities": [],
+            "specs": [],
+            "fName": "jangsao",
+            "nameFull": "Jang Sao",
+            "attacks": {},
+            "name": "Jang Sao",
+            "retired": false,
+            "spoiler": true,
+            "id": 140,
+            "alignment": "Unknown",
+            "event": true,
+            "age": "Unknown"
         }
     ],
-    "version": 3
+    "version": 4
 }
