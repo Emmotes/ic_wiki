@@ -59,22 +59,24 @@ function displayChampions() {
 		document.getElementById("seat"+i).innerHTML = seatTitle;
 	}
 	for(let i=0;i<data.length;i++){
-		var seat = data[i].seat;
-		var spoiler = data[i].spoiler;
-		if ( (localStorage.spoilers == 1 && spoiler) || !spoiler) {
-			var currSeat = document.getElementById("seat"+seat).innerHTML;
-			currSeat += drawChampion(i);
-			document.getElementById("seat"+seat).innerHTML = currSeat;
+		var champ = data[i];
+		if ( (localStorage.spoilers == 1 && champ.spoiler) || !champ.spoiler) {
+			var currSeat = document.getElementById("seat"+champ.seat).innerHTML;
+			currSeat += drawChampion(i,champ);
+			document.getElementById("seat"+champ.seat).innerHTML = currSeat;
 		}
 	}
 }
 
-function drawChampion(i) {
-	var name = data[i].name;
-	var fName = data[i].fName;
-	var nameShort = data[i].nameShort;
+function drawChampion(i,champ) {
+	var name = champ.name;
+	var fName = champ.fName;
+	var nameShort = champ.nameShort;
 	nameShort = runNameEegs(fName,nameShort);
-	var portrait = "images/"+fName+"/portraits/portrait.png";
+	var portrait = "images/unknown.png";
+	if (champ.portrait!=undefined&&champ.portrait) {
+		portrait = "images/"+fName+"/portraits/portrait.png";
+	}
 	if (fName == "nixie") {
 		portrait = nixiePortrait();
 	}
@@ -185,32 +187,126 @@ function addAbilityData(champ,ability) {
 		}
 	}
 	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>";
-	var description="";
+	var desc="";
 	for (let i=0;i<ability.length;i++) {
-		if (ability[i].long_description!=undefined&&ability[i].long_description!="") {
-			description=ability[i].long_description;
-			break;
-		} else if (ability[i].description!=undefined) {
-			if (ability[i].description.desc!=undefined && ability[i].description.desc!="") {
-				description=ability[i].description.desc;
-				break;
-			} else if (ability[i].description.pre!=undefined && ability[i].description.pre.conditions!=undefined && ability[i].description.pre.conditions.length!=undefined && ability[i].description.pre.conditions.length>0 && ability[i].description.pre.conditions[0].desc!=undefined && ability[i].description.pre.conditions[0].desc!="") {
-				description=ability[i].description.pre.conditions[0].desc;
-			} else if (ability[i].description!=undefined && ability[i].description.conditions!=undefined && ability[i].description.conditions.length!=undefined && ability[i].description.conditions.length>0 && ability[i].description.conditions[0].desc!=undefined && ability[i].description.conditions[0].desc!="") {
-				description=ability[i].description.conditions[0].desc;
-			} else if (ability[i].description.pre!=undefined && ability[i].description.pre!="") {
-				description=ability[i].description.pre;
-				break;
-			} else {
-				description=ability[i].description;
+		var a=ability[i];
+		if (a.hasOwnProperty("description")) {
+			var ad=a.description;
+			if (useableDesc(ad)) {
+				desc=ad;
 				break;
 			}
-		} else if (ability[i].tip_text!=undefined && ability[i].tip_text!="") {
-			description=ability[i].tip_text;
+			if (ad.hasOwnProperty("pre")) {
+				var adp=ad.pre;
+				if (useableDesc(adp)) {
+					desc=adp;
+					break;
+				}
+			}
+			if (ad.hasOwnProperty("desc")) {
+				var add=ad.desc;
+				if (useableDesc(add)) {
+					desc=add;
+					break;
+				}
+			}
+			if (ad.hasOwnProperty("conditions")) {
+				var adc=ad.conditions;
+				if (useableDesc(adc)) {
+					desc=adc;
+					break;
+				}
+				if (adc.hasOwnProperty("length")) {
+					for (let k=0;k<adc.length;k++) {
+						var adci=adc[i];
+						if (adci.hasOwnProperty("desc") && !adci.hasOwnProperty("condition")) {
+							var adcid=adci.desc;
+							if (useableDesc(adcid)) {
+								desc=adcid;
+								break;
+							}
+						}
+					}
+				}
+			}
+		}
+		if (a.hasOwnProperty("tip_text")) {
+			desc=a.tip_text;
+			// Don't break because this is a last resort.
+		}
+		if (a.hasOwnProperty("specialization_description")) {
+			desc=a.specialization_description;
+			// Don't break because this is a last resort.
 		}
 	}
-	content+=description+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(ability, null, 4)+"</pre></p></details></div></div>";
+	content+=fixDesc(desc,champ,ability)+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(ability, null, 4)+"</pre></p></details></div></div>";
 	return content;
+}
+
+function useableDesc(thing) {
+	if (thing!=undefined && typeof(thing)=="string" && thing!="") {
+		return true;
+	}
+	return false;
+}
+
+function fixDesc(desc,champ,ability) {
+	var effects=parseEffects(ability);
+	var regex=new RegExp("\\$\\({0,1}([A-Za-z0-9 _]+)\\){0,1}[^ ]","g");
+	var regex2=new RegExp("([^$\(\)%]+)","g");
+	var result=desc.match(regex);
+	for (let i=0;i<result.length;i++) {
+		var match=result[i];
+		var match1=match.match(regex2);
+		var index=0;
+		var changed=false;
+		if (match1.includes("___")) {
+			index=match1.split("___")[1]-1;
+		}
+		for (let k=0;k<effects.length;k++) {
+			var sEffect=effects[k];
+			var sEffectSplit=sEffect.split(",");
+			if (match.includes("source_hero")) {
+				//console.log("Replacing `"+match+"` with `"+champ.name+"`.");
+				desc=desc.replace(match,champ.name);
+			} else if (match.includes("source")) {
+				//console.log("Replacing `source` or `$source` with `"+champ.name+"`.");
+				desc=desc.replace("$source",champ.name);
+				desc=desc.replace("source",champ.name);
+			} else if (match.includes("not_buffed amount")) {
+				//console.log("Replacing `"+match+"` with `"+sEffectSplit[1]+"`.");
+				desc=desc.replace(match,sEffectSplit[1]);
+			} else {
+				//console.log("Just surrounding `"+match+"` with code block.");
+				if (!changed) {
+					desc=desc.replace(match,"<code class=\"language-plaintext highlighter-rouge\">"+match+"</code>");
+					changed=true;
+				}
+			}
+		}
+	}
+	return desc;
+}
+
+function parseEffects(abilities) {
+	var es="effect_string";
+	var effects=[];
+	customFilter(abilities,effects);
+	return effects;
+}
+
+function customFilter(object, result){
+	if(object==null)
+		return;
+	
+    if(object.hasOwnProperty("effect_string"))
+		result.push(object.effect_string);
+
+    for(var i=0;i<Object.keys(object).length;i++){
+        if(typeof object[Object.keys(object)[i]] == "object"){
+            customFilter(object[Object.keys(object)[i]], result);
+        }
+    }
 }
 
 function calcDay1Trials(stat, champ) {

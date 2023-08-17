@@ -127,6 +127,12 @@ blockquote {
 	margin-left: 10px;
 }
 
+code {
+	font-family: monospace;
+	color: var(--mid1);
+	font-size: 1.15em;
+}
+
 .navbar {
 	display: flex;
 	flex-direction: row;
