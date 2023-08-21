@@ -22823,7 +22823,7 @@
                     "id": 436
                 }
             },
-            "retired": false,
+            "retired": true,
             "spoiler": false,
             "id": 84,
             "event": true,
@@ -38127,7 +38127,6 @@
         },
         {
             "backstory": "Lae'zel is a ferocious Githyanki warrior, mighty even by the standards of her mind flayer-hunting kind. Faced with transforming into the very monster she's sworn to destroy, Lae'zel must prove herself worthy of rejoining her people - if they don't execute her first.",
-            "seatSpoiler": "2",
             "gender": "Female",
             "year": 6,
             "classes": "Fighter",
@@ -38561,14 +38560,14 @@
                 }
             },
             "retired": false,
-            "spoiler": true,
+            "spoiler": false,
             "id": 128,
             "event": true,
             "console": true,
             "race": "Githyanki",
             "portrait": true,
             "nameShort": "Lae'zel",
-            "seat": 0,
+            "seat": 2,
             "totalStats": 75,
             "name": "Lae'zel",
             "totalStatsFeats": 75,
@@ -38576,243 +38575,397 @@
             "age": "22"
         },
         {
-            "backstory": "Another Baldur's Gate 3 champion.\r\n\r\nInfo from a wiki.\r\n> Astarion prowled the night as a vampire spawn for centuries, serving a sadistic master until he was snatched away. Now he can walk in the light, but can he leave his wicked past behind?\r\n\r\n[Wiki Link](https://baldursgate3.wiki.fextralife.com/Astarion)",
-            "seatSpoiler": "10 (Guess) (Spoiled by Justin on DI)",
-            "gender": "Male (Guess)",
+            "backstory": "Astarion prowled the night as a vampire spawn for centuries, serving a sadistic master until he was snatched away. Now he can walk in the light and has the chance at a new life, but how long can he keep his past buried?",
+            "seatSpoiler": "10",
+            "gender": "Male",
             "year": 6,
-            "classes": "Rogue (Guess)",
-            "roles": "Unknown",
-            "affiliations": "Absolute Adversaries (Guess)",
+            "classes": "Rogue",
+            "roles": "Support / Gold",
+            "affiliations": "Absolute Adversaries",
             "formation": true,
+            "statsFeats": [
+                8,
+                17,
+                14,
+                13,
+                13,
+                10
+            ],
             "abilities": [
-                [{
-                    "effect_keys": [{"effect_string": "do_nothing"}],
-                    "requirements": "",
-                    "name": "Unknown",
-                    "description": {"desc": "Astarion counts as \"dead\" for the purposes of effects that care about dead Champions, but \"alive\" for all other purposes."},
-                    "id": 1663,
-                    "flavour_text": "",
-                    "graphic_id": 0,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "owner_use_outgoing_description": true,
-                        "formation_circle_icon": false
+                [
+                    {
+                        "static_dps_mult": null,
+                        "required_level": 0,
+                        "effect": "effect_def,1663",
+                        "name": "Vampire Spawn",
+                        "id": 12488,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0
+                    },
+                    {
+                        "effect_keys": [{"effect_string": "do_nothing"}],
+                        "requirements": "",
+                        "description": {"desc": "Astarion counts as \"dead\" for the purposes of effects that care about dead Champions, but \"alive\" for all other purposes."},
+                        "id": 1663,
+                        "flavour_text": "",
+                        "graphic_id": 0,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "owner_use_outgoing_description": true,
+                            "formation_circle_icon": false
+                        }
                     }
-                }],
-                [{
-                    "effect_keys": [
-                        {"effect_string": "pre_stack_amount,100"},
-                        {
-                            "amount_expr": "upgrade_amount(12489,0)",
-                            "stack_title": "Total Ceremorphosis Stacks",
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "required_level": 50,
+                        "effect": "effect_def,1664",
+                        "name": "Ceremorphosis",
+                        "id": 12489,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0
+                    },
+                    {
+                        "effect_keys": [
+                            {"effect_string": "pre_stack_amount,100"},
+                            {
+                                "amount_expr": "upgrade_amount(12489,0)",
+                                "stack_title": "Total Ceremorphosis Stacks",
+                                "amount_updated_listeners": ["slot_changed"],
+                                "stacks_multiply": true,
+                                "total_title": "Total Bonus",
+                                "off_when_benched": true,
+                                "show_bonus": true,
+                                "amount_func": "mult",
+                                "stack_func": "per_ceremorphosis_stacks",
+                                "effect_string": "buff_upgrades,0,12493,12494",
+                                "desc_forced_order": 2
+                            },
+                            {
+                                "stack_title": "Astarion Ceremorphosis Stacks",
+                                "manual_stacking": true,
+                                "stacks_multiply": false,
+                                "off_when_benched": true,
+                                "outgoing_buffs": false,
+                                "effect_string": "astarion_ceremorphosis_stacks,1",
+                                "show_stacks": true,
+                                "desc_forced_order": 1
+                            }
+                        ],
+                        "requirements": "",
+                        "description": {"desc": "Your formation gains one Ceremorphosis stack due to the mind flayer tadpole in Astarion's brain. Astarion increases the effect of Outflank by $(amount)% for each Ceremorphosis stack, stacking multiplicatively."},
+                        "id": 1664,
+                        "flavour_text": "",
+                        "graphic_id": 20421,
+                        "properties": {
+                            "indexed_effect_properties": true,
+                            "retain_on_slot_changed": true,
+                            "is_formation_ability": true,
+                            "default_bonus_index": 0,
+                            "owner_use_outgoing_description": true,
+                            "per_effect_index_bonuses": true
+                        }
+                    }
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "required_level": 90,
+                        "effect": "effect_def,1665",
+                        "name": "Generational Wealth",
+                        "id": 12490,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0
+                    },
+                    {
+                        "effect_keys": [{
+                            "stack_title": "Total Age",
                             "amount_updated_listeners": ["slot_changed"],
-                            "stacks_multiply": true,
-                            "total_title": "Total Bonus",
-                            "off_when_benched": true,
-                            "show_bonus": true,
-                            "amount_func": "mult",
-                            "stack_func": "per_ceremorphosis_stacks",
-                            "effect_string": "buff_upgrades,0,12493,12494",
-                            "desc_forced_order": 2
-                        },
-                        {
-                            "stack_title": "Astarion Ceremorphosis Stacks",
-                            "manual_stacking": true,
                             "stacks_multiply": false,
                             "off_when_benched": true,
-                            "outgoing_buffs": false,
-                            "effect_string": "astarion_ceremorphosis_stacks,1",
-                            "show_stacks": true,
-                            "desc_forced_order": 1
-                        }
-                    ],
-                    "requirements": "",
-                    "name": "Ceremorphosis",
-                    "description": {"desc": "Your formation gains one Ceremorphosis stack due to the mind flayer tadpole in Astarion's brain. Astarion increases the effect of Outflank by $(amount)% for each Ceremorphosis stack, stacking multiplicatively."},
-                    "id": 1664,
-                    "flavour_text": "",
-                    "graphic_id": 20421,
-                    "properties": {
-                        "indexed_effect_properties": true,
-                        "retain_on_slot_changed": true,
-                        "is_formation_ability": true,
-                        "default_bonus_index": 0,
-                        "owner_use_outgoing_description": true,
-                        "per_effect_index_bonuses": true
-                    }
-                }],
-                [{
-                    "effect_keys": [{
-                        "stack_title": "Total Age",
-                        "amount_updated_listeners": ["slot_changed"],
-                        "stacks_multiply": false,
-                        "off_when_benched": true,
-                        "show_bonus": true,
-                        "amount_func": "add",
-                        "stack_func": "per_hero_attribute",
-                        "per_hero_expr": "age",
-                        "effect_string": "gold_multiplier_mult,1"
-                    }],
-                    "requirements": "",
-                    "name": "Generational Wealth",
-                    "description": {"desc": "Astarion increases the gold find of the formation by $(amount)% multiplied by the total age of all Champions in the formation."},
-                    "id": 1665,
-                    "flavour_text": "",
-                    "graphic_id": 20422,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "owner_use_outgoing_description": true
-                    }
-                }],
-                [{
-                    "effect_keys": [
-                        {"effect_string": "pre_stack_amount,400"},
-                        {
-                            "amount_expr": "upgrade_amount(12491,0)",
-                            "stack_title": "Well Fed Stacks",
-                            "stacks_multiply": true,
                             "show_bonus": true,
-                            "effect_string": "buff_upgrades,0,12493,12494",
-                            "max_stacks": 5,
-                            "more_triggers": [{
-                                "action": {"type": "reset"},
-                                "trigger": "area_changed"
-                            }],
-                            "stacks_on_trigger": "owner_ultimate_attack"
+                            "amount_func": "add",
+                            "stack_func": "per_hero_attribute",
+                            "per_hero_expr": "age",
+                            "effect_string": "gold_multiplier_mult,1"
+                        }],
+                        "requirements": "",
+                        "description": {"desc": "Astarion increases the gold find of the formation by $(amount)% multiplied by the total age of all Champions in the formation."},
+                        "id": 1665,
+                        "flavour_text": "",
+                        "graphic_id": 20422,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "owner_use_outgoing_description": true
                         }
-                    ],
-                    "requirements": "",
-                    "name": "Well Fed",
-                    "description": {"desc": "After using his Sanguine Hunger ultimate, Astarion's Outflank is increased by $(amount)%. This effect can stack (multiplicatively) up to 5 times, with stacks resetting when changing areas."},
-                    "id": 1666,
-                    "flavour_text": "",
-                    "graphic_id": 20424,
-                    "properties": {
-                        "indexed_effect_properties": true,
-                        "retain_on_slot_changed": true,
-                        "is_formation_ability": true,
-                        "default_bonus_index": 0,
-                        "owner_use_outgoing_description": true,
-                        "per_effect_index_bonuses": true
                     }
-                }],
-                [{
-                    "effect_keys": [{
-                        "effect_string": "astarion_the_ultimate_outflake,10",
-                        "hero_id_blacklist": [43]
-                    }],
-                    "requirements": "",
-                    "name": "Ultimate Outflank",
-                    "description": {"desc": "If Astarion is buffed by his own Outflank ability, when he uses his Sanguine Hunger Ultimate attack, he reduces the active ultimate cooldown of all other Champions in the formation by $(amount)%."},
-                    "id": 1667,
-                    "flavour_text": "",
-                    "graphic_id": 20423,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "owner_use_outgoing_description": true
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "required_level": 140,
+                        "effect": "effect_def,1666",
+                        "name": "Well Fed",
+                        "id": 12491,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0
+                    },
+                    {
+                        "effect_keys": [
+                            {"effect_string": "pre_stack_amount,400"},
+                            {
+                                "amount_expr": "upgrade_amount(12491,0)",
+                                "stack_title": "Well Fed Stacks",
+                                "stacks_multiply": true,
+                                "show_bonus": true,
+                                "effect_string": "buff_upgrades,0,12493,12494",
+                                "max_stacks": 5,
+                                "more_triggers": [{
+                                    "action": {"type": "reset"},
+                                    "trigger": "area_changed"
+                                }],
+                                "stacks_on_trigger": "owner_ultimate_attack"
+                            }
+                        ],
+                        "requirements": "",
+                        "description": {"desc": "After using his Sanguine Hunger ultimate, Astarion's Outflank is increased by $(amount)%. This effect can stack (multiplicatively) up to 5 times, with stacks resetting when changing areas."},
+                        "id": 1666,
+                        "flavour_text": "",
+                        "graphic_id": 20424,
+                        "properties": {
+                            "indexed_effect_properties": true,
+                            "retain_on_slot_changed": true,
+                            "is_formation_ability": true,
+                            "default_bonus_index": 0,
+                            "owner_use_outgoing_description": true,
+                            "per_effect_index_bonuses": true
+                        }
                     }
-                }]
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "required_level": 180,
+                        "effect": "effect_def,1667",
+                        "tip_text": "Astarion reduces ultimate cooldowns of other Champions when he uses his ultimate if he is buffed by his own Outflank ability.",
+                        "name": "The Ultimate Outflank",
+                        "id": 12492,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0
+                    },
+                    {
+                        "effect_keys": [{
+                            "effect_string": "astarion_the_ultimate_outflake,10",
+                            "hero_id_blacklist": [43]
+                        }],
+                        "requirements": "",
+                        "description": {"desc": "If Astarion is buffed by his own Outflank ability, when he uses his Sanguine Hunger Ultimate attack, he reduces the active ultimate cooldown of all other Champions in the formation by $(amount)%."},
+                        "id": 1667,
+                        "flavour_text": "",
+                        "graphic_id": 20423,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "owner_use_outgoing_description": true
+                        }
+                    }
+                ]
             ],
             "specs": [
-                [{
-                    "effect_keys": [{
-                        "off_when_benched": true,
-                        "effect_string": "hero_dps_multiplier_mult,100",
-                        "targets": ["top_row_of_each_column"]
-                    }],
-                    "requirements": "",
-                    "name": "Specialisation: Outflank Top",
-                    "description": {"desc": "Astarion increases the damage of all Champions at the top of each column by $(amount)%."},
-                    "id": 1668,
-                    "flavour_text": "",
-                    "graphic_id": 20759,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "owner_use_outgoing_description": true,
-                        "type": "upgrade",
-                        "tracking_name": "outflank"
+                [
+                    {
+                        "specialization_name": "Outflank (Bottom)",
+                        "required_level": 10,
+                        "specialization_graphic_id": 20427,
+                        "upgrade_type": "unlock_ability",
+                        "static_dps_mult": null,
+                        "effect": "effect_def,1669",
+                        "tip_text": "Astarion increases the damage of all champions on either the top or the bottom of each column, based on your choice.",
+                        "name": "Outflank (Bottom)",
+                        "id": 12494,
+                        "hero_id": 129,
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0,
+                        "specialization_description": "Astarion looks to the bottom of the formation to deal the most damage."
+                    },
+                    {
+                        "effect_keys": [{
+                            "off_when_benched": true,
+                            "effect_string": "hero_dps_multiplier_mult,100",
+                            "targets": ["bottom_row_of_each_column"]
+                        }],
+                        "requirements": "",
+                        "description": {"desc": "Astarion increases the damage of all Champions at the bottom of each column by $(amount)%"},
+                        "id": 1669,
+                        "flavour_text": "",
+                        "graphic_id": 20758,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "owner_use_outgoing_description": true,
+                            "type": "upgrade",
+                            "tracking_name": "outflank"
+                        }
                     }
-                }],
-                [{
-                    "effect_keys": [{
-                        "off_when_benched": true,
-                        "effect_string": "hero_dps_multiplier_mult,100",
-                        "targets": ["bottom_row_of_each_column"]
-                    }],
-                    "requirements": "",
-                    "name": "Specialisation: Outflank Bottom",
-                    "description": {"desc": "Astarion increases the damage of all Champions at the bottom of each column by $(amount)%"},
-                    "id": 1669,
-                    "flavour_text": "",
-                    "graphic_id": 20758,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "owner_use_outgoing_description": true,
-                        "type": "upgrade",
-                        "tracking_name": "outflank"
+                ],
+                [
+                    {
+                        "specialization_name": "Outflank (Top)",
+                        "required_level": 10,
+                        "specialization_graphic_id": 20428,
+                        "upgrade_type": "unlock_ability",
+                        "static_dps_mult": null,
+                        "effect": "effect_def,1668",
+                        "tip_text": "Astarion increases the damage of all champions on either the top or the bottom of each column, based on your choice.",
+                        "name": "Outflank (Top)",
+                        "id": 12493,
+                        "hero_id": 129,
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0,
+                        "specialization_description": "Astarion looks to the top of the formation to deal the most damage."
+                    },
+                    {
+                        "effect_keys": [{
+                            "off_when_benched": true,
+                            "effect_string": "hero_dps_multiplier_mult,100",
+                            "targets": ["top_row_of_each_column"]
+                        }],
+                        "requirements": "",
+                        "description": {"desc": "Astarion increases the damage of all Champions at the top of each column by $(amount)%."},
+                        "id": 1668,
+                        "flavour_text": "",
+                        "graphic_id": 20759,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "owner_use_outgoing_description": true,
+                            "type": "upgrade",
+                            "tracking_name": "outflank"
+                        }
                     }
-                }],
-                [{
-                    "effect_keys": [{"effect_string": "gold_mult_per_tagged_crusader_mult,100,gold"}],
-                    "requirements": "",
-                    "name": "Specialisation: Thief",
-                    "description": {"desc": "Astarion increases the gold find of the party by $(amount)% for each gold find Champion in the formation, stacking multiplicatively."},
-                    "id": 1670,
-                    "flavour_text": "",
-                    "graphic_id": 0,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "spec_option_post_apply_info": "Qualified Champions: $num_stacks",
-                        "owner_use_outgoing_description": true,
-                        "type": "upgrade",
-                        "formation_circle_icon": false
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "specialization_name": "Arcane Trickster",
+                        "required_level": 200,
+                        "effect": "effect_def,1671",
+                        "name": "Arcane Trickster",
+                        "specialization_graphic_id": 20425,
+                        "id": 12496,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0,
+                        "specialization_description": "Astarion works best with fellow rogues, wizards, and Absolute Adversaries affiliation members."
+                    },
+                    {
+                        "effect_keys": [{
+                            "stack_title": "Qualified Champions",
+                            "amount_updated_listeners": [
+                                "hero_tags_changed",
+                                "slot_changed"
+                            ],
+                            "show_bonus": true,
+                            "amount_func": "mult",
+                            "stack_func": "per_hero",
+                            "effect_string": "buff_upgrades,100,12493,12494",
+                            "tag": "absoluteadversaries|rogue|wizard"
+                        }],
+                        "requirements": "",
+                        "description": {"desc": "Astarion increases the damage bonus of his Outflank specialization by $(amount)% for each Champion in the formation that is a Rogue, Wizard, or Absolute Adversaries affiliation member, stacking multiplicatively."},
+                        "id": 1671,
+                        "flavour_text": "",
+                        "graphic_id": 0,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "spec_option_post_apply_info": "Qualified Champions: $num_stacks",
+                            "owner_use_outgoing_description": true,
+                            "type": "upgrade",
+                            "formation_circle_icon": false
+                        }
                     }
-                }],
-                [{
-                    "effect_keys": [{
-                        "stack_title": "Qualified Champions",
-                        "amount_updated_listeners": [
-                            "hero_tags_changed",
-                            "slot_changed"
-                        ],
-                        "show_bonus": true,
-                        "amount_func": "mult",
-                        "stack_func": "per_hero",
-                        "effect_string": "buff_upgrades,100,12493,12494",
-                        "tag": "absoluteadversaries|rogue|wizard"
-                    }],
-                    "requirements": "",
-                    "name": "Specialisation: Arcane Trickster",
-                    "description": {"desc": "Astarion increases the damage bonus of his Outflank specialization by $(amount)% for each Champion in the formation that is a Rogue, Wizard, or Absolute Adversaries affiliation member, stacking multiplicatively."},
-                    "id": 1671,
-                    "flavour_text": "",
-                    "graphic_id": 0,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "spec_option_post_apply_info": "Qualified Champions: $num_stacks",
-                        "owner_use_outgoing_description": true,
-                        "type": "upgrade",
-                        "formation_circle_icon": false
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "specialization_name": "Assassin",
+                        "required_level": 200,
+                        "effect": "effect_def,1672",
+                        "name": "Assassin",
+                        "specialization_graphic_id": 20426,
+                        "id": 12497,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0,
+                        "specialization_description": "Astarion focuses on dealing more damage when he attacks an enemy who has been recently attacked by an ally."
+                    },
+                    {
+                        "effect_keys": [{"effect_string": "do_nothing,5"}],
+                        "requirements": "",
+                        "description": {"desc": "Increases the bonus BUD-based damage Astarion's Sneak Attack deals to $(amount) seconds worth."},
+                        "id": 1672,
+                        "flavour_text": "",
+                        "graphic_id": 0,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "owner_use_outgoing_description": true,
+                            "type": "upgrade",
+                            "formation_circle_icon": false
+                        }
                     }
-                }],
-                [{
-                    "effect_keys": [{"effect_string": "do_nothing,5"}],
-                    "requirements": "",
-                    "name": "Specialisation: Assassin",
-                    "description": {"desc": "Increases the bonus BUD-based damage Astarion's Sneak Attack deals to $(amount) seconds worth."},
-                    "id": 1672,
-                    "flavour_text": "",
-                    "graphic_id": 0,
-                    "properties": {
-                        "is_formation_ability": true,
-                        "owner_use_outgoing_description": true,
-                        "type": "upgrade",
-                        "formation_circle_icon": false
+                ],
+                [
+                    {
+                        "static_dps_mult": null,
+                        "specialization_name": "Thief",
+                        "required_level": 200,
+                        "effect": "effect_def,1670",
+                        "name": "Thief",
+                        "specialization_graphic_id": 20429,
+                        "id": 12495,
+                        "hero_id": 129,
+                        "upgrade_type": "unlock_ability",
+                        "default_enabled": 1,
+                        "required_upgrade_id": 0,
+                        "specialization_description": "Astarion schemes with other gold find Champions in the formation to \"obtain\" even more gold."
+                    },
+                    {
+                        "effect_keys": [{"effect_string": "gold_mult_per_tagged_crusader_mult,100,gold"}],
+                        "requirements": "",
+                        "description": {"desc": "Astarion increases the gold find of the party by $(amount)% for each gold find Champion in the formation, stacking multiplicatively."},
+                        "id": 1670,
+                        "flavour_text": "",
+                        "graphic_id": 0,
+                        "properties": {
+                            "is_formation_ability": true,
+                            "spec_option_post_apply_info": "Qualified Champions: $num_stacks",
+                            "owner_use_outgoing_description": true,
+                            "type": "upgrade",
+                            "formation_circle_icon": false
+                        }
                     }
-                }]
+                ]
             ],
             "fName": "astarion",
             "nameFull": "Astarion",
+            "stats": [
+                8,
+                17,
+                14,
+                13,
+                13,
+                10
+            ],
             "attacks": {
                 "ult": {
                     "description": "Astarion viciously attacks the enemy with the most health and heals to full health.",
@@ -38880,13 +39033,15 @@
             "id": 129,
             "event": true,
             "console": true,
-            "race": "Elf (High) (Guess)",
+            "race": "Elf (High)",
             "portrait": true,
             "nameShort": "Astarion",
             "seat": 0,
+            "totalStats": 75,
             "name": "Astarion",
-            "alignment": "Unknown",
-            "age": "Unknown"
+            "totalStatsFeats": 75,
+            "alignment": "Neutral Evil",
+            "age": "350"
         },
         {
             "backstory": "Commodore Krux is a giff soldier who believes his glory days are behind him. Krux has spent the last few years working as a mercenary on and around the Rock of Bral, but lately the giff has been spending more time in his cups as new jobs have become fewer and farther between.",
@@ -39539,5 +39694,5 @@
             "age": "Unknown"
         }
     ],
-    "version": 4
+    "version": 5
 }
