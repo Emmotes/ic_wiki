@@ -255,6 +255,9 @@ function fixDesc(desc,champ,ability) {
 	var regex=new RegExp("\\$\\({0,1}([A-Za-z0-9 _]+)\\){0,1}[^ ]","g");
 	var regex2=new RegExp("([^$\(\)%]+)","g");
 	var result=desc.match(regex);
+	if (result==null || result==undefined || result.length==undefined) {
+		result=[];
+	}
 	for (let i=0;i<result.length;i++) {
 		var match=result[i];
 		var match1=match.match(regex2);
@@ -285,6 +288,7 @@ function fixDesc(desc,champ,ability) {
 			}
 		}
 	}
+	desc=desc.replaceAll("\^","<br><br>");
 	return desc;
 }
 
