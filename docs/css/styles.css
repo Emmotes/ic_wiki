@@ -133,6 +133,20 @@ code {
 	font-size: 1.15em;
 }
 
+details {
+	max-width: 850px;
+	min-width: 350px;
+	margin: 4px;
+}
+
+pre {
+	padding: 8px 15px;
+	background: #191919;
+	border: 1px solid black;
+	overflow: auto;
+	overflow-y: hidden;
+}
+
 .navbar {
 	display: flex;
 	flex-direction: row;

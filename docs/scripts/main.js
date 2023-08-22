@@ -104,6 +104,7 @@ function displayWiki(i) {
 	var champ = data[i];
 	var name = champ.name;
 	var fName = champ.fName;
+	var unknown="Unknown.";
 	var portrait = "images/"+fName+"/portraits/portrait.png";
 	if (fName == "nixie") {
 		portrait = nixiePortrait();
@@ -127,28 +128,57 @@ function displayWiki(i) {
 		content+="<h1 id=\"formation\">Formation</h1>";
 		content+="<p><span class=\"formationBorder\"><img src=\""+formationURL+"\" alt=\"Formation Layout\" /></span></p>";
 	}
+	
 	content+="<h1 id=\"abilities\">Abilities</h1>";
-	if (champ.attacks.base != undefined) {
-		var attack = champ.attacks.base;
-		content+=addAttackData(champ,attack);
-	}
-	if (champ.attacks.ult != undefined) {
-		var attack = champ.attacks.ult;
-		content+=addAttackData(champ,attack);
-	}
-	if (champ.abilities != undefined) {
-		for (let i=0;i<champ.abilities.length;i++) {
-			var ability = champ.abilities[i];
-			content+=addAbilityData(champ,ability);
+	if (champ.attacks!=undefined || champ.abilities!=undefined) {
+		if (champ.attacks!=undefined) {
+			if (champ.attacks.base!=undefined) {
+				var attack = champ.attacks.base;
+				content+=addAttackData(champ,attack);
+			}
+			if (champ.attacks.ult!=undefined) {
+				var attack = champ.attacks.ult;
+				content+=addAttackData(champ,attack);
+			}
 		}
+		if (champ.abilities!=undefined&&champ.abilities.length>0) {
+			for (let i=0;i<champ.abilities.length;i++) {
+				var ability = champ.abilities[i];
+				content+=addAbilityData(champ,ability);
+			}
+		}
+	} else {
+		content+=unknown;
 	}
+	
 	content+="<h1 id=\"specialisations\">Specialisations</h1>";
-	if (champ.specs != undefined) {
+	if (champ.specs!=undefined&&champ.specs.length>0) {
 		for (let i=0;i<champ.specs.length;i++) {
 			var spec = champ.specs[i];
 			content+=addAbilityData(champ,spec);
 		}
+	} else {
+		content+=unknown;
 	}
+	
+	content+="<h1 id=\"legendaries\">Legendaries</h1>";
+	if (champ.legs!=undefined) {
+		if (champ.legs.effects==undefined||champ.legs.effects.length==0) {
+			content+="Unknown.";
+		} else {
+			content+="<ul>";
+			for (let i=0;i<champ.legs.effects.length;i++) {
+				content+="<li>"+champ.legs.effects[i]+"</li>";
+			}
+			content+="</ul>";
+			content+=addLegendaryDropdown("DPS",champ.legs.dps);
+			content+=addLegendaryDropdown("Non-DPS",champ.legs.nondps);
+		}
+	} else {
+		content+=unknown;
+	}
+	
+	content+="<p><br/><br/><br/><br/><br/><br/></p>";
 	
 	document.getElementById("wikicontent").innerHTML = content;
 }
@@ -243,6 +273,37 @@ function addAbilityData(champ,ability) {
 	return content;
 }
 
+function addLegendaryDropdown(legsType,legsApplic) {
+	if (legsApplic==undefined) {
+		return "";
+	}
+	var content="<details><summary><em>"+legsType+" Applicable</em></summary><p><pre>";
+	legsApplic=sortArray(legsApplic);
+	var names = Object.keys(legsApplic);
+	var longName = 0;
+	for (let i=0;i<names.length;i++) {
+		if (names[i].length > longName) {
+			longName=names[i].length;
+		}
+	}
+	for (let i=0;i<names.length;i++) {
+		content+=names[i].padStart(longName)+": ";
+		var applicables=legsApplic[names[i]];
+		if (typeof(applicables)=="string"||typeof(applicables)=="number") {
+			content+=applicables;
+		} else {
+			content+applicables[0];
+		}
+		content+=" / 6";
+		if (typeof(applicables)!="string"&&typeof(applicables)!="number") {
+			content+= " (Possibly "+applicables[1]+" / 6)";
+		}
+		content+="<br/>";
+	}
+	content+="</pre></p></details>";
+	return content;
+}
+
 function useableDesc(thing) {
 	if (thing!=undefined && typeof(thing)=="string" && thing!="") {
 		return true;
@@ -311,6 +372,17 @@ function customFilter(object, result){
             customFilter(object[Object.keys(object)[i]], result);
         }
     }
+}
+
+function sortArray(unordered) {
+	var ordered = Object.keys(unordered).sort().reduce(
+		(obj, key) => { 
+			obj[key] = unordered[key]; 
+			return obj;
+		}, 
+		{}
+	);
+	return ordered;
 }
 
 function calcDay1Trials(stat, champ) {
