@@ -296,7 +296,7 @@ function addLegendaryDropdown(legsType,legsApplic) {
 		}
 		content+=" / 6";
 		if (typeof(applicables)!="string"&&typeof(applicables)!="number") {
-			content+= " (Possibly "+applicables[1]+" / 6)";
+			content+= " (Potentially "+applicables[1]+" / 6)";
 		}
 		content+="<br/>";
 	}
