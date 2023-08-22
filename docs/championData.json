@@ -221,121 +221,307 @@
                 ],
                 "dps": {
                     "Prudence": 4,
-                    "Grimm": 3,
+                    "Grimm": [
+                        3,
+                        4
+                    ],
                     "Farideh": 5,
                     "Jamilah": 5,
-                    "Warden": 3,
-                    "Dhadius": 4,
+                    "Warden": [
+                        3,
+                        4
+                    ],
+                    "Dhadius": [
+                        4,
+                        5
+                    ],
                     "Lae'zel": 3,
                     "Strix": 4,
-                    "Krux": 3,
-                    "Warduke": 3,
-                    "Binwin": 4,
-                    "Yorven": 4,
+                    "Krux": [
+                        3,
+                        4
+                    ],
+                    "Warduke": [
+                        3,
+                        4
+                    ],
+                    "Binwin": [
+                        4,
+                        5
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 5,
-                    "Drizzt": 3,
+                    "Drizzt": [
+                        3,
+                        4
+                    ],
                     "Catti-brie": 4,
-                    "Artemis": 3,
+                    "Artemis": [
+                        3,
+                        4
+                    ],
                     "Delina": 4,
                     "Nahara": 5,
-                    "Nrakk": 4,
+                    "Nrakk": [
+                        4,
+                        5
+                    ],
                     "Black Viper": 5,
                     "Gromma": 5,
                     "Orisha": 5,
-                    "Lucius": 4,
-                    "Kent": 4,
+                    "Lucius": [
+                        4,
+                        5
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Rosie": 4,
-                    "Krond": 2,
+                    "Krond": [
+                        2,
+                        3
+                    ],
                     "Ishi": 4,
-                    "Minsc": 2,
+                    "Minsc": [
+                        2,
+                        3
+                    ],
                     "Fen": 4,
                     "Asharra": 5,
-                    "Jim": 4,
-                    "Torogar": 3,
-                    "Makos": 4,
+                    "Jim": [
+                        4,
+                        5
+                    ],
+                    "Torogar": [
+                        3,
+                        4
+                    ],
+                    "Makos": [
+                        4,
+                        5
+                    ],
                     "Azaka": 5,
-                    "Arkhan": 4,
+                    "Arkhan": [
+                        4,
+                        5
+                    ],
                     "Jaheira": 5,
-                    "Zorbu": 3,
-                    "Jarlaxle": 4
+                    "Zorbu": [
+                        3,
+                        4
+                    ],
+                    "Jarlaxle": [
+                        4,
+                        5
+                    ]
                 },
                 "nondps": {
                     "Calliope": 4,
-                    "Astarion": 3,
-                    "Briv": 3,
-                    "Omin": 4,
+                    "Astarion": [
+                        3,
+                        4
+                    ],
+                    "Briv": [
+                        3,
+                        4
+                    ],
+                    "Omin": [
+                        4,
+                        5
+                    ],
                     "Widdle": 5,
-                    "Tyril": 4,
+                    "Tyril": [
+                        4,
+                        5
+                    ],
                     "Viconia": 5,
-                    "Dungeon Master": 3,
+                    "Dungeon Master": [
+                        3,
+                        4
+                    ],
                     "Môrgæn": 4,
-                    "Egbert": 3,
-                    "Uriah": 3,
-                    "Brig": 3,
-                    "Dob": 3,
-                    "Donaar": 3,
-                    "Melf": 3,
-                    "Krull": 3,
-                    "Nordom": 3,
+                    "Egbert": [
+                        3,
+                        4
+                    ],
+                    "Uriah": [
+                        3,
+                        4
+                    ],
+                    "Brig": [
+                        3,
+                        4
+                    ],
+                    "Dob": [
+                        3,
+                        4
+                    ],
+                    "Donaar": [
+                        3,
+                        4
+                    ],
+                    "Melf": [
+                        3,
+                        4
+                    ],
+                    "Krull": [
+                        3,
+                        4
+                    ],
+                    "Nordom": [
+                        3,
+                        4
+                    ],
                     "Sentry": 4,
                     "Ulkoria": 6,
-                    "Spurt": 2,
-                    "Antrius": 3,
+                    "Spurt": [
+                        2,
+                        3
+                    ],
+                    "Antrius": [
+                        3,
+                        4
+                    ],
                     "Miria": 4,
-                    "Shaka": 4,
+                    "Shaka": [
+                        4,
+                        5
+                    ],
                     "Barrowin": 4,
                     "Evelyn": 5,
                     "Aila": 4,
                     "Imoen": 5,
-                    "Rust": 4,
+                    "Rust": [
+                        4,
+                        5
+                    ],
                     "Stoki": 5,
-                    "Corazón": 4,
-                    "Talin": 3,
-                    "Solaak": 4,
-                    "Paultin": 4,
-                    "Regis": 4,
+                    "Corazón": [
+                        4,
+                        5
+                    ],
+                    "Talin": [
+                        3,
+                        4
+                    ],
+                    "Solaak": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        4,
+                        5
+                    ],
+                    "Regis": [
+                        4,
+                        5
+                    ],
                     "Nerys": 4,
                     "Ellywick": 5,
-                    "Hitch": 3,
-                    "Krydle": 3,
-                    "Mehen": 4,
-                    "Korth": 4,
+                    "Hitch": [
+                        3,
+                        4
+                    ],
+                    "Krydle": [
+                        3,
+                        4
+                    ],
+                    "Mehen": [
+                        4,
+                        5
+                    ],
+                    "Korth": [
+                        4,
+                        5
+                    ],
                     "Reya": 4,
-                    "Baeloth": 3,
-                    "Desmond": 3,
-                    "Dragonbait": 3,
-                    "Strongheart": 3,
-                    "Gazrick": 4,
+                    "Baeloth": [
+                        3,
+                        4
+                    ],
+                    "Desmond": [
+                        3,
+                        4
+                    ],
+                    "Dragonbait": [
+                        3,
+                        4
+                    ],
+                    "Strongheart": [
+                        3,
+                        4
+                    ],
+                    "Gazrick": [
+                        4,
+                        5
+                    ],
                     "Vi": 5,
-                    "Virgil": 4,
+                    "Virgil": [
+                        4,
+                        5
+                    ],
                     "Valentine": 5,
-                    "Xander": 3,
+                    "Xander": [
+                        3,
+                        4
+                    ],
                     "Blooshi": 5,
-                    "Sgt. Knox": 4,
+                    "Sgt. Knox": [
+                        4,
+                        5
+                    ],
                     "Evandra": 5,
-                    "Beadle": 4,
+                    "Beadle": [
+                        4,
+                        5
+                    ],
                     "Vin Ursa": 3,
                     "Hew Maan": 4,
                     "Selise": 5,
-                    "Wulfgar": 3,
+                    "Wulfgar": [
+                        3,
+                        4
+                    ],
                     "Havilar": 4,
                     "Nova": 4,
                     "Lazaapz": 4,
-                    "Qillek": 3,
-                    "Avren": 4,
+                    "Qillek": [
+                        3,
+                        4
+                    ],
+                    "Avren": [
+                        4,
+                        5
+                    ],
                     "Alyndra": 5,
                     "Penelope": 4,
                     "Tatyana": 5,
-                    "Freely": 4,
+                    "Freely": [
+                        4,
+                        5
+                    ],
                     "Merilwen": 5,
                     "Vlahnya": 5,
                     "Walnut": 4,
-                    "Xerophon": 4,
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
                     "Celeste": 3,
                     "Nayeli": 4,
                     "Shandie": 4,
-                    "Pwent": 3,
-                    "BBEG": 3
+                    "Pwent": [
+                        3,
+                        4
+                    ],
+                    "BBEG": [
+                        3,
+                        4
+                    ]
                 }
             },
             "retired": true,
@@ -4766,54 +4952,129 @@
                     "Increases the damage of all Champions by 20% for each Champion in the formation with a NEUTRAL alignment."
                 ],
                 "dps": {
-                    "Prudence": 3,
+                    "Prudence": [
+                        3,
+                        4
+                    ],
                     "Grimm": 4,
-                    "Farideh": 3,
-                    "Jamilah": 4,
-                    "Warden": 3,
+                    "Farideh": [
+                        3,
+                        4
+                    ],
+                    "Jamilah": [
+                        4,
+                        5
+                    ],
+                    "Warden": [
+                        3,
+                        4
+                    ],
                     "Dhadius": 4,
-                    "D'hani": 4,
-                    "Lae'zel": 3,
-                    "Strix": 3,
+                    "D'hani": [
+                        4,
+                        5
+                    ],
+                    "Lae'zel": [
+                        3,
+                        4
+                    ],
+                    "Strix": [
+                        3,
+                        4
+                    ],
                     "Warduke": 4,
                     "Binwin": 4,
                     "Yorven": 4,
-                    "Birdsong": 3,
+                    "Birdsong": [
+                        3,
+                        4
+                    ],
                     "Drizzt": 4,
-                    "Catti-brie": 3,
+                    "Catti-brie": [
+                        3,
+                        4
+                    ],
                     "Artemis": 5,
-                    "Delina": 3,
-                    "Nahara": 3,
+                    "Delina": [
+                        3,
+                        4
+                    ],
+                    "Nahara": [
+                        3,
+                        4
+                    ],
                     "Nrakk": 5,
-                    "Black Viper": 3,
-                    "Gromma": 4,
-                    "Orisha": 4,
-                    "NERDS": 3,
+                    "Black Viper": [
+                        3,
+                        4
+                    ],
+                    "Gromma": [
+                        4,
+                        5
+                    ],
+                    "Orisha": [
+                        4,
+                        5
+                    ],
+                    "NERDS": [
+                        3,
+                        4
+                    ],
                     "Lucius": 4,
-                    "Nixie": 3,
-                    "Rosie": 3,
+                    "Nixie": [
+                        3,
+                        4
+                    ],
+                    "Rosie": [
+                        3,
+                        4
+                    ],
                     "Krond": 4,
                     "Minsc": 4,
-                    "Fen": 3,
-                    "Asharra": 4,
+                    "Fen": [
+                        3,
+                        4
+                    ],
+                    "Asharra": [
+                        4,
+                        5
+                    ],
                     "Jim": 4,
                     "Torogar": 4,
                     "Makos": 4,
-                    "Azaka": 3,
+                    "Azaka": [
+                        3,
+                        4
+                    ],
                     "Arkhan": 4,
-                    "Jaheira": 3,
+                    "Jaheira": [
+                        3,
+                        4
+                    ],
                     "Zorbu": 6
                 },
                 "nondps": {
-                    "Calliope": 3,
+                    "Calliope": [
+                        3,
+                        4
+                    ],
                     "Astarion": 4,
                     "Briv": 4,
                     "Omin": 5,
-                    "Widdle": 4,
+                    "Widdle": [
+                        4,
+                        5
+                    ],
                     "Tyril": 5,
-                    "Viconia": 4,
+                    "Viconia": [
+                        4,
+                        5
+                    ],
                     "Dungeon Master": 5,
-                    "Môrgæn": 4,
+                    "Môrgæn": [
+                        4,
+                        5
+                    ],
                     "Egbert": 4,
                     "Uriah": 5,
                     "Brig": 4,
@@ -4821,66 +5082,165 @@
                     "Donaar": 4,
                     "Melf": 4,
                     "Krull": 5,
-                    "Nordom": 3,
-                    "Ulkoria": 4,
+                    "Nordom": [
+                        3,
+                        4
+                    ],
+                    "Ulkoria": [
+                        4,
+                        5
+                    ],
                     "Spurt": 4,
-                    "Miria": 3,
+                    "Miria": [
+                        3,
+                        4
+                    ],
                     "Shaka": 4,
-                    "Barrowin": 4,
-                    "Evelyn": 3,
-                    "Aila": 3,
-                    "Imoen": 3,
+                    "Barrowin": [
+                        4,
+                        5
+                    ],
+                    "Evelyn": [
+                        3,
+                        4
+                    ],
+                    "Aila": [
+                        3,
+                        4
+                    ],
+                    "Imoen": [
+                        3,
+                        4
+                    ],
                     "Rust": 4,
                     "Deekin": 4,
                     "Corazón": 5,
                     "Talin": 4,
                     "Solaak": 5,
                     "Regis": 4,
-                    "Nerys": 4,
-                    "Ellywick": 4,
+                    "Nerys": [
+                        4,
+                        5
+                    ],
+                    "Ellywick": [
+                        4,
+                        5
+                    ],
                     "Hitch": 5,
                     "Krydle": 4,
                     "Mehen": 4,
                     "Korth": 4,
-                    "Reya": 3,
+                    "Reya": [
+                        3,
+                        4
+                    ],
                     "Turiel": 5,
-                    "Sisaspia": 4,
+                    "Sisaspia": [
+                        4,
+                        5
+                    ],
                     "Dragonbait": 5,
                     "Strongheart": 4,
-                    "Ezmerelda": 3,
+                    "Ezmerelda": [
+                        3,
+                        4
+                    ],
                     "Gazrick": 6,
-                    "Vi": 4,
+                    "Vi": [
+                        4,
+                        5
+                    ],
                     "Bruenor": 4,
                     "Virgil": 4,
-                    "Orkira": 4,
-                    "Valentine": 3,
+                    "Orkira": [
+                        4,
+                        5
+                    ],
+                    "Valentine": [
+                        3,
+                        4
+                    ],
                     "Xander": 5,
-                    "Blooshi": 3,
+                    "Blooshi": [
+                        3,
+                        4
+                    ],
                     "Sgt. Knox": 4,
-                    "Evandra": 3,
+                    "Evandra": [
+                        3,
+                        4
+                    ],
                     "Beadle": 4,
-                    "Vin Ursa": 4,
+                    "Vin Ursa": [
+                        4,
+                        5
+                    ],
                     "Hew Maan": 4,
-                    "Selise": 3,
+                    "Selise": [
+                        3,
+                        4
+                    ],
                     "Wulfgar": 4,
-                    "Havilar": 3,
-                    "Nova": 3,
+                    "Havilar": [
+                        3,
+                        4
+                    ],
+                    "Nova": [
+                        3,
+                        4
+                    ],
                     "K'thriss": 4,
-                    "Lazaapz": 3,
+                    "Lazaapz": [
+                        3,
+                        4
+                    ],
                     "Qillek": 5,
                     "Avren": 4,
-                    "Alyndra": 3,
-                    "Penelope": 4,
-                    "Tatyana": 3,
+                    "Alyndra": [
+                        3,
+                        4
+                    ],
+                    "Penelope": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        3,
+                        4
+                    ],
                     "Freely": 4,
-                    "Merilwen": 4,
-                    "Vlahnya": 3,
-                    "Walnut": 4,
-                    "Xerophon": 3,
-                    "Celeste": 4,
-                    "Nayeli": 3,
-                    "Voronika": 4,
-                    "Shandie": 3,
+                    "Merilwen": [
+                        4,
+                        5
+                    ],
+                    "Vlahnya": [
+                        3,
+                        4
+                    ],
+                    "Walnut": [
+                        4,
+                        5
+                    ],
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
+                    "Celeste": [
+                        4,
+                        5
+                    ],
+                    "Nayeli": [
+                        3,
+                        4
+                    ],
+                    "Voronika": [
+                        4,
+                        5
+                    ],
+                    "Shandie": [
+                        3,
+                        4
+                    ],
                     "Pwent": 4,
                     "BBEG": 5
                 }
@@ -12068,121 +12428,304 @@
                 ],
                 "dps": {
                     "Prudence": 5,
-                    "Grimm": 4,
+                    "Grimm": [
+                        4,
+                        5
+                    ],
                     "Farideh": 4,
                     "Jamilah": 5,
-                    "Warden": 4,
-                    "Dhadius": 3,
+                    "Warden": [
+                        4,
+                        5
+                    ],
+                    "Dhadius": [
+                        3,
+                        4
+                    ],
                     "D'hani": 5,
                     "Strix": 4,
-                    "Krux": 4,
-                    "Warduke": 4,
-                    "Binwin": 4,
-                    "Yorven": 4,
+                    "Krux": [
+                        4,
+                        5
+                    ],
+                    "Warduke": [
+                        4,
+                        5
+                    ],
+                    "Binwin": [
+                        4,
+                        5
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 4,
-                    "Drizzt": 3,
+                    "Drizzt": [
+                        3,
+                        4
+                    ],
                     "Catti-brie": 5,
-                    "Artemis": 4,
+                    "Artemis": [
+                        4,
+                        5
+                    ],
                     "Delina": 4,
                     "Nahara": 4,
-                    "Nrakk": 4,
+                    "Nrakk": [
+                        4,
+                        5
+                    ],
                     "Black Viper": 5,
                     "Gromma": 5,
                     "Orisha": 5,
-                    "NERDS": 3,
-                    "Lucius": 4,
-                    "Kent": 3,
+                    "NERDS": [
+                        3,
+                        4
+                    ],
+                    "Lucius": [
+                        4,
+                        5
+                    ],
+                    "Kent": [
+                        3,
+                        4
+                    ],
                     "Nixie": 4,
                     "Rosie": 4,
-                    "Krond": 4,
+                    "Krond": [
+                        4,
+                        5
+                    ],
                     "Ishi": 4,
-                    "Minsc": 4,
+                    "Minsc": [
+                        4,
+                        5
+                    ],
                     "Fen": 5,
                     "Asharra": 4,
-                    "Jim": 3,
-                    "Torogar": 4,
-                    "Makos": 4,
+                    "Jim": [
+                        3,
+                        4
+                    ],
+                    "Torogar": [
+                        4,
+                        5
+                    ],
+                    "Makos": [
+                        4,
+                        5
+                    ],
                     "Azaka": 5,
-                    "Arkhan": 5,
+                    "Arkhan": [
+                        5,
+                        6
+                    ],
                     "Jaheira": 5,
-                    "Zorbu": 3,
-                    "Jarlaxle": 3
+                    "Zorbu": [
+                        3,
+                        4
+                    ],
+                    "Jarlaxle": [
+                        3,
+                        4
+                    ]
                 },
                 "nondps": {
                     "Calliope": 5,
-                    "Astarion": 3,
-                    "Briv": 4,
-                    "Omin": 4,
-                    "Tyril": 4,
+                    "Astarion": [
+                        3,
+                        4
+                    ],
+                    "Briv": [
+                        4,
+                        5
+                    ],
+                    "Omin": [
+                        4,
+                        5
+                    ],
+                    "Tyril": [
+                        4,
+                        5
+                    ],
                     "Viconia": 4,
-                    "Dungeon Master": 4,
+                    "Dungeon Master": [
+                        4,
+                        5
+                    ],
                     "Môrgæn": 5,
-                    "Egbert": 5,
-                    "Uriah": 3,
-                    "Brig": 4,
-                    "Dob": 4,
-                    "Melf": 4,
-                    "Krull": 4,
-                    "Nordom": 4,
+                    "Egbert": [
+                        5,
+                        6
+                    ],
+                    "Uriah": [
+                        3,
+                        4
+                    ],
+                    "Brig": [
+                        4,
+                        5
+                    ],
+                    "Dob": [
+                        4,
+                        5
+                    ],
+                    "Melf": [
+                        4,
+                        5
+                    ],
+                    "Krull": [
+                        4,
+                        5
+                    ],
+                    "Nordom": [
+                        4,
+                        5
+                    ],
                     "Sentry": 5,
                     "Ulkoria": 4,
-                    "Spurt": 3,
-                    "Antrius": 3,
+                    "Spurt": [
+                        3,
+                        4
+                    ],
+                    "Antrius": [
+                        3,
+                        4
+                    ],
                     "Miria": 4,
-                    "Shaka": 3,
+                    "Shaka": [
+                        3,
+                        4
+                    ],
                     "Barrowin": 5,
                     "Evelyn": 5,
                     "Aila": 5,
                     "Imoen": 4,
-                    "Rust": 4,
-                    "Deekin": 3,
+                    "Rust": [
+                        4,
+                        5
+                    ],
+                    "Deekin": [
+                        3,
+                        4
+                    ],
                     "Stoki": 5,
-                    "Corazón": 4,
-                    "Paultin": 4,
+                    "Corazón": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        4,
+                        5
+                    ],
                     "Nerys": 5,
                     "Ellywick": 5,
-                    "Hitch": 4,
-                    "Mehen": 5,
+                    "Hitch": [
+                        4,
+                        5
+                    ],
+                    "Mehen": [
+                        5,
+                        6
+                    ],
                     "Reya": 5,
-                    "Baeloth": 4,
-                    "Desmond": 4,
-                    "Turiel": 3,
+                    "Baeloth": [
+                        4,
+                        5
+                    ],
+                    "Desmond": [
+                        4,
+                        5
+                    ],
+                    "Turiel": [
+                        3,
+                        4
+                    ],
                     "Sisaspia": 5,
-                    "Dragonbait": 4,
-                    "Strongheart": 4,
+                    "Dragonbait": [
+                        4,
+                        5
+                    ],
+                    "Strongheart": [
+                        4,
+                        5
+                    ],
                     "Ezmerelda": 5,
-                    "Gazrick": 3,
+                    "Gazrick": [
+                        3,
+                        4
+                    ],
                     "Vi": 4,
-                    "Bruenor": 4,
-                    "Virgil": 3,
+                    "Bruenor": [
+                        4,
+                        5
+                    ],
+                    "Virgil": [
+                        3,
+                        4
+                    ],
                     "Orkira": 6,
                     "Valentine": 4,
-                    "Xander": 3,
-                    "Sgt. Knox": 4,
+                    "Xander": [
+                        3,
+                        4
+                    ],
+                    "Sgt. Knox": [
+                        4,
+                        5
+                    ],
                     "Evandra": 5,
-                    "Beadle": 4,
+                    "Beadle": [
+                        4,
+                        5
+                    ],
                     "Vin Ursa": 4,
                     "Hew Maan": 5,
                     "Selise": 5,
-                    "Wulfgar": 4,
+                    "Wulfgar": [
+                        4,
+                        5
+                    ],
                     "Havilar": 5,
                     "Nova": 4,
-                    "K'thriss": 3,
+                    "K'thriss": [
+                        3,
+                        4
+                    ],
                     "Lazaapz": 4,
-                    "Qillek": 4,
-                    "Avren": 3,
+                    "Qillek": [
+                        4,
+                        5
+                    ],
+                    "Avren": [
+                        3,
+                        4
+                    ],
                     "Alyndra": 4,
                     "Penelope": 4,
                     "Tatyana": 5,
-                    "Freely": 4,
+                    "Freely": [
+                        4,
+                        5
+                    ],
                     "Vlahnya": 4,
                     "Walnut": 4,
-                    "Xerophon": 3,
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
                     "Nayeli": 5,
                     "Voronika": 4,
                     "Shandie": 4,
-                    "Pwent": 4,
-                    "BBEG": 3
+                    "Pwent": [
+                        4,
+                        5
+                    ],
+                    "BBEG": [
+                        3,
+                        4
+                    ]
                 }
             },
             "retired": true,
@@ -15236,52 +15779,121 @@
                     "Increases the damage of all Champions by 20% for each Champion in the formation with a CHAOTIC alignment."
                 ],
                 "dps": {
-                    "Prudence": 4,
+                    "Prudence": [
+                        4,
+                        5
+                    ],
                     "Grimm": 5,
-                    "Farideh": 3,
-                    "Jamilah": 4,
-                    "Warden": 3,
+                    "Farideh": [
+                        3,
+                        4
+                    ],
+                    "Jamilah": [
+                        4,
+                        5
+                    ],
+                    "Warden": [
+                        3,
+                        4
+                    ],
                     "Dhadius": 3,
-                    "D'hani": 4,
-                    "Lae'zel": 4,
-                    "Strix": 3,
+                    "D'hani": [
+                        4,
+                        5
+                    ],
+                    "Lae'zel": [
+                        4,
+                        5
+                    ],
+                    "Strix": [
+                        3,
+                        4
+                    ],
                     "Krux": 5,
                     "Warduke": 5,
                     "Binwin": 5,
                     "Yorven": 5,
-                    "Catti-brie": 4,
+                    "Catti-brie": [
+                        4,
+                        5
+                    ],
                     "Artemis": 5,
-                    "Delina": 4,
-                    "Nahara": 2,
+                    "Delina": [
+                        4,
+                        5
+                    ],
+                    "Nahara": [
+                        2,
+                        3
+                    ],
                     "Nrakk": 5,
-                    "Black Viper": 4,
-                    "Gromma": 4,
-                    "Orisha": 3,
-                    "NERDS": 3,
+                    "Black Viper": [
+                        4,
+                        5
+                    ],
+                    "Gromma": [
+                        4,
+                        5
+                    ],
+                    "Orisha": [
+                        3,
+                        4
+                    ],
+                    "NERDS": [
+                        3,
+                        4
+                    ],
                     "Lucius": 6,
                     "Kent": 4,
-                    "Nixie": 3,
-                    "Rosie": 2,
+                    "Nixie": [
+                        3,
+                        4
+                    ],
+                    "Rosie": [
+                        2,
+                        3
+                    ],
                     "Krond": 5,
-                    "Ishi": 3,
+                    "Ishi": [
+                        3,
+                        4
+                    ],
                     "Minsc": 5,
-                    "Fen": 5,
-                    "Asharra": 2,
+                    "Fen": [
+                        5,
+                        6
+                    ],
+                    "Asharra": [
+                        2,
+                        3
+                    ],
                     "Jim": 3,
                     "Torogar": 5,
-                    "Azaka": 4,
+                    "Azaka": [
+                        4,
+                        5
+                    ],
                     "Arkhan": 5,
                     "Zorbu": 4,
                     "Jarlaxle": 5
                 },
                 "nondps": {
-                    "Calliope": 4,
+                    "Calliope": [
+                        4,
+                        5
+                    ],
                     "Astarion": 5,
                     "Briv": 5,
                     "Omin": 5,
-                    "Widdle": 4,
+                    "Widdle": [
+                        4,
+                        5
+                    ],
                     "Tyril": 5,
-                    "Viconia": 3,
+                    "Viconia": [
+                        3,
+                        4
+                    ],
                     "Dungeon Master": 5,
                     "Egbert": 5,
                     "Brig": 4,
@@ -15289,68 +15901,164 @@
                     "Donaar": 5,
                     "Melf": 6,
                     "Krull": 5,
-                    "Sentry": 4,
-                    "Ulkoria": 2,
+                    "Sentry": [
+                        4,
+                        5
+                    ],
+                    "Ulkoria": [
+                        2,
+                        3
+                    ],
                     "Spurt": 3,
                     "Antrius": 4,
-                    "Miria": 4,
-                    "Barrowin": 4,
-                    "Evelyn": 4,
-                    "Imoen": 3,
+                    "Miria": [
+                        4,
+                        5
+                    ],
+                    "Barrowin": [
+                        4,
+                        5
+                    ],
+                    "Evelyn": [
+                        4,
+                        5
+                    ],
+                    "Imoen": [
+                        3,
+                        4
+                    ],
                     "Rust": 5,
                     "Deekin": 4,
-                    "Stoki": 4,
+                    "Stoki": [
+                        4,
+                        5
+                    ],
                     "Corazón": 4,
                     "Talin": 3,
                     "Solaak": 5,
                     "Paultin": 5,
                     "Regis": 4,
-                    "Nerys": 4,
-                    "Ellywick": 4,
+                    "Nerys": [
+                        4,
+                        5
+                    ],
+                    "Ellywick": [
+                        4,
+                        5
+                    ],
                     "Hitch": 4,
                     "Krydle": 5,
                     "Mehen": 5,
                     "Korth": 5,
-                    "Reya": 4,
+                    "Reya": [
+                        4,
+                        5
+                    ],
                     "Baeloth": 6,
                     "Desmond": 4,
                     "Turiel": 4,
-                    "Sisaspia": 4,
+                    "Sisaspia": [
+                        4,
+                        5
+                    ],
                     "Dragonbait": 5,
                     "Strongheart": 5,
-                    "Ezmerelda": 4,
+                    "Ezmerelda": [
+                        4,
+                        5
+                    ],
                     "Gazrick": 4,
-                    "Vi": 3,
+                    "Vi": [
+                        3,
+                        4
+                    ],
                     "Bruenor": 5,
                     "Virgil": 4,
-                    "Orkira": 4,
-                    "Valentine": 3,
+                    "Orkira": [
+                        4,
+                        5
+                    ],
+                    "Valentine": [
+                        3,
+                        4
+                    ],
                     "Xander": 3,
-                    "Blooshi": 3,
+                    "Blooshi": [
+                        3,
+                        4
+                    ],
                     "Sgt. Knox": 5,
-                    "Evandra": 4,
+                    "Evandra": [
+                        4,
+                        5
+                    ],
                     "Beadle": 4,
-                    "Vin Ursa": 2,
+                    "Vin Ursa": [
+                        2,
+                        3
+                    ],
                     "Hew Maan": 5,
-                    "Selise": 3,
+                    "Selise": [
+                        3,
+                        4
+                    ],
                     "Wulfgar": 5,
-                    "Havilar": 4,
-                    "Nova": 3,
+                    "Havilar": [
+                        4,
+                        5
+                    ],
+                    "Nova": [
+                        3,
+                        4
+                    ],
                     "K'thriss": 4,
                     "Qillek": 4,
                     "Avren": 4,
-                    "Alyndra": 4,
-                    "Penelope": 3,
-                    "Tatyana": 4,
+                    "Alyndra": [
+                        4,
+                        5
+                    ],
+                    "Penelope": [
+                        3,
+                        4
+                    ],
+                    "Tatyana": [
+                        4,
+                        5
+                    ],
                     "Freely": 4,
-                    "Merilwen": 5,
-                    "Vlahnya": 3,
-                    "Walnut": 4,
-                    "Xerophon": 3,
-                    "Celeste": 4,
-                    "Nayeli": 4,
-                    "Voronika": 4,
-                    "Shandie": 3,
+                    "Merilwen": [
+                        5,
+                        6
+                    ],
+                    "Vlahnya": [
+                        3,
+                        4
+                    ],
+                    "Walnut": [
+                        4,
+                        5
+                    ],
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
+                    "Celeste": [
+                        4,
+                        5
+                    ],
+                    "Nayeli": [
+                        4,
+                        5
+                    ],
+                    "Voronika": [
+                        4,
+                        5
+                    ],
+                    "Shandie": [
+                        3,
+                        4
+                    ],
                     "Pwent": 5,
                     "BBEG": 4
                 }
@@ -20888,53 +21596,128 @@
                     "Increases the damage of all Champions by 20% for each Champion in the formation with a GOOD alignment."
                 ],
                 "dps": {
-                    "Prudence": 4,
+                    "Prudence": [
+                        4,
+                        5
+                    ],
                     "Grimm": 4,
-                    "Farideh": 5,
-                    "Jamilah": 4,
-                    "Warden": 4,
+                    "Farideh": [
+                        5,
+                        6
+                    ],
+                    "Jamilah": [
+                        4,
+                        5
+                    ],
+                    "Warden": [
+                        4,
+                        5
+                    ],
                     "Dhadius": 3,
-                    "D'hani": 4,
-                    "Lae'zel": 4,
-                    "Strix": 4,
+                    "D'hani": [
+                        4,
+                        5
+                    ],
+                    "Lae'zel": [
+                        4,
+                        5
+                    ],
+                    "Strix": [
+                        4,
+                        5
+                    ],
                     "Krux": 5,
                     "Warduke": 4,
                     "Binwin": 4,
-                    "Birdsong": 4,
+                    "Birdsong": [
+                        4,
+                        5
+                    ],
                     "Drizzt": 5,
-                    "Catti-brie": 4,
+                    "Catti-brie": [
+                        4,
+                        5
+                    ],
                     "Artemis": 5,
-                    "Delina": 4,
-                    "Nahara": 4,
+                    "Delina": [
+                        4,
+                        5
+                    ],
+                    "Nahara": [
+                        4,
+                        5
+                    ],
                     "Nrakk": 5,
-                    "Black Viper": 4,
-                    "Gromma": 3,
-                    "Orisha": 3,
-                    "NERDS": 3,
+                    "Black Viper": [
+                        4,
+                        5
+                    ],
+                    "Gromma": [
+                        3,
+                        4
+                    ],
+                    "Orisha": [
+                        3,
+                        4
+                    ],
+                    "NERDS": [
+                        3,
+                        4
+                    ],
                     "Lucius": 5,
                     "Kent": 6,
-                    "Nixie": 5,
+                    "Nixie": [
+                        5,
+                        6
+                    ],
                     "Krond": 4,
-                    "Ishi": 4,
+                    "Ishi": [
+                        4,
+                        5
+                    ],
                     "Minsc": 4,
-                    "Fen": 4,
-                    "Asharra": 2,
+                    "Fen": [
+                        4,
+                        5
+                    ],
+                    "Asharra": [
+                        2,
+                        3
+                    ],
                     "Jim": 4,
                     "Makos": 5,
-                    "Azaka": 4,
+                    "Azaka": [
+                        4,
+                        5
+                    ],
                     "Arkhan": 5,
-                    "Jaheira": 4,
+                    "Jaheira": [
+                        4,
+                        5
+                    ],
                     "Zorbu": 5,
                     "Jarlaxle": 5
                 },
                 "nondps": {
-                    "Calliope": 4,
+                    "Calliope": [
+                        4,
+                        5
+                    ],
                     "Briv": 5,
                     "Omin": 4,
-                    "Widdle": 4,
-                    "Viconia": 3,
+                    "Widdle": [
+                        4,
+                        5
+                    ],
+                    "Viconia": [
+                        3,
+                        4
+                    ],
                     "Dungeon Master": 5,
-                    "Môrgæn": 4,
+                    "Môrgæn": [
+                        4,
+                        5
+                    ],
                     "Egbert": 5,
                     "Uriah": 4,
                     "Brig": 5,
@@ -20942,66 +21725,159 @@
                     "Donaar": 4,
                     "Melf": 5,
                     "Krull": 5,
-                    "Nordom": 4,
-                    "Sentry": 3,
+                    "Nordom": [
+                        4,
+                        5
+                    ],
+                    "Sentry": [
+                        3,
+                        4
+                    ],
                     "Spurt": 5,
                     "Antrius": 5,
-                    "Miria": 4,
+                    "Miria": [
+                        4,
+                        5
+                    ],
                     "Shaka": 6,
-                    "Evelyn": 4,
-                    "Aila": 4,
-                    "Imoen": 4,
+                    "Evelyn": [
+                        4,
+                        5
+                    ],
+                    "Aila": [
+                        4,
+                        5
+                    ],
+                    "Imoen": [
+                        4,
+                        5
+                    ],
                     "Rust": 5,
                     "Deekin": 5,
-                    "Stoki": 4,
+                    "Stoki": [
+                        4,
+                        5
+                    ],
                     "Corazón": 5,
                     "Talin": 6,
                     "Solaak": 5,
                     "Paultin": 5,
                     "Regis": 5,
-                    "Nerys": 4,
+                    "Nerys": [
+                        4,
+                        5
+                    ],
                     "Hitch": 5,
                     "Krydle": 5,
                     "Mehen": 4,
                     "Korth": 5,
-                    "Reya": 3,
+                    "Reya": [
+                        3,
+                        4
+                    ],
                     "Baeloth": 5,
                     "Desmond": 5,
                     "Turiel": 4,
-                    "Sisaspia": 4,
+                    "Sisaspia": [
+                        4,
+                        5
+                    ],
                     "Dragonbait": 5,
                     "Strongheart": 4,
-                    "Ezmerelda": 4,
+                    "Ezmerelda": [
+                        4,
+                        5
+                    ],
                     "Gazrick": 4,
-                    "Vi": 3,
+                    "Vi": [
+                        3,
+                        4
+                    ],
                     "Bruenor": 4,
-                    "Orkira": 4,
-                    "Valentine": 4,
+                    "Orkira": [
+                        4,
+                        5
+                    ],
+                    "Valentine": [
+                        4,
+                        5
+                    ],
                     "Xander": 4,
-                    "Blooshi": 4,
+                    "Blooshi": [
+                        4,
+                        5
+                    ],
                     "Sgt. Knox": 4,
-                    "Evandra": 3,
+                    "Evandra": [
+                        3,
+                        4
+                    ],
                     "Beadle": 5,
-                    "Vin Ursa": 4,
+                    "Vin Ursa": [
+                        4,
+                        5
+                    ],
                     "Hew Maan": 4,
-                    "Selise": 3,
-                    "Nova": 4,
+                    "Selise": [
+                        3,
+                        4
+                    ],
+                    "Nova": [
+                        4,
+                        5
+                    ],
                     "K'thriss": 4,
-                    "Lazaapz": 4,
+                    "Lazaapz": [
+                        4,
+                        5
+                    ],
                     "Qillek": 5,
                     "Avren": 5,
-                    "Alyndra": 4,
-                    "Penelope": 4,
-                    "Tatyana": 4,
+                    "Alyndra": [
+                        4,
+                        5
+                    ],
+                    "Penelope": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        4,
+                        5
+                    ],
                     "Freely": 4,
-                    "Merilwen": 4,
-                    "Vlahnya": 3,
-                    "Walnut": 4,
-                    "Xerophon": 4,
-                    "Celeste": 3,
-                    "Nayeli": 3,
-                    "Voronika": 4,
-                    "Shandie": 4,
+                    "Merilwen": [
+                        4,
+                        5
+                    ],
+                    "Vlahnya": [
+                        3,
+                        4
+                    ],
+                    "Walnut": [
+                        4,
+                        5
+                    ],
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
+                    "Celeste": [
+                        3,
+                        4
+                    ],
+                    "Nayeli": [
+                        3,
+                        4
+                    ],
+                    "Voronika": [
+                        4,
+                        5
+                    ],
+                    "Shandie": [
+                        4,
+                        5
+                    ],
                     "Pwent": 5,
                     "BBEG": 4
                 }
@@ -24383,122 +25259,302 @@
                 ],
                 "dps": {
                     "Prudence": 5,
-                    "Grimm": 4,
+                    "Grimm": [
+                        4,
+                        5
+                    ],
                     "Farideh": 4,
                     "Jamilah": 5,
-                    "Warden": 4,
-                    "Dhadius": 3,
+                    "Warden": [
+                        4,
+                        5
+                    ],
+                    "Dhadius": [
+                        3,
+                        4
+                    ],
                     "D'hani": 4,
                     "Lae'zel": 4,
                     "Strix": 4,
-                    "Krux": 4,
-                    "Warduke": 4,
-                    "Yorven": 4,
+                    "Krux": [
+                        4,
+                        5
+                    ],
+                    "Warduke": [
+                        4,
+                        5
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 4,
-                    "Drizzt": 3,
+                    "Drizzt": [
+                        3,
+                        4
+                    ],
                     "Catti-brie": 5,
                     "Delina": 4,
-                    "Nrakk": 4,
+                    "Nrakk": [
+                        4,
+                        5
+                    ],
                     "Black Viper": 5,
                     "Orisha": 5,
-                    "NERDS": 3,
-                    "Lucius": 4,
-                    "Kent": 3,
+                    "NERDS": [
+                        3,
+                        4
+                    ],
+                    "Lucius": [
+                        4,
+                        5
+                    ],
+                    "Kent": [
+                        3,
+                        4
+                    ],
                     "Nixie": 4,
                     "Rosie": 4,
-                    "Krond": 3,
+                    "Krond": [
+                        3,
+                        4
+                    ],
                     "Ishi": 4,
-                    "Minsc": 3,
+                    "Minsc": [
+                        3,
+                        4
+                    ],
                     "Fen": 5,
                     "Asharra": 4,
-                    "Jim": 3,
-                    "Torogar": 4,
-                    "Makos": 4,
+                    "Jim": [
+                        3,
+                        4
+                    ],
+                    "Torogar": [
+                        4,
+                        5
+                    ],
+                    "Makos": [
+                        4,
+                        5
+                    ],
                     "Azaka": 5,
-                    "Arkhan": 4,
+                    "Arkhan": [
+                        4,
+                        5
+                    ],
                     "Jaheira": 6,
-                    "Zorbu": 3,
-                    "Jarlaxle": 3
+                    "Zorbu": [
+                        3,
+                        4
+                    ],
+                    "Jarlaxle": [
+                        3,
+                        4
+                    ]
                 },
                 "nondps": {
                     "Calliope": 6,
-                    "Astarion": 2,
-                    "Briv": 4,
+                    "Astarion": [
+                        2,
+                        3
+                    ],
+                    "Briv": [
+                        4,
+                        5
+                    ],
                     "Widdle": 5,
-                    "Tyril": 4,
+                    "Tyril": [
+                        4,
+                        5
+                    ],
                     "Viconia": 4,
-                    "Dungeon Master": 4,
+                    "Dungeon Master": [
+                        4,
+                        5
+                    ],
                     "Môrgæn": 4,
-                    "Egbert": 4,
-                    "Uriah": 3,
-                    "Dob": 4,
-                    "Donaar": 4,
-                    "Melf": 3,
-                    "Krull": 4,
-                    "Nordom": 3,
+                    "Egbert": [
+                        4,
+                        5
+                    ],
+                    "Uriah": [
+                        3,
+                        4
+                    ],
+                    "Dob": [
+                        4,
+                        5
+                    ],
+                    "Donaar": [
+                        4,
+                        5
+                    ],
+                    "Melf": [
+                        3,
+                        4
+                    ],
+                    "Krull": [
+                        4,
+                        5
+                    ],
+                    "Nordom": [
+                        3,
+                        4
+                    ],
                     "Sentry": 5,
                     "Ulkoria": 4,
-                    "Antrius": 3,
+                    "Antrius": [
+                        3,
+                        4
+                    ],
                     "Miria": 4,
-                    "Shaka": 3,
+                    "Shaka": [
+                        3,
+                        4
+                    ],
                     "Barrowin": 4,
                     "Evelyn": 5,
                     "Aila": 4,
                     "Imoen": 4,
-                    "Rust": 4,
-                    "Deekin": 3,
+                    "Rust": [
+                        4,
+                        5
+                    ],
+                    "Deekin": [
+                        3,
+                        4
+                    ],
                     "Stoki": 5,
-                    "Corazón": 4,
-                    "Talin": 3,
-                    "Solaak": 4,
-                    "Paultin": 4,
-                    "Regis": 3,
+                    "Corazón": [
+                        4,
+                        5
+                    ],
+                    "Talin": [
+                        3,
+                        4
+                    ],
+                    "Solaak": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        4,
+                        5
+                    ],
+                    "Regis": [
+                        3,
+                        4
+                    ],
                     "Nerys": 5,
                     "Ellywick": 5,
-                    "Hitch": 4,
-                    "Krydle": 5,
-                    "Korth": 4,
+                    "Hitch": [
+                        4,
+                        5
+                    ],
+                    "Krydle": [
+                        5,
+                        6
+                    ],
+                    "Korth": [
+                        4,
+                        5
+                    ],
                     "Reya": 5,
-                    "Baeloth": 4,
-                    "Desmond": 4,
-                    "Turiel": 3,
+                    "Baeloth": [
+                        4,
+                        5
+                    ],
+                    "Desmond": [
+                        4,
+                        5
+                    ],
+                    "Turiel": [
+                        3,
+                        4
+                    ],
                     "Sisaspia": 5,
-                    "Dragonbait": 4,
-                    "Strongheart": 4,
+                    "Dragonbait": [
+                        4,
+                        5
+                    ],
+                    "Strongheart": [
+                        4,
+                        5
+                    ],
                     "Ezmerelda": 5,
-                    "Gazrick": 3,
+                    "Gazrick": [
+                        3,
+                        4
+                    ],
                     "Vi": 4,
-                    "Bruenor": 4,
-                    "Virgil": 3,
+                    "Bruenor": [
+                        4,
+                        5
+                    ],
+                    "Virgil": [
+                        3,
+                        4
+                    ],
                     "Orkira": 5,
                     "Valentine": 5,
-                    "Xander": 3,
+                    "Xander": [
+                        3,
+                        4
+                    ],
                     "Blooshi": 4,
-                    "Sgt. Knox": 4,
+                    "Sgt. Knox": [
+                        4,
+                        5
+                    ],
                     "Evandra": 6,
-                    "Beadle": 3,
+                    "Beadle": [
+                        3,
+                        4
+                    ],
                     "Vin Ursa": 3,
                     "Hew Maan": 5,
                     "Selise": 5,
-                    "Wulfgar": 4,
+                    "Wulfgar": [
+                        4,
+                        5
+                    ],
                     "Havilar": 5,
                     "Nova": 4,
-                    "K'thriss": 3,
+                    "K'thriss": [
+                        3,
+                        4
+                    ],
                     "Lazaapz": 3,
-                    "Qillek": 4,
-                    "Avren": 4,
+                    "Qillek": [
+                        4,
+                        5
+                    ],
+                    "Avren": [
+                        4,
+                        5
+                    ],
                     "Alyndra": 4,
                     "Penelope": 4,
                     "Tatyana": 5,
-                    "Freely": 4,
+                    "Freely": [
+                        4,
+                        5
+                    ],
                     "Merilwen": 5,
                     "Vlahnya": 4,
                     "Walnut": 3,
-                    "Xerophon": 3,
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
                     "Celeste": 4,
                     "Voronika": 4,
                     "Shandie": 4,
-                    "Pwent": 3
+                    "Pwent": [
+                        3,
+                        4
+                    ]
                 }
             },
             "retired": true,
@@ -30796,122 +31852,302 @@
                 ],
                 "dps": {
                     "Prudence": 4,
-                    "Grimm": 5,
+                    "Grimm": [
+                        5,
+                        6
+                    ],
                     "Farideh": 5,
                     "Jamilah": 5,
-                    "Warden": 3,
-                    "Dhadius": 3,
+                    "Warden": [
+                        3,
+                        4
+                    ],
+                    "Dhadius": [
+                        3,
+                        4
+                    ],
                     "D'hani": 4,
                     "Lae'zel": 4,
                     "Strix": 5,
-                    "Krux": 5,
-                    "Warduke": 4,
-                    "Yorven": 4,
+                    "Krux": [
+                        5,
+                        6
+                    ],
+                    "Warduke": [
+                        4,
+                        5
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 4,
-                    "Drizzt": 4,
+                    "Drizzt": [
+                        4,
+                        5
+                    ],
                     "Catti-brie": 6,
                     "Delina": 5,
-                    "Nrakk": 3,
+                    "Nrakk": [
+                        3,
+                        4
+                    ],
                     "Black Viper": 4,
                     "Orisha": 5,
-                    "NERDS": 3,
-                    "Lucius": 3,
-                    "Kent": 4,
+                    "NERDS": [
+                        3,
+                        4
+                    ],
+                    "Lucius": [
+                        3,
+                        4
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Nixie": 4,
                     "Rosie": 5,
-                    "Krond": 3,
+                    "Krond": [
+                        3,
+                        4
+                    ],
                     "Ishi": 5,
-                    "Minsc": 4,
+                    "Minsc": [
+                        4,
+                        5
+                    ],
                     "Fen": 4,
                     "Asharra": 4,
-                    "Jim": 3,
-                    "Torogar": 4,
-                    "Makos": 3,
+                    "Jim": [
+                        3,
+                        4
+                    ],
+                    "Torogar": [
+                        4,
+                        5
+                    ],
+                    "Makos": [
+                        3,
+                        4
+                    ],
                     "Azaka": 5,
-                    "Arkhan": 4,
+                    "Arkhan": [
+                        4,
+                        5
+                    ],
                     "Jaheira": 5,
-                    "Zorbu": 4,
-                    "Jarlaxle": 3
+                    "Zorbu": [
+                        4,
+                        5
+                    ],
+                    "Jarlaxle": [
+                        3,
+                        4
+                    ]
                 },
                 "nondps": {
                     "Calliope": 5,
-                    "Astarion": 2,
-                    "Briv": 5,
+                    "Astarion": [
+                        2,
+                        3
+                    ],
+                    "Briv": [
+                        5,
+                        6
+                    ],
                     "Widdle": 5,
-                    "Tyril": 5,
+                    "Tyril": [
+                        5,
+                        6
+                    ],
                     "Viconia": 4,
-                    "Dungeon Master": 5,
+                    "Dungeon Master": [
+                        5,
+                        6
+                    ],
                     "Môrgæn": 3,
-                    "Egbert": 5,
-                    "Uriah": 4,
-                    "Dob": 4,
-                    "Donaar": 5,
-                    "Melf": 4,
-                    "Krull": 4,
-                    "Nordom": 3,
+                    "Egbert": [
+                        5,
+                        6
+                    ],
+                    "Uriah": [
+                        4,
+                        5
+                    ],
+                    "Dob": [
+                        4,
+                        5
+                    ],
+                    "Donaar": [
+                        5,
+                        6
+                    ],
+                    "Melf": [
+                        4,
+                        5
+                    ],
+                    "Krull": [
+                        4,
+                        5
+                    ],
+                    "Nordom": [
+                        3,
+                        4
+                    ],
                     "Sentry": 6,
                     "Ulkoria": 5,
-                    "Antrius": 4,
+                    "Antrius": [
+                        4,
+                        5
+                    ],
                     "Miria": 4,
-                    "Shaka": 4,
+                    "Shaka": [
+                        4,
+                        5
+                    ],
                     "Barrowin": 5,
                     "Evelyn": 6,
                     "Aila": 4,
                     "Imoen": 5,
-                    "Rust": 3,
-                    "Deekin": 3,
+                    "Rust": [
+                        3,
+                        4
+                    ],
+                    "Deekin": [
+                        3,
+                        4
+                    ],
                     "Stoki": 4,
-                    "Corazón": 3,
-                    "Talin": 4,
-                    "Solaak": 4,
-                    "Paultin": 3,
-                    "Regis": 3,
+                    "Corazón": [
+                        3,
+                        4
+                    ],
+                    "Talin": [
+                        4,
+                        5
+                    ],
+                    "Solaak": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        3,
+                        4
+                    ],
+                    "Regis": [
+                        3,
+                        4
+                    ],
                     "Nerys": 6,
                     "Ellywick": 4,
-                    "Hitch": 4,
-                    "Krydle": 4,
-                    "Korth": 3,
+                    "Hitch": [
+                        4,
+                        5
+                    ],
+                    "Krydle": [
+                        4,
+                        5
+                    ],
+                    "Korth": [
+                        3,
+                        4
+                    ],
                     "Reya": 6,
-                    "Baeloth": 3,
-                    "Desmond": 5,
-                    "Turiel": 4,
+                    "Baeloth": [
+                        3,
+                        4
+                    ],
+                    "Desmond": [
+                        5,
+                        6
+                    ],
+                    "Turiel": [
+                        4,
+                        5
+                    ],
                     "Sisaspia": 4,
-                    "Dragonbait": 5,
-                    "Strongheart": 5,
+                    "Dragonbait": [
+                        5,
+                        6
+                    ],
+                    "Strongheart": [
+                        5,
+                        6
+                    ],
                     "Ezmerelda": 5,
-                    "Gazrick": 4,
+                    "Gazrick": [
+                        4,
+                        5
+                    ],
                     "Vi": 5,
-                    "Bruenor": 5,
-                    "Virgil": 4,
+                    "Bruenor": [
+                        5,
+                        6
+                    ],
+                    "Virgil": [
+                        4,
+                        5
+                    ],
                     "Orkira": 5,
                     "Valentine": 4,
-                    "Xander": 4,
+                    "Xander": [
+                        4,
+                        5
+                    ],
                     "Blooshi": 4,
-                    "Sgt. Knox": 5,
+                    "Sgt. Knox": [
+                        5,
+                        6
+                    ],
                     "Evandra": 5,
-                    "Beadle": 2,
+                    "Beadle": [
+                        2,
+                        3
+                    ],
                     "Vin Ursa": 3,
                     "Hew Maan": 4,
                     "Selise": 5,
-                    "Wulfgar": 5,
+                    "Wulfgar": [
+                        5,
+                        6
+                    ],
                     "Havilar": 6,
                     "Nova": 5,
-                    "K'thriss": 3,
+                    "K'thriss": [
+                        3,
+                        4
+                    ],
                     "Lazaapz": 3,
-                    "Qillek": 4,
-                    "Avren": 3,
+                    "Qillek": [
+                        4,
+                        5
+                    ],
+                    "Avren": [
+                        3,
+                        4
+                    ],
                     "Alyndra": 4,
                     "Penelope": 5,
                     "Tatyana": 5,
-                    "Freely": 4,
+                    "Freely": [
+                        4,
+                        5
+                    ],
                     "Merilwen": 4,
                     "Vlahnya": 5,
                     "Walnut": 3,
-                    "Xerophon": 3,
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
                     "Celeste": 4,
                     "Voronika": 4,
                     "Shandie": 5,
-                    "Pwent": 4
+                    "Pwent": [
+                        4,
+                        5
+                    ]
                 }
             },
             "retired": true,
@@ -31782,121 +33018,286 @@
                     "Increases the damage of all Champions by 20% for each Champion in the formation with a NEUTRAL alignment."
                 ],
                 "dps": {
-                    "Prudence": 4,
+                    "Prudence": [
+                        4,
+                        5
+                    ],
                     "Grimm": 6,
-                    "Farideh": 4,
-                    "Jamilah": 4,
-                    "Warden": 3,
+                    "Farideh": [
+                        4,
+                        5
+                    ],
+                    "Jamilah": [
+                        4,
+                        5
+                    ],
+                    "Warden": [
+                        3,
+                        4
+                    ],
                     "Dhadius": 6,
-                    "D'hani": 4,
-                    "Lae'zel": 4,
-                    "Strix": 4,
+                    "D'hani": [
+                        4,
+                        5
+                    ],
+                    "Lae'zel": [
+                        4,
+                        5
+                    ],
+                    "Strix": [
+                        4,
+                        5
+                    ],
                     "Krux": 5,
                     "Warduke": 5,
                     "Binwin": 3,
                     "Yorven": 4,
-                    "Birdsong": 4,
+                    "Birdsong": [
+                        4,
+                        5
+                    ],
                     "Drizzt": 5,
-                    "Catti-brie": 5,
+                    "Catti-brie": [
+                        5,
+                        6
+                    ],
                     "Artemis": 6,
-                    "Delina": 4,
-                    "Nahara": 3,
+                    "Delina": [
+                        4,
+                        5
+                    ],
+                    "Nahara": [
+                        3,
+                        4
+                    ],
                     "Nrakk": 5,
-                    "Black Viper": 5,
-                    "Gromma": 3,
-                    "Orisha": 4,
-                    "NERDS": 4,
+                    "Black Viper": [
+                        5,
+                        6
+                    ],
+                    "Gromma": [
+                        3,
+                        4
+                    ],
+                    "Orisha": [
+                        4,
+                        5
+                    ],
+                    "NERDS": [
+                        4,
+                        5
+                    ],
                     "Lucius": 5,
                     "Kent": 5,
-                    "Nixie": 3,
-                    "Rosie": 4,
+                    "Nixie": [
+                        3,
+                        4
+                    ],
+                    "Rosie": [
+                        4,
+                        5
+                    ],
                     "Krond": 5,
-                    "Ishi": 4,
+                    "Ishi": [
+                        4,
+                        5
+                    ],
                     "Minsc": 5,
-                    "Fen": 4,
-                    "Asharra": 4,
+                    "Fen": [
+                        4,
+                        5
+                    ],
+                    "Asharra": [
+                        4,
+                        5
+                    ],
                     "Jim": 6,
                     "Torogar": 4,
                     "Makos": 4,
-                    "Jaheira": 3,
+                    "Jaheira": [
+                        3,
+                        4
+                    ],
                     "Jarlaxle": 5
                 },
                 "nondps": {
-                    "Calliope": 4,
+                    "Calliope": [
+                        4,
+                        5
+                    ],
                     "Astarion": 5,
                     "Briv": 4,
                     "Omin": 4,
-                    "Widdle": 4,
+                    "Widdle": [
+                        4,
+                        5
+                    ],
                     "Tyril": 5,
-                    "Viconia": 4,
+                    "Viconia": [
+                        4,
+                        5
+                    ],
                     "Dungeon Master": 6,
-                    "Môrgæn": 4,
+                    "Môrgæn": [
+                        4,
+                        5
+                    ],
                     "Egbert": 4,
                     "Uriah": 5,
                     "Brig": 6,
                     "Donaar": 3,
                     "Krull": 5,
-                    "Nordom": 4,
-                    "Sentry": 2,
-                    "Ulkoria": 4,
+                    "Nordom": [
+                        4,
+                        5
+                    ],
+                    "Sentry": [
+                        2,
+                        3
+                    ],
+                    "Ulkoria": [
+                        4,
+                        5
+                    ],
                     "Spurt": 4,
                     "Antrius": 5,
                     "Shaka": 5,
-                    "Barrowin": 4,
-                    "Evelyn": 5,
-                    "Aila": 3,
-                    "Imoen": 5,
+                    "Barrowin": [
+                        4,
+                        5
+                    ],
+                    "Evelyn": [
+                        5,
+                        6
+                    ],
+                    "Aila": [
+                        3,
+                        4
+                    ],
+                    "Imoen": [
+                        5,
+                        6
+                    ],
                     "Rust": 5,
                     "Deekin": 4,
-                    "Stoki": 4,
+                    "Stoki": [
+                        4,
+                        5
+                    ],
                     "Corazón": 6,
                     "Talin": 5,
                     "Solaak": 5,
                     "Paultin": 6,
                     "Regis": 5,
-                    "Ellywick": 4,
+                    "Ellywick": [
+                        4,
+                        5
+                    ],
                     "Hitch": 6,
                     "Krydle": 5,
                     "Mehen": 4,
                     "Korth": 4,
-                    "Reya": 5,
+                    "Reya": [
+                        5,
+                        6
+                    ],
                     "Baeloth": 5,
                     "Desmond": 6,
                     "Turiel": 5,
-                    "Sisaspia": 4,
+                    "Sisaspia": [
+                        4,
+                        5
+                    ],
                     "Dragonbait": 5,
                     "Strongheart": 6,
-                    "Ezmerelda": 5,
+                    "Ezmerelda": [
+                        5,
+                        6
+                    ],
                     "Gazrick": 4,
                     "Bruenor": 3,
                     "Virgil": 5,
-                    "Orkira": 3,
-                    "Valentine": 4,
+                    "Orkira": [
+                        3,
+                        4
+                    ],
+                    "Valentine": [
+                        4,
+                        5
+                    ],
                     "Xander": 6,
-                    "Blooshi": 4,
+                    "Blooshi": [
+                        4,
+                        5
+                    ],
                     "Sgt. Knox": 6,
-                    "Evandra": 4,
+                    "Evandra": [
+                        4,
+                        5
+                    ],
                     "Beadle": 5,
-                    "Vin Ursa": 4,
+                    "Vin Ursa": [
+                        4,
+                        5
+                    ],
                     "Hew Maan": 6,
                     "Wulfgar": 6,
-                    "Havilar": 3,
-                    "Nova": 4,
+                    "Havilar": [
+                        3,
+                        4
+                    ],
+                    "Nova": [
+                        4,
+                        5
+                    ],
                     "K'thriss": 5,
-                    "Lazaapz": 4,
+                    "Lazaapz": [
+                        4,
+                        5
+                    ],
                     "Qillek": 5,
                     "Avren": 5,
-                    "Alyndra": 4,
-                    "Tatyana": 3,
+                    "Alyndra": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        3,
+                        4
+                    ],
                     "Freely": 4,
-                    "Merilwen": 4,
-                    "Vlahnya": 4,
-                    "Walnut": 3,
-                    "Xerophon": 4,
-                    "Celeste": 4,
-                    "Nayeli": 4,
-                    "Voronika": 4,
-                    "Shandie": 4,
+                    "Merilwen": [
+                        4,
+                        5
+                    ],
+                    "Vlahnya": [
+                        4,
+                        5
+                    ],
+                    "Walnut": [
+                        3,
+                        4
+                    ],
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
+                    "Celeste": [
+                        4,
+                        5
+                    ],
+                    "Nayeli": [
+                        4,
+                        5
+                    ],
+                    "Voronika": [
+                        4,
+                        5
+                    ],
+                    "Shandie": [
+                        4,
+                        5
+                    ],
                     "Pwent": 4,
                     "BBEG": 5
                 }
@@ -32300,122 +33701,311 @@
                 ],
                 "dps": {
                     "Prudence": 6,
-                    "Grimm": 5,
+                    "Grimm": [
+                        5,
+                        6
+                    ],
                     "Farideh": 5,
                     "Jamilah": 6,
-                    "Warden": 5,
-                    "Dhadius": 4,
+                    "Warden": [
+                        5,
+                        6
+                    ],
+                    "Dhadius": [
+                        4,
+                        5
+                    ],
                     "D'hani": 6,
                     "Lae'zel": 6,
                     "Strix": 5,
-                    "Krux": 5,
-                    "Warduke": 5,
-                    "Binwin": 4,
-                    "Yorven": 5,
+                    "Krux": [
+                        5,
+                        6
+                    ],
+                    "Warduke": [
+                        5,
+                        6
+                    ],
+                    "Binwin": [
+                        4,
+                        5
+                    ],
+                    "Yorven": [
+                        5,
+                        6
+                    ],
                     "Birdsong": 5,
-                    "Drizzt": 4,
+                    "Drizzt": [
+                        4,
+                        5
+                    ],
                     "Catti-brie": 6,
-                    "Artemis": 5,
+                    "Artemis": [
+                        5,
+                        6
+                    ],
                     "Delina": 5,
                     "Nahara": 5,
-                    "Nrakk": 5,
+                    "Nrakk": [
+                        5,
+                        6
+                    ],
                     "Black Viper": 6,
                     "Gromma": 5,
                     "Orisha": 6,
-                    "NERDS": 4,
-                    "Lucius": 5,
-                    "Kent": 4,
+                    "NERDS": [
+                        4,
+                        5
+                    ],
+                    "Lucius": [
+                        5,
+                        6
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Nixie": 5,
                     "Rosie": 5,
                     "Ishi": 5,
-                    "Minsc": 5,
-                    "Jim": 4,
-                    "Torogar": 5,
-                    "Makos": 4,
+                    "Minsc": [
+                        5,
+                        6
+                    ],
+                    "Jim": [
+                        4,
+                        5
+                    ],
+                    "Torogar": [
+                        5,
+                        6
+                    ],
+                    "Makos": [
+                        4,
+                        5
+                    ],
                     "Azaka": 6,
-                    "Arkhan": 5,
+                    "Arkhan": [
+                        5,
+                        6
+                    ],
                     "Jaheira": 6,
-                    "Zorbu": 4,
-                    "Jarlaxle": 4
+                    "Zorbu": [
+                        4,
+                        5
+                    ],
+                    "Jarlaxle": [
+                        4,
+                        5
+                    ]
                 },
                 "nondps": {
                     "Calliope": 6,
-                    "Astarion": 4,
-                    "Briv": 5,
-                    "Omin": 4,
+                    "Astarion": [
+                        4,
+                        5
+                    ],
+                    "Briv": [
+                        5,
+                        6
+                    ],
+                    "Omin": [
+                        4,
+                        5
+                    ],
                     "Widdle": 6,
-                    "Tyril": 5,
+                    "Tyril": [
+                        5,
+                        6
+                    ],
                     "Viconia": 5,
                     "Môrgæn": 6,
-                    "Egbert": 5,
-                    "Uriah": 3,
-                    "Brig": 5,
-                    "Dob": 5,
-                    "Donaar": 4,
-                    "Melf": 5,
-                    "Nordom": 5,
+                    "Egbert": [
+                        5,
+                        6
+                    ],
+                    "Uriah": [
+                        3,
+                        4
+                    ],
+                    "Brig": [
+                        5,
+                        6
+                    ],
+                    "Dob": [
+                        5,
+                        6
+                    ],
+                    "Donaar": [
+                        4,
+                        5
+                    ],
+                    "Melf": [
+                        5,
+                        6
+                    ],
+                    "Nordom": [
+                        5,
+                        6
+                    ],
                     "Sentry": 5,
                     "Ulkoria": 5,
-                    "Spurt": 4,
-                    "Antrius": 4,
+                    "Spurt": [
+                        4,
+                        5
+                    ],
+                    "Antrius": [
+                        4,
+                        5
+                    ],
                     "Miria": 5,
-                    "Shaka": 4,
+                    "Shaka": [
+                        4,
+                        5
+                    ],
                     "Barrowin": 6,
                     "Aila": 6,
                     "Imoen": 5,
-                    "Rust": 5,
-                    "Deekin": 4,
+                    "Rust": [
+                        5,
+                        6
+                    ],
+                    "Deekin": [
+                        4,
+                        5
+                    ],
                     "Stoki": 6,
-                    "Corazón": 5,
-                    "Talin": 4,
-                    "Solaak": 5,
-                    "Paultin": 5,
-                    "Regis": 4,
+                    "Corazón": [
+                        5,
+                        6
+                    ],
+                    "Talin": [
+                        4,
+                        5
+                    ],
+                    "Solaak": [
+                        5,
+                        6
+                    ],
+                    "Paultin": [
+                        5,
+                        6
+                    ],
+                    "Regis": [
+                        4,
+                        5
+                    ],
                     "Nerys": 6,
                     "Ellywick": 6,
-                    "Hitch": 5,
-                    "Krydle": 5,
-                    "Mehen": 4,
-                    "Korth": 5,
-                    "Baeloth": 5,
-                    "Desmond": 5,
-                    "Turiel": 4,
+                    "Hitch": [
+                        5,
+                        6
+                    ],
+                    "Krydle": [
+                        5,
+                        6
+                    ],
+                    "Mehen": [
+                        4,
+                        5
+                    ],
+                    "Korth": [
+                        5,
+                        6
+                    ],
+                    "Baeloth": [
+                        5,
+                        6
+                    ],
+                    "Desmond": [
+                        5,
+                        6
+                    ],
+                    "Turiel": [
+                        4,
+                        5
+                    ],
                     "Sisaspia": 6,
-                    "Dragonbait": 5,
-                    "Strongheart": 5,
+                    "Dragonbait": [
+                        5,
+                        6
+                    ],
+                    "Strongheart": [
+                        5,
+                        6
+                    ],
                     "Ezmerelda": 6,
-                    "Gazrick": 3,
+                    "Gazrick": [
+                        3,
+                        4
+                    ],
                     "Vi": 5,
-                    "Bruenor": 4,
-                    "Virgil": 4,
+                    "Bruenor": [
+                        4,
+                        5
+                    ],
+                    "Virgil": [
+                        4,
+                        5
+                    ],
                     "Orkira": 6,
                     "Valentine": 5,
-                    "Xander": 4,
+                    "Xander": [
+                        4,
+                        5
+                    ],
                     "Blooshi": 5,
                     "Evandra": 6,
-                    "Beadle": 5,
+                    "Beadle": [
+                        5,
+                        6
+                    ],
                     "Vin Ursa": 5,
                     "Hew Maan": 6,
                     "Selise": 6,
-                    "Wulfgar": 5,
+                    "Wulfgar": [
+                        5,
+                        6
+                    ],
                     "Havilar": 6,
                     "Nova": 5,
-                    "K'thriss": 4,
+                    "K'thriss": [
+                        4,
+                        5
+                    ],
                     "Lazaapz": 5,
-                    "Qillek": 5,
-                    "Avren": 4,
+                    "Qillek": [
+                        5,
+                        6
+                    ],
+                    "Avren": [
+                        4,
+                        5
+                    ],
                     "Penelope": 5,
                     "Tatyana": 6,
-                    "Freely": 5,
+                    "Freely": [
+                        5,
+                        6
+                    ],
                     "Merilwen": 6,
                     "Vlahnya": 5,
                     "Walnut": 5,
-                    "Xerophon": 4,
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
                     "Celeste": 5,
                     "Nayeli": 6,
                     "Voronika": 5,
-                    "Pwent": 5,
-                    "BBEG": 4
+                    "Pwent": [
+                        5,
+                        6
+                    ],
+                    "BBEG": [
+                        4,
+                        5
+                    ]
                 }
             },
             "retired": true,
@@ -36820,122 +38410,302 @@
                 ],
                 "dps": {
                     "Prudence": 4,
-                    "Grimm": 3,
+                    "Grimm": [
+                        3,
+                        4
+                    ],
                     "Farideh": 5,
                     "Jamilah": 5,
-                    "Warden": 4,
-                    "Dhadius": 3,
+                    "Warden": [
+                        4,
+                        5
+                    ],
+                    "Dhadius": [
+                        3,
+                        4
+                    ],
                     "D'hani": 6,
                     "Lae'zel": 4,
                     "Strix": 4,
-                    "Krux": 3,
-                    "Warduke": 3,
-                    "Yorven": 4,
+                    "Krux": [
+                        3,
+                        4
+                    ],
+                    "Warduke": [
+                        3,
+                        4
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 5,
-                    "Drizzt": 5,
+                    "Drizzt": [
+                        5,
+                        6
+                    ],
                     "Catti-brie": 5,
                     "Delina": 6,
-                    "Nrakk": 5,
+                    "Nrakk": [
+                        5,
+                        6
+                    ],
                     "Black Viper": 5,
                     "Orisha": 5,
-                    "NERDS": 3,
-                    "Lucius": 4,
-                    "Kent": 4,
+                    "NERDS": [
+                        3,
+                        4
+                    ],
+                    "Lucius": [
+                        4,
+                        5
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Nixie": 4,
                     "Rosie": 6,
-                    "Krond": 4,
+                    "Krond": [
+                        4,
+                        5
+                    ],
                     "Ishi": 6,
-                    "Minsc": 3,
+                    "Minsc": [
+                        3,
+                        4
+                    ],
                     "Fen": 4,
                     "Asharra": 5,
-                    "Jim": 3,
-                    "Torogar": 4,
-                    "Makos": 3,
+                    "Jim": [
+                        3,
+                        4
+                    ],
+                    "Torogar": [
+                        4,
+                        5
+                    ],
+                    "Makos": [
+                        3,
+                        4
+                    ],
                     "Azaka": 4,
-                    "Arkhan": 3,
+                    "Arkhan": [
+                        3,
+                        4
+                    ],
                     "Jaheira": 5,
-                    "Zorbu": 5,
-                    "Jarlaxle": 4
+                    "Zorbu": [
+                        5,
+                        6
+                    ],
+                    "Jarlaxle": [
+                        4,
+                        5
+                    ]
                 },
                 "nondps": {
                     "Calliope": 5,
-                    "Astarion": 5,
-                    "Briv": 3,
+                    "Astarion": [
+                        5,
+                        6
+                    ],
+                    "Briv": [
+                        3,
+                        4
+                    ],
                     "Widdle": 5,
-                    "Tyril": 5,
+                    "Tyril": [
+                        5,
+                        6
+                    ],
                     "Viconia": 6,
-                    "Dungeon Master": 5,
+                    "Dungeon Master": [
+                        5,
+                        6
+                    ],
                     "Môrgæn": 6,
-                    "Egbert": 3,
-                    "Uriah": 4,
-                    "Dob": 5,
-                    "Donaar": 3,
-                    "Melf": 4,
-                    "Krull": 4,
-                    "Nordom": 4,
+                    "Egbert": [
+                        3,
+                        4
+                    ],
+                    "Uriah": [
+                        4,
+                        5
+                    ],
+                    "Dob": [
+                        5,
+                        6
+                    ],
+                    "Donaar": [
+                        3,
+                        4
+                    ],
+                    "Melf": [
+                        4,
+                        5
+                    ],
+                    "Krull": [
+                        4,
+                        5
+                    ],
+                    "Nordom": [
+                        4,
+                        5
+                    ],
                     "Sentry": 5,
                     "Ulkoria": 5,
-                    "Antrius": 3,
+                    "Antrius": [
+                        3,
+                        4
+                    ],
                     "Miria": 6,
-                    "Shaka": 5,
+                    "Shaka": [
+                        5,
+                        6
+                    ],
                     "Barrowin": 5,
                     "Evelyn": 4,
                     "Aila": 6,
                     "Imoen": 5,
-                    "Rust": 4,
-                    "Deekin": 3,
+                    "Rust": [
+                        4,
+                        5
+                    ],
+                    "Deekin": [
+                        3,
+                        4
+                    ],
                     "Stoki": 6,
-                    "Corazón": 5,
-                    "Talin": 5,
-                    "Solaak": 5,
-                    "Paultin": 4,
-                    "Regis": 4,
+                    "Corazón": [
+                        5,
+                        6
+                    ],
+                    "Talin": [
+                        5,
+                        6
+                    ],
+                    "Solaak": [
+                        5,
+                        6
+                    ],
+                    "Paultin": [
+                        4,
+                        5
+                    ],
+                    "Regis": [
+                        4,
+                        5
+                    ],
                     "Nerys": 5,
                     "Ellywick": 5,
-                    "Hitch": 5,
-                    "Krydle": 4,
-                    "Korth": 5,
+                    "Hitch": [
+                        5,
+                        6
+                    ],
+                    "Krydle": [
+                        4,
+                        5
+                    ],
+                    "Korth": [
+                        5,
+                        6
+                    ],
                     "Reya": 4,
-                    "Baeloth": 3,
-                    "Desmond": 4,
-                    "Turiel": 4,
+                    "Baeloth": [
+                        3,
+                        4
+                    ],
+                    "Desmond": [
+                        4,
+                        5
+                    ],
+                    "Turiel": [
+                        4,
+                        5
+                    ],
                     "Sisaspia": 5,
-                    "Dragonbait": 4,
-                    "Strongheart": 4,
+                    "Dragonbait": [
+                        4,
+                        5
+                    ],
+                    "Strongheart": [
+                        4,
+                        5
+                    ],
                     "Ezmerelda": 5,
-                    "Gazrick": 4,
+                    "Gazrick": [
+                        4,
+                        5
+                    ],
                     "Vi": 5,
-                    "Bruenor": 4,
-                    "Virgil": 3,
+                    "Bruenor": [
+                        4,
+                        5
+                    ],
+                    "Virgil": [
+                        3,
+                        4
+                    ],
                     "Orkira": 5,
                     "Valentine": 5,
-                    "Xander": 5,
+                    "Xander": [
+                        5,
+                        6
+                    ],
                     "Blooshi": 4,
-                    "Sgt. Knox": 3,
+                    "Sgt. Knox": [
+                        3,
+                        4
+                    ],
                     "Evandra": 4,
-                    "Beadle": 4,
+                    "Beadle": [
+                        4,
+                        5
+                    ],
                     "Vin Ursa": 6,
                     "Hew Maan": 4,
                     "Selise": 5,
-                    "Wulfgar": 3,
+                    "Wulfgar": [
+                        3,
+                        4
+                    ],
                     "Havilar": 5,
                     "Nova": 5,
-                    "K'thriss": 4,
+                    "K'thriss": [
+                        4,
+                        5
+                    ],
                     "Lazaapz": 5,
-                    "Qillek": 5,
-                    "Avren": 4,
+                    "Qillek": [
+                        5,
+                        6
+                    ],
+                    "Avren": [
+                        4,
+                        5
+                    ],
                     "Alyndra": 5,
                     "Penelope": 6,
                     "Tatyana": 5,
-                    "Freely": 4,
+                    "Freely": [
+                        4,
+                        5
+                    ],
                     "Merilwen": 6,
                     "Vlahnya": 5,
                     "Walnut": 6,
-                    "Xerophon": 5,
+                    "Xerophon": [
+                        5,
+                        6
+                    ],
                     "Celeste": 5,
                     "Voronika": 6,
                     "Shandie": 5,
-                    "Pwent": 3
+                    "Pwent": [
+                        3,
+                        4
+                    ]
                 }
             },
             "retired": false,
@@ -41492,122 +43262,311 @@
                 ],
                 "dps": {
                     "Prudence": 6,
-                    "Grimm": 4,
+                    "Grimm": [
+                        4,
+                        5
+                    ],
                     "Farideh": 6,
                     "Jamilah": 5,
-                    "Warden": 4,
-                    "Dhadius": 5,
+                    "Warden": [
+                        4,
+                        5
+                    ],
+                    "Dhadius": [
+                        5,
+                        6
+                    ],
                     "D'hani": 4,
                     "Lae'zel": 4,
                     "Strix": 6,
-                    "Krux": 4,
-                    "Warduke": 4,
-                    "Binwin": 4,
-                    "Yorven": 4,
+                    "Krux": [
+                        4,
+                        5
+                    ],
+                    "Warduke": [
+                        4,
+                        5
+                    ],
+                    "Binwin": [
+                        4,
+                        5
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 5,
-                    "Drizzt": 4,
+                    "Drizzt": [
+                        4,
+                        5
+                    ],
                     "Catti-brie": 5,
-                    "Artemis": 4,
+                    "Artemis": [
+                        4,
+                        5
+                    ],
                     "Delina": 6,
                     "Nahara": 6,
-                    "Nrakk": 4,
+                    "Nrakk": [
+                        4,
+                        5
+                    ],
                     "Black Viper": 5,
                     "Gromma": 5,
                     "Orisha": 6,
-                    "NERDS": 4,
-                    "Lucius": 5,
-                    "Kent": 4,
+                    "NERDS": [
+                        4,
+                        5
+                    ],
+                    "Lucius": [
+                        5,
+                        6
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Nixie": 6,
                     "Rosie": 5,
                     "Ishi": 5,
-                    "Minsc": 3,
-                    "Jim": 5,
-                    "Torogar": 4,
-                    "Makos": 5,
+                    "Minsc": [
+                        3,
+                        4
+                    ],
+                    "Jim": [
+                        5,
+                        6
+                    ],
+                    "Torogar": [
+                        4,
+                        5
+                    ],
+                    "Makos": [
+                        5,
+                        6
+                    ],
                     "Azaka": 5,
-                    "Arkhan": 4,
+                    "Arkhan": [
+                        4,
+                        5
+                    ],
                     "Jaheira": 5,
-                    "Zorbu": 4,
-                    "Jarlaxle": 4
+                    "Zorbu": [
+                        4,
+                        5
+                    ],
+                    "Jarlaxle": [
+                        4,
+                        5
+                    ]
                 },
                 "nondps": {
                     "Calliope": 6,
-                    "Astarion": 3,
-                    "Briv": 4,
-                    "Omin": 4,
+                    "Astarion": [
+                        3,
+                        4
+                    ],
+                    "Briv": [
+                        4,
+                        5
+                    ],
+                    "Omin": [
+                        4,
+                        5
+                    ],
                     "Widdle": 6,
-                    "Tyril": 4,
+                    "Tyril": [
+                        4,
+                        5
+                    ],
                     "Viconia": 5,
                     "Môrgæn": 4,
-                    "Egbert": 4,
-                    "Uriah": 5,
-                    "Brig": 4,
-                    "Dob": 5,
-                    "Donaar": 5,
-                    "Melf": 3,
-                    "Nordom": 3,
+                    "Egbert": [
+                        4,
+                        5
+                    ],
+                    "Uriah": [
+                        5,
+                        6
+                    ],
+                    "Brig": [
+                        4,
+                        5
+                    ],
+                    "Dob": [
+                        5,
+                        6
+                    ],
+                    "Donaar": [
+                        5,
+                        6
+                    ],
+                    "Melf": [
+                        3,
+                        4
+                    ],
+                    "Nordom": [
+                        3,
+                        4
+                    ],
                     "Sentry": 5,
                     "Ulkoria": 6,
-                    "Spurt": 3,
-                    "Antrius": 5,
+                    "Spurt": [
+                        3,
+                        4
+                    ],
+                    "Antrius": [
+                        5,
+                        6
+                    ],
                     "Miria": 6,
-                    "Shaka": 5,
+                    "Shaka": [
+                        5,
+                        6
+                    ],
                     "Barrowin": 4,
                     "Aila": 4,
                     "Imoen": 5,
-                    "Rust": 4,
-                    "Deekin": 4,
+                    "Rust": [
+                        4,
+                        5
+                    ],
+                    "Deekin": [
+                        4,
+                        5
+                    ],
                     "Stoki": 5,
-                    "Corazón": 4,
-                    "Talin": 4,
-                    "Solaak": 4,
-                    "Paultin": 4,
-                    "Regis": 4,
+                    "Corazón": [
+                        4,
+                        5
+                    ],
+                    "Talin": [
+                        4,
+                        5
+                    ],
+                    "Solaak": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        4,
+                        5
+                    ],
+                    "Regis": [
+                        4,
+                        5
+                    ],
                     "Nerys": 5,
                     "Ellywick": 6,
-                    "Hitch": 4,
-                    "Krydle": 4,
-                    "Mehen": 4,
-                    "Korth": 4,
-                    "Baeloth": 5,
-                    "Desmond": 4,
-                    "Turiel": 5,
+                    "Hitch": [
+                        4,
+                        5
+                    ],
+                    "Krydle": [
+                        4,
+                        5
+                    ],
+                    "Mehen": [
+                        4,
+                        5
+                    ],
+                    "Korth": [
+                        4,
+                        5
+                    ],
+                    "Baeloth": [
+                        5,
+                        6
+                    ],
+                    "Desmond": [
+                        4,
+                        5
+                    ],
+                    "Turiel": [
+                        5,
+                        6
+                    ],
                     "Sisaspia": 6,
-                    "Dragonbait": 4,
-                    "Strongheart": 4,
+                    "Dragonbait": [
+                        4,
+                        5
+                    ],
+                    "Strongheart": [
+                        4,
+                        5
+                    ],
                     "Ezmerelda": 6,
-                    "Gazrick": 5,
+                    "Gazrick": [
+                        5,
+                        6
+                    ],
                     "Vi": 5,
-                    "Bruenor": 4,
-                    "Virgil": 5,
+                    "Bruenor": [
+                        4,
+                        5
+                    ],
+                    "Virgil": [
+                        5,
+                        6
+                    ],
                     "Orkira": 6,
                     "Valentine": 6,
-                    "Xander": 4,
+                    "Xander": [
+                        4,
+                        5
+                    ],
                     "Blooshi": 6,
                     "Evandra": 5,
-                    "Beadle": 3,
+                    "Beadle": [
+                        3,
+                        4
+                    ],
                     "Vin Ursa": 4,
                     "Hew Maan": 5,
                     "Selise": 5,
-                    "Wulfgar": 4,
+                    "Wulfgar": [
+                        4,
+                        5
+                    ],
                     "Havilar": 5,
                     "Nova": 5,
-                    "K'thriss": 5,
+                    "K'thriss": [
+                        5,
+                        6
+                    ],
                     "Lazaapz": 4,
-                    "Qillek": 5,
-                    "Avren": 5,
+                    "Qillek": [
+                        5,
+                        6
+                    ],
+                    "Avren": [
+                        5,
+                        6
+                    ],
                     "Penelope": 5,
                     "Tatyana": 5,
-                    "Freely": 5,
+                    "Freely": [
+                        5,
+                        6
+                    ],
                     "Merilwen": 6,
                     "Vlahnya": 6,
                     "Walnut": 4,
-                    "Xerophon": 4,
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
                     "Celeste": 5,
                     "Nayeli": 5,
                     "Voronika": 6,
-                    "Pwent": 3,
-                    "BBEG": 5
+                    "Pwent": [
+                        3,
+                        4
+                    ],
+                    "BBEG": [
+                        5,
+                        6
+                    ]
                 }
             },
             "retired": false,
@@ -43996,55 +45955,124 @@
                     "Increases the damage of all Champions by 30% for each Magic Champion in the formation."
                 ],
                 "dps": {
-                    "Prudence": 5,
+                    "Prudence": [
+                        5,
+                        6
+                    ],
                     "Grimm": 6,
-                    "Farideh": 4,
-                    "Jamilah": 5,
-                    "Warden": 4,
+                    "Farideh": [
+                        4,
+                        5
+                    ],
+                    "Jamilah": [
+                        5,
+                        6
+                    ],
+                    "Warden": [
+                        4,
+                        5
+                    ],
                     "Dhadius": 5,
-                    "Lae'zel": 3,
-                    "Strix": 4,
+                    "Lae'zel": [
+                        3,
+                        4
+                    ],
+                    "Strix": [
+                        4,
+                        5
+                    ],
                     "Krux": 6,
                     "Warduke": 6,
                     "Binwin": 6,
                     "Yorven": 5,
-                    "Birdsong": 4,
+                    "Birdsong": [
+                        4,
+                        5
+                    ],
                     "Drizzt": 5,
-                    "Catti-brie": 4,
+                    "Catti-brie": [
+                        4,
+                        5
+                    ],
                     "Artemis": 6,
-                    "Delina": 5,
-                    "Nahara": 4,
+                    "Delina": [
+                        5,
+                        6
+                    ],
+                    "Nahara": [
+                        4,
+                        5
+                    ],
                     "Nrakk": 6,
-                    "Black Viper": 4,
-                    "Gromma": 5,
-                    "Orisha": 4,
+                    "Black Viper": [
+                        4,
+                        5
+                    ],
+                    "Gromma": [
+                        5,
+                        6
+                    ],
+                    "Orisha": [
+                        4,
+                        5
+                    ],
                     "Lucius": 5,
                     "Kent": 5,
-                    "Rosie": 4,
+                    "Rosie": [
+                        4,
+                        5
+                    ],
                     "Krond": 4,
-                    "Ishi": 5,
+                    "Ishi": [
+                        5,
+                        6
+                    ],
                     "Minsc": 5,
-                    "Fen": 5,
-                    "Asharra": 4,
+                    "Fen": [
+                        5,
+                        6
+                    ],
+                    "Asharra": [
+                        4,
+                        5
+                    ],
                     "Jim": 5,
                     "Torogar": 5,
                     "Makos": 5,
-                    "Azaka": 5,
+                    "Azaka": [
+                        5,
+                        6
+                    ],
                     "Arkhan": 5,
-                    "Jaheira": 5,
+                    "Jaheira": [
+                        5,
+                        6
+                    ],
                     "Zorbu": 5,
                     "Jarlaxle": 5
                 },
                 "nondps": {
-                    "Calliope": 4,
+                    "Calliope": [
+                        4,
+                        5
+                    ],
                     "Astarion": 4,
                     "Briv": 6,
                     "Omin": 5,
-                    "Widdle": 4,
+                    "Widdle": [
+                        4,
+                        5
+                    ],
                     "Tyril": 6,
-                    "Viconia": 4,
+                    "Viconia": [
+                        4,
+                        5
+                    ],
                     "Dungeon Master": 6,
-                    "Môrgæn": 3,
+                    "Môrgæn": [
+                        3,
+                        4
+                    ],
                     "Egbert": 5,
                     "Uriah": 5,
                     "Brig": 5,
@@ -44052,64 +46080,157 @@
                     "Donaar": 5,
                     "Melf": 4,
                     "Krull": 6,
-                    "Nordom": 4,
-                    "Sentry": 5,
-                    "Ulkoria": 4,
+                    "Nordom": [
+                        4,
+                        5
+                    ],
+                    "Sentry": [
+                        5,
+                        6
+                    ],
+                    "Ulkoria": [
+                        4,
+                        5
+                    ],
                     "Spurt": 4,
                     "Antrius": 5,
-                    "Miria": 4,
+                    "Miria": [
+                        4,
+                        5
+                    ],
                     "Shaka": 6,
-                    "Barrowin": 4,
-                    "Evelyn": 5,
-                    "Aila": 4,
-                    "Imoen": 5,
+                    "Barrowin": [
+                        4,
+                        5
+                    ],
+                    "Evelyn": [
+                        5,
+                        6
+                    ],
+                    "Aila": [
+                        4,
+                        5
+                    ],
+                    "Imoen": [
+                        5,
+                        6
+                    ],
                     "Rust": 6,
-                    "Stoki": 5,
+                    "Stoki": [
+                        5,
+                        6
+                    ],
                     "Corazón": 5,
                     "Talin": 5,
                     "Solaak": 5,
                     "Paultin": 5,
                     "Regis": 5,
-                    "Nerys": 5,
-                    "Ellywick": 4,
+                    "Nerys": [
+                        5,
+                        6
+                    ],
+                    "Ellywick": [
+                        4,
+                        5
+                    ],
                     "Hitch": 5,
                     "Krydle": 6,
                     "Mehen": 6,
                     "Korth": 6,
-                    "Reya": 4,
+                    "Reya": [
+                        4,
+                        5
+                    ],
                     "Baeloth": 6,
                     "Desmond": 5,
                     "Dragonbait": 6,
                     "Strongheart": 5,
                     "Gazrick": 5,
-                    "Vi": 5,
+                    "Vi": [
+                        5,
+                        6
+                    ],
                     "Virgil": 5,
-                    "Valentine": 4,
+                    "Valentine": [
+                        4,
+                        5
+                    ],
                     "Xander": 5,
-                    "Blooshi": 5,
+                    "Blooshi": [
+                        5,
+                        6
+                    ],
                     "Sgt. Knox": 6,
-                    "Evandra": 5,
+                    "Evandra": [
+                        5,
+                        6
+                    ],
                     "Beadle": 4,
-                    "Vin Ursa": 3,
+                    "Vin Ursa": [
+                        3,
+                        4
+                    ],
                     "Hew Maan": 6,
-                    "Selise": 4,
+                    "Selise": [
+                        4,
+                        5
+                    ],
                     "Wulfgar": 5,
-                    "Havilar": 4,
-                    "Nova": 5,
-                    "Lazaapz": 4,
+                    "Havilar": [
+                        4,
+                        5
+                    ],
+                    "Nova": [
+                        5,
+                        6
+                    ],
+                    "Lazaapz": [
+                        4,
+                        5
+                    ],
                     "Qillek": 5,
                     "Avren": 6,
-                    "Alyndra": 4,
-                    "Penelope": 4,
-                    "Tatyana": 5,
+                    "Alyndra": [
+                        4,
+                        5
+                    ],
+                    "Penelope": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        5,
+                        6
+                    ],
                     "Freely": 5,
-                    "Merilwen": 5,
-                    "Vlahnya": 4,
-                    "Walnut": 3,
-                    "Xerophon": 4,
-                    "Celeste": 3,
-                    "Nayeli": 5,
-                    "Shandie": 5,
+                    "Merilwen": [
+                        5,
+                        6
+                    ],
+                    "Vlahnya": [
+                        4,
+                        5
+                    ],
+                    "Walnut": [
+                        3,
+                        4
+                    ],
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
+                    "Celeste": [
+                        3,
+                        4
+                    ],
+                    "Nayeli": [
+                        5,
+                        6
+                    ],
+                    "Shandie": [
+                        5,
+                        6
+                    ],
                     "Pwent": 5,
                     "BBEG": 5
                 }
@@ -44523,122 +46644,311 @@
                 ],
                 "dps": {
                     "Prudence": 5,
-                    "Grimm": 4,
+                    "Grimm": [
+                        4,
+                        5
+                    ],
                     "Farideh": 5,
                     "Jamilah": 5,
-                    "Warden": 4,
-                    "Dhadius": 4,
+                    "Warden": [
+                        4,
+                        5
+                    ],
+                    "Dhadius": [
+                        4,
+                        5
+                    ],
                     "D'hani": 4,
                     "Lae'zel": 4,
                     "Strix": 5,
-                    "Krux": 4,
-                    "Warduke": 4,
-                    "Binwin": 3,
-                    "Yorven": 4,
+                    "Krux": [
+                        4,
+                        5
+                    ],
+                    "Warduke": [
+                        4,
+                        5
+                    ],
+                    "Binwin": [
+                        3,
+                        4
+                    ],
+                    "Yorven": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 5,
-                    "Drizzt": 4,
+                    "Drizzt": [
+                        4,
+                        5
+                    ],
                     "Catti-brie": 5,
-                    "Artemis": 4,
+                    "Artemis": [
+                        4,
+                        5
+                    ],
                     "Delina": 5,
                     "Nahara": 5,
-                    "Nrakk": 4,
+                    "Nrakk": [
+                        4,
+                        5
+                    ],
                     "Black Viper": 5,
                     "Gromma": 4,
                     "Orisha": 5,
-                    "NERDS": 4,
-                    "Lucius": 4,
-                    "Kent": 4,
+                    "NERDS": [
+                        4,
+                        5
+                    ],
+                    "Lucius": [
+                        4,
+                        5
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Nixie": 5,
                     "Rosie": 5,
-                    "Krond": 4,
+                    "Krond": [
+                        4,
+                        5
+                    ],
                     "Ishi": 5,
-                    "Minsc": 3,
+                    "Minsc": [
+                        3,
+                        4
+                    ],
                     "Fen": 5,
                     "Asharra": 5,
-                    "Jim": 4,
-                    "Torogar": 4,
-                    "Makos": 3,
+                    "Jim": [
+                        4,
+                        5
+                    ],
+                    "Torogar": [
+                        4,
+                        5
+                    ],
+                    "Makos": [
+                        3,
+                        4
+                    ],
                     "Jaheira": 5,
-                    "Jarlaxle": 4
+                    "Jarlaxle": [
+                        4,
+                        5
+                    ]
                 },
                 "nondps": {
                     "Calliope": 5,
-                    "Astarion": 3,
-                    "Briv": 5,
-                    "Omin": 3,
+                    "Astarion": [
+                        3,
+                        4
+                    ],
+                    "Briv": [
+                        5,
+                        6
+                    ],
+                    "Omin": [
+                        3,
+                        4
+                    ],
                     "Widdle": 5,
-                    "Tyril": 4,
+                    "Tyril": [
+                        4,
+                        5
+                    ],
                     "Viconia": 5,
-                    "Dungeon Master": 4,
+                    "Dungeon Master": [
+                        4,
+                        5
+                    ],
                     "Môrgæn": 4,
-                    "Egbert": 4,
-                    "Uriah": 3,
-                    "Brig": 4,
-                    "Donaar": 3,
-                    "Krull": 4,
-                    "Nordom": 3,
+                    "Egbert": [
+                        4,
+                        5
+                    ],
+                    "Uriah": [
+                        3,
+                        4
+                    ],
+                    "Brig": [
+                        4,
+                        5
+                    ],
+                    "Donaar": [
+                        3,
+                        4
+                    ],
+                    "Krull": [
+                        4,
+                        5
+                    ],
+                    "Nordom": [
+                        3,
+                        4
+                    ],
                     "Sentry": 4,
                     "Ulkoria": 5,
-                    "Spurt": 3,
-                    "Antrius": 4,
-                    "Shaka": 4,
+                    "Spurt": [
+                        3,
+                        4
+                    ],
+                    "Antrius": [
+                        4,
+                        5
+                    ],
+                    "Shaka": [
+                        4,
+                        5
+                    ],
                     "Barrowin": 4,
                     "Evelyn": 5,
                     "Aila": 4,
                     "Imoen": 5,
-                    "Rust": 4,
-                    "Deekin": 4,
+                    "Rust": [
+                        4,
+                        5
+                    ],
+                    "Deekin": [
+                        4,
+                        5
+                    ],
                     "Stoki": 5,
-                    "Corazón": 4,
-                    "Talin": 4,
-                    "Solaak": 4,
-                    "Paultin": 4,
-                    "Regis": 4,
+                    "Corazón": [
+                        4,
+                        5
+                    ],
+                    "Talin": [
+                        4,
+                        5
+                    ],
+                    "Solaak": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        4,
+                        5
+                    ],
+                    "Regis": [
+                        4,
+                        5
+                    ],
                     "Ellywick": 5,
-                    "Hitch": 4,
-                    "Krydle": 4,
-                    "Mehen": 3,
-                    "Korth": 4,
+                    "Hitch": [
+                        4,
+                        5
+                    ],
+                    "Krydle": [
+                        4,
+                        5
+                    ],
+                    "Mehen": [
+                        3,
+                        4
+                    ],
+                    "Korth": [
+                        4,
+                        5
+                    ],
                     "Reya": 5,
-                    "Baeloth": 4,
-                    "Desmond": 4,
-                    "Turiel": 4,
+                    "Baeloth": [
+                        4,
+                        5
+                    ],
+                    "Desmond": [
+                        4,
+                        5
+                    ],
+                    "Turiel": [
+                        4,
+                        5
+                    ],
                     "Sisaspia": 5,
-                    "Dragonbait": 4,
-                    "Strongheart": 4,
+                    "Dragonbait": [
+                        4,
+                        5
+                    ],
+                    "Strongheart": [
+                        4,
+                        5
+                    ],
                     "Ezmerelda": 5,
-                    "Gazrick": 3,
-                    "Bruenor": 3,
-                    "Virgil": 4,
+                    "Gazrick": [
+                        3,
+                        4
+                    ],
+                    "Bruenor": [
+                        3,
+                        4
+                    ],
+                    "Virgil": [
+                        4,
+                        5
+                    ],
                     "Orkira": 5,
                     "Valentine": 5,
-                    "Xander": 4,
+                    "Xander": [
+                        4,
+                        5
+                    ],
                     "Blooshi": 5,
-                    "Sgt. Knox": 4,
+                    "Sgt. Knox": [
+                        4,
+                        5
+                    ],
                     "Evandra": 5,
-                    "Beadle": 3,
+                    "Beadle": [
+                        3,
+                        4
+                    ],
                     "Vin Ursa": 4,
                     "Hew Maan": 5,
-                    "Wulfgar": 4,
+                    "Wulfgar": [
+                        4,
+                        5
+                    ],
                     "Havilar": 5,
                     "Nova": 5,
-                    "K'thriss": 4,
+                    "K'thriss": [
+                        4,
+                        5
+                    ],
                     "Lazaapz": 4,
-                    "Qillek": 4,
-                    "Avren": 4,
+                    "Qillek": [
+                        4,
+                        5
+                    ],
+                    "Avren": [
+                        4,
+                        5
+                    ],
                     "Alyndra": 5,
                     "Tatyana": 5,
-                    "Freely": 4,
+                    "Freely": [
+                        4,
+                        5
+                    ],
                     "Merilwen": 5,
                     "Vlahnya": 5,
                     "Walnut": 4,
-                    "Xerophon": 4,
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
                     "Celeste": 3,
                     "Nayeli": 5,
                     "Voronika": 5,
                     "Shandie": 5,
-                    "Pwent": 3,
-                    "BBEG": 4
+                    "Pwent": [
+                        3,
+                        4
+                    ],
+                    "BBEG": [
+                        4,
+                        5
+                    ]
                 }
             },
             "retired": false,
@@ -45107,120 +47417,288 @@
                     "Increases the damage of all Magic Champions by 150%."
                 ],
                 "dps": {
-                    "Prudence": 5,
+                    "Prudence": [
+                        5,
+                        6
+                    ],
                     "Grimm": 5,
-                    "Farideh": 5,
-                    "Jamilah": 4,
-                    "Warden": 4,
+                    "Farideh": [
+                        5,
+                        6
+                    ],
+                    "Jamilah": [
+                        4,
+                        5
+                    ],
+                    "Warden": [
+                        4,
+                        5
+                    ],
                     "Dhadius": 6,
-                    "D'hani": 4,
-                    "Strix": 5,
+                    "D'hani": [
+                        4,
+                        5
+                    ],
+                    "Strix": [
+                        5,
+                        6
+                    ],
                     "Krux": 5,
                     "Warduke": 5,
                     "Binwin": 5,
                     "Yorven": 5,
-                    "Birdsong": 4,
+                    "Birdsong": [
+                        4,
+                        5
+                    ],
                     "Drizzt": 5,
-                    "Catti-brie": 4,
+                    "Catti-brie": [
+                        4,
+                        5
+                    ],
                     "Artemis": 5,
-                    "Delina": 5,
-                    "Nahara": 5,
+                    "Delina": [
+                        5,
+                        6
+                    ],
+                    "Nahara": [
+                        5,
+                        6
+                    ],
                     "Nrakk": 5,
-                    "Black Viper": 4,
-                    "Gromma": 4,
-                    "Orisha": 5,
-                    "NERDS": 4,
+                    "Black Viper": [
+                        4,
+                        5
+                    ],
+                    "Gromma": [
+                        4,
+                        5
+                    ],
+                    "Orisha": [
+                        5,
+                        6
+                    ],
+                    "NERDS": [
+                        4,
+                        5
+                    ],
                     "Lucius": 6,
                     "Kent": 5,
-                    "Nixie": 5,
-                    "Rosie": 4,
+                    "Nixie": [
+                        5,
+                        6
+                    ],
+                    "Rosie": [
+                        4,
+                        5
+                    ],
                     "Krond": 5,
-                    "Ishi": 4,
+                    "Ishi": [
+                        4,
+                        5
+                    ],
                     "Minsc": 5,
-                    "Fen": 4,
-                    "Asharra": 5,
+                    "Fen": [
+                        4,
+                        5
+                    ],
+                    "Asharra": [
+                        5,
+                        6
+                    ],
                     "Jim": 6,
                     "Torogar": 5,
                     "Makos": 6,
-                    "Azaka": 4,
+                    "Azaka": [
+                        4,
+                        5
+                    ],
                     "Arkhan": 5,
-                    "Jaheira": 4,
+                    "Jaheira": [
+                        4,
+                        5
+                    ],
                     "Zorbu": 5,
                     "Jarlaxle": 5
                 },
                 "nondps": {
-                    "Calliope": 5,
+                    "Calliope": [
+                        5,
+                        6
+                    ],
                     "Astarion": 5,
                     "Briv": 5,
                     "Omin": 5,
                     "Tyril": 5,
-                    "Viconia": 4,
+                    "Viconia": [
+                        4,
+                        5
+                    ],
                     "Dungeon Master": 6,
-                    "Môrgæn": 4,
+                    "Môrgæn": [
+                        4,
+                        5
+                    ],
                     "Egbert": 5,
                     "Uriah": 6,
                     "Brig": 5,
                     "Dob": 6,
                     "Melf": 5,
                     "Krull": 5,
-                    "Nordom": 4,
-                    "Sentry": 4,
-                    "Ulkoria": 5,
+                    "Nordom": [
+                        4,
+                        5
+                    ],
+                    "Sentry": [
+                        4,
+                        5
+                    ],
+                    "Ulkoria": [
+                        5,
+                        6
+                    ],
                     "Spurt": 5,
                     "Antrius": 6,
-                    "Miria": 5,
+                    "Miria": [
+                        5,
+                        6
+                    ],
                     "Shaka": 6,
-                    "Barrowin": 4,
-                    "Evelyn": 4,
-                    "Aila": 4,
-                    "Imoen": 4,
+                    "Barrowin": [
+                        4,
+                        5
+                    ],
+                    "Evelyn": [
+                        4,
+                        5
+                    ],
+                    "Aila": [
+                        4,
+                        5
+                    ],
+                    "Imoen": [
+                        4,
+                        5
+                    ],
                     "Rust": 5,
                     "Deekin": 5,
-                    "Stoki": 4,
+                    "Stoki": [
+                        4,
+                        5
+                    ],
                     "Corazón": 5,
                     "Paultin": 5,
-                    "Nerys": 4,
-                    "Ellywick": 5,
+                    "Nerys": [
+                        4,
+                        5
+                    ],
+                    "Ellywick": [
+                        5,
+                        6
+                    ],
                     "Hitch": 5,
                     "Mehen": 5,
-                    "Reya": 4,
+                    "Reya": [
+                        4,
+                        5
+                    ],
                     "Baeloth": 6,
                     "Desmond": 5,
                     "Turiel": 6,
-                    "Sisaspia": 5,
+                    "Sisaspia": [
+                        5,
+                        6
+                    ],
                     "Dragonbait": 5,
                     "Strongheart": 5,
-                    "Ezmerelda": 5,
+                    "Ezmerelda": [
+                        5,
+                        6
+                    ],
                     "Gazrick": 6,
-                    "Vi": 4,
+                    "Vi": [
+                        4,
+                        5
+                    ],
                     "Bruenor": 5,
                     "Virgil": 6,
-                    "Orkira": 5,
-                    "Valentine": 5,
+                    "Orkira": [
+                        5,
+                        6
+                    ],
+                    "Valentine": [
+                        5,
+                        6
+                    ],
                     "Xander": 5,
                     "Sgt. Knox": 5,
-                    "Evandra": 4,
+                    "Evandra": [
+                        4,
+                        5
+                    ],
                     "Beadle": 5,
-                    "Vin Ursa": 4,
+                    "Vin Ursa": [
+                        4,
+                        5
+                    ],
                     "Hew Maan": 5,
-                    "Selise": 4,
+                    "Selise": [
+                        4,
+                        5
+                    ],
                     "Wulfgar": 5,
-                    "Havilar": 4,
-                    "Nova": 4,
+                    "Havilar": [
+                        4,
+                        5
+                    ],
+                    "Nova": [
+                        4,
+                        5
+                    ],
                     "K'thriss": 6,
-                    "Lazaapz": 4,
+                    "Lazaapz": [
+                        4,
+                        5
+                    ],
                     "Qillek": 6,
                     "Avren": 6,
-                    "Alyndra": 5,
-                    "Penelope": 4,
-                    "Tatyana": 4,
+                    "Alyndra": [
+                        5,
+                        6
+                    ],
+                    "Penelope": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        4,
+                        5
+                    ],
                     "Freely": 6,
-                    "Vlahnya": 5,
-                    "Walnut": 4,
-                    "Xerophon": 4,
-                    "Nayeli": 4,
-                    "Voronika": 5,
-                    "Shandie": 4,
+                    "Vlahnya": [
+                        5,
+                        6
+                    ],
+                    "Walnut": [
+                        4,
+                        5
+                    ],
+                    "Xerophon": [
+                        4,
+                        5
+                    ],
+                    "Nayeli": [
+                        4,
+                        5
+                    ],
+                    "Voronika": [
+                        5,
+                        6
+                    ],
+                    "Shandie": [
+                        4,
+                        5
+                    ],
                     "Pwent": 5,
                     "BBEG": 6
                 }
@@ -46760,121 +49238,304 @@
                 ],
                 "dps": {
                     "Prudence": 4,
-                    "Grimm": 4,
+                    "Grimm": [
+                        4,
+                        5
+                    ],
                     "Farideh": 5,
                     "Jamilah": 4,
-                    "Warden": 3,
-                    "Dhadius": 2,
+                    "Warden": [
+                        3,
+                        4
+                    ],
+                    "Dhadius": [
+                        2,
+                        3
+                    ],
                     "D'hani": 5,
                     "Lae'zel": 4,
                     "Strix": 5,
-                    "Krux": 4,
-                    "Warduke": 3,
-                    "Binwin": 4,
+                    "Krux": [
+                        4,
+                        5
+                    ],
+                    "Warduke": [
+                        3,
+                        4
+                    ],
+                    "Binwin": [
+                        4,
+                        5
+                    ],
                     "Birdsong": 4,
-                    "Drizzt": 4,
+                    "Drizzt": [
+                        4,
+                        5
+                    ],
                     "Catti-brie": 5,
-                    "Artemis": 3,
+                    "Artemis": [
+                        3,
+                        4
+                    ],
                     "Delina": 5,
                     "Nahara": 5,
-                    "Nrakk": 3,
+                    "Nrakk": [
+                        3,
+                        4
+                    ],
                     "Black Viper": 4,
                     "Gromma": 4,
                     "Orisha": 5,
-                    "NERDS": 3,
-                    "Lucius": 3,
-                    "Kent": 4,
+                    "NERDS": [
+                        3,
+                        4
+                    ],
+                    "Lucius": [
+                        3,
+                        4
+                    ],
+                    "Kent": [
+                        4,
+                        5
+                    ],
                     "Nixie": 4,
-                    "Krond": 3,
+                    "Krond": [
+                        3,
+                        4
+                    ],
                     "Ishi": 5,
-                    "Minsc": 4,
+                    "Minsc": [
+                        4,
+                        5
+                    ],
                     "Fen": 4,
                     "Asharra": 3,
-                    "Jim": 2,
-                    "Makos": 3,
+                    "Jim": [
+                        2,
+                        3
+                    ],
+                    "Makos": [
+                        3,
+                        4
+                    ],
                     "Azaka": 4,
-                    "Arkhan": 3,
+                    "Arkhan": [
+                        3,
+                        4
+                    ],
                     "Jaheira": 4,
-                    "Zorbu": 4,
-                    "Jarlaxle": 3
+                    "Zorbu": [
+                        4,
+                        5
+                    ],
+                    "Jarlaxle": [
+                        3,
+                        4
+                    ]
                 },
                 "nondps": {
                     "Calliope": 5,
-                    "Briv": 4,
-                    "Omin": 3,
+                    "Briv": [
+                        4,
+                        5
+                    ],
+                    "Omin": [
+                        3,
+                        4
+                    ],
                     "Widdle": 4,
                     "Viconia": 3,
-                    "Dungeon Master": 4,
+                    "Dungeon Master": [
+                        4,
+                        5
+                    ],
                     "Môrgæn": 4,
-                    "Egbert": 4,
-                    "Uriah": 4,
-                    "Brig": 4,
-                    "Dob": 4,
-                    "Donaar": 4,
-                    "Melf": 4,
-                    "Krull": 3,
-                    "Nordom": 3,
+                    "Egbert": [
+                        4,
+                        5
+                    ],
+                    "Uriah": [
+                        4,
+                        5
+                    ],
+                    "Brig": [
+                        4,
+                        5
+                    ],
+                    "Dob": [
+                        4,
+                        5
+                    ],
+                    "Donaar": [
+                        4,
+                        5
+                    ],
+                    "Melf": [
+                        4,
+                        5
+                    ],
+                    "Krull": [
+                        3,
+                        4
+                    ],
+                    "Nordom": [
+                        3,
+                        4
+                    ],
                     "Sentry": 5,
-                    "Spurt": 3,
-                    "Antrius": 4,
+                    "Spurt": [
+                        3,
+                        4
+                    ],
+                    "Antrius": [
+                        4,
+                        5
+                    ],
                     "Miria": 4,
-                    "Shaka": 4,
+                    "Shaka": [
+                        4,
+                        5
+                    ],
                     "Evelyn": 5,
                     "Aila": 4,
                     "Imoen": 5,
-                    "Rust": 3,
-                    "Deekin": 3,
+                    "Rust": [
+                        3,
+                        4
+                    ],
+                    "Deekin": [
+                        3,
+                        4
+                    ],
                     "Stoki": 4,
-                    "Corazón": 3,
-                    "Talin": 4,
-                    "Solaak": 4,
-                    "Paultin": 3,
-                    "Regis": 3,
+                    "Corazón": [
+                        3,
+                        4
+                    ],
+                    "Talin": [
+                        4,
+                        5
+                    ],
+                    "Solaak": [
+                        4,
+                        5
+                    ],
+                    "Paultin": [
+                        3,
+                        4
+                    ],
+                    "Regis": [
+                        3,
+                        4
+                    ],
                     "Nerys": 5,
-                    "Hitch": 4,
-                    "Krydle": 4,
-                    "Mehen": 4,
-                    "Korth": 3,
+                    "Hitch": [
+                        4,
+                        5
+                    ],
+                    "Krydle": [
+                        4,
+                        5
+                    ],
+                    "Mehen": [
+                        4,
+                        5
+                    ],
+                    "Korth": [
+                        3,
+                        4
+                    ],
                     "Reya": 5,
-                    "Baeloth": 3,
-                    "Desmond": 4,
-                    "Turiel": 5,
+                    "Baeloth": [
+                        3,
+                        4
+                    ],
+                    "Desmond": [
+                        4,
+                        5
+                    ],
+                    "Turiel": [
+                        5,
+                        6
+                    ],
                     "Sisaspia": 4,
-                    "Dragonbait": 4,
-                    "Strongheart": 4,
+                    "Dragonbait": [
+                        4,
+                        5
+                    ],
+                    "Strongheart": [
+                        4,
+                        5
+                    ],
                     "Ezmerelda": 5,
-                    "Gazrick": 4,
+                    "Gazrick": [
+                        4,
+                        5
+                    ],
                     "Vi": 5,
-                    "Bruenor": 4,
+                    "Bruenor": [
+                        4,
+                        5
+                    ],
                     "Orkira": 5,
                     "Valentine": 4,
-                    "Xander": 3,
+                    "Xander": [
+                        3,
+                        4
+                    ],
                     "Blooshi": 4,
-                    "Sgt. Knox": 4,
+                    "Sgt. Knox": [
+                        4,
+                        5
+                    ],
                     "Evandra": 4,
-                    "Beadle": 3,
+                    "Beadle": [
+                        3,
+                        4
+                    ],
                     "Vin Ursa": 4,
                     "Hew Maan": 4,
                     "Selise": 4,
                     "Nova": 5,
-                    "K'thriss": 2,
+                    "K'thriss": [
+                        2,
+                        3
+                    ],
                     "Lazaapz": 4,
-                    "Qillek": 4,
-                    "Avren": 3,
+                    "Qillek": [
+                        4,
+                        5
+                    ],
+                    "Avren": [
+                        3,
+                        4
+                    ],
                     "Alyndra": 4,
                     "Penelope": 5,
                     "Tatyana": 4,
-                    "Freely": 3,
+                    "Freely": [
+                        3,
+                        4
+                    ],
                     "Merilwen": 4,
                     "Vlahnya": 4,
                     "Walnut": 4,
-                    "Xerophon": 3,
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
                     "Celeste": 5,
                     "Nayeli": 5,
                     "Voronika": 4,
                     "Shandie": 5,
-                    "Pwent": 4,
-                    "BBEG": 2
+                    "Pwent": [
+                        4,
+                        5
+                    ],
+                    "BBEG": [
+                        2,
+                        3
+                    ]
                 }
             },
             "retired": false,
@@ -47782,54 +50443,120 @@
                     "Increases the damage of all Good Champions by 150%."
                 ],
                 "dps": {
-                    "Prudence": 3,
+                    "Prudence": [
+                        3,
+                        4
+                    ],
                     "Grimm": 6,
-                    "Farideh": 4,
+                    "Farideh": [
+                        4,
+                        5
+                    ],
                     "Dhadius": 4,
-                    "D'hani": 3,
-                    "Lae'zel": 2,
+                    "D'hani": [
+                        3,
+                        4
+                    ],
+                    "Lae'zel": [
+                        2,
+                        3
+                    ],
                     "Krux": 5,
                     "Warduke": 5,
                     "Binwin": 5,
                     "Yorven": 4,
-                    "Birdsong": 2,
+                    "Birdsong": [
+                        2,
+                        3
+                    ],
                     "Drizzt": 5,
-                    "Catti-brie": 5,
+                    "Catti-brie": [
+                        5,
+                        6
+                    ],
                     "Artemis": 5,
-                    "Delina": 4,
-                    "Nahara": 2,
+                    "Delina": [
+                        4,
+                        5
+                    ],
+                    "Nahara": [
+                        2,
+                        3
+                    ],
                     "Nrakk": 4,
-                    "Black Viper": 4,
-                    "Gromma": 3,
-                    "NERDS": 3,
+                    "Black Viper": [
+                        4,
+                        5
+                    ],
+                    "Gromma": [
+                        3,
+                        4
+                    ],
+                    "NERDS": [
+                        3,
+                        4
+                    ],
                     "Lucius": 4,
                     "Kent": 5,
-                    "Nixie": 3,
-                    "Rosie": 3,
+                    "Nixie": [
+                        3,
+                        4
+                    ],
+                    "Rosie": [
+                        3,
+                        4
+                    ],
                     "Krond": 3,
-                    "Ishi": 4,
+                    "Ishi": [
+                        4,
+                        5
+                    ],
                     "Minsc": 5,
-                    "Fen": 3,
-                    "Asharra": 2,
+                    "Fen": [
+                        3,
+                        4
+                    ],
+                    "Asharra": [
+                        2,
+                        3
+                    ],
                     "Jim": 4,
                     "Torogar": 4,
                     "Makos": 4,
-                    "Azaka": 4,
+                    "Azaka": [
+                        4,
+                        5
+                    ],
                     "Arkhan": 4,
-                    "Jaheira": 3,
+                    "Jaheira": [
+                        3,
+                        4
+                    ],
                     "Zorbu": 5,
                     "Jarlaxle": 4
                 },
                 "nondps": {
-                    "Calliope": 4,
+                    "Calliope": [
+                        4,
+                        5
+                    ],
                     "Astarion": 3,
                     "Briv": 5,
                     "Omin": 4,
-                    "Widdle": 3,
+                    "Widdle": [
+                        3,
+                        4
+                    ],
                     "Tyril": 5,
-                    "Viconia": 2,
+                    "Viconia": [
+                        2,
+                        3
+                    ],
                     "Dungeon Master": 6,
-                    "Môrgæn": 1,
+                    "Môrgæn": [
+                        1,
+                        2
+                    ],
                     "Egbert": 5,
                     "Uriah": 5,
                     "Brig": 5,
@@ -47837,66 +50564,165 @@
                     "Donaar": 5,
                     "Melf": 4,
                     "Krull": 4,
-                    "Nordom": 2,
-                    "Sentry": 4,
-                    "Ulkoria": 3,
+                    "Nordom": [
+                        2,
+                        3
+                    ],
+                    "Sentry": [
+                        4,
+                        5
+                    ],
+                    "Ulkoria": [
+                        3,
+                        4
+                    ],
                     "Spurt": 2,
                     "Antrius": 6,
-                    "Miria": 3,
+                    "Miria": [
+                        3,
+                        4
+                    ],
                     "Shaka": 5,
-                    "Barrowin": 3,
-                    "Evelyn": 5,
-                    "Aila": 2,
+                    "Barrowin": [
+                        3,
+                        4
+                    ],
+                    "Evelyn": [
+                        5,
+                        6
+                    ],
+                    "Aila": [
+                        2,
+                        3
+                    ],
                     "Deekin": 4,
-                    "Stoki": 3,
+                    "Stoki": [
+                        3,
+                        4
+                    ],
                     "Corazón": 4,
                     "Talin": 4,
                     "Solaak": 5,
                     "Paultin": 5,
                     "Regis": 4,
-                    "Nerys": 5,
-                    "Ellywick": 3,
+                    "Nerys": [
+                        5,
+                        6
+                    ],
+                    "Ellywick": [
+                        3,
+                        4
+                    ],
                     "Hitch": 5,
                     "Krydle": 5,
                     "Mehen": 5,
                     "Korth": 4,
-                    "Reya": 5,
+                    "Reya": [
+                        5,
+                        6
+                    ],
                     "Baeloth": 4,
                     "Desmond": 5,
                     "Turiel": 5,
-                    "Sisaspia": 3,
-                    "Ezmerelda": 5,
+                    "Sisaspia": [
+                        3,
+                        4
+                    ],
+                    "Ezmerelda": [
+                        5,
+                        6
+                    ],
                     "Gazrick": 5,
-                    "Vi": 4,
+                    "Vi": [
+                        4,
+                        5
+                    ],
                     "Bruenor": 5,
                     "Virgil": 5,
-                    "Orkira": 4,
-                    "Valentine": 3,
+                    "Orkira": [
+                        4,
+                        5
+                    ],
+                    "Valentine": [
+                        3,
+                        4
+                    ],
                     "Xander": 5,
-                    "Blooshi": 3,
+                    "Blooshi": [
+                        3,
+                        4
+                    ],
                     "Sgt. Knox": 6,
-                    "Evandra": 3,
+                    "Evandra": [
+                        3,
+                        4
+                    ],
                     "Beadle": 2,
-                    "Vin Ursa": 1,
+                    "Vin Ursa": [
+                        1,
+                        2
+                    ],
                     "Hew Maan": 5,
-                    "Selise": 3,
+                    "Selise": [
+                        3,
+                        4
+                    ],
                     "Wulfgar": 6,
-                    "Havilar": 4,
+                    "Havilar": [
+                        4,
+                        5
+                    ],
                     "K'thriss": 3,
-                    "Lazaapz": 2,
+                    "Lazaapz": [
+                        2,
+                        3
+                    ],
                     "Qillek": 4,
-                    "Alyndra": 3,
-                    "Penelope": 4,
-                    "Tatyana": 3,
+                    "Alyndra": [
+                        3,
+                        4
+                    ],
+                    "Penelope": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        3,
+                        4
+                    ],
                     "Freely": 4,
-                    "Merilwen": 3,
-                    "Vlahnya": 3,
-                    "Walnut": 2,
-                    "Xerophon": 3,
-                    "Celeste": 4,
-                    "Nayeli": 5,
-                    "Voronika": 3,
-                    "Shandie": 4,
+                    "Merilwen": [
+                        3,
+                        4
+                    ],
+                    "Vlahnya": [
+                        3,
+                        4
+                    ],
+                    "Walnut": [
+                        2,
+                        3
+                    ],
+                    "Xerophon": [
+                        3,
+                        4
+                    ],
+                    "Celeste": [
+                        4,
+                        5
+                    ],
+                    "Nayeli": [
+                        5,
+                        6
+                    ],
+                    "Voronika": [
+                        3,
+                        4
+                    ],
+                    "Shandie": [
+                        4,
+                        5
+                    ],
                     "Pwent": 4,
                     "BBEG": 3
                 }
@@ -51772,52 +54598,121 @@
                 ],
                 "dps": {
                     "Grimm": 5,
-                    "Farideh": 5,
-                    "Jamilah": 5,
-                    "Warden": 4,
-                    "D'hani": 4,
-                    "Lae'zel": 4,
-                    "Strix": 4,
+                    "Farideh": [
+                        5,
+                        6
+                    ],
+                    "Jamilah": [
+                        5,
+                        6
+                    ],
+                    "Warden": [
+                        4,
+                        5
+                    ],
+                    "D'hani": [
+                        4,
+                        5
+                    ],
+                    "Lae'zel": [
+                        4,
+                        5
+                    ],
+                    "Strix": [
+                        4,
+                        5
+                    ],
                     "Krux": 5,
                     "Warduke": 5,
                     "Binwin": 5,
                     "Yorven": 6,
-                    "Birdsong": 5,
+                    "Birdsong": [
+                        5,
+                        6
+                    ],
                     "Drizzt": 5,
-                    "Catti-brie": 4,
+                    "Catti-brie": [
+                        4,
+                        5
+                    ],
                     "Artemis": 5,
-                    "Delina": 4,
-                    "Nahara": 5,
+                    "Delina": [
+                        4,
+                        5
+                    ],
+                    "Nahara": [
+                        5,
+                        6
+                    ],
                     "Nrakk": 6,
-                    "Black Viper": 5,
-                    "Gromma": 5,
-                    "Orisha": 4,
-                    "NERDS": 5,
+                    "Black Viper": [
+                        5,
+                        6
+                    ],
+                    "Gromma": [
+                        5,
+                        6
+                    ],
+                    "Orisha": [
+                        4,
+                        5
+                    ],
+                    "NERDS": [
+                        5,
+                        6
+                    ],
                     "Lucius": 6,
                     "Kent": 6,
-                    "Nixie": 5,
-                    "Rosie": 4,
+                    "Nixie": [
+                        5,
+                        6
+                    ],
+                    "Rosie": [
+                        4,
+                        5
+                    ],
                     "Krond": 5,
-                    "Ishi": 4,
+                    "Ishi": [
+                        4,
+                        5
+                    ],
                     "Minsc": 5,
-                    "Fen": 4,
-                    "Asharra": 4,
+                    "Fen": [
+                        4,
+                        5
+                    ],
+                    "Asharra": [
+                        4,
+                        5
+                    ],
                     "Jim": 5,
                     "Torogar": 5,
                     "Makos": 6,
-                    "Azaka": 5,
+                    "Azaka": [
+                        5,
+                        6
+                    ],
                     "Arkhan": 6,
-                    "Jaheira": 5,
+                    "Jaheira": [
+                        5,
+                        6
+                    ],
                     "Zorbu": 5,
                     "Jarlaxle": 6
                 },
                 "nondps": {
                     "Astarion": 6,
                     "Omin": 6,
-                    "Widdle": 5,
+                    "Widdle": [
+                        5,
+                        6
+                    ],
                     "Tyril": 6,
                     "Dungeon Master": 5,
-                    "Môrgæn": 5,
+                    "Môrgæn": [
+                        5,
+                        6
+                    ],
                     "Egbert": 5,
                     "Uriah": 5,
                     "Brig": 5,
@@ -51825,68 +54720,167 @@
                     "Donaar": 5,
                     "Melf": 6,
                     "Krull": 5,
-                    "Nordom": 5,
-                    "Sentry": 4,
-                    "Ulkoria": 5,
+                    "Nordom": [
+                        5,
+                        6
+                    ],
+                    "Sentry": [
+                        4,
+                        5
+                    ],
+                    "Ulkoria": [
+                        5,
+                        6
+                    ],
                     "Spurt": 5,
                     "Antrius": 5,
-                    "Miria": 4,
+                    "Miria": [
+                        4,
+                        5
+                    ],
                     "Shaka": 6,
-                    "Barrowin": 4,
-                    "Evelyn": 5,
-                    "Aila": 5,
-                    "Imoen": 5,
+                    "Barrowin": [
+                        4,
+                        5
+                    ],
+                    "Evelyn": [
+                        5,
+                        6
+                    ],
+                    "Aila": [
+                        5,
+                        6
+                    ],
+                    "Imoen": [
+                        5,
+                        6
+                    ],
                     "Rust": 6,
                     "Deekin": 6,
-                    "Stoki": 5,
+                    "Stoki": [
+                        5,
+                        6
+                    ],
                     "Corazón": 6,
                     "Talin": 5,
                     "Solaak": 6,
                     "Paultin": 6,
                     "Regis": 6,
-                    "Nerys": 4,
-                    "Ellywick": 5,
+                    "Nerys": [
+                        4,
+                        5
+                    ],
+                    "Ellywick": [
+                        5,
+                        6
+                    ],
                     "Hitch": 5,
                     "Krydle": 5,
                     "Mehen": 6,
                     "Korth": 6,
-                    "Reya": 4,
+                    "Reya": [
+                        4,
+                        5
+                    ],
                     "Baeloth": 5,
                     "Desmond": 5,
                     "Turiel": 5,
-                    "Sisaspia": 5,
+                    "Sisaspia": [
+                        5,
+                        6
+                    ],
                     "Dragonbait": 5,
                     "Strongheart": 5,
-                    "Ezmerelda": 4,
+                    "Ezmerelda": [
+                        4,
+                        5
+                    ],
                     "Gazrick": 6,
-                    "Vi": 5,
+                    "Vi": [
+                        5,
+                        6
+                    ],
                     "Bruenor": 6,
                     "Virgil": 6,
-                    "Orkira": 4,
-                    "Blooshi": 5,
+                    "Orkira": [
+                        4,
+                        5
+                    ],
+                    "Blooshi": [
+                        5,
+                        6
+                    ],
                     "Sgt. Knox": 6,
                     "Beadle": 6,
-                    "Vin Ursa": 4,
+                    "Vin Ursa": [
+                        4,
+                        5
+                    ],
                     "Hew Maan": 5,
-                    "Selise": 5,
+                    "Selise": [
+                        5,
+                        6
+                    ],
                     "Wulfgar": 5,
-                    "Havilar": 4,
-                    "Nova": 4,
+                    "Havilar": [
+                        4,
+                        5
+                    ],
+                    "Nova": [
+                        4,
+                        5
+                    ],
                     "K'thriss": 5,
-                    "Lazaapz": 5,
+                    "Lazaapz": [
+                        5,
+                        6
+                    ],
                     "Avren": 6,
-                    "Alyndra": 5,
-                    "Penelope": 4,
-                    "Tatyana": 5,
+                    "Alyndra": [
+                        5,
+                        6
+                    ],
+                    "Penelope": [
+                        4,
+                        5
+                    ],
+                    "Tatyana": [
+                        5,
+                        6
+                    ],
                     "Freely": 5,
-                    "Merilwen": 5,
-                    "Vlahnya": 4,
-                    "Walnut": 5,
-                    "Xerophon": 5,
-                    "Celeste": 4,
-                    "Nayeli": 4,
-                    "Voronika": 4,
-                    "Shandie": 4,
+                    "Merilwen": [
+                        5,
+                        6
+                    ],
+                    "Vlahnya": [
+                        4,
+                        5
+                    ],
+                    "Walnut": [
+                        5,
+                        6
+                    ],
+                    "Xerophon": [
+                        5,
+                        6
+                    ],
+                    "Celeste": [
+                        4,
+                        5
+                    ],
+                    "Nayeli": [
+                        4,
+                        5
+                    ],
+                    "Voronika": [
+                        4,
+                        5
+                    ],
+                    "Shandie": [
+                        4,
+                        5
+                    ],
                     "BBEG": 4
                 }
             },
@@ -55571,5 +58565,5 @@
             "age": "Unknown"
         }
     ],
-    "version": 6
+    "version": 7
 }
