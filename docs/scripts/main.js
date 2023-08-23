@@ -196,80 +196,31 @@ function addAttackData(champ,attack) {
 	if (attack.tags.includes("ultimate")) {
 		type = "Ultimate";
 	}
-	return "<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAttackImages(champ,attack)+" <strong>"+type+" Attack: "+attack.name+"</strong>"+(attack.damage_types.length>0?"("+slashSeparate(attack.damage_types,true)+")":"")+"</p><blockquote><p>"+(attack.long_description!=undefined&&attack.long_description!=""?attack.long_description:attack.description)+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(attack, null, 4)+"</pre></p></details></div></div>";
+	var shortCDtxt = "<p><span style=\"font-size:1.2em;\">ⓘ</span> <em>Note: Very short ultimate cooldowns are almost always for testing purposes and are likely to be increased later.</em></p>"
+	var shortCD = "";
+	if (attack.cooldown <= 15 && champ.spoiler && type == "Ultimate") {
+		shortCD = shortCDtxt;
+	}
+	return "<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAttackImages(champ,attack)+" <strong>"+type+" Attack: "+attack.name+"</strong>"+(attack.damage_types.length>0?"("+slashSeparate(attack.damage_types,true)+")":"")+"</p><blockquote><p>"+(attack.long_description!=undefined&&attack.long_description!=""?attack.long_description:attack.description)+"<br>Cooldown: "+attack.cooldown+"s (Cap "+(attack.cooldown*0.25)+"s)</p></blockquote>"+shortCD+"<details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(attack, null, 4)+"</pre></p></details></div></div>";
 }
 
 function addAbilityData(champ,ability) {
-	var content="<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAbilityImages(champ,ability)+" <strong>";
-	var name = "";
-	for (let i=0;i<ability.length;i++) {
-		if (ability[i].name!=undefined && ability[i].name!="") {
-			name=ability[i].name;
-			break;
-		}
-	}
-	content+=name+"</strong>";
+	var content="<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAbilityImages(champ,ability)+" <strong>"+ability.name+"</strong>";
 	var reqLevel=-1;
-	for (let i=0; i<ability.length;i++) {
-		if (ability[i].required_level!=undefined) {
-			reqLevel=ability[i].required_level;
+	for (let i=0; i<ability.raw.length;i++) {
+		if (ability.raw[i].required_level!=undefined) {
+			reqLevel=ability.raw[i].required_level;
 			break;
 		}
 	}
-	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>";
-	var desc="";
-	for (let i=0;i<ability.length;i++) {
-		var a=ability[i];
-		if (a.hasOwnProperty("description")) {
-			var ad=a.description;
-			if (useableDesc(ad)) {
-				desc=ad;
-				break;
-			}
-			if (ad.hasOwnProperty("pre")) {
-				var adp=ad.pre;
-				if (useableDesc(adp)) {
-					desc=adp;
-					break;
-				}
-			}
-			if (ad.hasOwnProperty("desc")) {
-				var add=ad.desc;
-				if (useableDesc(add)) {
-					desc=add;
-					break;
-				}
-			}
-			if (ad.hasOwnProperty("conditions")) {
-				var adc=ad.conditions;
-				if (useableDesc(adc)) {
-					desc=adc;
-					break;
-				}
-				if (adc.hasOwnProperty("length")) {
-					for (let k=0;k<adc.length;k++) {
-						var adci=adc[i];
-						if (adci.hasOwnProperty("desc") && !adci.hasOwnProperty("condition")) {
-							var adcid=adci.desc;
-							if (useableDesc(adcid)) {
-								desc=adcid;
-								break;
-							}
-						}
-					}
-				}
-			}
-		}
-		if (a.hasOwnProperty("tip_text")) {
-			desc=a.tip_text;
-			// Don't break because this is a last resort.
-		}
-		if (a.hasOwnProperty("specialization_description")) {
-			desc=a.specialization_description;
-			// Don't break because this is a last resort.
+	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>"+ability.desc+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>";
+	for (let i=0;i<ability.raw.length;i++) {
+		content+=JSON.stringify(ability.raw[i], null, 4);
+		if (i<ability.raw.length-1) {
+			content+=",<br/>";
 		}
 	}
-	content+=fixDesc(desc,champ,ability)+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>"+JSON.stringify(ability, null, 4)+"</pre></p></details></div></div>";
+	content+="</pre></p></details></div></div>";
 	return content;
 }
 
@@ -309,48 +260,6 @@ function useableDesc(thing) {
 		return true;
 	}
 	return false;
-}
-
-function fixDesc(desc,champ,ability) {
-	var effects=parseEffects(ability);
-	var regex=new RegExp("\\$\\({0,1}([A-Za-z0-9 _]+)\\){0,1}[^ ]","g");
-	var regex2=new RegExp("([^$\(\)%]+)","g");
-	var result=desc.match(regex);
-	if (result==null || result==undefined || result.length==undefined) {
-		result=[];
-	}
-	for (let i=0;i<result.length;i++) {
-		var match=result[i];
-		var match1=match.match(regex2);
-		var index=0;
-		var changed=false;
-		if (match1.includes("___")) {
-			index=match1.split("___")[1]-1;
-		}
-		for (let k=0;k<effects.length;k++) {
-			var sEffect=effects[k];
-			var sEffectSplit=sEffect.split(",");
-			if (match.includes("source_hero")) {
-				//console.log("Replacing `"+match+"` with `"+champ.name+"`.");
-				desc=desc.replace(match,champ.name);
-			} else if (match.includes("source")) {
-				//console.log("Replacing `source` or `$source` with `"+champ.name+"`.");
-				desc=desc.replace("$source",champ.name);
-				desc=desc.replace("source",champ.name);
-			} else if (match.includes("not_buffed amount")) {
-				//console.log("Replacing `"+match+"` with `"+sEffectSplit[1]+"`.");
-				desc=desc.replace(match,sEffectSplit[1]);
-			} else {
-				//console.log("Just surrounding `"+match+"` with code block.");
-				if (!changed) {
-					desc=desc.replace(match,"<code class=\"language-plaintext highlighter-rouge\">"+match+"</code>");
-					changed=true;
-				}
-			}
-		}
-	}
-	desc=desc.replaceAll("\^","<br><br>");
-	return desc;
 }
 
 function parseEffects(abilities) {
@@ -478,9 +387,8 @@ function addFormation(fName) {
 }
 
 function addAttackImages(champ,attack) {
-	var prefix = "images/"+champ.fName+"/attacks/";
 	if (attack.graphic_id != undefined && attack.graphic_id > 0) {
-		return "<img src=\""+prefix+attack.id+".png\" alt=\""+attack.name+" Icon\">";
+		return "<img src=\"images/"+champ.fName+"/attacks/"+attack.id+".png\" alt=\""+attack.name+" Icon\">";
 	}
 	var images = "";
 	for (let i=0;i<attack.damage_types.length;i++) {
@@ -491,18 +399,15 @@ function addAttackImages(champ,attack) {
 }
 
 function addAbilityImages(champ,ability) {
-	var prefix="images/"+champ.fName+"/abilities/";
-	var graphicId = -3;
-	for (let i=0;i<ability.length;i++) {
-		if (graphicId<0 && ability[i].graphic_id!=undefined && ability[i].graphic_id>0) {
-			graphicId = ability[i].graphic_id;
-		}
-		if (graphicId<0 && ability[i].specialization_graphic_id!=undefined && ability[i].specialization_graphic_id>0) {
-			graphicId = ability[i].specialization_graphic_id;
+	var graphicId = ability.graphicId;
+	var reqLevel = -3;
+	for (let i=0;i<ability.raw.length;i++) {
+		if (ability.raw[i].required_level!=undefined) {
+			reqLevel = ability.raw[i].required_level;
 		}
 	}
-	if (ability.length==2 && graphicId>0 && ability[0].required_level>0) {
-		return "<img src=\""+prefix+ability[0].id+".png\" alt=\""+ability[0].name+" Icon\">";
+	if (ability.raw.length==2 && ability.graphicId>0 && reqLevel>0) {
+		return "<img src=\"images/"+champ.fName+"/abilities/"+ability.id+".png\" alt=\""+ability.name+" Icon\">";
 	}
 	return "";
 }
