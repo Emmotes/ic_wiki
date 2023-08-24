@@ -2671,7 +2671,7 @@
                         }
                     ],
                     "id": 91,
-                    "desc": "Asharra forms a bond of friendship with the Dwarf and Elf champions (including Drow and Eladrin) in your party, increasing their damage."
+                    "desc": "Increases the damage of Dwarven and Elven Champions (including Drow) by 100%."
                 },
                 {
                     "graphicId": 786,
@@ -2714,7 +2714,7 @@
                         }
                     ],
                     "id": 90,
-                    "desc": "Asharra forms a bond of friendship with the Human champions in your party, increasing their damage."
+                    "desc": "Increases the damage of Human Champions by 100%."
                 },
                 {
                     "graphicId": 787,
@@ -2757,7 +2757,7 @@
                         }
                     ],
                     "id": 92,
-                    "desc": "Asharra forms a bond of friendship with the Aarakocra, Dragonborn, Firbolg, Lizardfolk, Minotaur, Tiefling, and Tortle champions in your party, increasing their damage."
+                    "desc": "Increases the damage of Aarakocra, Dragonborn, Firbolg, Lizardfolk, Minotaur, Tiefling, and Tortle Champions by 100%."
                 },
                 {
                     "graphicId": 2825,
@@ -2800,7 +2800,7 @@
                         }
                     ],
                     "id": 976,
-                    "desc": "Asharra forms a bond of friendship with any Aasimar, Bullywug, Doppelganger, Genasi, Giff, Gith, Harengon, Kalashtar, Saurial, Tabaxi , Warforged, and Yuan-ti champions in your party, increasing their damage."
+                    "desc": "Increases the damage of Aasimar, Bullywug, Doppelganger, Genasi, Giff, Gith, Harengon, Kalashtar, Saurial, Tabaxi, Warforged, Modron, and Yuan-ti Champions by 16200%."
                 },
                 {
                     "graphicId": 2826,
@@ -2843,7 +2843,7 @@
                         }
                     ],
                     "id": 975,
-                    "desc": "Asharra forms a bond of friendship with any Half-Elf, Half-Orc and Halfling champions in your party, increasing their damage."
+                    "desc": "Increases the damage of Half-Elf, Half-Orc and Halfling Champions by 16200%."
                 },
                 {
                     "graphicId": 2827,
@@ -2886,7 +2886,7 @@
                         }
                     ],
                     "id": 977,
-                    "desc": "Asharra forms a bond of friendship with any Gnome, Goblin, Halfling, Kobold, NERDS and Plasmoid champions in your party, increasing their damage."
+                    "desc": "Increases the damage of Gnome, Goblin, Halfling, Kobold, NERDS, and Plasmoid Champions by 16200%."
                 }
             ],
             "fName": "asharra",
@@ -3447,7 +3447,7 @@
                         }
                     ],
                     "id": 109,
-                    "desc": "Minsc favors hunting Beast enemies. They take additional damage from the party."
+                    "desc": "Beast enemies become a Favored Foe and take 300% extra damage from the party."
                 },
                 {
                     "graphicId": 803,
@@ -3493,7 +3493,7 @@
                         }
                     ],
                     "id": 111,
-                    "desc": "Minsc favors hunting Fey enemies. They take additional damage from the party."
+                    "desc": "Fey enemies become a Favored Foe and take 300% extra damage from the party."
                 },
                 {
                     "graphicId": 804,
@@ -3539,7 +3539,7 @@
                         }
                     ],
                     "id": 108,
-                    "desc": "Minsc favors hunting Humanoid enemies. They take additional damage from the party."
+                    "desc": "Humanoid enemies become a Favored Foe and take 300% extra damage from the party."
                 },
                 {
                     "graphicId": 805,
@@ -3585,7 +3585,7 @@
                         }
                     ],
                     "id": 112,
-                    "desc": "Minsc favors hunting Monstrosity enemies. They take additional damage from the party."
+                    "desc": "Monstrosity enemies become a Favored Foe and take 300% extra damage from the party."
                 },
                 {
                     "graphicId": 806,
@@ -3631,7 +3631,7 @@
                         }
                     ],
                     "id": 110,
-                    "desc": "Minsc favors hunting Undead enemies. They take additional damage from the party."
+                    "desc": "Undead enemies become a Favored Foe and take 300% extra damage from the party."
                 }
             ],
             "fName": "minsc",
@@ -5135,7 +5135,7 @@
                     }
                 ],
                 "id": 146,
-                "desc": "Tyril transforms into a bear and gains additional hit points and damage reduction abilities over time. He also eventually buffs nearby Champions."
+                "desc": "Transforms Tyril into a bear, grants him 265 health points, and increases his overwhelmed point by 265___3."
             }],
             "fName": "tyril",
             "nameFull": "Tyril Tallguy",
@@ -11135,7 +11135,7 @@
                         }
                     ],
                     "id": 10779,
-                    "desc": "Birdsong focuses her song on Neutral Champions."
+                    "desc": "Increases the effect of 10774 on Neutral (Good/Evil axis) Champions by 400%."
                 },
                 {
                     "graphicId": 2123,
@@ -11178,7 +11178,7 @@
                         }
                     ],
                     "id": 10780,
-                    "desc": "Birdsong focuses her song on Evil Champions."
+                    "desc": "Increases the effect of 10774 on Evil Champions by 400%."
                 },
                 {
                     "graphicId": 2124,
@@ -11221,7 +11221,7 @@
                         }
                     ],
                     "id": 10778,
-                    "desc": "Birdsong focuses her song on Good Champions."
+                    "desc": "Increases the effect of 10774 on Good Champions by 400%."
                 },
                 {
                     "graphicId": 18590,
@@ -11268,7 +11268,7 @@
                         }
                     ],
                     "id": 10783,
-                    "desc": "Birdsong focuses her song on Bards."
+                    "desc": "Birdsong starts each area with Crescendo stacks equal to the number of Bard Champions in the formation."
                 },
                 {
                     "graphicId": 18597,
@@ -11315,7 +11315,7 @@
                         }
                     ],
                     "id": 10782,
-                    "desc": "Birdsong focuses her song on Female Champions."
+                    "desc": "Birdsong starts each area with Crescendo stacks equal to the number of Female Champions in the formation."
                 },
                 {
                     "graphicId": 18598,
@@ -11362,7 +11362,7 @@
                         }
                     ],
                     "id": 10781,
-                    "desc": "Birdsong focuses her song on Lawful Champions."
+                    "desc": "Birdsong starts each area with Crescendo stacks equal to the number of Lawful Champions in the formation."
                 }
             ],
             "fName": "birdsong",
@@ -11954,7 +11954,7 @@
                         }
                     ],
                     "id": 9735,
-                    "desc": "Zorbu favors his lifelong enemies, increasing his damage against them."
+                    "desc": "Humanoid, beast, undead, and drow enemies become Zorbu's Favored Foes and take 200% more damage from him."
                 },
                 {
                     "graphicId": 5903,
@@ -11985,7 +11985,7 @@
                         }
                     ],
                     "id": 1031,
-                    "desc": "Zorbu's anger is so hot that his Lifelong Enemies kill counters increment multiple times for each kill."
+                    "desc": "When Zorbu kills an enemy, it increases the Lifelong Enemies counter by."
                 },
                 {
                     "graphicId": 5904,
@@ -12023,7 +12023,7 @@
                         }
                     ],
                     "id": 860,
-                    "desc": "Zorbu focuses his hatred on supporting his dextrous allies via Hunter's Pack."
+                    "desc": "Increases the effect of Hunter's Pack by the total bonus given by Seething Hatred."
                 }
             ],
             "fName": "zorbu",
@@ -13678,7 +13678,7 @@
                         }
                     ],
                     "id": 11313,
-                    "desc": "Catti-brie focuses on pushing forward."
+                    "desc": "Increases the base effect of Push Forward to 60% per stack and Catti-brie only loses half of her existing stacks when changing areas instead of all of them."
                 },
                 {
                     "graphicId": 19585,
@@ -13722,7 +13722,7 @@
                         }
                     ],
                     "id": 11314,
-                    "desc": "Catti-brie shares her Critical Hit secrets with the Champions of the Hall."
+                    "desc": "Additively increases the critical hit chance of all Companions of the Hall Champions by 20%."
                 },
                 {
                     "graphicId": 19586,
@@ -13765,7 +13765,7 @@
                         }
                     ],
                     "id": 11312,
-                    "desc": "Catti-brie strengthens her bow for more powerful shots."
+                    "desc": "Catti-brie's damage is increased by 400% and her arrows hit all enemies on their way to their target. Each enemy hit has a separate chance of being a critical hit."
                 }
             ],
             "fName": "catti-brie",
@@ -19386,7 +19386,7 @@
                         }
                     ],
                     "id": 1900,
-                    "desc": "Warden does a small amount of AOE damage (this does not cause them to be Hexed)."
+                    "desc": "When Warden attacks, they do an additional AoE attack for 50% damage."
                 },
                 {
                     "graphicId": 4497,
@@ -19426,7 +19426,7 @@
                         }
                     ],
                     "id": 1899,
-                    "desc": "Warden attacks enemies for a third time with a chance to stun."
+                    "desc": "Warden strikes enemies they attack for a third time, dealing 200% extra damage with a 50% chance to stun the Enemy for 3."
                 }
             ],
             "fName": "warden",
@@ -20036,7 +20036,7 @@
                         }
                     ],
                     "id": 9747,
-                    "desc": "Nerys focuses on Favored Foes."
+                    "desc": "Increases the damage of Spiritual Weapon against all Favored Foes by 400%."
                 },
                 {
                     "graphicId": 4571,
@@ -20070,7 +20070,7 @@
                         }
                     ],
                     "id": 9745,
-                    "desc": "Nerys focuses on healing damaged Champions."
+                    "desc": "Increases the effect of War Healing by 100%."
                 },
                 {
                     "graphicId": 4572,
@@ -20104,7 +20104,7 @@
                         }
                     ],
                     "id": 9746,
-                    "desc": "Nerys focuses on her Spirtual Weapon."
+                    "desc": "Increases the damage bonus of Spiritual Weapon by 200%."
                 }
             ],
             "fName": "nerys",
@@ -22942,7 +22942,7 @@
                         }
                     ],
                     "id": 8785,
-                    "desc": "Aila's storm is more forceful, stunning enemies for a longer duration."
+                    "desc": "Doubles the stun durations of Storm Soul and Raging Storm."
                 },
                 {
                     "graphicId": 5329,
@@ -22981,7 +22981,7 @@
                         }
                     ],
                     "id": 8784,
-                    "desc": "Aila is one with the storm, and primes enemies more quickly."
+                    "desc": "Reduce the cooldown of Storm Aura by 3 seconds."
                 }
             ],
             "fName": "aila",
@@ -24380,7 +24380,7 @@
                         }
                     ],
                     "id": 8772,
-                    "desc": "Qillek increases the power of his Bless ability based on the number of nearby, but not adjacent, Champions."
+                    "desc": "Champions exactly 2 slots away from Qillek contribute twice as much to Bless."
                 },
                 {
                     "graphicId": 5618,
@@ -24420,7 +24420,7 @@
                         }
                     ],
                     "id": 8771,
-                    "desc": "Qillek focuses on expanding his Bless ability to Champions a bit further away."
+                    "desc": "Bless also applies to Champions exactly 2 slots away from Qillek."
                 },
                 {
                     "graphicId": 16000,
@@ -24456,7 +24456,7 @@
                         }
                     ],
                     "id": 8773,
-                    "desc": "Qillek focuses on the rewards reaped from slow enemies."
+                    "desc": "Slow Sanctions increased by 100%."
                 }
             ],
             "fName": "qillek",
@@ -27316,7 +27316,7 @@
                         }
                     ],
                     "id": 10664,
-                    "desc": "Turiel increases the damage of Champions based on their Charisma."
+                    "desc": "All Champions deal bonus damage based on their individual CHA scores (+400% per point of CHA above 10, stacking multiplicatively)."
                 },
                 {
                     "graphicId": 18638,
@@ -27357,7 +27357,7 @@
                         }
                     ],
                     "id": 10663,
-                    "desc": "Turiel increases the damage of Champions based on their Constitution."
+                    "desc": "All Champions deal bonus damage based on their individual CON scores (+400% per point of CON above 10, stacking multiplicatively)."
                 }
             ],
             "fName": "turiel",
@@ -28047,7 +28047,7 @@
                         }
                     ],
                     "id": 11498,
-                    "desc": "Pwent increases his damage against injured enemies."
+                    "desc": "Attacks targeting enemies that Pwent has caused to Bleed have a 40% additive chance to be a critical hit, up from 20%."
                 },
                 {
                     "graphicId": 19588,
@@ -28087,7 +28087,7 @@
                         }
                     ],
                     "id": 11496,
-                    "desc": "Pwent recruits Champions a little farther away."
+                    "desc": "Gutbuster Recruits now triggers when non-adjacent Champions score critical hits, instead of adjacent Champions."
                 },
                 {
                     "graphicId": 19589,
@@ -28127,7 +28127,7 @@
                         }
                     ],
                     "id": 11497,
-                    "desc": "Pwent embraces his Dwarven scent."
+                    "desc": "Increases the effect of Can You SMELL That? by 200% for each Dwarf Champion in the formation, stacking multiplicatively and including himself."
                 }
             ],
             "fName": "pwent",
@@ -29252,7 +29252,7 @@
                         }
                     ],
                     "id": 8763,
-                    "desc": "Sentry increases her buff to damage,but only from the front."
+                    "desc": "Guardian of Solwynn is now only active if Sentry is in the front-most column of the formation, but its effect is increased by 400%."
                 },
                 {
                     "graphicId": 6645,
@@ -29283,7 +29283,7 @@
                         }
                     ],
                     "id": 8866,
-                    "desc": "Sentry's base attacks gain a chance to ensnare affected enemies in a circle of vines, stunning them for a short time."
+                    "desc": "Sentry's Divine Strike has a 50% chance to ensnare affected enemies in a circle of vines, stunning them for 4 seconds."
                 },
                 {
                     "graphicId": 6644,
@@ -30324,7 +30324,7 @@
                         }
                     ],
                     "id": 3270,
-                    "desc": "Artemis has a keen eye for abilities copied from his lifelong nemesis, Drizzt Do'Urden and his tiresome band of companions."
+                    "desc": "Observance's effect is increased by 25% (multiplicatively) for positional formation ability observed and copied from Drizzt Do'Urden or Catti-brie."
                 },
                 {
                     "graphicId": 6954,
@@ -30355,7 +30355,7 @@
                         }
                     ],
                     "id": 3269,
-                    "desc": "Artemis makes cautious friends with those around him, increasing the effect of abilities observed on them."
+                    "desc": "Observance's effect is increased by 10% (multiplicatively) for positional formation ability observed and copied from Champions adjacent to Artemis."
                 }
             ],
             "fName": "artemis",
@@ -32600,7 +32600,7 @@
                         }
                     ],
                     "id": 3455,
-                    "desc": "With more efficient use of his metal reserves, Briv can Sprint further on each run."
+                    "desc": "Unnatural Haste uses 20% less Sprint stacks whenever it procs (3.2% of stacks instead of 4% of stacks)."
                 },
                 {
                     "graphicId": 7374,
@@ -33847,7 +33847,7 @@
                         }
                     ],
                     "id": 9635,
-                    "desc": "Krydle focuses on enemies, increasing his health."
+                    "desc": "Krydle's base max health is increased by 75% for every 50 areas completed, up to area 600."
                 },
                 {
                     "graphicId": 17409,
@@ -33881,7 +33881,7 @@
                         }
                     ],
                     "id": 9634,
-                    "desc": "Krydle focuses on other Champions, increasing their damage."
+                    "desc": "Increase the effect of Charismatic Leader by 200%."
                 }
             ],
             "fName": "krydle",
@@ -35103,7 +35103,7 @@
                         }
                     ],
                     "id": 8753,
-                    "desc": "Nova focuses on expanding her crew."
+                    "desc": "The Crew now applies to all Champions within 3 slots, but the extra Champions are only counted towards its levels total at 50% effectiveness."
                 },
                 {
                     "graphicId": 15999,
@@ -35139,7 +35139,7 @@
                         }
                     ],
                     "id": 8754,
-                    "desc": "Nova focuses on her closest crewmates."
+                    "desc": "Increases the effect of The Crew by 100%."
                 }
             ],
             "fName": "nova",
@@ -37980,7 +37980,7 @@
                         }
                     ],
                     "id": 3278,
-                    "desc": "Dragonbait enjoys working alongside other defensive Champions, and emits a pleasantly spicy scent while doing so."
+                    "desc": "Increases the effect of 1104's Scent: Roasted Vegetables ability by 50%."
                 },
                 {
                     "graphicId": 7178,
@@ -38571,7 +38571,7 @@
                         }
                     ],
                     "id": 4347,
-                    "desc": "Ulkoria provides additional buffs based on the number of Spellcaster School stacks she has.  \r\n> 3+ stacks: Attack speeds of Champions counting towards Spellcaster School are reduced by 0.5 sec.  \r\n> 5+ stacks: Increase the positional formation ability effects of Champions counting towards Spellcaster School by 25% for each stack.  \r\n> 7+ stacks: Each time a Champion counting towards Spellcaster School attacks there is a 50% chance that their base attack cooldown will immediately reset.  \r\n> 9+ stacks: Increase the base value of Spellcaster School by 200%."
+                    "desc": "Ulkoria provides additional buffs based on the number of Spellcaster School stacks she has.  \r\n> 3+ stacks: Attack speeds of Champions counting towards Spellcaster School are reduced by 300 sec.  \r\n> 5+ stacks: Increase the positional formation ability effects of Champions counting towards Spellcaster School by 300% for each stack.  \r\n> 7+ stacks: Each time a Champion counting towards Spellcaster School attacks there is a 50% chance that their base attack cooldown will immediately reset.  \r\n> 9+ stacks: Increase the base value of Spellcaster School by 200%."
                 }
             ],
             "fName": "ulkoria",
@@ -40844,7 +40844,7 @@
                         }
                     ],
                     "id": 8731,
-                    "desc": "Lucius focuses on increasing the damage dealt by the combination of his two elements."
+                    "desc": "Increase the \"explode\" damage of Elemental Adept by 200%."
                 },
                 {
                     "graphicId": 9370,
@@ -40880,7 +40880,7 @@
                         }
                     ],
                     "id": 8732,
-                    "desc": "Lucius specializes in working with his allies to increase his damage."
+                    "desc": "Increase the effect of Aerois Synergy on Lucius' damage by 100%."
                 },
                 {
                     "graphicId": 9371,
@@ -40927,7 +40927,7 @@
                         }
                     ],
                     "id": 8733,
-                    "desc": "Lucius' enemies remain minorly slowed even after he has triggered his combo."
+                    "desc": "When an enemy explodes and loses their Arcane Chromat - Cold debuff, they gain a Lingering Chill debuff which slows them by 25% and lasts for 20 seconds. If this debuff applies again before it expires, the cooldown is refreshed. Stacks with Arcane Chromat - Cold."
                 }
             ],
             "fName": "lucius",
@@ -42771,7 +42771,7 @@
                         }
                     ],
                     "id": 10653,
-                    "desc": "Hew Maan cozies up with the most common race in the party."
+                    "desc": "The Hello, Fellow Humans ability now uses the most populous race in your formation instead of Humans."
                 },
                 {
                     "graphicId": 18599,
@@ -42830,7 +42830,7 @@
                         }
                     ],
                     "id": 10655,
-                    "desc": "Hew Maan cozies up with the unaffiliated Champions in the party."
+                    "desc": "The Hello, Fellow Humans ability now uses the number of unaffiliated Champions in the formation instead of Humans."
                 },
                 {
                     "graphicId": 18600,
@@ -42889,7 +42889,7 @@
                         }
                     ],
                     "id": 10654,
-                    "desc": "Hew Maan cozies up with the lawful Champions in the party."
+                    "desc": "The Hello, Fellow Humans ability now uses the number of Lawful Champions in the formation instead of Humans."
                 }
             ],
             "fName": "hewmaan",
@@ -44100,7 +44100,7 @@
                         }
                     ],
                     "id": 5380,
-                    "desc": "Alyndra peers into even more futures, increases the number of Champions receiving Portent."
+                    "desc": "Portent now applies to (up to) three random adjacent Champions instead of (up to) two."
                 },
                 {
                     "graphicId": 10016,
@@ -44131,7 +44131,7 @@
                         }
                     ],
                     "id": 5381,
-                    "desc": "Alyndra focuses on Griff, increasing the effect of their judgement."
+                    "desc": "Double Griff's chance to judge enemies as unworthy with Brows of Judgement, and increases the buff by 100% as well."
                 }
             ],
             "fName": "alyndra",
@@ -45216,7 +45216,7 @@
                         }
                     ],
                     "id": 5651,
-                    "desc": "Shaka gives up on the current puzzle and tries to solve a new one."
+                    "desc": "The slots chosen for A Celestial Puzzle are rerolled."
                 },
                 {
                     "graphicId": 10358,
@@ -45250,7 +45250,7 @@
                         }
                     ],
                     "id": 5650,
-                    "desc": "Shaka focuses on the current puzzle increasing the number of affected slots."
+                    "desc": "An additional slot in the formation is assigned a random tag and can be matched to further increase A Celestial Puzzle."
                 }
             ],
             "fName": "shaka",
@@ -45903,7 +45903,7 @@
                         }
                     ],
                     "id": 5640,
-                    "desc": "Mehen focuses on fine tuning his attitude."
+                    "desc": "Increases the rate at which Grumpy stacks are added by 1 (flat increase regardless of column) and increases the effect of Grumpy by 400%."
                 },
                 {
                     "graphicId": 10501,
@@ -45944,7 +45944,7 @@
                         }
                     ],
                     "id": 5641,
-                    "desc": "Mehen focuses on his bond with his daughters."
+                    "desc": "Increase the effect of Found Family based on how far from the front of the formation Mehen is placed. Effect is increased by 20% for each column, stacking multiplicatively."
                 }
             ],
             "fName": "mehen",
@@ -46837,7 +46837,7 @@
                         }
                     ],
                     "id": 5787,
-                    "desc": "Selise focuses on her Last Resort stance, decreasing damage as her health falls."
+                    "desc": "While in Last Resort stance, Selise takes reduced damage the further her health falls below 80%."
                 },
                 {
                     "graphicId": 10675,
@@ -46901,7 +46901,7 @@
                         }
                     ],
                     "id": 5786,
-                    "desc": "Selise Focuses on her Deflect stance, reflecting projectiles."
+                    "desc": "While in Deflect stance, Selise can deflect projectiles back at the enemies that shot/cast them, dealing 6 seconds of BUD-based damage."
                 },
                 {
                     "graphicId": 10676,
@@ -46952,7 +46952,7 @@
                         }
                     ],
                     "id": 5785,
-                    "desc": "Selise focuses on her Wall stance, reflecting stuns."
+                    "desc": "While in Wall stance, Selise cannot be stunned by enemies. Any enemy that attempts to stun her is stunned for 4 seconds."
                 },
                 {
                     "graphicId": 10674,
@@ -47008,7 +47008,7 @@
                         }
                     ],
                     "id": 5790,
-                    "desc": "Selise focuses on her Last Resort stance, decreasing damage as her health falls."
+                    "desc": "While in Last Resort stance, Selise takes reduced damage the further her health falls below 80%."
                 },
                 {
                     "graphicId": 10674,
@@ -47064,7 +47064,7 @@
                         }
                     ],
                     "id": 5792,
-                    "desc": "Selise focuses on her Last Resort stance, decreasing damage as her health falls."
+                    "desc": "While in Last Resort stance, Selise takes reduced damage the further her health falls below 80%."
                 },
                 {
                     "graphicId": 10675,
@@ -47128,7 +47128,7 @@
                         }
                     ],
                     "id": 5789,
-                    "desc": "Selise Focuses on her Deflect stance, reflecting projectiles."
+                    "desc": "While in Deflect stance, Selise can deflect projectiles back at the enemies that shot/cast them, dealing 6 seconds of BUD-based damage."
                 },
                 {
                     "graphicId": 10675,
@@ -47192,7 +47192,7 @@
                         }
                     ],
                     "id": 5794,
-                    "desc": "Selise Focuses on her Deflect stance, reflecting projectiles."
+                    "desc": "While in Deflect stance, Selise can deflect projectiles back at the enemies that shot/cast them, dealing 6 seconds of BUD-based damage."
                 },
                 {
                     "graphicId": 10676,
@@ -47243,7 +47243,7 @@
                         }
                     ],
                     "id": 5791,
-                    "desc": "Selise focuses on her Wall stance, reflecting stuns."
+                    "desc": "While in Wall stance, Selise cannot be stunned by enemies. Any enemy that attempts to stun her is stunned for 4 seconds."
                 },
                 {
                     "graphicId": 10676,
@@ -47294,7 +47294,7 @@
                         }
                     ],
                     "id": 5793,
-                    "desc": "Selise focuses on her Wall stance, reflecting stuns."
+                    "desc": "While in Wall stance, Selise cannot be stunned by enemies. Any enemy that attempts to stun her is stunned for 4 seconds."
                 },
                 {
                     "graphicId": 10677,
@@ -47342,7 +47342,7 @@
                         }
                     ],
                     "id": 5788,
-                    "desc": "Selise focuses on her Divine Sense, buffing even more Champions."
+                    "desc": "Increase the range of Divine Sense to affect the three columns behind Selise rather than just two."
                 }
             ],
             "fName": "selise",
@@ -48152,7 +48152,7 @@
                         }
                     ],
                     "id": 5986,
-                    "desc": "Sergeant Knox focuses on his Allies."
+                    "desc": "Increase the effect of Celeste's Crusader's Mantle and Makos' Dark Blessing abilities by 100% each."
                 },
                 {
                     "graphicId": 10777,
@@ -48194,7 +48194,7 @@
                         }
                     ],
                     "id": 5985,
-                    "desc": "Sergeant Knox focuses on his Rallying Cry."
+                    "desc": "Rallying Cry now stacks multiplicatively, with buffs applying to the post-stack value, but it's base percentage is decreased to 35%."
                 },
                 {
                     "graphicId": 10778,
@@ -48232,7 +48232,7 @@
                         }
                     ],
                     "id": 5987,
-                    "desc": "Sergeant Knox focuses on his Health."
+                    "desc": "Increase the max health of Sgt. Knox by 50%."
                 }
             ],
             "fName": "sgt.knox",
@@ -49191,7 +49191,7 @@
                         }
                     ],
                     "id": 5997,
-                    "desc": "Ellywick focuses on her Gem stacks increasing her gold find."
+                    "desc": "The effect of Gem stacks on Fortunate Soul is increased to 7.5% per stack. In addition, the chance to draw the Gem Card is increased by 10%, while the chance to draw Knight and Moon cards is decreased by 5% each."
                 },
                 {
                     "graphicId": 11254,
@@ -49236,7 +49236,7 @@
                         }
                     ],
                     "id": 5996,
-                    "desc": "Ellywick focuses on her Moon stacks increasing her enemy debuffs."
+                    "desc": "It only takes 3 Moon stacks instead of 5 to increase the effect of Greatest Song In The Multiverse. In addition, the chance to draw the Moon Card is increased by 10%, while the chance to draw Knight and Gem cards is decreased by 5% each."
                 },
                 {
                     "graphicId": 11255,
@@ -49286,7 +49286,7 @@
                         }
                     ],
                     "id": 5995,
-                    "desc": "Ellywick focuses on her Knight stacks increasing her bonus to damage."
+                    "desc": "The effect of Knight stacks on Powerful Following is increased to 25% per stack. In addition, the chance to draw the Knight Card is increased by 10%, while the chance to draw Moon and Gem cards is decreased by 5% each."
                 }
             ],
             "fName": "ellywick",
@@ -49913,7 +49913,7 @@
                         }
                     ],
                     "id": 6072,
-                    "desc": "Prudence focuses on her Eldritch blast granting her a chance for multiple attacks."
+                    "desc": "When Prudence attacks, there is a 50% chance that her base attack cooldown will be immediately reset."
                 },
                 {
                     "graphicId": 11168,
@@ -49952,7 +49952,7 @@
                         }
                     ],
                     "id": 6073,
-                    "desc": "Prudence focuses on her connection with Hadar, increasing the chance she can call them back."
+                    "desc": "When Prudence attacks, there is a 10% chance that her ultimate attack cooldown will be immediately reset. Prudence Ultimate Damage is increased by 200%."
                 }
             ],
             "fName": "prudence",
@@ -50534,7 +50534,7 @@
                         }
                     ],
                     "id": 6133,
-                    "desc": "Corazón focuses on his bond with non adjacent champions."
+                    "desc": "Corazón's Honorary Crewmates ability now affects all non-adjacent Champions instead of adjacent ones."
                 },
                 {
                     "graphicId": 11431,
@@ -50572,7 +50572,7 @@
                         }
                     ],
                     "id": 6134,
-                    "desc": "Corazón focuses on his Grease magic, stacking it as much as possible."
+                    "desc": "Grease puddles now form under the furthest enemy from the formation instead of under the enemy attacked. Effect of the puddles is increased by 10% multiplicitively."
                 }
             ],
             "fName": "corazon",
@@ -51173,7 +51173,7 @@
                         }
                     ],
                     "id": 5459,
-                    "desc": "The gaze of Zariel focuses on Good aligned Champions."
+                    "desc": "Echoes of Zariel is guaranteed to look at all Good aligned Champions in the formation before returning to Reya."
                 },
                 {
                     "graphicId": 10076,
@@ -51215,7 +51215,7 @@
                         }
                     ],
                     "id": 5460,
-                    "desc": "The gaze of Zariel focuses on Lawful aligned Champions."
+                    "desc": "Echoes of Zariel is guaranteed to look at all Lawful aligned Champions in the formation before returning to Reya."
                 }
             ],
             "fName": "reya",
@@ -51846,7 +51846,7 @@
                         }
                     ],
                     "id": 6148,
-                    "desc": "The NERDS choose Green to lead!."
+                    "desc": "The {Bard}#6ac359 will always appear in the front of the cart when Shake The Box is used."
                 },
                 {
                     "graphicId": 11527,
@@ -51884,7 +51884,7 @@
                         }
                     ],
                     "id": 6146,
-                    "desc": "The NERDS choose Orange to lead!."
+                    "desc": "The {Fighter}#ed8730 will always appear in the front of the cart when Shake The Box is used."
                 },
                 {
                     "graphicId": 11528,
@@ -51922,7 +51922,7 @@
                         }
                     ],
                     "id": 6150,
-                    "desc": "The NERDS choose Pink to lead!."
+                    "desc": "The {Rogue}#e035aa will always appear in the front of the cart when Shake The Box is used."
                 },
                 {
                     "graphicId": 11529,
@@ -51960,7 +51960,7 @@
                         }
                     ],
                     "id": 6151,
-                    "desc": "The NERDS choose Purple to lead!."
+                    "desc": "The {Wizard}#856fd3 will always appear in the front of the cart when Shake The Box is used."
                 },
                 {
                     "graphicId": 11530,
@@ -51998,7 +51998,7 @@
                         }
                     ],
                     "id": 6147,
-                    "desc": "The NERDS choose Red to lead!."
+                    "desc": "The {Ranger}#e50035 will always appear in the front of the cart when Shake The Box is used."
                 },
                 {
                     "graphicId": 11531,
@@ -52036,7 +52036,7 @@
                         }
                     ],
                     "id": 6149,
-                    "desc": "The NERDS choose Yellow to lead!."
+                    "desc": "The {Cleric}#f8e432 will always appear in the front of the cart when Shake The Box is used."
                 }
             ],
             "fName": "nerds",
@@ -52654,7 +52654,7 @@
                         }
                     ],
                     "id": 6838,
-                    "desc": "Xerophon focuses on their bond with Champions with the highest strength."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a STR score of 13 or higher."
                 },
                 {
                     "graphicId": 12207,
@@ -52704,7 +52704,7 @@
                         }
                     ],
                     "id": 6839,
-                    "desc": "Xerophon focuses on their bond with Champions with the lowest strength."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a STR score of 12 or lower."
                 },
                 {
                     "graphicId": 12059,
@@ -52754,7 +52754,7 @@
                         }
                     ],
                     "id": 6840,
-                    "desc": "Xerophon focuses on their bond with Champions with the highest dexterity."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a DEX score of 13 or higher."
                 },
                 {
                     "graphicId": 12205,
@@ -52804,7 +52804,7 @@
                         }
                     ],
                     "id": 6841,
-                    "desc": "Xerophon focuses on their bond with Champions with the lowest dexterity."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a DEX score of 12 or lower."
                 },
                 {
                     "graphicId": 12058,
@@ -52854,7 +52854,7 @@
                         }
                     ],
                     "id": 6978,
-                    "desc": "Xerophon focuses on their bond with Champions with the highest constitution."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a CON score of 13 or higher."
                 },
                 {
                     "graphicId": 12204,
@@ -52904,7 +52904,7 @@
                         }
                     ],
                     "id": 6979,
-                    "desc": "Xerophon focuses on their bond with Champions with the lowest constitution."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a CON score of 12 or lower."
                 },
                 {
                     "graphicId": 12060,
@@ -52954,7 +52954,7 @@
                         }
                     ],
                     "id": 6976,
-                    "desc": "Xerophon focuses on their bond with Champions with the highest intelligence."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a INT score of 13 or higher."
                 },
                 {
                     "graphicId": 12206,
@@ -53004,7 +53004,7 @@
                         }
                     ],
                     "id": 6977,
-                    "desc": "Xerophon focuses on their bond with Champions with the lowest intelligence."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a INT score of 12 or lower."
                 },
                 {
                     "graphicId": 12062,
@@ -53054,7 +53054,7 @@
                         }
                     ],
                     "id": 6980,
-                    "desc": "Xerophon focuses on their bond with Champions with the highest wisdom."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a WIS score of 13 or higher."
                 },
                 {
                     "graphicId": 12208,
@@ -53104,7 +53104,7 @@
                         }
                     ],
                     "id": 6981,
-                    "desc": "Xerophon focuses on their bond with Champions with the lowest wisdom."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a WIS score of 12 or lower."
                 },
                 {
                     "graphicId": 12057,
@@ -53154,7 +53154,7 @@
                         }
                     ],
                     "id": 6842,
-                    "desc": "Xerophon focuses on their bond with Champions with the highest charisma."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a CHA score of 13 or higher."
                 },
                 {
                     "graphicId": 12203,
@@ -53204,7 +53204,7 @@
                         }
                     ],
                     "id": 6843,
-                    "desc": "Xerophon focuses on their bond with Champions with the lowest charisma."
+                    "desc": "Decrease the cooldown of Perfect Imitation by 10 seconds for every other Champion in the formation with a CHA score of 12 or lower."
                 }
             ],
             "fName": "xerophon",
@@ -53774,7 +53774,7 @@
                         }
                     ],
                     "id": 6221,
-                    "desc": "D'hani adds a stunning blotch of blue to her repitoire."
+                    "desc": "Enemies D'hani paints also gain a blotch of blue. Enemies painted in this way are stunned for 2 seconds when D'hani attacks them and boss enemies painted in this way take 800% more damage from all attacks."
                 },
                 {
                     "graphicId": 11654,
@@ -53813,7 +53813,7 @@
                         }
                     ],
                     "id": 6219,
-                    "desc": "D'hani uses a splash of yellow to earn extra gold."
+                    "desc": "Enemies D'hani paints also gain a splash of yellow. Enemies painted in this way drop 200% more gold when they are killed."
                 },
                 {
                     "graphicId": 11655,
@@ -53851,7 +53851,7 @@
                         }
                     ],
                     "id": 6220,
-                    "desc": "D'hani cleaves a stroke of green to damage nearby enemies."
+                    "desc": "Enemies D'hani paints also gain a stroke of green. Enemies painted in this way cause D'hani's attacks against them to damage nearby enemies as well at 50% damage. This effect does not chain, but does apply paint to the enemies it damages."
                 }
             ],
             "fName": "dhani",
@@ -54507,7 +54507,7 @@
                         }
                     ],
                     "id": 6355,
-                    "desc": "Brig generates bonus hype by backing up his fellow champions."
+                    "desc": "Brig gains 2 Hype stacks for each Champion in front of him in the formation."
                 },
                 {
                     "graphicId": 11856,
@@ -54551,7 +54551,7 @@
                         }
                     ],
                     "id": 6356,
-                    "desc": "Brig generates bonus hype based on how much damage he deals."
+                    "desc": "Brig gains 2 Hype stacks for each Champion in the formation whose listed attack damage is lower than himself."
                 }
             ],
             "fName": "brig",
@@ -55329,7 +55329,7 @@
                         }
                     ],
                     "id": 6910,
-                    "desc": "Widdle focuses her abilities on the Smartest and Toughest."
+                    "desc": "The effects of Widdle's abilities on Champions affected by Vampiric Gaze are increased by 50% on Champions with a INT or CON score of 12 or higher."
                 },
                 {
                     "graphicId": 11946,
@@ -55381,7 +55381,7 @@
                         }
                     ],
                     "id": 6909,
-                    "desc": "Widdle focuses her abilities on the Strongest and most Dexterous."
+                    "desc": "The effects of Widdle's abilities on Champions affected by Vampiric Gaze are increased by 50% on Champions with a STR or DEX score of 12 or higher."
                 },
                 {
                     "graphicId": 11947,
@@ -55433,7 +55433,7 @@
                         }
                     ],
                     "id": 6911,
-                    "desc": "Widdle focuses her abilities on the Wisest and most Charismatic."
+                    "desc": "The effects of Widdle's abilities on Champions affected by Vampiric Gaze are increased by 50% on Champions with a WIS or CHA score of 12 or higher."
                 }
             ],
             "fName": "widdle",
@@ -55984,7 +55984,7 @@
                         }
                     ],
                     "id": 6990,
-                    "desc": "Yorven's tattoo helps him deal additional damage."
+                    "desc": "Each time Yorven attacks during Ferocious Maul, Eldritch energy shoots out and zaps a different enemy, dealing damage based on the amount of health Yorven's target currently has, capped by BUD."
                 },
                 {
                     "graphicId": 12275,
@@ -56020,7 +56020,7 @@
                         }
                     ],
                     "id": 6989,
-                    "desc": "Yorven turns his remaining ferocity on additional enemies."
+                    "desc": "If an enemy dies while Yorven is attacking it with Ferocious Maul, Yorven gains an additional attack and begins attacking another enemy."
                 }
             ],
             "fName": "yorven",
@@ -56602,7 +56602,7 @@
                         }
                     ],
                     "id": 9785,
-                    "desc": "Viconia prefers the presence of Neutral Champions."
+                    "desc": "Cleric of Shar now affects Neutral (Good/Evil axis) champions instead of Evil ones. Heroes of Baldur's Gate are still covered under this new plan."
                 },
                 {
                     "graphicId": 12711,
@@ -56646,7 +56646,7 @@
                         }
                     ],
                     "id": 9784,
-                    "desc": "Viconia prefers to support from the front."
+                    "desc": "Increase the effect of Cleric of Shar by 100% for each column away from the back-most column she is, stacking multiplicatively."
                 },
                 {
                     "graphicId": 12712,
@@ -56685,7 +56685,7 @@
                         }
                     ],
                     "id": 9786,
-                    "desc": "Viconia focuses on reanimating the dead."
+                    "desc": "Increase the chance for Animate Dead to trigger by 100%."
                 }
             ],
             "fName": "viconia",
@@ -57305,7 +57305,7 @@
                         }
                     ],
                     "id": 7168,
-                    "desc": "Rust focuses on his relationship with the Oxventurers Guild Champions."
+                    "desc": "The ability bonus of One Gold Piece is increased by 100% for each other Oxventurers Guild Champion within 2 slots, stacking multiplicatively."
                 },
                 {
                     "graphicId": 12841,
@@ -57344,7 +57344,7 @@
                         }
                     ],
                     "id": 7167,
-                    "desc": "Rust focuses on the power his Gold Piece provides."
+                    "desc": "Increase the ability bonus of One Gold Piece by 100%."
                 },
                 {
                     "graphicId": 12842,
@@ -57380,7 +57380,7 @@
                         }
                     ],
                     "id": 7169,
-                    "desc": "Rust focuses on keeping his treasure safe."
+                    "desc": "Rust now only attacks with his Pistols and can only lose his One Gold Piece during his ultimate attack."
                 }
             ],
             "fName": "rust",
@@ -57994,7 +57994,7 @@
                         }
                     ],
                     "id": 7182,
-                    "desc": "Vi focuses on the good in those in between."
+                    "desc": "Increase the effect of A Good Example by 100%."
                 },
                 {
                     "graphicId": 12903,
@@ -58037,7 +58037,7 @@
                         }
                     ],
                     "id": 7180,
-                    "desc": "Vi focuses on good in even the most evil."
+                    "desc": "Evil Champions also benefit from A Good Example's damage increase."
                 },
                 {
                     "graphicId": 12904,
@@ -58088,7 +58088,7 @@
                         }
                     ],
                     "id": 7181,
-                    "desc": "Vi focuses on repaying the warforged."
+                    "desc": "Warforged Champions also receive A Good Example's damage increase.  Both Good and Warforged Champions are counted when buffing adjacent Neutral (on the Good/Evil Axis) and Warforged Champions."
                 },
                 {
                     "graphicId": 12905,
@@ -58127,7 +58127,7 @@
                         }
                     ],
                     "id": 7184,
-                    "desc": "Vi focuses on her sass."
+                    "desc": "Vi's Sass is increased by 100%."
                 },
                 {
                     "graphicId": 12906,
@@ -58166,7 +58166,7 @@
                         }
                     ],
                     "id": 7183,
-                    "desc": "Vi focuses on the damage from her blunderbuss."
+                    "desc": "Vi's chance of using her special Catch and Release attack is increased by 100%."
                 }
             ],
             "fName": "vi",
@@ -58866,7 +58866,7 @@
                         }
                     ],
                     "id": 7304,
-                    "desc": "Desmond focuses on his synergy with the moon speeding up all phases, making his ultimate available more frequently."
+                    "desc": "The moon cycle of Howl at the Moon is twice as fast, recharging Desmond's ultimate attack more often."
                 },
                 {
                     "graphicId": 13204,
@@ -58920,7 +58920,7 @@
                         }
                     ],
                     "id": 7305,
-                    "desc": "Desmond focuses on his synergy with the Full Moon, speeding up his allies more frequently."
+                    "desc": "Additively increases the base attack cooldown reduction that Desmond's Howl at the Moon provides by 0.5 seconds. In addition, the full moon of Howl at the Moon takes 30 seconds, while the new moon and crescent moons only take 10 seconds."
                 },
                 {
                     "graphicId": 13205,
@@ -58974,7 +58974,7 @@
                         }
                     ],
                     "id": 7306,
-                    "desc": "Desmond focuses on his synergy with the New Moon. Buffing his allies damage more frequently."
+                    "desc": "Devotion in Dark Times gets an +100% additive buff. In addition, the new moon of Howl at the Moon takes 30 seconds, while the full moon and gibbous moons only take 10 seconds."
                 }
             ],
             "fName": "desmond",
@@ -59638,7 +59638,7 @@
                         }
                     ],
                     "id": 7389,
-                    "desc": "Tatyana focuses on her only friend."
+                    "desc": "Tatyana's Faithful Friend continues to only affect one slot, however the effect is increased by 400%."
                 },
                 {
                     "graphicId": 13368,
@@ -59692,7 +59692,7 @@
                         }
                     ],
                     "id": 7388,
-                    "desc": "Tatyana focuses her love in a line of friends."
+                    "desc": "Tatyana's Faithful Friend now affects all Champions in the column containing the Faithful Friend slot, and the effect is increased by 200%."
                 },
                 {
                     "graphicId": 13369,
@@ -59746,7 +59746,7 @@
                         }
                     ],
                     "id": 7387,
-                    "desc": "Tatyana focuses her love in a circle of friends."
+                    "desc": "Tatyana's Faithful Friend now affects all Champions in slots adjacent to the Faithful Friend slot, and the effect is increased by 100%."
                 }
             ],
             "fName": "tatyana",
@@ -60360,7 +60360,7 @@
                         }
                     ],
                     "id": 7539,
-                    "desc": "Gazrick focuses freezing enemy armor."
+                    "desc": "Gazrick increases the duration of Armor Ablation by 100%."
                 },
                 {
                     "graphicId": 13613,
@@ -60399,7 +60399,7 @@
                         }
                     ],
                     "id": 7540,
-                    "desc": "Gazrick focuses on debuffing cold enemies."
+                    "desc": "Gazrick increases the effect of Control Weather by 200%."
                 },
                 {
                     "graphicId": 13614,
@@ -60438,7 +60438,7 @@
                         }
                     ],
                     "id": 7538,
-                    "desc": "Gazrick focuses on his wares."
+                    "desc": "Gazrick increases the effect of Travelling Merchant by 200%."
                 }
             ],
             "fName": "gazrick",
@@ -61039,7 +61039,7 @@
                         }
                     ],
                     "id": 7850,
-                    "desc": "Dungeon Master stays close to the Champions."
+                    "desc": "The chance Dungeon Master doesn't join the formation in Disappearing Act is decreased to 25%, and the temporary hit points gained by Words of Encouragement are increased by 100%."
                 },
                 {
                     "graphicId": 14310,
@@ -61092,7 +61092,7 @@
                         }
                     ],
                     "id": 7848,
-                    "desc": "`$d_s1_guest` has been chosen!  \r\n> (Slot."
+                    "desc": "Dungeon Master uses his powers to plane shift in one random Champion that is normally not eligible for the adventure. Preference is given to bench seats with no eligible Champion. The Champion can not be from Dungeon Master's seat."
                 },
                 {
                     "graphicId": 14311,
@@ -61142,7 +61142,7 @@
                         }
                     ],
                     "id": 7849,
-                    "desc": "Dungeon Master is pulled away more frequently."
+                    "desc": "The chance Dungeon Master doesn't join the formation in Disappearing Act is increased to 75%, and gold find amount is also increased by 100%."
                 }
             ],
             "fName": "dungeonmaster",
@@ -61863,7 +61863,7 @@
                         }
                     ],
                     "id": 7860,
-                    "desc": "Nordom explodes enemies pushing them back."
+                    "desc": "Nordom's Gear Spirits attack explode upon impact, pushing the target back a short distance."
                 },
                 {
                     "graphicId": 14241,
@@ -61909,7 +61909,7 @@
                         }
                     ],
                     "id": 7859,
-                    "desc": "Nordrom pierces enemies causing them to take more damage."
+                    "desc": "Enemies hit by Nordom's Gear Spirits attack take 100% more damage for the next 10 seconds. Stacks up to 2 times additively, and the timer resets if it applies again before the 10 seconds are up."
                 }
             ],
             "fName": "nordom",
@@ -62502,7 +62502,7 @@
                         }
                     ],
                     "id": 7999,
-                    "desc": "Merilwen focuses on her cat form bonuses."
+                    "desc": "Merilwen's Wild Shape attack speed cooldown reduction is increased by 1 second and persists when she is in her elf form."
                 },
                 {
                     "graphicId": 14595,
@@ -62543,7 +62543,7 @@
                         }
                     ],
                     "id": 7997,
-                    "desc": "Merilwen focuses on her stinky enemies."
+                    "desc": "Merilwen's normal attack makes hit enemies stink like skunk, taking 2.5 seconds of BUD damage every second for 5 seconds."
                 },
                 {
                     "graphicId": 14596,
@@ -62597,7 +62597,7 @@
                         }
                     ],
                     "id": 7998,
-                    "desc": "Merilwen focuses on her beloved friends."
+                    "desc": "Merilwen gains an Encouragement stack each second that an enemy is not defeated, capping at 300 stacks. For each Encouragement stack, the gold find of Liquidity is increased by 100%, stacking additively. When an enemy is defeated or the party changes areas, the stacks are reset to 0."
                 }
             ],
             "fName": "merilwen",
@@ -63249,7 +63249,7 @@
                         }
                     ],
                     "id": 8014,
-                    "desc": "Nahara focuses on her companions to bring the fight to Strahd."
+                    "desc": "Strong Society gets a 400% increase and Black Dice Society members can be used if Strahd is currently the Patron, even if they do not qualify for the other variant requirements."
                 },
                 {
                     "graphicId": 14621,
@@ -63288,7 +63288,7 @@
                         }
                     ],
                     "id": 8013,
-                    "desc": "Nahara focuses on her experience to deal more damage."
+                    "desc": "The Who Am I? counter increments three times for every area cleared."
                 },
                 {
                     "graphicId": 14622,
@@ -63324,7 +63324,7 @@
                         }
                     ],
                     "id": 8015,
-                    "desc": "Nahara focuses on her amusement to move more quickly."
+                    "desc": "The area reduction in To Amuse or Avenge is increased by 50%."
                 }
             ],
             "fName": "nahara",
@@ -63878,7 +63878,7 @@
                         }
                     ],
                     "id": 8149,
-                    "desc": "Valentine focuses on helping other Champions deal as much damage as possible."
+                    "desc": "Tregrum's pre-stack damage increase is increased by 25%."
                 },
                 {
                     "graphicId": 15264,
@@ -63914,7 +63914,7 @@
                         }
                     ],
                     "id": 8151,
-                    "desc": "Valentine focuses on the business side of things."
+                    "desc": "A Life of Leisure's total gold find is increased by 200%."
                 },
                 {
                     "graphicId": 15265,
@@ -63954,7 +63954,7 @@
                         }
                     ],
                     "id": 8150,
-                    "desc": "Valentine focuses on being a great friend to Tatyana."
+                    "desc": "If Valentine is affected by 1152's Faithful Friend ability, its effect is increased by 200%."
                 }
             ],
             "fName": "valentine",
@@ -64579,7 +64579,7 @@
                         }
                     ],
                     "id": 8642,
-                    "desc": "Voronika adds a Champion to her Inner Circle."
+                    "desc": "Voronika chooses 0 to be her Inner Circle champion. They gain the Black Dice Society affiliation membership if they don't already have it."
                 },
                 {
                     "graphicId": 15539,
@@ -64620,7 +64620,7 @@
                         }
                     ],
                     "id": 8643,
-                    "desc": "Voronika adds a Champion to her Inner Circle."
+                    "desc": "Voronika chooses 1 to be her Inner Circle champion. They gain the Black Dice Society affiliation membership if they don't already have it."
                 },
                 {
                     "graphicId": 15539,
@@ -64661,7 +64661,7 @@
                         }
                     ],
                     "id": 8644,
-                    "desc": "Voronika adds a Champion to her Inner Circle."
+                    "desc": "Voronika chooses 2 to be her Inner Circle champion. They gain the Black Dice Society affiliation membership if they don't already have it."
                 },
                 {
                     "graphicId": 15537,
@@ -64708,7 +64708,7 @@
                         }
                     ],
                     "id": 8645,
-                    "desc": "Voronika is better with her Inner Circle Champion."
+                    "desc": "Voronika's Inner Circle Champion gets increases depending on the Champions roles. Champions with multiple roles get all the benefits."
                 },
                 {
                     "graphicId": 15538,
@@ -64760,7 +64760,7 @@
                         }
                     ],
                     "id": 8646,
-                    "desc": "Voronika is better off without her Inner Circle Champion."
+                    "desc": "After Voronika has achieved her Darklord form, she increases the effect of Calculating Guidance by 100% while her Inner Circle Champion is not part of the formation."
                 }
             ],
             "fName": "voronika",
@@ -65513,7 +65513,7 @@
                         }
                     ],
                     "id": 8745,
-                    "desc": "Dob befriends all races."
+                    "desc": "Dob increases the attack bonus of Traveling Entertainer by 100% for each unique race in the formation, stacking multiplicatively and applied multiplicatively."
                 },
                 {
                     "graphicId": 15747,
@@ -65566,7 +65566,7 @@
                         }
                     ],
                     "id": 8743,
-                    "desc": "Dob befriends his Charismatic companions.\n."
+                    "desc": "Dob increases the attack bonus of Traveling Entertainer by 100% for each Oxventures Champion or Champion with a Charisma of 17 or higher, stacking multiplicatively and applied multiplicatively."
                 },
                 {
                     "graphicId": 15748,
@@ -65617,7 +65617,7 @@
                         }
                     ],
                     "id": 8742,
-                    "desc": "Dob befriends his Magic companions."
+                    "desc": "Dob increases the attack bonus of Traveling Entertainer by 100% for each Oxventures Champion or Champion with a magical base attack, stacking multiplicatively and applied multiplicatively."
                 },
                 {
                     "graphicId": 15749,
@@ -65670,7 +65670,7 @@
                         }
                     ],
                     "id": 8744,
-                    "desc": "Dob befriends his Dexterous companions."
+                    "desc": "Dob increases the attack bonus of Traveling Entertainer by 100% for each Oxventures Champion or Champion with a Dexterity of 17 or higher, stacking multiplicatively and applied multiplicatively."
                 }
             ],
             "fName": "dob",
@@ -66517,7 +66517,7 @@
                         }
                     ],
                     "id": 7525,
-                    "desc": "Blooshi focuses on enemies killed by magic."
+                    "desc": "Enemies killed with magic attacks generate twice the number of Soul Stacks for Soul Gatherer."
                 },
                 {
                     "graphicId": 13277,
@@ -66553,7 +66553,7 @@
                         }
                     ],
                     "id": 7524,
-                    "desc": "Blooshi focuses on enemies killed at range."
+                    "desc": "Enemies killed with ranged attacks generate twice the number of Soul Stacks for Soul Gatherer."
                 },
                 {
                     "graphicId": 13278,
@@ -66589,7 +66589,7 @@
                         }
                     ],
                     "id": 7523,
-                    "desc": "Blooshi focuses on enemies killed in melee."
+                    "desc": "Enemies killed with melee attacks generate twice the number of Soul Stacks for Soul Gatherer."
                 },
                 {
                     "graphicId": 13276,
@@ -66634,7 +66634,7 @@
                         }
                     ],
                     "id": 7526,
-                    "desc": "Blooshi focuses on being a tanking spirit."
+                    "desc": "Blooshi's Spirit form takes 50% less damage."
                 },
                 {
                     "graphicId": 13279,
@@ -66670,7 +66670,7 @@
                         }
                     ],
                     "id": 7527,
-                    "desc": "Blooshi focuses on being a supportive Spirit."
+                    "desc": "Soul Stacks granted by A Grave Situation are increased by 33%."
                 }
             ],
             "fName": "blooshi",
@@ -67486,7 +67486,7 @@
                         }
                     ],
                     "id": 8877,
-                    "desc": "Egbert focuses on his Atonement for his past."
+                    "desc": "The number of Neutral (Lawful/Chaotic axis) Champions in the formation is added to Egbert's Atonement points."
                 },
                 {
                     "graphicId": 16169,
@@ -67522,7 +67522,7 @@
                         }
                     ],
                     "id": 8878,
-                    "desc": "Egbert gives in a little to his chaotic nature."
+                    "desc": "The number of Neutral (Lawful/Chaotic axis) Champions in the formation is subtracted from Egbert's Atonement points."
                 },
                 {
                     "graphicId": 16167,
@@ -67564,7 +67564,7 @@
                         }
                     ],
                     "id": 8880,
-                    "desc": "Egbert focuses on his healing hands."
+                    "desc": "Egbert's Lay On Hands targets the two most damaged Champions and the amount of healing is increased by 100%."
                 },
                 {
                     "graphicId": 16170,
@@ -67600,7 +67600,7 @@
                         }
                     ],
                     "id": 8881,
-                    "desc": "Egbert knows gold is crucial for adventuring."
+                    "desc": "Egbert increases the effect of Golden Scales by 100% for each Oxventures affiliation member in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 16168,
@@ -67657,7 +67657,7 @@
                         }
                     ],
                     "id": 8879,
-                    "desc": "Egbert adds some smoke to his bombs."
+                    "desc": "Egbert's bombs now also create smoke clouds that last for 10 seconds. Enemies in one or more smoke clouds take an additional 400% damage from attacks, and have a 50% chance to miss with their attack."
                 }
             ],
             "fName": "egbert",
@@ -68306,7 +68306,7 @@
                         }
                     ],
                     "id": 9356,
-                    "desc": "Kent poisons his Rapier."
+                    "desc": "Whenever Kent attacks an enemy and doesn't kill it, it is affected by a virulent poison. The poison deals 4 seconds worth of BUD to the enemy each second for 4 seconds."
                 },
                 {
                     "graphicId": 16394,
@@ -68342,7 +68342,7 @@
                         }
                     ],
                     "id": 9355,
-                    "desc": "Kent focuses on improving his Tokens of the Departed."
+                    "desc": "Kent increases the attack bonus of Tokens of the Departed by 100% for each Rivals of Waterdeep Champion, stacking multiplicatively and applied multiplicatively."
                 }
             ],
             "fName": "kent",
@@ -68991,7 +68991,7 @@
                         }
                     ],
                     "id": 9608,
-                    "desc": "Virgil feels anxious, improving his Magic Missile attack."
+                    "desc": "Virgil's magic missile and chain lightning attacks turn amber, he increases the number of magic missiles he fires by one, and there is a 25% chance he stuns an enemy struck by a magic missile for 5 seconds."
                 },
                 {
                     "graphicId": 16654,
@@ -69028,7 +69028,7 @@
                         }
                     ],
                     "id": 9609,
-                    "desc": "Virgil feels determined, boosting the damage of Weather Control for each Rivals of Waterdeep Champion."
+                    "desc": "Virgil's magic missile and chain lightning attacks turn violet, and Virgil increases Weather Control's damage boost by 33% for each Rivals of Waterdeep Champion in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 16655,
@@ -69063,7 +69063,7 @@
                         }
                     ],
                     "id": 9607,
-                    "desc": "Virgil feels relaxed, increasing the effect of Storm Sorcerer."
+                    "desc": "Virgil's magic missile and chain lightning attacks turn green, and he further increases Storm Sorcerer's damage boost by 100% and increases the attack cooldown reduction by a further 1 second."
                 }
             ],
             "fName": "virgil",
@@ -69865,7 +69865,7 @@
                         }
                     ],
                     "id": 9619,
-                    "desc": "Warduke focuses on Chaos, increasing his damage."
+                    "desc": "Warduke's damage is increased by 100% for each Chaotic Champion in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 16904,
@@ -69906,7 +69906,7 @@
                         }
                     ],
                     "id": 9621,
-                    "desc": "Warduke focuses on evil, increasing his damage."
+                    "desc": "Warduke's damage is increased by 500% for each Evil Champion in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 16905,
@@ -69947,7 +69947,7 @@
                         }
                     ],
                     "id": 9620,
-                    "desc": "Warduke focuses on gold, increasing his damage."
+                    "desc": "Warduke's damage is increased by 300% for each Gold Find Champion in the formation, stacking multiplicatively."
                 }
             ],
             "fName": "warduke",
@@ -70537,7 +70537,7 @@
                         }
                     ],
                     "id": 9646,
-                    "desc": "Imoen favors slaying aberrations, increasing her damage against them."
+                    "desc": "Aberration enemies become Imoen's Favored Foe. Her Short Bow attacks against Aberration enemies deal an additional BUD-based damage with each hit."
                 },
                 {
                     "graphicId": 17147,
@@ -70576,7 +70576,7 @@
                         }
                     ],
                     "id": 9643,
-                    "desc": "Imoen favors slaying beasts, increasing her damage against them."
+                    "desc": "Beast enemies become Imoen's Favored Foe. Her Short Bow attacks against Beast enemies deal an additional BUD-based damage with each hit."
                 },
                 {
                     "graphicId": 17148,
@@ -70615,7 +70615,7 @@
                         }
                     ],
                     "id": 9644,
-                    "desc": "Imoen favors slaying dragons, increasing her damage against them."
+                    "desc": "Dragon enemies become Imoen's Favored Foe. Her Short Bow attacks against Dragon enemies deal an additional BUD-based damage with each hit."
                 },
                 {
                     "graphicId": 17149,
@@ -70654,7 +70654,7 @@
                         }
                     ],
                     "id": 9645,
-                    "desc": "Imoen favors slaying monstrosities, increasing her damage against them."
+                    "desc": "Monstrosity enemies become Imoen's Favored Foe. Her Short Bow attacks against Monstrosity enemies deal an additional BUD-based damage with each hit."
                 }
             ],
             "fName": "imoen",
@@ -71463,7 +71463,7 @@
                         }
                     ],
                     "id": 9762,
-                    "desc": "Fen focuses on her Dhampir heritage, dealing much more damage."
+                    "desc": "Fen embraces her Dhampir heritage and increases her damage by 1000%."
                 },
                 {
                     "graphicId": 17462,
@@ -71509,7 +71509,7 @@
                         }
                     ],
                     "id": 9761,
-                    "desc": "Fen focuses on her eldritch blade, increasing her support and dealing additional damage."
+                    "desc": "Fen imbues her blade with eldritch energy, increasing the effect of Mischievous, but Dangerous by 100% and causing her normal attack to deal an additional 5 seconds of BUD based damage with each hit."
                 }
             ],
             "fName": "fen",
@@ -72108,7 +72108,7 @@
                         }
                     ],
                     "id": 9773,
-                    "desc": "Brother Uriah fights his evil connection, helping champions defeat the Undead and Fiends."
+                    "desc": "Uriah reads from the Book of Exalted Deeds, making Undead and Fiends his Favored Foes and all Champions deal an additional 200% damage to them."
                 },
                 {
                     "graphicId": 17760,
@@ -72154,7 +72154,7 @@
                         }
                     ],
                     "id": 9774,
-                    "desc": "Brother Uriah embraces his evil connection, helping evil champions deal even more damage."
+                    "desc": "Azalin reads from the Book of Vile Darkness, increasing the effect of In the Grip of Azalin Rex by 100%."
                 }
             ],
             "fName": "uriah",
@@ -72862,7 +72862,7 @@
                         }
                     ],
                     "id": 10617,
-                    "desc": "Solaak trusts those escorted like his ranged bretheren."
+                    "desc": "Each formation slot occupied by an escort adds 1 Reach stack for Compatriots."
                 },
                 {
                     "graphicId": 18026,
@@ -72921,7 +72921,7 @@
                         }
                     ],
                     "id": 10616,
-                    "desc": "Solaak imbues his attacks with Tempest's Lightning magic, adding AOE damage."
+                    "desc": "Solaak's normal attack deals damage to all enemies in a small radius and all enemies hit take an additional 400% damage for 5 seconds."
                 },
                 {
                     "graphicId": 18027,
@@ -72971,7 +72971,7 @@
                         }
                     ],
                     "id": 10615,
-                    "desc": "Solaak focuses on knockbacks and the speed of his attacks."
+                    "desc": "Solaak's base attack speed is reduced by 30. Additionally, the effect of Maneuvers is increased to 30% per stack."
                 }
             ],
             "fName": "solaak",
@@ -73654,7 +73654,7 @@
                     ],
                     "id": 10672,
                     "prestack": true,
-                    "desc": "Miria prefers the lone wolves."
+                    "desc": "Miria increases the attack bonus of Mage of High Sorcery by 25% for each Unaffiliated Champion in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 18266,
@@ -73703,7 +73703,7 @@
                     ],
                     "id": 10671,
                     "prestack": true,
-                    "desc": "Miria prefers the smarter crowd."
+                    "desc": "Miria increases the attack bonus of Mage of High Sorcery by 25% for each Champion with an INT score of 15+ in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 18267,
@@ -73752,7 +73752,7 @@
                     ],
                     "id": 10670,
                     "prestack": true,
-                    "desc": "Miria prefers those who follow the rules."
+                    "desc": "Miria increases the attack bonus of Mage of High Sorcery by 25% for each Lawful Champion in the formation, stacking multiplicatively."
                 }
             ],
             "fName": "miria",
@@ -74416,7 +74416,7 @@
                         }
                     ],
                     "id": 10798,
-                    "desc": "Antrius focuses on his fellow bards to power his song."
+                    "desc": "Antrius increases Inspiring Song's damage bonus by 200% for each Bard in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 18687,
@@ -74457,7 +74457,7 @@
                         }
                     ],
                     "id": 10800,
-                    "desc": "Antrius focuses on Chaotic Champions to power his song."
+                    "desc": "Antrius increases Inspiring Song's damage bonus by 100% for each Chaotic Champion in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 18688,
@@ -74510,7 +74510,7 @@
                         }
                     ],
                     "id": 10799,
-                    "desc": "Antrius focuses on other Champions with awful stats to power his song."
+                    "desc": "Antrius increases Inspiring Song's damage bonus by 150% for each Champion in the formation with a total ability score of 78 or lower, stacking multiplicatively."
                 }
             ],
             "fName": "antrius",
@@ -75280,7 +75280,7 @@
                         }
                     ],
                     "id": 10892,
-                    "desc": "Nixie focuses on the chaos."
+                    "desc": "Nixie increases the damage bonus of Blazing Charisma by 100% for each Chaotic champion in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 19067,
@@ -75333,7 +75333,7 @@
                         }
                     ],
                     "id": 10891,
-                    "desc": "Nixie focuses on her bond with others with Awful stats."
+                    "desc": "Nixie increases the damage bonus of Blazing Charisma by 150% for each Champion with a total ability score of 78 or less in the formation, stacking multiplicatively."
                 },
                 {
                     "graphicId": 19068,
@@ -75374,7 +75374,7 @@
                         }
                     ],
                     "id": 10890,
-                    "desc": "Nixie focuses on her Tiefling bond."
+                    "desc": "Nixie increases the damage bonus of Blazing Charisma by 200% for each Tiefling champion in the formation, stacking multiplicatively."
                 }
             ],
             "fName": "nixie",
@@ -76127,7 +76127,7 @@
                         }
                     ],
                     "id": 11301,
-                    "desc": "Evandra focuses on her connection with her Awful Ones affiliation."
+                    "desc": "Evandra increases the damage bonus of Freedom's Fury by 400% for each Champion with a total ability score of 78 or less in the formation, stacking multiplicatively, and all Awful Ones Champions can be used in Witchlight adventures."
                 },
                 {
                     "graphicId": 19317,
@@ -76168,7 +76168,7 @@
                         }
                     ],
                     "id": 11300,
-                    "desc": "Evandra focuses on her connection with battle-hardened Champions."
+                    "desc": "Evandra increases the damage bonus of Freedom's Fury by 250% for each Fighter, Barbarian, Ranger, or Paladin Champion in the formation, stacking multiplicatively and applied multiplicatively."
                 },
                 {
                     "graphicId": 19318,
@@ -76209,7 +76209,7 @@
                         }
                     ],
                     "id": 11299,
-                    "desc": "Evandra focuses on her connection with Female and Nonbinary Champions."
+                    "desc": "Evandra increases the damage bonus of Freedom's Fury by 100% for each Female or Nonbinary Champion in the formation, stacking multiplicatively and applied multiplicatively."
                 }
             ],
             "fName": "evandra",
@@ -77088,7 +77088,7 @@
                         }
                     ],
                     "id": 11545,
-                    "desc": "BBEG powers his evil empire with bumbling minions."
+                    "desc": "BBEG increases the damage bonus of Evil Overlord by 150% for each Champion with a total ability score of 78 or less in the formation, stacking multiplicatively and applied multiplicatively."
                 },
                 {
                     "graphicId": 19513,
@@ -77129,7 +77129,7 @@
                         }
                     ],
                     "id": 11544,
-                    "desc": "BBEG powers his evil empire with Evil minions."
+                    "desc": "BBEG increases the damage bonus of Evil Overlord by 200% for each Evil Champion in the formation, stacking multiplicatively and applied multiplicatively."
                 },
                 {
                     "graphicId": 19514,
@@ -77170,7 +77170,7 @@
                         }
                     ],
                     "id": 11546,
-                    "desc": "BBEG powers his evil empire with Lawful minions."
+                    "desc": "BBEG increases the damage bonus of Evil Overlord by 100% for each Lawful Champion in the formation, stacking multiplicatively and applied multiplicatively."
                 }
             ],
             "fName": "bbeg",
@@ -77817,7 +77817,7 @@
                         }
                     ],
                     "id": 11741,
-                    "desc": "Strongheart is buoyed by a party that completes its quests."
+                    "desc": "Strongheart increases the damage bonus of Justice Needs Champions by 12.5% for each Season Level you have gained in the current Season, stacking multiplicatively."
                 },
                 {
                     "graphicId": 19783,
@@ -77870,7 +77870,7 @@
                         }
                     ],
                     "id": 11742,
-                    "desc": "Strongheart joins the largest bonded group in your formation."
+                    "desc": "Strongheart gains the affiliation(s) of the most populous affiliation(s) in the formation, and increases the damage bonus of Justice Needs Champions by 150% for each Champion from the affiliation(s), stacking multiplicatively."
                 },
                 {
                     "graphicId": 19784,
@@ -77911,7 +77911,7 @@
                         }
                     ],
                     "id": 11740,
-                    "desc": "Strongheart is heartened by Good Champions in the formation."
+                    "desc": "Strongheart increases the damage bonus of Justice Needs Champions by 100% for each good Champion in the formation, stacking multiplicatively."
                 }
             ],
             "fName": "strongheart",
@@ -78511,7 +78511,7 @@
                         }
                     ],
                     "id": 12090,
-                    "desc": "Vin Ursa focuses her efforts on the front-most columns of the formation."
+                    "desc": "Vin Ursa increases the damage of all Champions in the front two columns by 400%."
                 },
                 {
                     "graphicId": 20018,
@@ -78546,7 +78546,7 @@
                         }
                     ],
                     "id": 12091,
-                    "desc": "Vin Ursa focuses her efforts on the rear-most columns of the formation."
+                    "desc": "Vin Ursa increases the damage of all Champions in the rear two columns by 400%."
                 },
                 {
                     "graphicId": 20014,
@@ -78588,7 +78588,7 @@
                         }
                     ],
                     "id": 12094,
-                    "desc": "Vin Ursa reluctantly hangs out with Champions that have a moral code."
+                    "desc": "Vin Ursa increases the damage of Good Champions by 400%."
                 },
                 {
                     "graphicId": 20015,
@@ -78630,7 +78630,7 @@
                         }
                     ],
                     "id": 12092,
-                    "desc": "Vin Ursa likes to hang with a rather sadistic crowd."
+                    "desc": "Vin Ursa increases the damage of Evil Champions by 400%."
                 },
                 {
                     "graphicId": 20016,
@@ -78672,7 +78672,7 @@
                         }
                     ],
                     "id": 12093,
-                    "desc": "Vin Ursa likes to hang with Champions who like to keep their options open."
+                    "desc": "Vin Ursa increases the damage of Neutral (Good/Evil axis) Champions by 400%."
                 }
             ],
             "fName": "vinursa",
@@ -79406,7 +79406,7 @@
                         }
                     ],
                     "id": 12119,
-                    "desc": "Lae'zel's attacks distract enemies, causing the next attack that hits them to do massive damage."
+                    "desc": "When Lae'zel hits an enemy and they survive, the enemy is distracted and the next Champion (other than Lae'zel) that hits them deals an additional 4 seconds of BUD-based damage."
                 },
                 {
                     "graphicId": 20242,
@@ -79446,7 +79446,7 @@
                         }
                     ],
                     "id": 12118,
-                    "desc": "Lae'zel becomes a Champion, increasing the chance and damage of her critical hits."
+                    "desc": "Increases Lae'zel's Critical Hit chance by 20% (additively) and Critical Hit damage by 100% (multiplicatively)."
                 },
                 {
                     "graphicId": 20243,
@@ -79481,7 +79481,7 @@
                         }
                     ],
                     "id": 12120,
-                    "desc": "Lae'zel becomes an Eldritch Knight, allowing her to cast Magic Missile after each of her Greatsword attacks."
+                    "desc": "Lae'zel now casts Magic Missile immediately after attacking with her greatsword, firing a missile at 3 random targets."
                 }
             ],
             "fName": "laezel",
@@ -80131,7 +80131,7 @@
                         }
                     ],
                     "id": 12494,
-                    "desc": "Astarion looks to the bottom of the formation to deal the most damage."
+                    "desc": "Astarion increases the damage of all Champions at the bottom of each column by 100%."
                 },
                 {
                     "graphicId": 20428,
@@ -80172,7 +80172,7 @@
                         }
                     ],
                     "id": 12493,
-                    "desc": "Astarion looks to the top of the formation to deal the most damage."
+                    "desc": "Astarion increases the damage of all Champions at the top of each column by 100%."
                 },
                 {
                     "graphicId": 20425,
@@ -80220,7 +80220,7 @@
                         }
                     ],
                     "id": 12496,
-                    "desc": "Astarion works best with fellow rogues, wizards, and Absolute Adversaries affiliation members."
+                    "desc": "Astarion increases the damage bonus of his Outflank specialization by 100% for each Champion in the formation that is a Rogue, Wizard, or Absolute Adversaries affiliation member, stacking multiplicatively."
                 },
                 {
                     "graphicId": 20426,
@@ -80256,7 +80256,7 @@
                         }
                     ],
                     "id": 12497,
-                    "desc": "Astarion focuses on dealing more damage when he attacks an enemy who has been recently attacked by an ally."
+                    "desc": "Increases the bonus BUD-based damage Astarion's Sneak Attack deals to 5 seconds worth."
                 },
                 {
                     "graphicId": 20429,
@@ -80293,7 +80293,7 @@
                         }
                     ],
                     "id": 12495,
-                    "desc": "Astarion schemes with other gold find Champions in the formation to \"obtain\" even more gold."
+                    "desc": "Astarion increases the gold find of the party by 100% for each gold find Champion in the formation, stacking multiplicatively."
                 }
             ],
             "fName": "astarion",
@@ -81757,5 +81757,5 @@
             "age": "Unknown"
         }
     ],
-    "version": 2
+    "version": 3
 }
