@@ -7,6 +7,10 @@
             "classes": "Fighter",
             "roles": "Support",
             "affiliations": "Companions of the Hall",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 18,
                 10,
@@ -722,6 +726,10 @@
             "classes": "Cleric",
             "roles": "Support / Healing",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 14,
                 8,
@@ -1128,6 +1136,10 @@
             "classes": "Paladin",
             "roles": "Tanking / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 16,
                 12,
@@ -1635,6 +1647,10 @@
             "classes": "Rogue",
             "roles": "DPS / Gold",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 10,
                 18,
@@ -2108,6 +2124,10 @@
             "classes": "Bard",
             "roles": "Support / Healing",
             "affiliations": "Force Grey",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 12,
                 16,
@@ -2484,6 +2504,10 @@
             "classes": "Wizard",
             "roles": "DPS / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 10,
                 11,
@@ -3262,6 +3286,10 @@
             "classes": "Ranger",
             "roles": "DPS / Support / Speed",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 18,
                 12,
@@ -4017,6 +4045,10 @@
             "classes": "Sorcerer",
             "roles": "DPS",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 9,
                 16,
@@ -4539,6 +4571,10 @@
             "classes": "Warlock",
             "roles": "DPS / Support / Gold",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 11,
                 10,
@@ -4979,6 +5015,10 @@
             "classes": "Druid",
             "roles": "Support / Tanking / Healing",
             "affiliations": "Force Grey",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 18,
                 15,
@@ -5498,6 +5538,10 @@
             "classes": "Barbarian",
             "roles": "DPS",
             "affiliations": "Force Grey",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 18,
                 14,
@@ -6031,6 +6075,10 @@
             "classes": "Paladin",
             "roles": "DPS / Tanking",
             "affiliations": "Force Grey / Dark Order",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 20,
                 15,
@@ -6517,6 +6565,10 @@
             "classes": "Rogue",
             "roles": "Support",
             "affiliations": "Force Grey",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 11,
                 18,
@@ -7011,6 +7063,10 @@
             "classes": "Monk",
             "roles": "Support / Gold",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 11,
@@ -7707,6 +7763,10 @@
             "classes": "Fighter",
             "roles": "DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -8179,6 +8239,10 @@
             "classes": "Druid",
             "roles": "DPS / Support / Tanking",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -8711,6 +8775,10 @@
             "classes": "Wizard",
             "roles": "DPS / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -9225,6 +9293,10 @@
             "classes": "Ranger",
             "roles": "DPS",
             "affiliations": "Companions of the Hall",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 10,
                 19,
@@ -9787,6 +9859,10 @@
             "classes": "Cleric",
             "roles": "Support / Healing / Tanking",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -10442,6 +10518,10 @@
             "classes": "Rogue",
             "roles": "Support / Healing / Gold",
             "affiliations": "Companions of the Hall",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -10903,6 +10983,10 @@
             "classes": "Bard",
             "roles": "Support / DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -11754,6 +11838,10 @@
             "classes": "Ranger",
             "roles": "DPS / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -12388,6 +12476,10 @@
             "classes": "Sorcerer",
             "roles": "DPS / Support",
             "affiliations": "Waffle Crew / Acquisitions Incorporated",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -12856,6 +12948,10 @@
             "classes": "Monk",
             "roles": "DPS / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 13,
@@ -13400,6 +13496,10 @@
             "classes": "Fighter",
             "roles": "DPS / Support",
             "affiliations": "Companions of the Hall",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -14130,6 +14230,10 @@
             "classes": "Paladin",
             "roles": "Tanking / Support",
             "affiliations": "Waffle Crew / Acquisitions Incorporated",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 19,
@@ -14713,6 +14817,10 @@
             "classes": "Fighter / Barbarian",
             "roles": "DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -15246,6 +15354,10 @@
             "classes": "Bard",
             "roles": "Support / Speed",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -15745,6 +15857,10 @@
             "classes": "Rogue",
             "roles": "Support / Speed",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -16267,6 +16383,10 @@
             "classes": "Fighter",
             "roles": "Support / DPS / Gold",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 19,
                 14,
@@ -16800,6 +16920,10 @@
             "classes": "Fighter / Rogue",
             "roles": "DPS / Gold",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -17272,6 +17396,10 @@
             "classes": "Barbarian",
             "roles": "Support / Tanking",
             "affiliations": "Companions of the Hall",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 20,
@@ -17652,6 +17780,10 @@
             "classes": "Warlock",
             "roles": "DPS",
             "affiliations": "Brimstone Angels",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -18128,6 +18260,10 @@
             "classes": "Paladin",
             "roles": "Support / Healing",
             "affiliations": "Acq Inc \"C\" Team",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -18735,6 +18871,10 @@
             "classes": "Bard / Wizard",
             "roles": "Support",
             "affiliations": "Sirens of the Realms",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -19208,6 +19348,10 @@
             "classes": "Warlock",
             "roles": "Support / DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -19805,6 +19949,10 @@
             "classes": "Cleric",
             "roles": "Support / Healing",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -20480,6 +20628,10 @@
             "classes": "Warlock",
             "roles": "Support",
             "affiliations": "Acq Inc \"C\" Team",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -20936,6 +21088,10 @@
             "classes": "Bard",
             "roles": "Support / Gold",
             "affiliations": "Waffle Crew",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -21433,6 +21589,10 @@
             "classes": "Rogue",
             "roles": "DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -22012,6 +22172,10 @@
             "classes": "Monk",
             "roles": "DPS",
             "affiliations": "Acq Inc \"C\" Team",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -22600,6 +22764,10 @@
             "classes": "Barbarian",
             "roles": "Tanking / Support",
             "affiliations": "Heroes of Aerois",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -23526,6 +23694,10 @@
             "classes": "Rogue",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 7,
@@ -24113,6 +24285,10 @@
             "classes": "Bard / Cleric",
             "roles": "Healing / Support / Gold",
             "affiliations": "Heroes of Aerois",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -24827,6 +25003,10 @@
             "classes": "Fighter",
             "roles": "Support / Healing",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -25362,6 +25542,10 @@
             "classes": "Druid",
             "roles": "Tanking / Support",
             "affiliations": "Acq Inc \"C\" Team",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -25923,6 +26107,10 @@
             "classes": "Rogue",
             "roles": "Support / Speed",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -26540,6 +26728,10 @@
             "classes": "Wizard",
             "roles": "DPS / Support",
             "affiliations": "Acquisitions Incorporated",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -27030,6 +27222,10 @@
             "classes": "Cleric",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -27724,6 +27920,10 @@
             "classes": "Barbarian",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -28494,6 +28694,10 @@
             "classes": "Warlock / Sorcerer",
             "roles": "Support",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -28965,6 +29169,10 @@
             "classes": "Paladin",
             "roles": "Tanking / Support / Speed",
             "affiliations": "Heroes of Aerois",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -29680,6 +29888,10 @@
             "classes": "Cleric",
             "roles": "Support / Gold",
             "affiliations": "Dark Order",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 20,
@@ -30214,6 +30426,10 @@
             "classes": "Rogue",
             "roles": "DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -30714,6 +30930,10 @@
             "classes": "Ranger",
             "roles": "Support / Gold",
             "affiliations": "Acquisitions Incorporated",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -31209,6 +31429,10 @@
             "classes": "Fighter",
             "roles": "Tanking / Support / Speed",
             "affiliations": "Brimstone Angels",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -31893,6 +32117,10 @@
             "classes": "Druid",
             "roles": "Healing / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 11,
@@ -32338,6 +32566,10 @@
             "classes": "Paladin",
             "roles": "Support / Tanking / Healing / Speed",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -32990,6 +33222,10 @@
             "classes": "Fighter / Wizard",
             "roles": "Support / Speed",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 17,
@@ -33515,6 +33751,10 @@
             "classes": "Rogue",
             "roles": "Support / Tanking",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -34243,6 +34483,10 @@
             "classes": "Fighter / Druid",
             "roles": "DPS / Support",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 15,
@@ -34727,6 +34971,10 @@
             "classes": "Warlock",
             "roles": "Tanking / Support",
             "affiliations": "Heroes of Aerois",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 7,
@@ -35516,6 +35764,10 @@
             "classes": "Bard / Warlock",
             "roles": "Support / Gold",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 13,
@@ -36052,6 +36304,10 @@
             "classes": "Barbarian",
             "roles": "DPS / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -36548,6 +36804,10 @@
             "classes": "Cleric",
             "roles": "Gold / Support",
             "affiliations": "Acquisitions Incorporated",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -37194,6 +37454,10 @@
             "classes": "Artificer",
             "roles": "Tanking / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -37756,6 +38020,10 @@
             "classes": "Paladin",
             "roles": "Tanking / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 15,
                 13,
@@ -38363,6 +38631,10 @@
             "classes": "Wizard",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 10,
                 14,
@@ -38947,6 +39219,10 @@
             "classes": "Barbarian",
             "roles": "Support / DPS",
             "affiliations": "Dark Order",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 23,
@@ -39487,6 +39763,10 @@
             "classes": "Wizard / Fighter",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -40027,6 +40307,10 @@
             "classes": "Druid / Warlock",
             "roles": "Support / Gold / Healing",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -40533,6 +40817,10 @@
             "classes": "Sorcerer",
             "roles": "DPS",
             "affiliations": "Heroes of Aerois",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 13,
@@ -41311,6 +41599,10 @@
             "classes": "Sorcerer",
             "roles": "Gold / Support",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -41894,6 +42186,10 @@
             "classes": "Rogue",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -42426,6 +42722,10 @@
             "classes": "Rogue / Bard",
             "roles": "Support / Speed",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 11,
@@ -43298,6 +43598,10 @@
             "classes": "Cleric / Bard",
             "roles": "Support / DPS",
             "affiliations": "Sirens of the Realms",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -43806,6 +44110,10 @@
             "classes": "Wizard / Cleric",
             "roles": "Support",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -44499,6 +44807,10 @@
             "classes": "Cleric",
             "roles": "Healing / Support",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 13,
@@ -45035,6 +45347,10 @@
             "classes": "Warlock",
             "roles": "Support / Healing",
             "affiliations": "Rivals of Waterdeep",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -45652,6 +45968,10 @@
             "classes": "Fighter",
             "roles": "Support / Gold",
             "affiliations": "Brimstone Angels",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 19,
@@ -46487,6 +46807,10 @@
             "classes": "Paladin",
             "roles": "Support / Tanking",
             "affiliations": "Rivals of Waterdeep",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 19,
@@ -47881,6 +48205,10 @@
             "classes": "Fighter",
             "roles": "Tanking / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 19,
@@ -48787,6 +49115,10 @@
             "classes": "Bard",
             "roles": "Support / Gold / Healing",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -49667,6 +49999,10 @@
             "classes": "Warlock",
             "roles": "DPS",
             "affiliations": "Oxventurers Guild",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -50317,6 +50653,10 @@
             "classes": "Rogue",
             "roles": "Support",
             "affiliations": "Oxventurers Guild",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 13,
@@ -50941,6 +51281,10 @@
             "classes": "Paladin",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 18,
                 12,
@@ -51583,6 +51927,10 @@
             "classes": "Rogue / Wizard / Fighter / Ranger / Cleric / Bard",
             "roles": "Support / Tanking / Healing / DPS",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 9,
                 12,
@@ -52392,6 +52740,10 @@
             "classes": "Rogue",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 10,
                 18,
@@ -53561,6 +53913,10 @@
             "classes": "Monk",
             "roles": "DPS / Gold",
             "affiliations": "Rivals of Waterdeep",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 11,
@@ -54221,6 +54577,10 @@
             "classes": "Rogue / Bard",
             "roles": "Support",
             "affiliations": "Sirens of the Realms",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -55093,6 +55453,10 @@
             "classes": "Wizard",
             "roles": "Support / Healing / Speed",
             "affiliations": "Heroes of the Planes",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -55797,6 +56161,10 @@
             "classes": "Barbarian / Druid",
             "roles": "DPS / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 20,
@@ -56381,6 +56749,10 @@
             "classes": "Cleric",
             "roles": "Support / Healing",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -57055,6 +57427,10 @@
             "classes": "Rogue",
             "roles": "Support / Gold",
             "affiliations": "Oxventurers Guild",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -57756,6 +58132,10 @@
             "classes": "Artificer",
             "roles": "Support / Gold / Speed",
             "affiliations": "Acquisitions Incorporated",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -58537,6 +58917,10 @@
             "classes": "Ranger",
             "roles": "Support",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -59355,6 +59739,10 @@
             "classes": "Barbarian / Druid",
             "roles": "Tanking / Support / Speed",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -60114,6 +60502,10 @@
             "classes": "Druid",
             "roles": "Support / Gold",
             "affiliations": "Rivals of Waterdeep",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -60815,6 +61207,10 @@
             "classes": "Wizard",
             "roles": "Support / Gold / Healing",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -61706,6 +62102,10 @@
             "classes": "Fighter",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 16,
@@ -62287,6 +62687,10 @@
             "classes": "Druid",
             "roles": "Support / Gold",
             "affiliations": "Oxventurers Guild",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -63003,6 +63407,10 @@
             "classes": "Warlock / Bard",
             "roles": "DPS / Speed",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -63695,6 +64103,10 @@
             "classes": "Sorcerer",
             "roles": "Support / Gold",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -64345,6 +64757,10 @@
             "classes": "Druid",
             "roles": "Support",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -65336,6 +65752,10 @@
             "classes": "Bard",
             "roles": "Support / Gold",
             "affiliations": "Oxventurers Guild",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 12,
@@ -66246,6 +66666,10 @@
             "classes": "Warlock",
             "roles": "Tanking / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 10,
                 14,
@@ -67210,6 +67634,10 @@
             "classes": "Paladin",
             "roles": "Tanking / Support / Healing / Gold",
             "affiliations": "Oxventurers Guild",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 18,
@@ -68066,6 +68494,10 @@
             "classes": "Rogue",
             "roles": "Support / DPS",
             "affiliations": "Rivals of Waterdeep",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -68702,6 +69134,10 @@
             "classes": "Sorcerer",
             "roles": "Support / Speed",
             "affiliations": "Rivals of Waterdeep",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -69645,6 +70081,10 @@
             "classes": "Fighter",
             "roles": "DPS / Tanking",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 19,
@@ -70309,6 +70749,10 @@
             "classes": "Rogue / Wizard",
             "roles": "Support / Healing",
             "affiliations": "Heroes of Baldur's Gate",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -71228,6 +71672,10 @@
             "classes": "Warlock / Rogue",
             "roles": "DPS / Support",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -71878,6 +72326,10 @@
             "classes": "Cleric",
             "roles": "Support / Healing",
             "affiliations": "Black Dice Society",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -72522,6 +72974,10 @@
             "classes": "Ranger",
             "roles": "Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 14,
@@ -73349,6 +73805,10 @@
             "classes": "Wizard",
             "roles": "Support / Tanking",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -74143,6 +74603,10 @@
             "classes": "Bard",
             "roles": "Support / Healing",
             "affiliations": "Awful Ones",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -74927,6 +75391,10 @@
             "classes": "Sorcerer",
             "roles": "DPS / Support",
             "affiliations": "Awful Ones",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -75834,6 +76302,10 @@
             "classes": "Fighter",
             "roles": "Support / Tanking / Gold",
             "affiliations": "Awful Ones",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 17,
@@ -76741,6 +77213,10 @@
             "classes": "Wizard",
             "roles": "Support / Speed",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 10,
@@ -77533,6 +78009,10 @@
             "classes": "Paladin",
             "roles": "Support / Healing",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 15,
@@ -78279,6 +78759,10 @@
             "classes": "Fighter / Rogue",
             "roles": "Support / Gold",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -79075,6 +79559,10 @@
             "classes": "Fighter",
             "roles": "Support / DPS / Speed",
             "affiliations": "Absolute Adversaries",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 17,
@@ -79860,6 +80348,10 @@
             "classes": "Rogue",
             "roles": "Support / Gold",
             "affiliations": "Absolute Adversaries",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "statsFeats": [
                 8,
@@ -80670,6 +81162,10 @@
             "classes": "Fighter",
             "roles": "DPS / Tanking / Support",
             "affiliations": "None",
+            "chests": {
+                "gold": true,
+                "silver": false
+            },
             "statsFeats": [
                 18,
                 15,
@@ -81224,6 +81720,10 @@
             "classes": "Bard / Fighter (Guess)",
             "roles": "Unknown",
             "affiliations": "Acquisitions Incorporated (Guess)",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "formation": true,
             "abilities": [
                 {
@@ -81503,6 +82003,10 @@
             "classes": "Paladin (Guess)",
             "roles": "Tanking / Support (Guess)",
             "affiliations": "Unknown",
+            "chests": {
+                "gold": true,
+                "silver": true
+            },
             "abilities": [
                 {
                     "graphicId": 0,
@@ -81744,6 +82248,10 @@
             "classes": "Unknown",
             "roles": "Unknown",
             "affiliations": "Unknown",
+            "chests": {
+                "gold": false,
+                "silver": false
+            },
             "nameShort": "Jang Sao",
             "seat": 0,
             "fName": "jangsao",
@@ -81757,5 +82265,5 @@
             "age": "Unknown"
         }
     ],
-    "version": 3
+    "version": 4
 }

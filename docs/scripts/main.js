@@ -160,7 +160,7 @@ function displayWiki(i) {
 	content+="<h1 id=\"legendaries\">Legendaries</h1>";
 	if (champ.legs!=undefined) {
 		if (champ.legs.effects==undefined||champ.legs.effects.length==0) {
-			content+="Unknown.";
+			content+=unknown;
 		} else {
 			content+="<ul>";
 			for (let i=0;i<champ.legs.effects.length;i++) {
@@ -170,6 +170,13 @@ function displayWiki(i) {
 			content+=addLegendaryDropdown("DPS",champ.legs.dps);
 			content+=addLegendaryDropdown("Non-DPS",champ.legs.nondps);
 		}
+	} else {
+		content+=unknown;
+	}
+	
+	content+="<h1 id=\"championimages\">Champion Images</h1>";
+	if (champ.console||champ.chests!=undefined) {
+		content+=addChampionImagesData(champ);
 	} else {
 		content+=unknown;
 	}
@@ -297,6 +304,25 @@ function addLegendaryDropdown(legsType,legsApplic) {
 		content+="<br/>";
 	}
 	content+="</pre></p></details>";
+	return content;
+}
+
+function addChampionImagesData(champ) {
+	var content="<p><span class=\"championImagesColumn\">";
+	if (champ.console) {
+		content+="<span class=\"championImagesRow\"><span class=\"championImagesPortrait\"><img src=\"images/"+champ.fName+"/portraits/console.png\" alt=\""+champ.name+" Console Portrait\" />Console Portait</span></span>";
+	}
+	if (champ.chests!=undefined) {
+		content+="<span class=\"championImagesRow\">"
+		if (champ.chests.gold) {
+			content+="<span class=\"championImagesChests\"><img src=\"images/"+champ.fName+"/chests/gold.png\" alt=\""+champ.name+" Gold Chest Icon\" />Gold Chest Icon</span>";
+		}
+		if (champ.chests.silver) {
+			content+="<span class=\"championImagesChests\"><img src=\"images/"+champ.fName+"/chests/silver.png\" alt=\""+champ.name+" Silver Chest Icon\" />Silver Chest Icon</span>";
+		}
+		content+="</span>";
+	}
+	content+="</span></p>";
 	return content;
 }
 
