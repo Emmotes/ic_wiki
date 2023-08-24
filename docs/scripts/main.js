@@ -76,13 +76,7 @@ function drawChampion(i,champ) {
 	if (fName == "nixie") {
 		portrait = nixiePortrait();
 	}
-	var draw = "<div class=\"championHolder\" id=\""+fName+"\">";
-	draw+="<a onclick=\"displayWiki("+i+")\" id=\"link_"+fName+"\" href=\"#\">";
-	draw+="<div class=\"champion\" style=\"background-image:url("+portrait+"); background-size:68px; background-repeat: no-repeat;\" id=\"div_"+fName+"\">";
-	draw+="<div class=\"championName\">"+nameShort+"</div>";
-	draw+="</div>";
-	draw+="</a>";
-	draw+="</div>";
+	var draw = "<div class=\"championHolder\" id=\""+fName+"\"><a onclick=\"displayWiki("+i+")\" id=\"link_"+fName+"\" href=\"#\"><div class=\"champion\" style=\"background-image:url("+portrait+"); background-size:68px; background-repeat: no-repeat;\" id=\"div_"+fName+"\"><div class=\"championName\">"+nameShort+"</div></div></a></div>";
 	return draw;
 }
 
@@ -121,8 +115,7 @@ function displayWiki(i) {
 	var formationURL = "images/"+fName+"/formation/formation.png";
 	var formationExists = champ.formation;
 	if (formationExists) {
-		content+="<h1 id=\"formation\">Formation</h1>";
-		content+="<p><span class=\"formationBorder\"><img src=\""+formationURL+"\" alt=\"Formation Layout\" /></span></p>";
+		content+="<h1 id=\"formation\">Formation</h1><p><span class=\"formationBorder\"><img src=\""+formationURL+"\" alt=\"Formation Layout\" /></span></p>";
 	}
 	
 	content+="<h1 id=\"abilities\">Abilities</h1>";
@@ -525,12 +518,12 @@ function runNameEegs(fName,nameShort) {
 		return laezelEegg;
 	}
 	if (fName == "corazon") {
-		if (randInt(1,4) == 4) {
+		if (randInt(1,4) == 3) {
 			return "Côrăžón";
 		}
 	}
 	if (fName == "torogar") {
-		if (randInt(1,8) == 8) {
+		if (randInt(1,8) == 7) {
 			return "Totoro";
 		}
 	}
@@ -538,7 +531,7 @@ function runNameEegs(fName,nameShort) {
 }
 
 function isNixieBlue() {
-	if (randInt(1,4) == 4) {
+	if (randInt(1,4) == 2) {
 		return true;
 	}
 	return false;
