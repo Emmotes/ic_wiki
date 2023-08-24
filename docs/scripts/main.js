@@ -246,7 +246,7 @@ function addItemData(champ,slots) {
 		content+="<span class=\"itemTableRow\"><span class=\"itemTableIcon\">";
 		for (let k=0;k<slot.items.length;k++) {
 			var item=slot.items[k];
-			content+="<span class=\"itemTableIcon"+(k+1)+"\"><img src=\"/images/"+champ.fName+"/items/"+item.graphicId+".png\" alt=\""+item.name+" Icon\"/></span>";
+			content+="<span class=\"itemTableIcon"+(k+1)+"\"><img src=\"images/"+champ.fName+"/items/"+item.graphicId+".png\" alt=\""+item.name+" Icon\"/></span>";
 			if (item.name.length>longName) {
 				longName=item.name.length;
 			}
