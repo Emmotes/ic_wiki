@@ -161,6 +161,13 @@ function displayWiki(i) {
 		content+=unknown;
 	}
 	
+	content+="<h1 id=\"items\">Items</h1>";
+	if (champ.items!=undefined&&champ.items.length>0) {
+		content+=addItemData(champ,champ.items);
+	} else {
+		content+=unknown;
+	}
+	
 	content+="<h1 id=\"legendaries\">Legendaries</h1>";
 	if (champ.legs!=undefined) {
 		if (champ.legs.effects==undefined||champ.legs.effects.length==0) {
@@ -221,6 +228,56 @@ function addAbilityData(champ,ability) {
 		}
 	}
 	content+="</pre></p></details></div></div>";
+	return content;
+}
+
+function addItemData(champ,slots) {
+	var small=(slots[0].effect==undefined);
+	var content="<p><span class=\"itemTableColumn\"><span class=\"itemTableRowHeader\"><span class=\"itemTableIcon\" style=\"align-items:center;\"><span style=\"margin-left:8px;\"><strong>Icons</strong></span></span>";
+	if (small) {
+		content+="<span class=\"itemTableNameSmall\"><span style=\"margin-left: 8px;\"><strong>Name</strong></span></span>";
+	} else {
+		content+="<span class=\"itemTableSlot\"><span><strong>Slot</strong></span></span><span class=\"itemTableName\"><span style=\"margin-left: 8px;\"><strong>Epic Name</strong></span></span><span class=\"itemTableEffect\"><span style=\"margin-left: 8px;\"><strong>Effect</strong></span></span>";
+	}
+	content+="</span>";
+	var longName = 0;
+	for (let i=0;i<slots.length;i++) {
+		var slot=slots[i];
+		content+="<span class=\"itemTableRow\"><span class=\"itemTableIcon\">";
+		for (let k=0;k<slot.items.length;k++) {
+			var item=slot.items[k];
+			content+="<span class=\"itemTableIcon"+(k+1)+"\"><img src=\"/images/"+champ.fName+"/items/"+item.graphicId+".png\" alt=\""+item.name+" Icon\"/></span>";
+			if (item.name.length>longName) {
+				longName=item.name.length;
+			}
+		}
+		content+="</span>";
+		if (small) {
+			content+="<span class=\"itemTableNameSmall\"><span style=\"margin-left: 8px;\">"+item.name+"</span></span>";
+		} else {
+			content+="<span class=\"itemTableSlot\"><span>"+(i+1)+"</span></span><span class=\"itemTableName\"><span style=\"margin-left: 8px;\">"+item.name+"</span></span><span class=\"itemTableEffect\"><span style=\"margin-left: 8px;\">"+slot.effect+"</span></span>";
+		}
+		content+="</span>";
+	}
+	content+="</p>";
+	if (!small) {
+		longName+=2;
+		content+="<details><summary><em>Item Names and Descriptions</em></summary><p><pre>";
+		for (let i=0;i<slots.length;i++) {
+			var slot=slots[i];
+			if (i>0) {
+				content+="<br/><br/>";
+			}
+			content+="Slot: "+(i+1)+"<br/>";
+			for (let k=0;k<slot.items.length;k++) {
+				var item=slot.items[k];
+				content+=(item.name+": ").padStart(longName);
+				content+=splitItemDescription(item.description,longName);
+				content+="<br/>";
+			}
+		}
+	}
+	content+="</pre></p></details>";
 	return content;
 }
 
@@ -410,6 +467,26 @@ function addAbilityImages(champ,ability) {
 		return "<img src=\"images/"+champ.fName+"/abilities/"+ability.id+".png\" alt=\""+ability.name+" Icon\">";
 	}
 	return "";
+}
+
+function splitItemDescription(description,longName) {
+	var limit=95;
+	var spacing="".padStart(longName);
+	var desc=description.split(" ");
+	var retVal="";
+	var line="";
+	var i=0;
+	while (i<desc.length) {
+		if (line.length+spacing.length+1+desc[i].length<=limit) {
+			line+=(line!=""?" ":"")+desc[i];
+		} else {
+			retVal+=(retVal!=""?"<br/>":"")+line;
+			line=spacing+desc[i];
+		}
+		i++;
+	}
+	retVal+=(retVal!=""?"<br/>":"")+line;
+	return retVal;
 }
 
 function ins(str, index, value) {
