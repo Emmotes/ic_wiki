@@ -524,7 +524,7 @@ function runNameEegs(fName,nameShort) {
 		return dhaniEegg;
 	}
 	if (fName == "laezel") {
-		var laezelEegg = "Dhani";
+		var laezelEegg = "Laezel";
 		laezelEegg = ins(laezelEegg, randInt(1,5), "'");
 		return laezelEegg;
 	}
