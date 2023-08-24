@@ -266,13 +266,12 @@ function addItemData(champ,slots) {
 		for (let i=0;i<slots.length;i++) {
 			var slot=slots[i];
 			if (i>0) {
-				content+="<br/><br/>";
+				content+="<br/>";
 			}
 			content+="Slot: "+(i+1)+"<br/>";
 			for (let k=0;k<slot.items.length;k++) {
 				var item=slot.items[k];
-				content+=(item.name+": ").padStart(longName);
-				content+=splitItemDescription(item.description,longName);
+				content+=splitItemDescription((item.name+":").padStart(longName-1),item.description,longName);
 				content+="<br/>";
 			}
 		}
@@ -469,20 +468,22 @@ function addAbilityImages(champ,ability) {
 	return "";
 }
 
-function splitItemDescription(description,longName) {
+function splitItemDescription(start,description,longName) {
 	var limit=95;
 	var spacing="".padStart(longName);
 	var desc=description.split(" ");
 	var retVal="";
-	var line="";
+	var line=start;
 	var i=0;
+	var first=true;
 	while (i<desc.length) {
-		if (line.length+spacing.length+1+desc[i].length<=limit) {
+		if (line.length+1+desc[i].length<=limit) {
 			line+=(line!=""?" ":"")+desc[i];
 		} else {
 			retVal+=(retVal!=""?"<br/>":"")+line;
 			line=spacing+desc[i];
 		}
+		first=false;
 		i++;
 	}
 	retVal+=(retVal!=""?"<br/>":"")+line;
