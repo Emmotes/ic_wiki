@@ -6408,7 +6408,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Gold",
                     "items": [
                         {
                             "graphicId": 651,
@@ -8070,7 +8070,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Cantrip Abilities Damage",
                     "items": [
                         {
                             "graphicId": 1304,
@@ -12797,7 +12797,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Damage while Ultimate Active",
                     "items": [
                         {
                             "graphicId": 2503,
@@ -13341,7 +13341,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Ultimate Effect",
                     "items": [
                         {
                             "graphicId": 2712,
@@ -14021,7 +14021,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Critical Chance",
                     "items": [
                         {
                             "graphicId": 2806,
@@ -14046,7 +14046,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Critical Damage",
                     "items": [
                         {
                             "graphicId": 2809,
@@ -17213,7 +17213,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Ultimate Cooldown Duration",
                     "items": [
                         {
                             "graphicId": 3709,
@@ -24079,7 +24079,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Ultimate Cooldown Increase",
                     "items": [
                         {
                             "graphicId": 5506,
@@ -27665,7 +27665,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Beacon of Light",
                     "items": [
                         {
                             "graphicId": 6308,
@@ -30655,7 +30655,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Damage while Ultimate Active",
                     "items": [
                         {
                             "graphicId": 6967,
@@ -35918,7 +35918,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Luck of Yondalla: Requisition",
                     "items": [
                         {
                             "graphicId": 7929,
@@ -37110,7 +37110,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Contractual Obligations",
                     "items": [
                         {
                             "graphicId": 8290,
@@ -41835,7 +41835,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Morbid Excitement",
                     "items": [
                         {
                             "graphicId": 9466,
@@ -41860,7 +41860,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Generous Djinn",
                     "items": [
                         {
                             "graphicId": 9457,
@@ -63636,7 +63636,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Form of Dread Attack Damage",
                     "items": [
                         {
                             "graphicId": 14519,
@@ -66112,7 +66112,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Gold",
                     "items": [
                         {
                             "graphicId": 15753,
@@ -67932,7 +67932,7 @@
                     ]
                 },
                 {
-                    "effect": "???",
+                    "effect": "Gold",
                     "items": [
                         {
                             "graphicId": 16127,
@@ -81757,5 +81757,5 @@
             "age": "Unknown"
         }
     ],
-    "version": 1
+    "version": 2
 }
