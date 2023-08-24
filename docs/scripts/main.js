@@ -88,9 +88,13 @@ function setSpoilers() {
 		localStorage.setItem("spoilers", 0);
 	}
 	displayChampions();
+	if (document.getElementById("currChamp").innerHTML>0) {
+		displayWiki(document.getElementById("currChamp").innerHTML);
+	}
 }
 
 function displayWiki(i) {
+	document.getElementById("currChamp").innerHTML = i;
 	var champ = data[i];
 	var name = champ.name;
 	var fName = champ.fName;
@@ -155,6 +159,14 @@ function displayWiki(i) {
 		content+=addItemData(champ,champ.items);
 	} else {
 		content+=unknown;
+	}
+	
+	content+="<h1 id=\"feats\">Feats</h1>";
+	content+="<p>TODO</p>";
+	
+	if (localStorage.spoilers==1) {
+		content+="<h1 id=\"spoilerfeats\">Spoiler Feats</h1>";
+		content+="<p>TODO</p>";
 	}
 	
 	content+="<h1 id=\"legendaries\">Legendaries</h1>";
