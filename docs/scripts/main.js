@@ -19,10 +19,6 @@ async function loadLocalData() {
 	await localStorage.setItem("data", response);
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 async function init() {
 	// Init the data.
 	if (!localStorage.data) {
@@ -530,7 +526,12 @@ function runNameEegs(fName,nameShort) {
 	}
 	if (fName == "corazon") {
 		if (randInt(1,4) == 4) {
-			return "Côrăzón";
+			return "Côrăžón";
+		}
+	}
+	if (fName == "torogar") {
+		if (randInt(1,8) == 8) {
+			return "Totoro";
 		}
 	}
 	return nameShort;
@@ -545,8 +546,8 @@ function isNixieBlue() {
 
 function nixiePortrait() {
 	var prefix = "images/nixie/portraits/portrait";
-    if (nixieBlue) {
-        return prefix+"Blue.png";
-    }
+	if (nixieBlue) {
+		return prefix+"Blue.png";
+	}
 	return prefix+".png";
 }
