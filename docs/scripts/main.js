@@ -523,6 +523,11 @@ function runNameEegs(fName,nameShort) {
 		dhaniEegg = ins(dhaniEegg, randInt(1,4), "'");
 		return dhaniEegg;
 	}
+	if (fName == "laezel") {
+		var laezelEegg = "Dhani";
+		laezelEegg = ins(laezelEegg, randInt(1,5), "'");
+		return laezelEegg;
+	}
 	if (fName == "corazon") {
 		if (randInt(1,4) == 4) {
 			return "Côrăzón";
