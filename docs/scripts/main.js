@@ -295,10 +295,10 @@ function addItemData(champ,slots) {
 
 function addFeatData(champ,feats,spoils) {
 	var content="<p><span class=\"featTableColumn\">";
-	content+="<span class=\"featTableRowHeader\"><span class=\"featTableIcon1\"><span style=\"margin-left:8px;\"><strong>Feat</strong></span></span><span class=\"featTableEffect\"><span style=\"margin-left: 8px;\"><strong>Effect</strong></span></span><span class=\"featTableSource\"><span style=\"margin-left: 8px;\"><strong>Source</strong></span></span>"+(spoils?"<span class=\"featTableDate\"><span style=\"margin-right: 8px;\"><strong>Date</strong></span></span>":"")+"</span>";
+	content+="<span class=\"featTableRowHeader\"><span class=\"featTableIcon1\"><span style=\"margin-left:8px;\"><strong>Feat</strong></span></span><span class=\"featTableEffect\"><span style=\"margin-left:8px;margin-right:8px;\"><strong>Effect</strong></span></span><span class=\"featTableSource\"><span style=\"margin-left:8px;\"><strong>Source</strong></span></span>"+(spoils?"<span class=\"featTableDate\"><span style=\"margin-right:8px;\"><strong>Date</strong></span></span>":"")+"</span>";
 	for (let i=0;i<feats.length;i++) {
 		var feat = feats[i];
-		content+="<span class=\"featTableRow\"><span class=\"featTableIcon"+feat.rarity+"\"><img src=\"images/feats/"+feat.graphicId+".png\" alt=\""+feat.name+" Icon\" />"+feat.name+"</span><span class=\"featTableEffect\"><span style=\"margin-left: 8px;\">"+feat.effect+"</span></span><span class=\"featTableSource\"><span style=\"margin-left: 8px;\">"+feat.source+"</span></span>"+(spoils?"<span class=\"featTableDate\"><span style=\"margin-right: 8px;\"><strong>"+(feat.date!=undefined?feat.date:"???")+"</strong></span></span>":"")+"</span>";
+		content+="<span class=\"featTableRow\"><span class=\"featTableIcon"+feat.rarity+"\"><img src=\"images/feats/"+feat.graphicId+".png\" alt=\""+feat.name+" Icon\" />"+feat.name+"</span><span class=\"featTableEffect\"><span style=\"margin-left:8px;margin-right:8px;\">"+feat.effect+"</span></span><span class=\"featTableSource\"><span style=\"margin-left:8px;\">"+feat.source+"</span></span>"+(spoils?"<span class=\"featTableDate\"><span style=\"margin-right:8px;\"><strong>"+(feat.date!=undefined?feat.date:"???")+"</strong></span></span>":"")+"</span>";
 	}
 	content+="</span></p>";
 	return content;
