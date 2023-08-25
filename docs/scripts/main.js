@@ -162,11 +162,16 @@ function displayWiki(i) {
 	}
 	
 	content+="<h1 id=\"feats\">Feats</h1>";
-	content+="<p>TODO</p>";
+	if (champ.feats!=undefined&&champ.feats.normal!=undefined) {
+		content+=addFeatData(champ,champ.feats.normal,false);
+	} else {
+		content+=unknown;
+	}
 	
-	if (localStorage.spoilers==1) {
+	if (localStorage.spoilers==1&&champ.feats!=undefined&&champ.feats.spoilers!=undefined&&champ.feats.spoilers.length>0) {
 		content+="<h1 id=\"spoilerfeats\">Spoiler Feats</h1>";
-		content+="<p>TODO</p>";
+		content+="<p>These are feats that have yet to be released.</p>";
+		content+=addFeatData(champ,champ.feats.spoilers,true);
 	}
 	
 	content+="<h1 id=\"legendaries\">Legendaries</h1>";
@@ -285,6 +290,17 @@ function addItemData(champ,slots) {
 		}
 	}
 	content+="</pre></p></details>";
+	return content;
+}
+
+function addFeatData(champ,feats,spoils) {
+	var content="<p><span class=\"featTableColumn\">";
+	content+="<span class=\"featTableRowHeader\"><span class=\"featTableIcon1\"><span style=\"margin-left:8px;\"><strong>Feat</strong></span></span><span class=\"featTableEffect\"><span style=\"margin-left: 8px;\"><strong>Effect</strong></span></span><span class=\"featTableSource\"><span style=\"margin-left: 8px;\"><strong>Source</strong></span></span>"+(spoils?"<span class=\"featTableDate\"><span style=\"margin-right: 8px;\"><strong>Date</strong></span></span>":"")+"</span>";
+	for (let i=0;i<feats.length;i++) {
+		var feat = feats[i];
+		content+="<span class=\"featTableRow\"><span class=\"featTableIcon"+feat.rarity+"\"><img src=\"images/feats/"+feat.graphicId+".png\" alt=\""+feat.name+" Icon\" />"+feat.name+"</span><span class=\"featTableEffect\"><span style=\"margin-left: 8px;\">"+feat.effect+"</span></span><span class=\"featTableSource\"><span style=\"margin-left: 8px;\">"+feat.source+"</span></span>"+(spoils?"<span class=\"featTableDate\"><span style=\"margin-right: 8px;\"><strong>"+(feat.date!=undefined?feat.date:"???")+"</strong></span></span>":"")+"</span>";
+	}
+	content+="</span></p>";
 	return content;
 }
 
