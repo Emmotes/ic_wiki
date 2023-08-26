@@ -234,7 +234,11 @@ function addAbilityData(champ,ability) {
 			break;
 		}
 	}
-	var maybePrestack=JSON.stringify(ability.raw, null, 4).includes("pre_stack");
+	var raw=JSON.stringify(ability.raw, null, 4);
+	var maybePrestack=false;
+	if (raw.includes("pre_stack") || raw.includes("pre-stack") || raw.includes("prestack")) {
+		maybePrestack = true;
+	}
 	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>"+ability.desc+"</p></blockquote>"+(maybePrestack?prestack:"")+"<details><summary><em>Raw Data</em></summary><p><pre>";
 	for (let i=0;i<ability.raw.length;i++) {
 		content+=JSON.stringify(ability.raw[i], null, 4);
