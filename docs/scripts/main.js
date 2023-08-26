@@ -225,6 +225,7 @@ function addAttackData(champ,attack) {
 }
 
 function addAbilityData(champ,ability) {
+	var prestack = "<p><span style=\"font-size:1.2em;\">ⓘ</span> <em>Note: This ability might be prestack.</em></p>"
 	var content="<div class=\"abilityBorder\"><div class=\"abilityBorderInner\"><p class=\"abilityBorderName\">"+addAbilityImages(champ,ability)+" <strong>"+ability.name+"</strong>";
 	var reqLevel=-1;
 	for (let i=0; i<ability.raw.length;i++) {
@@ -233,7 +234,8 @@ function addAbilityData(champ,ability) {
 			break;
 		}
 	}
-	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>"+ability.desc+"</p></blockquote><details><summary><em>Raw Data</em></summary><p><pre>";
+	var maybePrestack=JSON.stringify(ability.raw, null, 4).includes("pre_stack");
+	content+=(reqLevel>=0?"(Level: "+reqLevel+")":"")+"</p><blockquote><p>"+ability.desc+"</p></blockquote>"+(maybePrestack?prestack:"")+"<details><summary><em>Raw Data</em></summary><p><pre>";
 	for (let i=0;i<ability.raw.length;i++) {
 		content+=JSON.stringify(ability.raw[i], null, 4);
 		if (i<ability.raw.length-1) {
