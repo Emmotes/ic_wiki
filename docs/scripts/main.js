@@ -26,9 +26,9 @@ async function init() {
 	}
 	await parseJSON()
 	
-	var latestVersion = (await loadDataVersion()).version;
+	var latestVersion = (await loadDataVersion()).sha256;
 	if (version != latestVersion) {
-		console.log("localStorage version mismatch. Updating.");
+		console.log("localStorage version mismatch. Updating.\r\n\tlocalStorage: "+version+"\r\n\t   on server: "+latestVersion);
 		await loadLocalData();
 		await parseJSON();
 	}
@@ -40,10 +40,11 @@ async function init() {
 	displayChampions();
 }
 
-function parseJSON() {
-	json = JSON.parse(localStorage.getItem("data"));
+async function parseJSON() {
+	var localStore = localStorage.getItem("data");
+	json = JSON.parse(localStore);
 	data = json.data;
-	version = json.version;
+	version = await sha256(localStore);
 }
 
 function displayChampions() {
@@ -564,6 +565,13 @@ function slashSeparate(inputArr,capsFirstLetter) {
 		}
 	}
 	return output;
+}
+
+async function sha256(source) {
+    var sourceBytes = new TextEncoder().encode(source);
+    var digest = await crypto.subtle.digest("SHA-256", sourceBytes);
+    var resultBytes = [...new Uint8Array(digest)];
+    return resultBytes.map(x => x.toString(16).padStart(2, '0')).join("");
 }
 
 function runNameEegs(fName,nameShort) {
