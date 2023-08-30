@@ -3,6 +3,7 @@ var version;
 var trialsDay1 = [9,12,12,10,10,11];
 var withFeat = " (with Feat)";
 var nixieBlue = isNixieBlue();
+var splatGhost = isSplatGhost();
 
 async function loadDataVersion() {
 	var response = await fetch("championDataVersion.json")
@@ -77,6 +78,9 @@ function drawChampion(i,champ) {
 	if (fName == "nixie") {
 		portrait = nixiePortrait();
 	}
+	if (fName == "spurt") {
+		portrait = splatPortrait();
+	}
 	var draw = "<div class=\"championHolder\" id=\""+fName+"\"><a onclick=\"displayWiki("+i+")\" id=\"link_"+fName+"\" href=\"#\"><div class=\"champion\" style=\"background-image:url("+portrait+"); background-size:68px; background-repeat: no-repeat;\" id=\"div_"+fName+"\"><div class=\"championName\">"+nameShort+"</div></div></a></div>";
 	return draw;
 }
@@ -103,6 +107,9 @@ function displayWiki(i) {
 	var portrait = "images/"+fName+"/portraits/portrait.png";
 	if (fName == "nixie") {
 		portrait = nixiePortrait();
+	}
+	if (fName == "spurt") {
+		portrait = splatPortrait();
 	}
 	var portraitExists = champ.portrait;
 	var content=(portraitExists?"<p><br /><img src=\""+portrait+"\" alt=\""+name+" Portrait\"></p>":"");
@@ -613,7 +620,22 @@ function isNixieBlue() {
 function nixiePortrait() {
 	var prefix = "images/nixie/portraits/portrait";
 	if (nixieBlue) {
-		return prefix+"Blue.png";
+		prefix+="Blue";
+	}
+	return prefix+".png";
+}
+
+function isSplatGhost() {
+	if (randInt(1,4) == 3) {
+		return true;
+	}
+	return false;
+}
+
+function splatPortrait() {
+	var prefix = "images/spurt/portraits/portrait";
+	if (splatGhost) {
+		prefix+="Ghost3";
 	}
 	return prefix+".png";
 }
