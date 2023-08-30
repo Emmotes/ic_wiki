@@ -585,6 +585,11 @@ function runNameEegs(fName,nameShort) {
 		laezelEegg = ins(laezelEegg, randInt(1,5), "'");
 		return laezelEegg;
 	}
+	if (fName == "kthriss") {
+		var kthrissEegg = "Kthriss";
+		kthrissEegg = ins(kthrissEegg, randInt(1,6), "'");
+		return kthrissEegg;
+	}
 	if (fName == "corazon") {
 		if (randInt(1,4) == 3) {
 			return "Côrăžón";
