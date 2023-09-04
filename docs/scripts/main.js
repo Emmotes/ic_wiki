@@ -4,6 +4,7 @@ var trialsDay1 = [9,12,12,10,10,11];
 var withFeat = " (with Feat)";
 var nixieBlue = isNixieBlue();
 var splatGhost = isSplatGhost();
+var dmUni = isDMUni();
 
 async function loadDataVersion() {
 	var response = await fetch("championDataVersion.json")
@@ -81,6 +82,9 @@ function drawChampion(i,champ) {
 	if (fName == "spurt") {
 		portrait = splatPortrait();
 	}
+	if (fName == "dungeonmaster") {
+		portrait = dmPortrait();
+	}
 	var draw = "<div class=\"championHolder\" id=\""+fName+"\"><a onclick=\"displayWiki("+i+")\" id=\"link_"+fName+"\" href=\"#\"><div class=\"champion\" style=\"background-image:url("+portrait+"); background-size:68px; background-repeat: no-repeat;\" id=\"div_"+fName+"\"><div class=\"championName\">"+nameShort+"</div></div></a></div>";
 	return draw;
 }
@@ -110,6 +114,9 @@ function displayWiki(i) {
 	}
 	if (fName == "spurt") {
 		portrait = splatPortrait();
+	}
+	if (fName == "dungeonmaster") {
+		portrait = dmPortrait();
 	}
 	var portraitExists = champ.portrait;
 	var content=(portraitExists?"<p><br /><img src=\""+portrait+"\" alt=\""+name+" Portrait\"></p>":"");
@@ -636,6 +643,21 @@ function splatPortrait() {
 	var prefix = "images/spurt/portraits/portrait";
 	if (splatGhost) {
 		prefix+="Ghost3";
+	}
+	return prefix+".png";
+}
+
+function isDMUni() {
+	if (randInt(1,4) == 4) {
+		return true;
+	}
+	return false;
+}
+
+function dmPortrait() {
+	var prefix = "images/dm/portraits/portrait";
+	if (dmUni) {
+		prefix+="Uni";
 	}
 	return prefix+".png";
 }
