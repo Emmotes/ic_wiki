@@ -285,6 +285,9 @@ function addItemData(champ,slots) {
 				longName=item.name.length;
 			}
 		}
+		if (slot.ge) {
+			content += "<span class=\"itemTableGE\">&nbsp;</span>";
+		}
 		content+="</span>";
 		if (small) {
 			content+="<span class=\"itemTableNameSmall\"><span style=\"margin-left: 8px;\">"+item.name+"</span></span>";
