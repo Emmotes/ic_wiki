@@ -333,7 +333,7 @@ pre {
 .championName {
 	width: 100%;
 	text-align: center;
-	font-size: 0.7em;
+	font-size: 0.6em;
 	padding: 5px;
 	text-shadow: 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2);
 }
