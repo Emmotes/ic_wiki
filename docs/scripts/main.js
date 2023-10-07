@@ -140,13 +140,17 @@ function displayWiki(i) {
 	content+="<h1 id=\"abilities\">Abilities</h1>";
 	if (champ.attacks!=undefined || champ.abilities!=undefined) {
 		if (champ.attacks!=undefined) {
-			if (champ.attacks.base!=undefined) {
-				var attack = champ.attacks.base;
-				content+=addAttackData(champ,attack);
+			if (champ.attacks.base!=undefined&&champ.attacks.base.length>0) {
+				for (let i=0;i<champ.attacks.base.length;i++) {
+					var attack = champ.attacks.base[i];
+					content+=addAttackData(champ,attack);
+				}
 			}
-			if (champ.attacks.ult!=undefined) {
-				var attack = champ.attacks.ult;
-				content+=addAttackData(champ,attack);
+			if (champ.attacks.ult!=undefined&&champ.attacks.ult.length>0) {
+				for (let i=0;i<champ.attacks.ult.length;i++) {
+					var attack = champ.attacks.ult[i];
+					content+=addAttackData(champ,attack);
+				}
 			}
 		}
 		if (champ.abilities!=undefined&&champ.abilities.length>0) {
