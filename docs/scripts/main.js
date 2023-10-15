@@ -124,7 +124,7 @@ function displayWiki(i) {
 	content+="<p>"+champ.backstory+"</p>";
 	content+="<h1 id=\"basic-information\">Basic Information</h1>";
 	if (champ.spoiler) {
-		content+="<p>"+name+" will be the new champion in the "+champ.event+" event on "+champ.date+".</p>";
+		content+="<p>"+name+" will be the new champion in the "+champ.eventName+" event on "+champ.eventDate+".</p>";
 	}
 	if (champ.stats != undefined) {
 		content+=createFullStatsTable(champ);
