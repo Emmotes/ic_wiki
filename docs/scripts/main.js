@@ -298,7 +298,7 @@ function addItemData(champ,slots) {
 		} else {
 			var effect=slot.effect;
 			if (slot.caps!=undefined&&slot.caps.length==3) {
-				effect+="<br/><span style=\"font-size:0.8em;\">iLevel Cap: "+(slot.caps[0]+1)+" dull / "+(slot.caps[1]+1)+" shiny / "+(slot.caps[2]+1)+" golden.</span>";
+				effect+="<br/><span style=\"font-size:0.8em;\">Cap: "+(slot.caps[0]+1)+" dull / "+(slot.caps[1]+1)+" shiny / "+(slot.caps[2]+1)+" golden.</span>";
 			}
 			content+="<span class=\"itemTableSlot\"><span>"+(i+1)+"</span></span><span class=\"itemTableName\"><span style=\"margin-left: 8px;\">"+item.name+"</span></span><span class=\"itemTableEffect\"><span style=\"margin-left: 8px;\">"+effect+"</span></span>";
 		}
