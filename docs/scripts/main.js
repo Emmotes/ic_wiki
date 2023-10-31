@@ -467,6 +467,9 @@ function calcStrahd(champ) {
 	var restr = 13;
 	var statNorm = champ.stats[stat];
 	var statFeat = champ.statsFeats[stat];
+	if (champ.id == 102) {
+		return "Strahd";
+	}
 	if (statFeat >= restr) {
 		var result = "Strahd";
 		if (statNorm < restr) {
