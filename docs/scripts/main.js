@@ -426,6 +426,12 @@ function sortArray(unordered) {
 }
 
 function calcDay1Trials(stat, champ) {
+	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
+		return "Yes (Forced)";
+	}
+	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.trials!=undefined) {
+		return champ.special.forceIfOthers.trials[stat];
+	}
 	var restr = trialsDay1[stat];
 	var statNorm = champ.stats[stat];
 	var statFeat = champ.statsFeats[stat];
@@ -440,6 +446,12 @@ function calcDay1Trials(stat, champ) {
 }
 
 function calcMirt(champ) {
+	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
+		return "Yes (Forced)";
+	}
+	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.mirt!=undefined) {
+		return champ.special.forceIfOthers.mirt;
+	}
 	var align = champ.alignment;
 	if (align.includes("Good") || align.includes("Evil")) {
 		return "Mirt"
@@ -448,6 +460,12 @@ function calcMirt(champ) {
 }
 
 function calcVajra(champ) {
+	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
+		return "Yes (Forced)";
+	}
+	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.vajra!=undefined) {
+		return champ.special.forceIfOthers.vajra;
+	}
 	var stat = 2; /* con */
 	var restr = 14;
 	var statNorm = champ.stats[stat];
@@ -463,13 +481,20 @@ function calcVajra(champ) {
 }
 
 function calcStrahd(champ) {
+	if (champ.id == 102) {
+		return "Strahd (Ability)";
+	}
+	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
+		return "Yes (Forced)";
+	}
+	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.strahd!=undefined) {
+		return champ.special.forceIfOthers.strahd;
+	}
+	
 	var stat = 3; /* int */
 	var restr = 13;
 	var statNorm = champ.stats[stat];
 	var statFeat = champ.statsFeats[stat];
-	if (champ.id == 102) {
-		return "Strahd (Ability)";
-	}
 	if (statFeat >= restr) {
 		var result = "Strahd";
 		if (statNorm < restr) {
@@ -481,6 +506,16 @@ function calcStrahd(champ) {
 }
 
 function calcZariel(champ) {
+	if (champ.id == 143) {
+		return "Zariel (Ability)";
+	}
+	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
+		return "Yes (Forced)";
+	}
+	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.zariel!=undefined) {
+		return champ.special.forceIfOthers.zariel;
+	}
+	
 	var statA = 0; /* str */
 	var statB = 5; /* cha */
 	var restrA = 10;
