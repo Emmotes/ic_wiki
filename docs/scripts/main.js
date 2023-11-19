@@ -55,7 +55,7 @@ async function init() {
 async function parseJSON() {
 	var localStore = localStorage.getItem(`wikiData`);
 	json = JSON.parse(localStore);
-	data = json.wikiData;
+	data = json.data;
 	version = await sha256(localStore);
 }
 
