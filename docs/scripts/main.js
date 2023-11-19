@@ -17,13 +17,23 @@ async function loadLocalData() {
 	var response = await fetch(`championData.json`)
 		.then(response => response.text())
 		.catch(err => console.log(err));
-	await localStorage.removeItem(`data`);
-	await localStorage.setItem(`data`, response);
+	if (localStorage.wikiData != undefined) {
+		await localStorage.removeItem(`wikiData`);
+	}
+	await localStorage.setItem(`wikiData`, response);
 }
 
 async function init() {
+	if (localStorage.spoilers != undefined) {
+		localStorage.wikiSpoilers = localStorage.spoilers;
+		localStorage.removeItem(`spoilers`);
+	}
+	if (localStorage.data != undefined) {
+		localStorage.removeItem(`data`);
+	}
+	
 	// Init the data.
-	if (!localStorage.data) {
+	if (!localStorage.wikiData) {
 		await loadLocalData();
 	}
 	await parseJSON()
@@ -36,7 +46,7 @@ async function init() {
 	}
 	
 	// Set spoiler checkbox to checked if spoilers are set.
-	document.getElementById(`spoilerCheckbox`).checked = (localStorage.spoilers == 1 ? true : false);
+	document.getElementById(`spoilerCheckbox`).checked = (localStorage.wikiSpoilers == 1 ? true : false);
 	
 	// Display the champions.
 	displayChampions();
@@ -52,14 +62,14 @@ async function parseJSON() {
 function displayChampions() {
 	for(let i=0;i<=12;i++){
 		var seatTitle = `<div class="seatTitle">`+(i==0?`Spoilers`:`Seat ${i}`)+`</div>`;
-		if (i==0 && (!localStorage.spoilers || localStorage.spoilers == 0)) {
+		if (i==0 && (!localStorage.wikiSpoilers || localStorage.wikiSpoilers == 0)) {
 			seatTitle = ``;
 		}
 		document.getElementById(`seat${i}`).innerHTML = seatTitle;
 	}
 	for(let i=0;i<data.length;i++){
 		var champ = data[i];
-		if ( (localStorage.spoilers == 1 && champ.spoiler) || !champ.spoiler) {
+		if ( (localStorage.wikiSpoilers == 1 && champ.spoiler) || !champ.spoiler) {
 			var currSeat = document.getElementById(`seat${champ.seat}`).innerHTML;
 			currSeat += drawChampion(i,champ);
 			document.getElementById(`seat${champ.seat}`).innerHTML = currSeat;
@@ -187,7 +197,7 @@ function displayWiki(i) {
 		content+=unknown;
 	}
 	
-	if (localStorage.spoilers==1&&champ.feats!=undefined&&champ.feats.spoilers!=undefined&&champ.feats.spoilers.length>0) {
+	if (localStorage.wikiSpoilers==1&&champ.feats!=undefined&&champ.feats.spoilers!=undefined&&champ.feats.spoilers.length>0) {
 		content+=`<h1 id="spoilerfeats">Spoiler Feats</h1>`;
 		content+=`<p>These are feats that have yet to be released.</p>`;
 		content+=addFeatData(champ,champ.feats.spoilers,true);
