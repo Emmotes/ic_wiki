@@ -18,17 +18,21 @@ async function loadLocalData() {
 		.then(response => response.text())
 		.catch(err => console.log(err));
 	if (localStorage.wikiData != undefined) {
+		console.log("Removing old wikiData so the new stuff can go there.");
 		await localStorage.removeItem(`wikiData`);
 	}
-	await localStorage.setItem(`wikiData`, response);
+	var compressed = await compress(response);
+	await localStorage.setItem(`wikiData`, compressed);
 }
 
 async function init() {
 	if (localStorage.spoilers != undefined) {
 		localStorage.wikiSpoilers = localStorage.spoilers;
+		console.log("Cleaning up old localStorage spoilers location.");
 		localStorage.removeItem(`spoilers`);
 	}
 	if (localStorage.data != undefined) {
+		console.log("Cleaning up old localStorage data location.");
 		localStorage.removeItem(`data`);
 	}
 	
@@ -53,10 +57,9 @@ async function init() {
 }
 
 async function parseJSON() {
-	var localStore = localStorage.getItem(`wikiData`);
-	json = JSON.parse(localStore);
-	data = json.data;
-	version = await sha256(localStore);
+	var decompressed = decompress(localStorage.getItem(`wikiData`));
+	data = JSON.parse(decompressed).data;
+	version = await sha256(decompressed);
 }
 
 function displayChampions() {
@@ -102,9 +105,9 @@ function drawChampion(i,champ) {
 function setSpoilers() {
 	var spoilerCheckbox = document.getElementById(`spoilerCheckbox`);
 	if (spoilerCheckbox.checked == true) {
-		localStorage.setItem(`spoilers`, 1)
+		localStorage.setItem(`wikiSpoilers`, 1)
 	} else {
-		localStorage.setItem(`spoilers`, 0);
+		localStorage.setItem(`wikiSpoilers`, 0);
 	}
 	displayChampions();
 	if (document.getElementById(`currChamp`).innerHTML>0) {
@@ -719,4 +722,12 @@ function dmPortrait() {
 		prefix+=`Uni`;
 	}
 	return `${prefix}.png`;
+}
+
+function compress(input) {
+	return LZString.compress(input);
+}
+
+function decompress(input) {
+	return LZString.decompress(input);
 }
