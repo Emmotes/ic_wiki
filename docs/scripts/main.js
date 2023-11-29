@@ -58,7 +58,16 @@ async function init() {
 
 async function parseJSON() {
 	var decompressed = decompress(localStorage.getItem(`wikiData`));
-	data = JSON.parse(decompressed).data;
+	try {
+		data = JSON.parse(decompressed).data;
+	} catch (err) {
+		console.log(`Caught an error with localStorage data. Taking the nuclear option.`);
+		localStorage.remove(`wikiData`);
+		console.log(`Nuked the localStorage - downloading the data again.`);
+		await loadLocalData();
+		decompressed = decompress(localStorage.getItem(`wikiData`));
+		data = JSON.parse(decompressed).data;
+	}
 	version = await sha256(decompressed);
 }
 
