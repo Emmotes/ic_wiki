@@ -62,7 +62,7 @@ async function parseJSON() {
 		data = JSON.parse(decompressed).data;
 	} catch (err) {
 		console.log(`Caught an error with localStorage data. Taking the nuclear option.`);
-		localStorage.remove(`wikiData`);
+		localStorage.removeItem(`wikiData`);
 		console.log(`Nuked the localStorage - downloading the data again.`);
 		await loadLocalData();
 		decompressed = decompress(localStorage.getItem(`wikiData`));
