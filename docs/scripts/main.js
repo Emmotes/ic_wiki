@@ -419,14 +419,14 @@ function addSkinImages(champ,skins) {
 	for (let i=0; i<skins.length; i++) {
 		var skin=skins[i];
 		var skintxt=`<span class="skinsPortraitsImage"><img src="images/${champ.fName}/skins/${skin.id}.png" alt="${champ.name} ${skin.name} Portrait" />${skin.name}</span>`;
-		if (skin.spoiler!=undefined&&skin.spoiler&&localStorage.wikiSpoilers==1) {
+		if (skin.spoiler!=undefined&&skin.spoiler) {
 			spoiler+=skintxt;
 			if (!addedspoiler) addedspoiler=true;
 		} else {
 			content+=skintxt;
 		}
 	}
-	if (addedspoiler) {
+	if (addedspoiler&&localStorage.wikiSpoilers==1) {
 		content+=`</span></p><h1 id="skinsSpoilers">Spoiler Skin Portraits</h1>`;
 		content+=spoiler;
 	}
