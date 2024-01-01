@@ -239,6 +239,9 @@ function displayWiki(i) {
 		content+=unknown;
 	}
 	
+	content+=`<h1 id="skins">Skin Portraits</h1>`;
+	content+=addSkinImages(champ,champ.skins);
+	
 	content+=`<p><br/><br/><br/><br/><br/><br/></p>`;
 	
 	document.getElementById(`wikicontent`).innerHTML = content;
@@ -403,6 +406,29 @@ function addChampionImagesData(champ) {
 			content+=`<span class="championImagesChests"><img src="images/${champ.fName}/chests/silver.png" alt="${champ.name} Silver Chest Icon" />Silver Chest Icon</span>`;
 		}
 		content+=`</span>`;
+	}
+	content+=`</span></p>`;
+	return content;
+}
+
+function addSkinImages(champ,skins) {
+	var content=`<p><span class="skinsPortraitsRow">`;
+	var spoiler=content;
+	var addedspoiler=false;
+	content+=`<span class="skinsPortraitsImage"><img src="images/${champ.fName}/portraits/portrait.png" alt="${champ.name} No Skin Portrait" />No Skin</span>`;
+	for (let i=0; i<skins.length; i++) {
+		var skin=skins[i];
+		var skintxt=`<span class="skinsPortraitsImage"><img src="images/${champ.fName}/skins/${skin.id}.png" alt="${champ.name} ${skin.name} Portrait" />${skin.name}</span>`;
+		if (skin.spoiler!=undefined&&skin.spoiler&&localStorage.wikiSpoilers==1) {
+			spoiler+=skintxt;
+			if (!addedspoiler) addedspoiler=true;
+		} else {
+			content+=skintxt;
+		}
+	}
+	if (addedspoiler) {
+		content+=`</span></p><h1 id="skinsSpoilers">Spoiler Skin Portraits</h1>`;
+		content+=spoiler;
 	}
 	content+=`</span></p>`;
 	return content;

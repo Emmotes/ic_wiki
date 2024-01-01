@@ -735,3 +735,32 @@ pre {
 .featTableIcon5 img {
 	border: 1px solid #FBBA37;
 }
+
+.skinsPortraitsRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.skinsPortraitsImage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+	width: fit-content;
+	padding: 10px;
+	margin: 5px;
+	border: 1px solid black;
+	background-color: #181918;
+	font-size: 0.9em;
+}
+
+.skinsPortraitsImage img {
+	height: 190px;
+	width: 190px;
+	object-fit: scale-down;
+	margin-bottom: 5px;
+}
