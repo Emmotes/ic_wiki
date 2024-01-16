@@ -93,7 +93,7 @@ function drawChampion(i,champ) {
 	var name = champ.name;
 	var fName = champ.fName;
 	var nameShort = champ.nameShort;
-	nameShort = runNameEegs(fName,nameShort);
+	nameShort = runNameEeggs(nameShort);
 	var portrait = `images/unknown.png`;
 	if (champ.portrait!=undefined&&champ.portrait) {
 		portrait = `images/${fName}/portraits/portrait.png`;
@@ -685,31 +685,17 @@ async function sha256(source) {
     return resultBytes.map(x => x.toString(16).padStart(2, '0')).join(``);
 }
 
-function runNameEegs(fName,nameShort) {
-	if (fName == `dhani`) {
-		var dhaniEegg = `Dhani`;
-		dhaniEegg = ins(dhaniEegg, randInt(1,4), `'`);
-		return dhaniEegg;
+function runNameEeggs(nameShort) {
+	var apo = `'`;
+	if (nameShort.includes(apo)) {
+		nameShort = nameShort.replaceAll(apo,``);
+		nameShort = ins(nameShort,randInt(1,nameShort.length-1),apo);
 	}
-	if (fName == `laezel`) {
-		var laezelEegg = `Laezel`;
-		laezelEegg = ins(laezelEegg, randInt(1,5), `'`);
-		return laezelEegg;
+	if (nameShort == `Corazón` || nameShort == `Côrăžón`) {
+		nameShort = randInt(1,4) == 3 ? `Côrăžón` : `Corazón`;
 	}
-	if (fName == `kthriss`) {
-		var kthrissEegg = `Kthriss`;
-		kthrissEegg = ins(kthrissEegg, randInt(1,6), `'`);
-		return kthrissEegg;
-	}
-	if (fName == `corazon`) {
-		if (randInt(1,4) == 3) {
-			return `Côrăžón`;
-		}
-	}
-	if (fName == `torogar`) {
-		if (randInt(1,8) == 7) {
-			return `Totoro`;
-		}
+	if (nameShort == `Torogar` || nameShort == `Totoro`) {
+		nameShort = randInt(1,8) == 7 ? `Totoro` : `Torogar`;
 	}
 	return nameShort;
 }
