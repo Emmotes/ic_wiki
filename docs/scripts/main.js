@@ -248,7 +248,7 @@ function displayWiki(i) {
 }
 
 function createFullStatsTable(champ) {
-	return `<p><span class="champStatsTableColumn"><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Seat</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">`+(champ.spoiler?champ.seatSpoiler:champ.seat)+`</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Stat</strong></span></span><span class="champStatsTableStatsHeader"><span style="margin-left:8px;"><strong>Value</strong></span></span><span class="champStatsTableTrialsHeader"><span style="margin-left:8px;"><strong>Day 1 Trials</strong></span></span><span class="champStatsTablePatronsHeader"><span style="margin-left:8px;"><strong>Patrons</strong></span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Race</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.race}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Strength</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(0,champ)+`px;">${champ.stats[0]}`+(champ.statsFeats[0]>champ.stats[0]?` (${champ.statsFeats[0]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(0,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">`+calcMirt(champ)+`</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Class</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.classes}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Dexterity</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(1,champ)+`px;">${champ.stats[1]}`+(champ.statsFeats[1]>champ.stats[1]?` (${champ.statsFeats[1]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(1,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">`+calcVajra(champ)+`</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Roles</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.roles}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Constitution</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(2,champ)+`px;">${champ.stats[2]}`+(champ.statsFeats[2]>champ.stats[2]?` (${champ.statsFeats[2]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(2,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">`+calcStrahd(champ)+`</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Age</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.age}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Intelligence</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(3,champ)+`px;">${champ.stats[3]}`+(champ.statsFeats[3]>champ.stats[3]?` (${champ.statsFeats[3]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(3,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">`+calcZariel(champ)+`</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Gender</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">`+(champ.gender==``?`Nonbinary`:champ.gender)+`</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Wisdom</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(4,champ)+`px;">${champ.stats[4]}`+(champ.statsFeats[4]>champ.stats[4]?` (${champ.statsFeats[4]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(4,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;"> </span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Alignment</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.alignment}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Charisma</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(5,champ)+`px;">${champ.stats[5]}`+(champ.statsFeats[5]>champ.stats[5]?` (${champ.statsFeats[5]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(5,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;"> </span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Affiliation</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.affiliations}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Total</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:8px;">${champ.totalStats}</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">Champion ID:</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.id}</span></span></span></span></p>`;
+	return `<p><span class="champStatsTableColumn"><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Seat</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">`+(champ.spoiler?champ.seatSpoiler:champ.seat)+`</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Stat</strong></span></span><span class="champStatsTableStatsHeader"><span style="margin-left:8px;"><strong>Value</strong></span></span><span class="champStatsTableTrialsHeader"><span style="margin-left:8px;"><strong>Day 1 Trials</strong></span></span><span class="champStatsTablePatronsHeader"><span style="margin-left:8px;"><strong>Patrons</strong></span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Race</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.race}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Strength</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(0,champ)+`px;">${champ.stats[0]}`+(champ.statsFeats[0]>champ.stats[0]?` (${champ.statsFeats[0]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(0,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[0]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Class</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.classes}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Dexterity</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(1,champ)+`px;">${champ.stats[1]}`+(champ.statsFeats[1]>champ.stats[1]?` (${champ.statsFeats[1]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(1,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[1]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Roles</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.roles}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Constitution</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(2,champ)+`px;">${champ.stats[2]}`+(champ.statsFeats[2]>champ.stats[2]?` (${champ.statsFeats[2]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(2,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[2]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Age</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.age}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Intelligence</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(3,champ)+`px;">${champ.stats[3]}`+(champ.statsFeats[3]>champ.stats[3]?` (${champ.statsFeats[3]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(3,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[3]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Gender</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">`+(champ.gender==``?`Nonbinary`:champ.gender)+`</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Wisdom</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(4,champ)+`px;">${champ.stats[4]}`+(champ.statsFeats[4]>champ.stats[4]?` (${champ.statsFeats[4]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(4,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[4]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Alignment</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.alignment}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Charisma</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:`+calcChampPadding(5,champ)+`px;">${champ.stats[5]}`+(champ.statsFeats[5]>champ.stats[5]?` (${champ.statsFeats[5]} with feat)`:``)+`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">`+calcDay1Trials(5,champ)+`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;"> </span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Affiliation</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.affiliations}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Total</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:8px;">${champ.totalStats}</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">Champion ID:</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.id}</span></span></span></span></p>`;
 }
 
 function createSmallStatsTable(champ) {
@@ -486,95 +486,6 @@ function calcDay1Trials(stat, champ) {
 	if (statFeat >= restr) {
 		var result = `Yes`;
 		if (statNorm < restr) {
-			return result+withFeat;
-		}
-		return result;
-	}
-	return `-`;
-}
-
-function calcMirt(champ) {
-	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
-		return `Yes (Forced)`;
-	}
-	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.mirt!=undefined) {
-		return champ.special.forceIfOthers.mirt;
-	}
-	var align = champ.alignment;
-	if (align.includes(`Good`) || align.includes(`Evil`)) {
-		return `Mirt`
-	}
-	return `-`;
-}
-
-function calcVajra(champ) {
-	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
-		return `Yes (Forced)`;
-	}
-	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.vajra!=undefined) {
-		return champ.special.forceIfOthers.vajra;
-	}
-	var stat = 2; /* con */
-	var restr = 14;
-	var statNorm = champ.stats[stat];
-	var statFeat = champ.statsFeats[stat];
-	if (statFeat >= restr) {
-		var result = `Vajra`;
-		if (statNorm < restr) {
-			return result+withFeat;
-		}
-		return result;
-	}
-	return `-`;
-}
-
-function calcStrahd(champ) {
-	if (champ.id == 102) {
-		return `Strahd (Ability)`;
-	}
-	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
-		return `Yes (Forced)`;
-	}
-	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.strahd!=undefined) {
-		return champ.special.forceIfOthers.strahd;
-	}
-	
-	var stat = 3; /* int */
-	var restr = 13;
-	var statNorm = champ.stats[stat];
-	var statFeat = champ.statsFeats[stat];
-	if (statFeat >= restr) {
-		var result = `Strahd`;
-		if (statNorm < restr) {
-			return result+withFeat;
-		}
-		return result;
-	}
-	return `-`;
-}
-
-function calcZariel(champ) {
-	if (champ.id == 143) {
-		return `Zariel (Ability)`;
-	}
-	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
-		return `Yes (Forced)`;
-	}
-	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.zariel!=undefined) {
-		return champ.special.forceIfOthers.zariel;
-	}
-	
-	var statA = 0; /* str */
-	var statB = 5; /* cha */
-	var restrA = 10;
-	var restrB = 13;
-	var statANorm = champ.stats[statA];
-	var statAFeat = champ.statsFeats[statA];
-	var statBNorm = champ.stats[statB];
-	var statBFeat = champ.statsFeats[statB];
-	if (statAFeat >= restrA && statBFeat >= restrB) {
-		var result = `Zariel`;
-		if (statANorm < restrA || statBNorm < restrB) {
 			return result+withFeat;
 		}
 		return result;
