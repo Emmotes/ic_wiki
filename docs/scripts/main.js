@@ -1,3 +1,4 @@
+const v=1.0
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
