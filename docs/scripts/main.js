@@ -1,4 +1,4 @@
-const v=1.0
+const v=1.1
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
@@ -316,7 +316,8 @@ function addItemData(champ,slots) {
 		content+=`<span class="itemTableRow"><span class="itemTableIcon">`;
 		for (let k=0;k<slot.items.length;k++) {
 			var item=slot.items[k];
-			content+=`<span class="itemTableIcon`+(k+1)+`"><img src="images/${champ.fName}/items/${item.graphicId}.png" alt="${item.name} Icon"/></span>`;
+			var tt=addItemTooltipData(item);
+			content+=`<span class="itemTableIcon`+(k+1)+`"><img src="images/${champ.fName}/items/${item.graphicId}.png" alt="${item.name} Icon"/>${tt}</span>`;
 			if (item.name.length>longName) {
 				longName=item.name.length;
 			}
@@ -357,15 +358,46 @@ function addItemData(champ,slots) {
 	return content;
 }
 
+function addItemTooltipData(item) {
+	let tt=`<span class="itemTooltipContents"><strong>${item.name}</strong>${item.description}`;
+	if (item.effects!=undefined&&item.effects.length>0) {
+		tt+=`<code>`;
+		for (let i=0;i<item.effects.length;i++) {
+			if (i>0)
+				tt+=`<br>`;
+			tt+=item.effects[i];
+		}
+		tt+=`</code>`;
+	}
+	tt+=`</span>`;
+	return tt;
+}
+
 function addFeatData(champ,feats,spoils) {
 	var content=`<p><span class="featTableColumn">`;
 	content+=`<span class="featTableRowHeader"><span class="featTableIcon1"><span style="margin-left:8px;"><strong>Feat</strong></span></span><span class="featTableEffect"><span style="margin-left:8px;margin-right:8px;"><strong>Effect</strong></span></span><span class="featTableSource"><span style="margin-left:8px;"><strong>Source</strong></span></span>`+(spoils?`<span class="featTableDate"><span style="margin-right:8px;"><strong>Date</strong></span></span>`:``)+`</span>`;
 	for (let i=0;i<feats.length;i++) {
-		var feat = feats[i];
-		content+=`<span class="featTableRow"><span class="featTableIcon${feat.rarity}"><img src="images/feats/${feat.graphicId}.png" alt="${feat.name} Icon" />${feat.name}</span><span class="featTableEffect"><span style="margin-left:8px;margin-right:8px;">${feat.effect}</span></span><span class="featTableSource"><span style="margin-left:8px;">${feat.source}</span></span>`+(spoils?`<span class="featTableDate"><span style="margin-right:8px;"><strong>`+(feat.date!=undefined?feat.date:`???`)+`</strong></span></span>`:``)+`</span>`;
+		var feat=feats[i];
+		var tt=addFeatTooltipData(feat);
+		content+=`<span class="featTableRow"><span class="featTableIcon${feat.rarity}"><img src="images/feats/${feat.graphicId}.png" alt="${feat.name} Icon" />${tt}${feat.name}</span><span class="featTableEffect"><span style="margin-left:8px;margin-right:8px;">${feat.effect}</span></span><span class="featTableSource"><span style="margin-left:8px;">${feat.source}</span></span>`+(spoils?`<span class="featTableDate"><span style="margin-right:8px;"><strong>`+(feat.date!=undefined?feat.date:`???`)+`</strong></span></span>`:``)+`</span>`;
 	}
 	content+=`</span></p>`;
 	return content;
+}
+
+function addFeatTooltipData(feat) {
+	let tt=`<span class="featTooltipContents"><strong>${feat.name}</strong>${feat.desc}`;
+	if (feat.effects!=undefined&&feat.effects.length>0) {
+		tt+=`<code>`;
+		for (let i=0;i<feat.effects.length;i++) {
+			if (i>0)
+				tt+=`<br>`;
+			tt+=feat.effects[i];
+		}
+		tt+=`</code>`;
+	}
+	tt+=`</span>`;
+	return tt;
 }
 
 function addLegendaryDropdown(legsType,legsApplic) {
