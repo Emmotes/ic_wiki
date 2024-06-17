@@ -1,4 +1,4 @@
-const v=1.1
+const v=1.2
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
@@ -38,9 +38,8 @@ async function init() {
 	}
 	
 	// Init the data.
-	if (!localStorage.wikiData) {
+	if (!localStorage.wikiData)
 		await loadLocalData();
-	}
 	await parseJSON()
 	
 	var latestVersion = (await loadDataVersion()).sha256;
@@ -75,9 +74,8 @@ async function parseJSON() {
 function displayChampions() {
 	for(let i=0;i<=12;i++){
 		var seatTitle = `<div class="seatTitle">`+(i==0?`Spoilers`:`Seat ${i}`)+`</div>`;
-		if (i==0 && (!localStorage.wikiSpoilers || localStorage.wikiSpoilers == 0)) {
+		if (i==0 && (!localStorage.wikiSpoilers || localStorage.wikiSpoilers == 0))
 			seatTitle = ``;
-		}
 		document.getElementById(`seat${i}`).innerHTML = seatTitle;
 	}
 	for(let i=0;i<data.length;i++){
@@ -96,33 +94,27 @@ function drawChampion(i,champ) {
 	var nameShort = champ.nameShort;
 	nameShort = runNameEeggs(nameShort);
 	var portrait = `images/unknown.png`;
-	if (champ.portrait!=undefined&&champ.portrait) {
+	if (champ.portrait!=undefined&&champ.portrait)
 		portrait = `images/${fName}/portraits/portrait.png`;
-	}
-	if (fName == `nixie`) {
+	if (fName == `nixie`)
 		portrait = nixiePortrait();
-	}
-	if (fName == `spurt`) {
+	if (fName == `spurt`)
 		portrait = splatPortrait();
-	}
-	if (fName == `dungeonmaster`) {
+	if (fName == `dungeonmaster`)
 		portrait = dmPortrait();
-	}
 	var draw = `<div class="championHolder" id="${fName}"><a onclick="displayWiki(${i})" id="link_${fName}" href="#"><div class="champion" style="background-image:url(${portrait}); background-size:68px; background-repeat: no-repeat;" id="div_${fName}"><div class="championName">${nameShort}</div></div></a></div>`;
 	return draw;
 }
 
 function setSpoilers() {
 	var spoilerCheckbox = document.getElementById(`spoilerCheckbox`);
-	if (spoilerCheckbox.checked == true) {
+	if (spoilerCheckbox.checked == true)
 		localStorage.setItem(`wikiSpoilers`, 1)
-	} else {
+	else
 		localStorage.setItem(`wikiSpoilers`, 0);
-	}
 	displayChampions();
-	if (document.getElementById(`currChamp`).innerHTML>0) {
+	if (document.getElementById(`currChamp`).innerHTML>0)
 		displayWiki(document.getElementById(`currChamp`).innerHTML);
-	}
 }
 
 function displayWiki(i) {
@@ -132,28 +124,23 @@ function displayWiki(i) {
 	var fName = champ.fName;
 	var unknown=`Unknown.`;
 	var portrait = `images/${fName}/portraits/portrait.png`;
-	if (fName == `nixie`) {
+	if (fName == `nixie`)
 		portrait = nixiePortrait();
-	}
-	if (fName == `spurt`) {
+	if (fName == `spurt`)
 		portrait = splatPortrait();
-	}
-	if (fName == `dungeonmaster`) {
+	if (fName == `dungeonmaster`)
 		portrait = dmPortrait();
-	}
 	var portraitExists = champ.portrait;
 	var content=(portraitExists?`<p><br /><img src="${portrait}" alt="${name} Portrait"></p>`:``);
 	content+=`<h1 id="${fName}">${champ.nameFull}</h1>`;
 	content+=`<p>${champ.backstory}</p>`;
 	content+=`<h1 id="basic-information">Basic Information</h1>`;
-	if (champ.spoiler) {
+	if (champ.spoiler)
 		content+=`<p>${name} will be the new champion in the ${champ.eventName} event on ${champ.eventDate}.</p>`;
-	}
-	if (champ.stats != undefined) {
+	if (champ.stats != undefined)
 		content+=createFullStatsTable(champ);
-	} else {
+	else
 		content+=createSmallStatsTable(champ);
-	}
 	var formationURL = `images/${fName}/formation/formation.png`;
 	var formationExists = champ.formation;
 	if (formationExists) {
@@ -197,18 +184,16 @@ function displayWiki(i) {
 	}
 	
 	content+=`<h1 id="items">Items</h1>`;
-	if (champ.items!=undefined&&champ.items.length>0) {
+	if (champ.items!=undefined&&champ.items.length>0)
 		content+=addItemData(champ,champ.items);
-	} else {
+	else
 		content+=unknown;
-	}
 	
 	content+=`<h1 id="feats">Feats</h1>`;
-	if (champ.feats!=undefined&&champ.feats.normal!=undefined) {
+	if (champ.feats!=undefined&&champ.feats.normal!=undefined)
 		content+=addFeatData(champ,champ.feats.normal,false);
-	} else {
+	else
 		content+=unknown;
-	}
 	
 	if (localStorage.wikiSpoilers==1&&champ.feats!=undefined&&champ.feats.spoilers!=undefined&&champ.feats.spoilers.length>0) {
 		content+=`<h1 id="spoilerfeats">Spoiler Feats</h1>`;
@@ -222,9 +207,8 @@ function displayWiki(i) {
 			content+=unknown;
 		} else {
 			content+=`<ul>`;
-			for (let i=0;i<champ.legs.effects.length;i++) {
+			for (let i=0;i<champ.legs.effects.length;i++)
 				content+=`<li>${champ.legs.effects[i]}</li>`;
-			}
 			content+=`</ul>`;
 			content+=addLegendaryDropdown(`DPS`,champ.legs.dps);
 			content+=addLegendaryDropdown(`Non-DPS`,champ.legs.nondps);
@@ -234,11 +218,10 @@ function displayWiki(i) {
 	}
 	
 	content+=`<h1 id="championimages">Champion Images</h1>`;
-	if (champ.console||champ.chests!=undefined) {
+	if (champ.console||champ.chests!=undefined)
 		content+=addChampionImagesData(champ);
-	} else {
+	else
 		content+=unknown;
-	}
 	
 	content+=`<h1 id="skins">Skin Portraits</h1>`;
 	content+=addSkinImages(champ,champ.skins);
@@ -257,15 +240,11 @@ function createSmallStatsTable(champ) {
 }
 
 function addAttackData(champ,attack) {
-	var type = `Base`;
-	if (attack.tags.includes(`ultimate`)) {
-		type = `Ultimate`;
-	}
+	var type = attack.tags.includes(`ultimate`) ? `Ultimate` : `Base`;
 	var shortCDtxt = `<p><span style="font-size:1.2em;">ⓘ</span> <em>Note: Very short ultimate cooldowns are almost always for testing purposes and are likely to be increased later.</em></p>`
 	var shortCD = ``;
-	if (attack.cooldown <= 15 && champ.spoiler && type == `Ultimate`) {
+	if (attack.cooldown <= 15 && champ.spoiler && type == `Ultimate`)
 		shortCD = shortCDtxt;
-	}
 	return `<div class="abilityBorder"><div class="abilityBorderInner"><p class="abilityBorderName">`+addAttackImages(champ,attack)+` <strong>${type} Attack: ${attack.name}</strong>`+(attack.damage_types.length>0?`(`+slashSeparate(attack.damage_types,true)+`)`:``)+`</p><blockquote><p>`+(attack.long_description!=undefined&&attack.long_description!=``?attack.long_description:attack.description)+`<br>Cooldown: ${attack.cooldown}s (Cap `+(attack.cooldown*0.25)+`s)</p></blockquote>${shortCD}<details><summary><em>Raw Data</em></summary><p><pre>`+JSON.stringify(attack, null, 4)+`</pre></p></details></div></div>`;
 }
 
@@ -293,9 +272,8 @@ function addAbilityData(champ,ability) {
 	content+=(reqLevel>=0?`(Level: ${reqLevel})`:``)+`</p><blockquote><p>${ability.desc}</p></blockquote>${prestackText}<details><summary><em>Raw Data</em></summary><p><pre>`;
 	for (let i=0;i<ability.raw.length;i++) {
 		content+=JSON.stringify(ability.raw[i], null, 4);
-		if (i<ability.raw.length-1) {
+		if (i<ability.raw.length-1)
 			content+=`,<br/>`;
-		}
 	}
 	content+=`</pre></p></details></div></div>`;
 	return content;
@@ -318,21 +296,18 @@ function addItemData(champ,slots) {
 			var item=slot.items[k];
 			var tt=addItemTooltipData(item);
 			content+=`<span class="itemTableIcon`+(k+1)+`"><img src="images/${champ.fName}/items/${item.graphicId}.png" alt="${item.name} Icon"/>${tt}</span>`;
-			if (item.name.length>longName) {
+			if (item.name.length>longName)
 				longName=item.name.length;
-			}
 		}
-		if (slot.ge) {
+		if (slot.ge)
 			content += `<span class="itemTableGE">&nbsp;</span>`;
-		}
 		content+=`</span>`;
 		if (small) {
 			content+=`<span class="itemTableNameSmall"><span style="margin-left: 8px;">${item.name}</span></span>`;
 		} else {
 			var effect=slot.effect;
-			if (slot.caps!=undefined&&slot.caps.length==3) {
+			if (slot.caps!=undefined&&slot.caps.length==3)
 				effect+=`<br/><span style="font-size:0.8em;">Cap: `+(slot.caps[0]+1)+` dull / `+(slot.caps[1]+1)+` shiny / `+(slot.caps[2]+1)+` golden.</span>`;
-			}
 			content+=`<span class="itemTableSlot"><span>`+(i+1)+`</span></span><span class="itemTableName"><span style="margin-left: 8px;">${item.name}</span></span><span class="itemTableEffect"><span style="margin-left: 8px;">${effect}</span></span>`;
 		}
 		content+=`</span>`;
@@ -343,9 +318,8 @@ function addItemData(champ,slots) {
 		content+=`<details><summary><em>Item Names and Descriptions</em></summary><p><pre>`;
 		for (let i=0;i<slots.length;i++) {
 			var slot=slots[i];
-			if (i>0) {
+			if (i>0)
 				content+=`<br/>`;
-			}
 			content+=`Slot: `+(i+1)+`<br/>`;
 			for (let k=0;k<slot.items.length;k++) {
 				var item=slot.items[k];
@@ -401,30 +375,25 @@ function addFeatTooltipData(feat) {
 }
 
 function addLegendaryDropdown(legsType,legsApplic) {
-	if (legsApplic==undefined) {
+	if (legsApplic==undefined)
 		return ``;
-	}
 	var content=`<details><summary><em>${legsType} Applicable</em></summary><p><pre>`;
 	legsApplic=sortArray(legsApplic);
 	var names = Object.keys(legsApplic);
 	var longName = 0;
-	for (let i=0;i<names.length;i++) {
-		if (names[i].length > longName) {
+	for (let i=0;i<names.length;i++)
+		if (names[i].length > longName)
 			longName=names[i].length;
-		}
-	}
 	for (let i=0;i<names.length;i++) {
 		content+=names[i].padStart(longName)+`: `;
 		var applicables=legsApplic[names[i]];
-		if (typeof(applicables)==`string`||typeof(applicables)==`number`) {
+		if (typeof(applicables)==`string`||typeof(applicables)==`number`)
 			content+=applicables;
-		} else {
+		else
 			content+=applicables[0];
-		}
 		content+=` / 6`;
-		if (typeof(applicables)!=`string`&&typeof(applicables)!=`number`) {
+		if (typeof(applicables)!=`string`&&typeof(applicables)!=`number`)
 			content+= ` (Potentially ${applicables[1]} / 6)`;
-		}
 		content+=`<br/>`;
 	}
 	content+=`</pre></p></details>`;
@@ -433,17 +402,14 @@ function addLegendaryDropdown(legsType,legsApplic) {
 
 function addChampionImagesData(champ) {
 	var content=`<p><span class="championImagesColumn">`;
-	if (champ.console) {
+	if (champ.console)
 		content+=`<span class="championImagesRow"><span class="championImagesPortrait"><img src="images/${champ.fName}/portraits/console.png" alt="${champ.name} Console Portrait" />Console Portait</span></span>`;
-	}
 	if (champ.chests!=undefined) {
 		content+=`<span class="championImagesRow">`
-		if (champ.chests.gold) {
+		if (champ.chests.gold)
 			content+=`<span class="championImagesChests"><img src="images/${champ.fName}/chests/gold.png" alt="${champ.name} Gold Chest Icon" />Gold Chest Icon</span>`;
-		}
-		if (champ.chests.silver) {
+		if (champ.chests.silver)
 			content+=`<span class="championImagesChests"><img src="images/${champ.fName}/chests/silver.png" alt="${champ.name} Silver Chest Icon" />Silver Chest Icon</span>`;
-		}
 		content+=`</span>`;
 	}
 	content+=`</span></p>`;
@@ -457,7 +423,9 @@ function addSkinImages(champ,skins) {
 	content+=`<span class="skinsPortraitsImage"><img src="images/${champ.fName}/portraits/portrait.png" alt="${champ.name} No Skin Portrait" />No Skin</span>`;
 	for (let i=0; i<skins.length; i++) {
 		var skin=skins[i];
-		var skintxt=`<span class="skinsPortraitsImage"><img src="images/${champ.fName}/skins/${skin.id}.png" alt="${champ.name} ${skin.name} Portrait" />${skin.name}</span>`;
+		var crayon=addCrayonEegg(champ,skin);
+		var crossedOut=(crayon==``?``:` crossedOut`);
+		var skintxt=`<span class="skinsPortraitsImage${crossedOut}"><img src="images/${champ.fName}/skins/${skin.id}.png" alt="${champ.name} ${skin.name} Portrait" />${skin.name}${crayon}</span>`;
 		if (skin.spoiler!=undefined&&skin.spoiler) {
 			spoiler+=skintxt;
 			if (!addedspoiler) addedspoiler=true;
@@ -473,10 +441,17 @@ function addSkinImages(champ,skins) {
 	return content;
 }
 
+function addCrayonEegg(champ,skin) {
+	let pref=`<span class="crayon">`;
+	let suff=`</span>`;
+	if (champ.name==`Catti-brie`&&skin.name==`Dwarf Glitch`)
+		return `${pref}Penelope Cosplay${suff}`;
+	return ``;
+}
+
 function useableDesc(thing) {
-	if (thing!=undefined && typeof(thing)==`string` && thing!=``) {
+	if (thing!=undefined && typeof(thing)==`string` && thing!=``)
 		return true;
-	}
 	return false;
 }
 
@@ -494,11 +469,9 @@ function customFilter(object, result){
     if(object.hasOwnProperty(`effect_string`))
 		result.push(object.effect_string);
 
-    for(var i=0;i<Object.keys(object).length;i++){
-        if(typeof object[Object.keys(object)[i]] == `object`){
+    for(var i=0;i<Object.keys(object).length;i++)
+        if(typeof object[Object.keys(object)[i]] == `object`)
             customFilter(object[Object.keys(object)[i]], result);
-        }
-    }
 }
 
 function sortArray(unordered) {
@@ -513,20 +486,17 @@ function sortArray(unordered) {
 }
 
 function calcDay1Trials(stat, champ) {
-	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced) {
+	if (champ.special!=undefined&&champ.special.forced!=undefined&&champ.special.forced)
 		return `Yes (Forced)`;
-	}
-	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.trials!=undefined) {
+	if (champ.special!=undefined&&champ.special.forceIfOthers!=undefined&&champ.special.forceIfOthers.trials!=undefined)
 		return champ.special.forceIfOthers.trials[stat];
-	}
 	var restr = trialsDay1[stat];
 	var statNorm = champ.stats[stat];
 	var statFeat = champ.statsFeats[stat];
 	if (statFeat >= restr) {
 		var result = `Yes`;
-		if (statNorm < restr) {
+		if (statNorm < restr)
 			return result+withFeat;
-		}
 		return result;
 	}
 	return `-`;
@@ -534,9 +504,8 @@ function calcDay1Trials(stat, champ) {
 
 function calcChampPadding(stat, champ) {
 	var statVal = champ.stats[stat];
-	if (statVal < 10) {
+	if (statVal < 10)
 		return 16;
-	}
 	return 8;
 }
 
@@ -554,9 +523,8 @@ function addFormation(fName) {
 }
 
 function addAttackImages(champ,attack) {
-	if (attack.graphic_id != undefined && attack.graphic_id > 0) {
+	if (attack.graphic_id != undefined && attack.graphic_id > 0)
 		return `<img src="images/${champ.fName}/attacks/${attack.id}.png" alt="${attack.name} Icon">`;
-	}
 	var images = ``;
 	for (let i=0;i<attack.damage_types.length;i++) {
 		let dmg = attack.damage_types[i];
@@ -568,14 +536,11 @@ function addAttackImages(champ,attack) {
 function addAbilityImages(champ,ability) {
 	var graphicId = ability.graphicId;
 	var reqLevel = -3;
-	for (let i=0;i<ability.raw.length;i++) {
-		if (ability.raw[i].required_level!=undefined) {
+	for (let i=0;i<ability.raw.length;i++)
+		if (ability.raw[i].required_level!=undefined)
 			reqLevel = ability.raw[i].required_level;
-		}
-	}
-	if (ability.raw.length==2 && ability.graphicId>0 && reqLevel>0) {
+	if (ability.raw.length==2 && ability.graphicId>0 && reqLevel>0)
 		return `<img src="images/${champ.fName}/abilities/${ability.id}.png" alt="${ability.name} Icon">`;
-	}
 	return ``;
 }
 
@@ -616,14 +581,12 @@ function capitalise(input) {
 function slashSeparate(inputArr,capsFirstLetter) {
 	var output = ``;
 	for (let i=0;i<inputArr.length;i++) {
-		if (i > 0) {
+		if (i > 0)
 			output += ` / `;
-		}
-		if (capsFirstLetter) {
+		if (capsFirstLetter)
 			output+=capitalise(inputArr[i]);
-		} else {
+		else
 			output+=inputArr[i];
-		}
 	}
 	return output;
 }
@@ -641,57 +604,49 @@ function runNameEeggs(nameShort) {
 		nameShort = nameShort.replaceAll(apo,``);
 		nameShort = ins(nameShort,randInt(1,nameShort.length-1),apo);
 	}
-	if (nameShort == `Corazón` || nameShort == `Côrăžón`) {
+	if (nameShort == `Corazón` || nameShort == `Côrăžón`)
 		nameShort = randInt(1,4) == 3 ? `Côrăžón` : `Corazón`;
-	}
-	if (nameShort == `Torogar` || nameShort == `Totoro`) {
+	if (nameShort == `Torogar` || nameShort == `Totoro`)
 		nameShort = randInt(1,8) == 7 ? `Totoro` : `Torogar`;
-	}
 	return nameShort;
 }
 
 function isNixieBlue() {
-	if (randInt(1,4) == 2) {
+	if (randInt(1,4) == 2)
 		return true;
-	}
 	return false;
 }
 
 function nixiePortrait() {
 	var prefix = `images/nixie/portraits/portrait`;
-	if (nixieBlue) {
+	if (nixieBlue)
 		prefix+=`Blue`;
-	}
 	return `${prefix}.png`;
 }
 
 function isSplatGhost() {
-	if (randInt(1,4) == 3) {
+	if (randInt(1,4) == 3)
 		return true;
-	}
 	return false;
 }
 
 function splatPortrait() {
 	var prefix = `images/spurt/portraits/portrait`;
-	if (splatGhost) {
+	if (splatGhost)
 		prefix+=`Ghost3`;
-	}
 	return `${prefix}.png`;
 }
 
 function isDMUni() {
-	if (randInt(1,4) == 4) {
+	if (randInt(1,4) == 4)
 		return true;
-	}
 	return false;
 }
 
 function dmPortrait() {
 	var prefix = `images/dm/portraits/portrait`;
-	if (dmUni) {
+	if (dmUni)
 		prefix+=`Uni`;
-	}
 	return `${prefix}.png`;
 }
 

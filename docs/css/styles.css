@@ -859,3 +859,26 @@ pre {
 	color: #f0e7d5;
 	pointer-events: none;
 }
+@font-face {
+	font-family: crayon;
+	src: url('../fonts/crayon.ttf');
+}
+@font-face {
+	font-family: crayon2;
+	src: url('../fonts/crayon2.ttf');
+}
+.crossedOut {
+	position: relative;
+	text-decoration: line-through;
+	text-decoration-color: red;
+	text-decoration-thickness: 4px;
+	transform: rotate(3deg);
+}
+.crayon {
+	position: absolute;
+	font-size: 1.8em;
+	font-family: 'crayon';
+	color: red;
+	transform: rotate(337deg);
+	bottom: 5px;
+}
