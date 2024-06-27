@@ -265,11 +265,12 @@ function addAbilityData(champ,ability) {
 		prestackText += prestackPrefix;
 		if (ability.prestack==true)
 			prestackText += `is`;
-		else if (ability.prestack=="maybe")
+		else if (ability.prestack==`maybe`)
 			prestackText += `might be`;
 		prestackText += prestackSuffix;
 	}
-	content+=(reqLevel>=0?`(Level: ${reqLevel})`:``)+`</p><blockquote><p>${ability.desc}</p></blockquote>${prestackText}<details><summary><em>Raw Data</em></summary><p><pre>`;
+	var desc=ability.desc.replaceAll(`>`,`<br>`);
+	content+=(reqLevel>=0?`(Level: ${reqLevel})`:``)+`</p><blockquote><p>${desc}</p></blockquote>${prestackText}<details><summary><em>Raw Data</em></summary><p><pre>`;
 	for (let i=0;i<ability.raw.length;i++) {
 		content+=JSON.stringify(ability.raw[i], null, 4);
 		if (i<ability.raw.length-1)
