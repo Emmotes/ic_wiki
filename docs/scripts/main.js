@@ -1,4 +1,4 @@
-const v=1.2
+const v=1.3
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
@@ -334,7 +334,7 @@ function addItemData(champ,slots) {
 }
 
 function addItemTooltipData(item) {
-	let tt=`<span class="itemTooltipContents"><strong>${item.name}</strong>${item.description}`;
+	let tt=`<span class="itemTooltipContents">ID: ${item.id}<strong>${item.name}</strong>${item.description}`;
 	if (item.effects!=undefined&&item.effects.length>0) {
 		tt+=`<code>`;
 		for (let i=0;i<item.effects.length;i++) {
