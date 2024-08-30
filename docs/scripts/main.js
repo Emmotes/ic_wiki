@@ -446,7 +446,7 @@ function addCrayonEegg(champ,skin) {
 	let pref=`<span class="crayon">`;
 	let suff=`</span>`;
 	if (champ.name==`Catti-brie`&&skin.name==`Dwarf Glitch`)
-		return `${pref}Penelope Cosplay${suff}`;
+		return `${pref}Cattastro-brie${suff}`;
 	return ``;
 }
 
