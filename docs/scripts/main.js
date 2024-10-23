@@ -295,7 +295,7 @@ function addItemData(champ,slots) {
 		content+=`<span class="itemTableRow"><span class="itemTableIcon">`;
 		for (let k=0;k<slot.items.length;k++) {
 			var item=slot.items[k];
-			var tt=addItemTooltipData(item);
+			var tt=addItemTooltipData(item,slot.ge);
 			content+=`<span class="itemTableIcon`+(k+1)+`"><img src="images/${champ.fName}/items/${item.graphicId}.png" alt="${item.name} Icon"/>${tt}</span>`;
 			if (item.name.length>longName)
 				longName=item.name.length;
@@ -333,7 +333,7 @@ function addItemData(champ,slots) {
 	return content;
 }
 
-function addItemTooltipData(item) {
+function addItemTooltipData(item,ge) {
 	let tt=`<span class="itemTooltipContents">ID: ${item.id}<strong>${item.name}</strong>${item.description}`;
 	if (item.effects!=undefined&&item.effects.length>0) {
 		tt+=`<code>`;
@@ -342,6 +342,7 @@ function addItemTooltipData(item) {
 				tt+=`<br>`;
 			tt+=item.effects[i];
 		}
+		tt+=`<br>allow_ge:${ge==undefined?false:(ge?true:false)}`;
 		tt+=`</code>`;
 	}
 	tt+=`</span>`;
