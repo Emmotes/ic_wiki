@@ -102,7 +102,7 @@ function drawChampion(i,champ) {
 		portrait = splatPortrait();
 	if (fName == `dungeonmaster`)
 		portrait = dmPortrait();
-	var draw = `<div class="championHolder" id="${fName}"><a onclick="displayWiki(${i})" id="link_${fName}" href="#"><div class="champion" style="background-image:url(${portrait}); background-size:68px; background-repeat: no-repeat;" id="div_${fName}"><div class="championName">${nameShort}</div></div></a></div>`;
+	var draw = `<div class="championHolder" id="${fName}"><a onclick="displayWiki(${i})" id="link_${fName}" href="#"><div class="champion" style="background-image:url(${portrait}); background-size:61px; background-repeat: no-repeat;" id="div_${fName}"><div class="championName">${nameShort}</div></div></a></div>`;
 	return draw;
 }
 
