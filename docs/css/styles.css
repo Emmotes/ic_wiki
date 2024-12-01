@@ -182,19 +182,17 @@ pre {
 .menuitem {
 	font-size: 1.4em;
 	text-align: center;
-	padding-top: 8px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 8px 20px 0;
 	height: 100%;
 }
 
 .spoilersNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	font-size: 1.2em;
 	text-align: center;
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	height: 100%;
+	padding: 10px 5px 0 20px;
 }
 
 .box {
@@ -231,14 +229,13 @@ pre {
 .spoilers {
 	display: block;
 	position: relative;
-	padding-left: 35px;
+	padding: 0 15px 0 35px;
 	margin-bottom: 12px;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	width: 30%;
 }
 
 /* Hide the browser's default checkbox */

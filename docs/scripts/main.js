@@ -1,4 +1,4 @@
-const v=1.4
+const v=1.5
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
@@ -108,13 +108,25 @@ function drawChampion(i,champ) {
 
 function setSpoilers() {
 	var spoilerCheckbox = document.getElementById(`spoilerCheckbox`);
-	if (spoilerCheckbox.checked == true)
-		localStorage.setItem(`wikiSpoilers`, 1)
+	if (spoilerCheckbox.checked)
+		localStorage.setItem(`wikiSpoilers`, 1);
 	else
 		localStorage.setItem(`wikiSpoilers`, 0);
 	displayChampions();
 	if (document.getElementById(`currChamp`).innerHTML>0)
 		displayWiki(document.getElementById(`currChamp`).innerHTML);
+}
+
+function setUnsticky() {
+	var unstickyCheckbox = document.getElementById(`unstickyCheckbox`);
+	if (unstickyCheckbox.checked)
+		localStorage.setItem(`wikiUnstickyChamps`, 1);
+	else
+		localStorage.setItem(`wikiUnstickyChamps`, 0);
+	let eles = document.getElementsByClassName(`championsList`);
+	for (let ele of eles) {
+		ele.style.position = (unstickyCheckbox.checked ? `unset` : ``);
+	}
 }
 
 function displayWiki(i) {
