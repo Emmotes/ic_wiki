@@ -51,6 +51,8 @@ async function init() {
 	
 	// Set spoiler checkbox to checked if spoilers are set.
 	document.getElementById(`spoilerCheckbox`).checked = (localStorage.wikiSpoilers == 1 ? true : false);
+	// Set unsticky champions checkbox to checked if unsticky champions is set.
+	document.getElementById(`unstickyCheckbox`).checked = (localStorage.wikiUnstickyChamps == 1 ? true : false);
 	
 	// Display the champions.
 	displayChampions();
