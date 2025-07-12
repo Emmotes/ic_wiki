@@ -366,11 +366,11 @@ function addItemTooltipData(item,ge) {
 
 function addFeatData(champ,feats,spoils) {
 	var content=`<p><span class="featTableColumn">`;
-	content+=`<span class="featTableRowHeader"><span class="featTableIcon1"><span style="margin-left:8px;"><strong>Feat</strong></span></span><span class="featTableEffect"><span style="margin-left:8px;margin-right:8px;padding:4px 0"><strong>Effect</strong></span></span><span class="featTableSource"><span style="margin-left:8px;"><strong>Source</strong></span></span>`+(spoils?`<span class="featTableDate"><span style="margin-right:8px;"><strong>Date</strong></span></span>`:``)+`</span>`;
+	content+=`<span class="featTableRowHeader"><span class="featTableIcon1"><span class="featTableInner"><strong>Feat</strong></span></span><span class="featTableEffect"><span class="featTableInner"><strong>Effect</strong></span></span><span class="featTableSource"><span class="featTableInner"><strong>Source</strong></span></span>`+(spoils?`<span class="featTableDate"><span class="featTableInner"><strong>Date</strong></span></span>`:``)+`</span>`;
 	for (let i=0;i<feats.length;i++) {
 		var feat=feats[i];
 		var tt=addFeatTooltipData(feat);
-		content+=`<span class="featTableRow"><span class="featTableIcon${feat.rarity}"><img src="images/feats/${feat.graphicId}.png" alt="${feat.name} Icon" />${tt}${feat.name}</span><span class="featTableEffect"><span style="margin-left:8px;margin-right:8px;padding:4px 0">${feat.effect}</span></span><span class="featTableSource"><span style="margin-left:8px;">${feat.source}</span></span>`+(spoils?`<span class="featTableDate"><span style="margin-right:8px;"><strong>`+(feat.date!=undefined?feat.date:`???`)+`</strong></span></span>`:``)+`</span>`;
+		content+=`<span class="featTableRow"><span class="featTableIcon${feat.rarity}"><img src="images/feats/${feat.graphicId}.png" alt="${feat.name} Icon" />${tt}${feat.name}</span><span class="featTableEffect"><span class="featTableInner">${feat.effect}</span></span><span class="featTableSource"><span class="featTableInner">${feat.source}</span></span>`+(spoils?`<span class="featTableDate"><span class="featTableInner"><strong>`+(feat.date!=undefined?feat.date:`???`)+`</strong></span></span>`:``)+`</span>`;
 	}
 	content+=`</span></p>`;
 	return content;
