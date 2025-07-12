@@ -659,6 +659,7 @@ pre {
 	font-size: 0.9em;
 	margin-top: 1px;
 	margin-bottom: 1px;
+	text-wrap-style: pretty;
 }
 
 .featTableRow,.featTableRowHeader {
