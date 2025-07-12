@@ -694,6 +694,7 @@ pre {
 
 .featTableSource,.featTableDate {
 	width: 100px;
+	min-height: 50px;
 }
 
 .featTableDate {
