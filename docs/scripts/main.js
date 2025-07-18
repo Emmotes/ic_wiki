@@ -302,11 +302,11 @@ function addAbilityData(champ,ability) {
 
 function addItemData(champ,slots) {
 	var small=(slots[0].effect==undefined);
-	var content=`<p><span class="itemTableColumn"><span class="itemTableRowHeader"><span class="itemTableIcon" style="align-items:center;"><span style="margin-left:8px;"><strong>Icons</strong></span></span>`;
+	var content=`<p><span class="itemTableColumn"><span class="itemTableRowHeader"><span class="itemTableIcon" style="justify-content:flex-start"><span style="margin-left:8px;"><strong>Icons</strong></span></span>`;
 	if (small) {
-		content+=`<span class="itemTableNameSmall"><span style="margin-left: 8px;"><strong>Name</strong></span></span>`;
+		content+=`<span class="itemTableNameSmall"><span><strong>Name</strong></span></span>`;
 	} else {
-		content+=`<span class="itemTableSlot"><span><strong>Slot</strong></span></span><span class="itemTableName"><span style="margin-left: 8px;"><strong>Epic Name</strong></span></span><span class="itemTableEffect"><span style="margin-left: 8px;"><strong>Effect</strong></span></span>`;
+		content+=`<span class="itemTableSlot"><span><strong>Slot</strong></span></span><span class="itemTableName"><span><strong>Epic Name</strong></span></span><span class="itemTableEffect"><span style="padding:0 8px"><strong>Effect</strong></span></span>`;
 	}
 	content+=`</span>`;
 	var longName = 0;
@@ -320,16 +320,15 @@ function addItemData(champ,slots) {
 			if (item.name.length>longName)
 				longName=item.name.length;
 		}
-		if (slot.ge)
-			content += `<span class="itemTableGE">&nbsp;</span>`;
+		content += `<span class="itemTableGE"${slot.ge?'':' style="background-color:unset"'}>&nbsp;</span>`;
 		content+=`</span>`;
 		if (small) {
-			content+=`<span class="itemTableNameSmall"><span style="margin-left: 8px;">${item.name}</span></span>`;
+			content+=`<span class="itemTableNameSmall"><span>${item.name}</span></span>`;
 		} else {
 			var effect=slot.effect;
 			if (slot.caps!=undefined&&slot.caps.length==3)
 				effect+=`<br/><span style="font-size:0.8em;color:var(--mid1)">Cap: `+(slot.caps[0]+1)+` dull / `+(slot.caps[1]+1)+` shiny / `+(slot.caps[2]+1)+` golden.</span>`;
-			content+=`<span class="itemTableSlot"><span>`+(i+1)+`</span></span><span class="itemTableName"><span style="margin-left: 8px;">${item.name}</span></span><span class="itemTableEffect"><span style="margin-left: 8px;">${effect}</span></span>`;
+			content+=`<span class="itemTableSlot"><span>`+(i+1)+`</span></span><span class="itemTableName"><span>${item.name}</span></span><span class="itemTableEffect"><span>${effect}</span></span>`;
 		}
 		content+=`</span>`;
 	}
