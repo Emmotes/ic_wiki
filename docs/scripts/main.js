@@ -1,4 +1,4 @@
-const v=1.5
+const v=1.6
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
@@ -162,22 +162,27 @@ function displayWiki(i) {
 		content+=`<h1 id="formation">Formation</h1><p><span class="formationBorder"><img src="${formationURL}" alt="Formation Layout" /></span></p>`;
 	}
 	
-	content+=`<h1 id="abilities">Abilities</h1>`;
-	if (champ.attacks!=undefined || champ.abilities!=undefined) {
+	content+=`<h1 id="attacks">Attacks</h1>`;
+	if (champ.attacks!=undefined) {
 		if (champ.attacks!=undefined) {
 			if (champ.attacks.base!=undefined&&champ.attacks.base.length>0) {
 				for (let i=0;i<champ.attacks.base.length;i++) {
 					var attack = champ.attacks.base[i];
-					content+=addAttackData(champ,attack);
+					content+=addAttackData(champ,attack,false);
 				}
 			}
 			if (champ.attacks.ult!=undefined&&champ.attacks.ult.length>0) {
 				for (let i=0;i<champ.attacks.ult.length;i++) {
 					var attack = champ.attacks.ult[i];
-					content+=addAttackData(champ,attack);
+					content+=addAttackData(champ,attack,true);
 				}
 			}
 		}
+	} else {
+		content+=unknown;
+	}
+	content+=`<h1 id="abilities">Abilities</h1>`;
+	if (champ.abilities!=undefined) {
 		if (champ.abilities!=undefined&&champ.abilities.length>0) {
 			for (let i=0;i<champ.abilities.length;i++) {
 				var ability = champ.abilities[i];
@@ -254,8 +259,8 @@ function createSmallStatsTable(champ) {
 	return `<p><span class="champStatsTableColumn"><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Seat</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.seatSpoiler}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Species</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.species}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Class</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.classes}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Roles</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.roles}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Age</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.age}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Gender</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.gender}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Alignment</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.alignment}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Affiliation</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.affiliations}</span></span></span></span></p>`;
 }
 
-function addAttackData(champ,attack) {
-	var type = attack.tags.includes(`ultimate`) ? `Ultimate` : `Base`;
+function addAttackData(champ,attack,ult) {
+	var type = ult ? `Ultimate` : `Base`;
 	var shortCDtxt = `<p><span style="font-size:1.2em;">ⓘ</span> <em>Note: Very short ultimate cooldowns are almost always for testing purposes and are likely to be increased later.</em></p>`
 	var shortCD = ``;
 	if (attack.cooldown <= 15 && champ.spoiler && type == `Ultimate`)
@@ -323,7 +328,7 @@ function addItemData(champ,slots) {
 		} else {
 			var effect=slot.effect;
 			if (slot.caps!=undefined&&slot.caps.length==3)
-				effect+=`<br/><span style="font-size:0.8em;">Cap: `+(slot.caps[0]+1)+` dull / `+(slot.caps[1]+1)+` shiny / `+(slot.caps[2]+1)+` golden.</span>`;
+				effect+=`<br/><span style="font-size:0.8em;color:var(--mid1)">Cap: `+(slot.caps[0]+1)+` dull / `+(slot.caps[1]+1)+` shiny / `+(slot.caps[2]+1)+` golden.</span>`;
 			content+=`<span class="itemTableSlot"><span>`+(i+1)+`</span></span><span class="itemTableName"><span style="margin-left: 8px;">${item.name}</span></span><span class="itemTableEffect"><span style="margin-left: 8px;">${effect}</span></span>`;
 		}
 		content+=`</span>`;
