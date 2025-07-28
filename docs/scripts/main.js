@@ -1,4 +1,4 @@
-const v=1.6
+const v=1.7
 var data;
 var version;
 var trialsDay1 = [9,12,12,10,10,11];
@@ -148,7 +148,7 @@ function displayWiki(i) {
 	var portraitExists = champ.portrait;
 	var content=(portraitExists?`<p><br /><img src="${portrait}" alt="${name} Portrait"></p>`:``);
 	content+=`<h1 id="${fName}">${champ.nameFull}</h1>`;
-	content+=`<p>${champ.backstory}</p>`;
+	content+=`<p>${champ.backstory.replace(/\[([^\]]+)\]\(([^\)]+)\)/gm, "<br><br><a href=\"$2\" target=\"_blank\">$1</a>")}</p>`;
 	content+=`<h1 id="basic-information">Basic Information</h1>`;
 	if (champ.spoiler)
 		content+=`<p>${name} will be the new champion in the ${champ.eventName} event on ${champ.eventDate}.</p>`;
