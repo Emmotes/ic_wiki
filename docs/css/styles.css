@@ -1,19 +1,3 @@
-:root {
-	/* colour names from: https://www.color-name.com/ */
-	/* darks */
-	--dark1: #22222E; /* Dark Gunmetal */
-	--dark2: #200F1E; /* Eerie Black */
-	--dark3: #592940; /* Old Mauve */
-	/* mids */
-	--mid1: #AA7594; /* English Lavender */
-	--mid2: #8E7895; /* Mountbatten Pink */
-	--mid3: #60537E; /* Purple Navy */
-	/* lights */
-	--light1: #D7CDD9; /* Languid Lavender */
-	--light2: #E3DAE5; /* Platinum */
-	--light3: #F6EDF8; /* Anti-Flash White */
-}
-
 * {
 	margin: 0px;
 	padding: 0px;
@@ -27,8 +11,8 @@ html {
 
 body {
 	font-family:'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-	color: var(--light1);
-	background-color: var(--dark1);
+	color: var(--LanguidLavender);
+	background-color: var(--DarkGunmetal);
 }
 
 h1{
@@ -57,17 +41,17 @@ h6{
 }
 h1,h2,h3 {
 	line-height: 2.0em;
-	color: var(--light3);
+	color: var(--SentimentalPink);
 }
 h4,h5 {
 	line-height: 1.7em;
 }
 h3,h4,h5 {
-	color: var(--light2);
+	color: var(--Spangle);
 }
 h6 {
 	line-height: 1.4em;
-	color: var(--light1);
+	color: var(--LanguidLavender);
 }
 ul {
 	padding-left: 3em;
@@ -92,44 +76,44 @@ table{
 th{
     text-align:left;
     padding:5px 10px;
-    border-bottom:1px solid #434343;
-    color:#b6b6b6;
+    border-bottom:1px solid var(--Arsenic);
+    color:var(--Wolfram);
     font-family:'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-weight:bold;
 }
 td{
     text-align:left;
     padding:5px 10px;
-    border-bottom:1px solid #434343;
+    border-bottom:1px solid var(--Arsenic);
 }
 
 a {
 	text-decoration: none;
-	color: var(--light2);
+	color: var(--Spangle);
 	transition: 0.6s;
 }
 
 a:hover {
-	color: var(--light3);
+	color: var(--SentimentalPink);
 }
 
 summary {
 	cursor: pointer;
-	color: var(--light2);
+	color: var(--Spangle);
 }
 summary:hover {
 	cursor: pointer;
-	color: var(--light3);
+	color: var(--SentimentalPink);
 }
 
 blockquote {
-	border-left: 4px solid var(--mid1);
+	border-left: 4px solid var(--Bouquet);
 	margin-left: 10px;
 }
 
 code {
 	font-family: monospace;
-	color: var(--mid1);
+	color: var(--Bouquet);
 	font-size: 1.15em;
 }
 
@@ -141,8 +125,8 @@ details {
 
 pre {
 	padding: 8px 15px;
-	background: #191919;
-	border: 1px solid black;
+	background: var(--ThamarBlack);
+	border: 1px solid var(--Black);
 	overflow: auto;
 	overflow-y: hidden;
 }
@@ -153,7 +137,7 @@ pre {
 	align-items: center;
 	justify-content: space-between;
 	height: 50px;
-	background-color: var(--dark3);
+	background-color: var(--OldMauve);
 	width: 100%;
 	position: fixed;
 	top: 0px;
@@ -170,13 +154,13 @@ pre {
 
 .menubar a {
 	border-style: solid;
-	border-color: var(--dark3) var(--dark3) var(--dark3) var(--dark3);
+	border-color: var(--OldMauve) var(--OldMauve) var(--OldMauve) var(--OldMauve);
 	font-size: 0.9em;
 }
 
 .menubar a:hover {
 	border-style: solid;
-	border-color: var(--dark3) var(--dark3) var(--light2) var(--dark3);
+	border-color: var(--OldMauve) var(--OldMauve) var(--Spangle) var(--OldMauve);
 }
 
 .menuitem {
@@ -254,19 +238,19 @@ pre {
 	left: 0;
 	height: 25px;
 	width: 25px;
-	border: solid var(--light3);
+	border: solid var(--SentimentalPink);
 	border-width: 1px 1px 1px 1px;
-	background-color: var(--dark2);
+	background-color: var(--MeskiBlack);
 }
 
-/* On mouse-over, add a mid2 background color */
+/* On mouse-over, add a Bouquet background color */
 .spoilers:hover input ~ .checkmark {
-	background-color: var(--mid1);
+	background-color: var(--Bouquet);
 }
 
-/* When the checkbox is checked, add a dark2 background */
+/* When the checkbox is checked, add a OldMauve background */
 .spoilers input:checked ~ .checkmark {
-	background-color: var(--dark3);
+	background-color: var(--OldMauve);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -287,7 +271,7 @@ pre {
 	top: 4px;
 	width: 4px;
 	height: 9px;
-	border: solid var(--light3);
+	border: solid var(--SentimentalPink);
 	border-width: 0 3px 3px 0;
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
@@ -310,20 +294,20 @@ pre {
 	align-items: center;
 	padding: 3px;
 	padding-top: 9px;
-	text-shadow: 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2);
+	text-shadow: 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack);
 	font-size: 0.8em;
 }
 
 .championHolder {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--light3);
+	background-color: var(--SentimentalPink);
 }
 
 .champion {
 	width: 61px;
 	height: 57px;
-	border: 1px solid var(--mid1);
+	border: 1px solid var(--Bouquet);
 	margin-right: -1px;
 	margin-bottom: -1px;
 }
@@ -333,7 +317,7 @@ pre {
 	text-align: center;
 	font-size: 0.6em;
 	padding: 5px;
-	text-shadow: 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2), 0 0 3px var(--dark2);
+	text-shadow: 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack);
 }
 
 .champStatsTableColumn {
@@ -356,8 +340,8 @@ pre {
     justify-content: center;
     align-items: center;
 	height: 25px;
-	background-color: #141414;
-	border: 1px solid black;
+	background-color: var(--Sooty);
+	border: 1px solid var(--Black);
 	margin: 2px;
 }
 
@@ -378,12 +362,12 @@ pre {
 	width: 250px;
 	height: 100%;
 	margin: 0px;
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
 }
 
 .champStatsTableInfo {
-	border-right: 1px solid black;
+	border-right: 1px solid var(--Black);
 }
 
 .champStatsTableStatHeader,.champStatsTableStats,.champStatsTableStatsHeader,.champStatsTableTrials,.champStatsTableTrialsHeader,.champStatsTablePatrons,.champStatsTablePatronsHeader {
@@ -406,9 +390,9 @@ pre {
 
 .champStatsTableStats,.champStatsTableStatsHeader {
 	width: 120px;
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
+	border-right: 1px solid var(--Black);
 }
 
 .champStatsTableTrials,.champStatsTableTrialsHeader {
@@ -417,8 +401,8 @@ pre {
 
 .champStatsTablePatrons,.champStatsTablePatronsHeader {
 	width: 130px;
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
 }
 
 .formationBorder {
@@ -426,13 +410,13 @@ pre {
 	height: fit-content;
 	width: fit-content;
 	padding: 20px;
-	border: 1px solid black;
-	background-color: #1a1a1a;
+	border: 1px solid var(--Black);
+	background-color: var(--CodGrey);
 }
 
 .abilityBorder {
-	background-color: #1a1a1a;
-	border: 1px solid black;
+	background-color: var(--CodGrey);
+	border: 1px solid var(--Black);
 	max-width: 848px;
 	min-width: 348px;
 	margin: 4px;
@@ -469,9 +453,9 @@ pre {
 	margin: 5px;
 	margin-right: 15px;
 	box-shadow: none;
-	border: 1px solid black;
+	border: 1px solid var(--Black);
 	border-radius: 0px;
-	background-color: #202020;
+	background-color: var(--Lead);
 	text-wrap: balance;
 }
 
@@ -491,19 +475,19 @@ pre {
 	min-height: 70px;
 	height: min-content;
 	margin: 2px;
-	background-color: #141414;
-	border: 1px solid black;
+	background-color: var(--Sooty);
+	border: 1px solid var(--Black);
 }
 
 .itemTableRowHeader {
-	border-bottom: 4px ridge black;
+	border-bottom: 4px ridge var(--Black);
 	font-size: 1.1em;
 	min-height: 44px;
 }
 
 .itemTableRow:hover {
-	border: 1px solid #FFEB9B;
-	background-color: #000000;
+	border: 1px solid var(--Flavescent);
+	background-color: var(--Black);
 }
 
 .itemTableIcon {
@@ -524,9 +508,9 @@ pre {
 	justify-content: center;
 	align-items: center;
 	width: 40px;
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
+	border-right: 1px solid var(--Black);
 }
 
 .itemTableName,.itemTableType,.itemTableNameSmall,.itemTableEffect {
@@ -542,15 +526,15 @@ pre {
 }
 
 .itemTableNameSmall {
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
 	margin-left: 0px;
 	padding-left: 8px;
 }
 
 .itemTableEffect {
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
 	width: 350px;
 	padding: 0 8px;
 }
@@ -558,7 +542,7 @@ pre {
 .itemTableIcon1,.itemTableIcon2,.itemTableIcon3,.itemTableIcon4,.itemTableIcon5 {
 	position: relative;
 	cursor: pointer;
-	color: #FFCC00;
+	color: var(--TangerineYellow);
 	display: flex;
 	align-items: center;
 }
@@ -571,28 +555,28 @@ pre {
 }
 
 .itemTableIcon1 img {
-	border: 1px solid #DEE3DE;
+	border: 1px solid var(--WhitecapFoam);
 }
 
 .itemTableIcon2 img {
-	border: 1px solid #7BDF00;
+	border: 1px solid var(--AlienArmpit);
 }
 
 .itemTableIcon3 img {
-	border: 1px solid #2955FF;
+	border: 1px solid var(--UltramarineBlue);
 }
 
 .itemTableIcon4 img {
-	border: 1px solid #8408EF;
+	border: 1px solid var(--Violet);
 }
 
 .itemTableIcon5 img {
-	border: 1px solid #FBBA37;
+	border: 1px solid var(--Saffron);
 }
 
 .itemTableGE {
 	width: 3px;
-	background-color: #FBBA37;
+	background-color: var(--Saffron);
 	height: 60%;
 	margin-left: 2px;
 }
@@ -620,8 +604,8 @@ pre {
 	align-items: center;
 	height: fit-content;
 	padding: 20px;
-	border: 1px solid black;
-	background-color: #1a1a1a;
+	border: 1px solid var(--Black);
+	background-color: var(--CodGrey);
 	margin: 5px;
 }
 
@@ -654,18 +638,18 @@ pre {
 .featTableRow,.featTableRowHeader {
     display: flex;
 	margin: 2px;
-	background-color: #141414;
-	border: 1px solid black;
+	background-color: var(--Sooty);
+	border: 1px solid var(--Black);
 }
 
 .featTableRowHeader {
-	border-bottom: 4px ridge black;
+	border-bottom: 4px ridge var(--Black);
 	font-size: 1.1em;
 }
 
 .featTableRow:hover {
-	border: 1px solid #FFEB9B;
-	background-color: #000000;
+	border: 1px solid var(--Flavescent);
+	background-color: var(--Black);
 }
 
 .featTableIcon1,.featTableIcon2,.featTableIcon3,.featTableIcon4,.featTableIcon5,.featTableSource,.featTableDate {
@@ -681,8 +665,8 @@ pre {
 
 .featTableDate {
 	justify-content: flex-end;
-	border-left: 1px solid black;
-	background-color: #1c1c1c;
+	border-left: 1px solid var(--Black);
+	background-color: var(--EerieBlack);
 	padding: 0 8px;
 }
 
@@ -690,9 +674,9 @@ pre {
 	display: flex;
 	align-items: center;
 	width: 410px;
-	background-color: #1c1c1c;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	background-color: var(--EerieBlack);
+	border-left: 1px solid var(--Black);
+	border-right: 1px solid var(--Black);
 	padding: 0 8px;
 }
 
@@ -704,23 +688,23 @@ pre {
 }
 
 .featTableIcon1 img {
-	border: 1px solid #DEE3DE;
+	border: 1px solid var(--WhitecapFoam);
 }
 
 .featTableIcon2 img {
-	border: 1px solid #7BDF00;
+	border: 1px solid var(--AlienArmpit);
 }
 
 .featTableIcon3 img {
-	border: 1px solid #2955FF;
+	border: 1px solid var(--UltramarineBlue);
 }
 
 .featTableIcon4 img {
-	border: 1px solid #8408EF;
+	border: 1px solid var(--Violet);
 }
 
 .featTableIcon5 img {
-	border: 1px solid #FBBA37;
+	border: 1px solid var(--Saffron);
 }
 
 .featTableInner {
@@ -744,8 +728,8 @@ pre {
 	width: fit-content;
 	padding: 10px;
 	margin: 5px;
-	border: 1px solid black;
-	background-color: #181918;
+	border: 1px solid var(--Black);
+	background-color: var(--HeavyMetal);
 	font-size: 0.9em;
 }
 
@@ -757,19 +741,19 @@ pre {
 }
 
 .itemTableIcon1 img,.itemTableIcon1:hover .itemTooltipContents {
-	border: 1px solid #DEE3DE;
+	border: 1px solid var(--WhitecapFoam);
 }
 .itemTableIcon2 img,.itemTableIcon2:hover .itemTooltipContents {
-	border: 1px solid #7BDF00;
+	border: 1px solid var(--AlienArmpit);
 }
 .itemTableIcon3 img,.itemTableIcon3:hover .itemTooltipContents {
-	border: 1px solid #2955FF;
+	border: 1px solid var(--UltramarineBlue);
 }
 .itemTableIcon4 img,.itemTableIcon4:hover .itemTooltipContents {
-	border: 1px solid #8408EF;
+	border: 1px solid var(--Violet);
 }
 .itemTableIcon5 img,.itemTableIcon5:hover .itemTooltipContents {
-	border: 1px solid #FBBA37;
+	border: 1px solid var(--Saffron);
 }
 .itemTableIcon1:hover .itemTooltipContents,.itemTableIcon2:hover .itemTooltipContents,.itemTableIcon3:hover .itemTooltipContents,.itemTableIcon4:hover .itemTooltipContents,.itemTableIcon5:hover .itemTooltipContents {
 	visibility: visible;
@@ -777,8 +761,8 @@ pre {
 .itemTooltipContents {
 	visibility: hidden;
 	padding: 15px;
-	border: 1px solid black;
-	background-color: #101010;
+	border: 1px solid var(--Black);
+	background-color: var(--Onyx);
 	width: max-content;
 	max-width: 350px;
 	
@@ -791,13 +775,13 @@ pre {
 	left: 0px;
 	bottom: 0px;
 	transform: translate(100px, 10px);
-	color: #f0e7d5;
+	color: var(--Eggshell);
 	pointer-events: none;
 }
 .itemTooltipContents code,.featTooltipContents code {
 	margin-top: 10px;
 	font-size: 0.9em;
-	color: white;
+	color: var(--White);
 	padding: 5px;
 }
 
@@ -807,19 +791,19 @@ pre {
 	padding: 0;
 }
 .featTableIcon1 img,.featTableIcon1:hover .featTooltipContents {
-	border: 1px solid #DEE3DE;
+	border: 1px solid var(--WhitecapFoam);
 }
 .featTableIcon2 img,.featTableIcon2:hover .featTooltipContents {
-	border: 1px solid #7BDF00;
+	border: 1px solid var(--AlienArmpit);
 }
 .featTableIcon3 img,.featTableIcon3:hover .featTooltipContents {
-	border: 1px solid #2955FF;
+	border: 1px solid var(--UltramarineBlue);
 }
 .featTableIcon4 img,.featTableIcon4:hover .featTooltipContents {
-	border: 1px solid #8408EF;
+	border: 1px solid var(--Violet);
 }
 .featTableIcon5 img,.featTableIcon5:hover .featTooltipContents {
-	border: 1px solid #FBBA37;
+	border: 1px solid var(--Saffron);
 }
 .featTableIcon1:hover .featTooltipContents,.featTableIcon2:hover .featTooltipContents,.featTableIcon3:hover .featTooltipContents,.featTableIcon4:hover .featTooltipContents,.featTableIcon5:hover .featTooltipContents {
 	visibility: visible;
@@ -827,8 +811,8 @@ pre {
 .featTooltipContents {
 	visibility: hidden;
 	padding: 15px;
-	border: 1px solid black;
-	background-color: #101010;
+	border: 1px solid var(--Black);
+	background-color: var(--Onyx);
 	width: max-content;
 	max-width: 350px;
 	
@@ -841,7 +825,7 @@ pre {
 	left: 0px;
 	bottom: 0px;
 	transform: translate(100px, 10px);
-	color: #f0e7d5;
+	color: var(--Eggshell);
 	pointer-events: none;
 }
 @font-face {
