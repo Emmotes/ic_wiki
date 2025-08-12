@@ -270,8 +270,8 @@ function addAttackData(champ,attack,ult) {
 
 function addAbilityData(champ,ability) {
 	var prestackPrefix = `<p><span style="font-size:1.2em;">ⓘ</span> <em>Note: This ability `;
-	var prestackSuffix = ` prestack.</em></p>`
-	var content=`<div class="abilityBorder"><div class="abilityBorderInner"><p class="abilityBorderName">`+addAbilityImages(champ,ability)+` <strong>${ability.name}</strong>`;
+	var prestackSuffix = ` prestack.</em></p>`;
+	var content=`<div class="abilityBorder"><div class="abilityBorderInner"><p class="abilityBorderName">`+addAbilityImages(champ,ability)+` <strong>${dealWithColours(ability.name)}</strong>`;
 	var reqLevel=-1;
 	for (let i=0; i<ability.raw.length;i++) {
 		if (ability.raw[i].required_level!=undefined) {
@@ -290,6 +290,7 @@ function addAbilityData(champ,ability) {
 		prestackText += prestackSuffix;
 	}
 	var desc=ability.desc.replaceAll(`>`,`<br>`);
+	desc=dealWithColours(desc);
 	content+=(reqLevel>=0?`(Level: ${reqLevel})`:``)+`</p><blockquote><p>${desc}</p></blockquote>${prestackText}<details><summary><em>Raw Data</em></summary><p><pre>`;
 	for (let i=0;i<ability.raw.length;i++) {
 		content+=JSON.stringify(ability.raw[i], null, 4);
@@ -677,4 +678,8 @@ function compress(input) {
 
 function decompress(input) {
 	return LZString.decompress(input);
+}
+
+function dealWithColours(str) {
+	return str.replaceAll(/\{([^\}]+)\}(#(?:[A-Za-z0-9]{6}|[A-Za-z0-9]{3}))/g, `<span style="color:$2">$1</span>`);
 }
