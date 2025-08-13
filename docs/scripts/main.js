@@ -666,7 +666,7 @@ function isDMUni() {
 }
 
 function dmPortrait() {
-	var prefix = `images/dm/portraits/portrait`;
+	var prefix = `images/dungeonmaster/portraits/portrait`;
 	if (dmUni)
 		prefix+=`Uni`;
 	return `${prefix}.png`;
