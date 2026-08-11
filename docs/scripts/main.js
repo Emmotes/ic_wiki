@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const v=2.003; // prettier-ignore
+const v=2.004; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -80,7 +80,7 @@ async function parseJSON() {
 	let decompressed = decompress(ls_get(LSKEY_data, null));
 	try {
 		data = JSON.parse(decompressed).data;
-	// eslint-disable-next-line no-unused-vars
+		// eslint-disable-next-line no-unused-vars
 	} catch (_) {
 		console.log(
 			`Caught an error with localStorage data. Taking the nuclear option.`,
@@ -185,9 +185,8 @@ function displayWiki(i) {
 	else content += createSmallStatsTable(champ);
 	const formationURL = `images/${fName}/formation/formation.png`;
 	const formationExists = champ.formation;
-	if (formationExists) {
+	if (formationExists)
 		content += `<h1 id="formation">Formation</h1><p><span class="formationBorder"><img src="${formationURL}" alt="Formation Layout" /></span></p>`;
-	}
 
 	content += `<h1 id="attacks">Attacks</h1>`;
 	if (champ.attacks != null) {
@@ -207,9 +206,7 @@ function displayWiki(i) {
 	if (champ.specs != null && champ.specs.length > 0) {
 		for (const spec of champ?.specs ?? [])
 			content += addAbilityData(champ, spec);
-	} else {
-		content += unknown;
-	}
+	} else content += unknown;
 
 	content += `<h1 id="items">Items</h1>`;
 	if (champ.items != null && champ.items.length > 0)
@@ -234,19 +231,15 @@ function displayWiki(i) {
 
 	content += `<h1 id="legendaries">Legendaries</h1>`;
 	if (champ.legs != null) {
-		if (champ.legs.effects == null || champ.legs.effects.length === 0) {
-			content += unknown;
-		} else {
+		if (champ.legs.effects != null && champ.legs.effects.length > 0) {
 			content += `<ul>`;
 			for (const effect of champ?.legs?.effects ?? [])
 				content += `<li>${effect}</li>`;
 			content += `</ul>`;
 			content += addLegendaryDropdown(`DPS`, champ.legs.dps);
 			content += addLegendaryDropdown(`Non-DPS`, champ.legs.nondps);
-		}
-	} else {
-		content += unknown;
-	}
+		} else content += unknown;
+	} else content += unknown;
 
 	content += `<h1 id="championimages">Champion Images</h1>`;
 	if (champ.console || champ.chests != null)
@@ -412,7 +405,8 @@ function addAbilityData(champ, ability) {
 	}
 
 	let rawContents = ``;
-	for (const raw of ability?.raw ?? []) rawContents += JSON.stringify(raw, null, 4);
+	for (const raw of ability?.raw ?? [])
+		rawContents += JSON.stringify(raw, null, 4);
 
 	content += addDetailsBlock(`Raw Data`, rawContents);
 	content += `</div></div>`;
@@ -462,9 +456,7 @@ function addItemData(champ, slots) {
 		content += `</span>`;
 
 		const lastItem = slot.items[slot.items.length - 1];
-		if (small) {
-			content += `<span class="itemTableNameSmall"><span>${lastItem.name}</span></span>`;
-		} else {
+		if (!small) {
 			let effect = slot.effect;
 			if (slot.caps && slot.caps.length === 3)
 				effect +=
@@ -479,7 +471,8 @@ function addItemData(champ, slots) {
 				`<span class="itemTableSlot"><span>` +
 				(i + 1) +
 				`</span></span><span class="itemTableName"><span>${lastItem.name}</span></span><span class="itemTableEffect"><span>${effect}</span></span>`;
-		}
+		} else
+			content += `<span class="itemTableNameSmall"><span>${lastItem.name}</span></span>`;
 		content += `</span>`;
 	}
 	content += `</p>`;
@@ -612,10 +605,8 @@ function addSkinImages(champ, skins) {
 			if (!addedspoiler) addedspoiler = true;
 		} else content += skintxt;
 	}
-	if (addedspoiler && getSpoilersSetting()) {
-		content += `</span></p><h1 id="skinsSpoilers">Spoiler Skin Portraits</h1>`;
-		content += spoiler;
-	}
+	if (addedspoiler && getSpoilersSetting())
+		content += `</span></p><h1 id="skinsSpoilers">Spoiler Skin Portraits</h1>${spoiler}`;
 	content += `</span></p>`;
 	return content;
 }
@@ -682,10 +673,8 @@ function addAttackImages(champ, attack) {
 
 function addAbilityImages(champ, ability) {
 	let reqLevel = -3;
-	for (const raw of ability?.raw ?? []) {
-		if (raw.required_level != null)
-			reqLevel = raw.required_level;
-	}
+	for (const raw of ability?.raw ?? [])
+		if (raw.required_level != null) reqLevel = raw.required_level;
 	if (ability.raw.length === 2 && ability.graphicId > 0 && reqLevel > 0)
 		return `<img src="images/${champ.fName}/abilities/${ability.id}.png" alt="${ability.name} Icon">`;
 	return ``;
@@ -699,12 +688,10 @@ function splitItemDescription(start, description, longName) {
 	let line = start;
 	let i = 0;
 	while (i < desc.length) {
-		if (line.length + 1 + desc[i].length <= limit) {
-			line += (line !== `` ? ` ` : ``) + desc[i];
-		} else {
+		if (line.length + 1 + desc[i].length > limit) {
 			retVal += (retVal !== `` ? `<br/>` : ``) + line;
 			line = spacing + desc[i];
-		}
+		} else line += (line !== `` ? ` ` : ``) + desc[i];
 		i++;
 	}
 	retVal += (retVal !== `` ? `<br/>` : ``) + line;
