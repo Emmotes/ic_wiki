@@ -28,11 +28,11 @@
 		</div>
 		<div class="spoilersNav">
 			<label class="spoilers">Unsticky Champions
-				<input type="checkbox" id="unstickyCheckbox" onclick="setUnsticky()">
+				<input type="checkbox" id="unstickyCheckbox" onclick="onUnstickyChange(this.checked);">
 				<span class="checkmark"></span>
 			</label>
 			<label class="spoilers">Spoilers
-				<input type="checkbox" id="spoilerCheckbox" onclick="setSpoilers()">
+				<input type="checkbox" id="spoilerCheckbox" onclick="onSpoilersChange(this.checked);">
 				<span class="checkmark"></span>
 			</label>
 		</div>
@@ -58,6 +58,6 @@
 	<div>
 
 	<script type="text/json" src="championData.json"></script>
-	<script type="text/javascript" src="scripts/main.js?v=1.7"></script>
+	<script type="text/javascript" src="scripts/main.js?v=2.000"></script>
 </body>
 </html>
