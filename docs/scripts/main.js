@@ -1,4 +1,4 @@
-const v=2.000; // prettier-ignore
+const v=2.001; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -387,7 +387,6 @@ function addAbilityData(champ, ability) {
 		`</p><blockquote><p>${desc}</p></blockquote>${prestackText}`;
 
 	if (ability.upgrades != null) {
-		console.log(ability.name, ability.upgrades);
 		let upgradeContents = ``;
 		let longL = 5;
 		let longE = 6;
