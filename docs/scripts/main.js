@@ -1,4 +1,5 @@
-const v=2.002; // prettier-ignore
+// eslint-disable-next-line no-unused-vars
+const v=2.003; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -38,6 +39,7 @@ async function loadLocalData() {
 	await ls_set_string(LSKEY_data, compressed, null);
 }
 
+// eslint-disable-next-line no-unused-vars
 async function init() {
 	// Migrate old localStorage data to new keys.
 	// Unsticky never had old keys.
@@ -78,6 +80,7 @@ async function parseJSON() {
 	let decompressed = decompress(ls_get(LSKEY_data, null));
 	try {
 		data = JSON.parse(decompressed).data;
+	// eslint-disable-next-line no-unused-vars
 	} catch (_) {
 		console.log(
 			`Caught an error with localStorage data. Taking the nuclear option.`,
@@ -123,10 +126,11 @@ function drawChampion(i, champ) {
 	if (fName === `nixie`) portrait = nixiePortrait();
 	if (fName === `spurt`) portrait = splatPortrait();
 	if (fName === `dungeonmaster`) portrait = dmPortrait();
-	const draw = `<div class="championHolder" id="${fName}"><a onclick="displayWiki(${i})" id="link_${fName}" href="#"><div class="champion" style="background-image:url(${portrait}); background-size:61px; background-repeat: no-repeat;" id="div_${fName}"><div class="championName">${nameShort}</div></div></a></div>`;
+	const draw = `<div class="championHolder" id="${fName}"><div onclick="displayWiki(${i})" class="champion" style="background-image:url(${portrait}); background-size:61px; background-repeat: no-repeat; cursor: pointer;" id="div_${fName}"><div class="championName">${nameShort}</div></div></div>`;
 	return draw;
 }
 
+// eslint-disable-next-line no-unused-vars
 function onSpoilersChange(checked) {
 	setSpoilersSetting(checked);
 	updateSpoilers();
@@ -140,6 +144,7 @@ function updateSpoilers() {
 		displayWiki(document.getElementById(`currChamp`).innerHTML);
 }
 
+// eslint-disable-next-line no-unused-vars
 function onUnstickyChange(checked) {
 	setUnstickySetting(checked);
 	updateUnsticky();
@@ -169,7 +174,10 @@ function displayWiki(i) {
 			`<p><br /><img src="${portrait}" alt="${name} Portrait"></p>`
 		:	``;
 	content += `<h1 id="${fName}">${champ.nameFull}</h1>`;
-	content += `<p>${champ.backstory.replace(/\[([^\]]+)\]\(([^)]+)\)/gm, '<br><br><a href="$2" target="_blank">$1</a>')}</p>`;
+	content += `<p>${champ.backstory.replace(
+		/\[([^\]]+)\]\(([^)]+)\)(?:{[^}]+})?/gm,
+		'<br><br><a href="$2" target="_blank">$1</a>',
+	)}</p>`;
 	content += `<h1 id="basic-information">Basic Information</h1>`;
 	if (champ.spoiler)
 		content += `<p>${name} will be the new champion in the ${champ.eventName} event on ${champ.eventDate}.</p>`;
@@ -183,41 +191,22 @@ function displayWiki(i) {
 
 	content += `<h1 id="attacks">Attacks</h1>`;
 	if (champ.attacks != null) {
-		if (champ.attacks != null) {
-			if (champ.attacks.base != null && champ.attacks.base.length > 0) {
-				for (let i = 0; i < champ.attacks.base.length; i++) {
-					const attack = champ.attacks.base[i];
-					content += addAttackData(champ, attack, false);
-				}
-			}
-			if (champ.attacks.ult != null && champ.attacks.ult.length > 0) {
-				for (let i = 0; i < champ.attacks.ult.length; i++) {
-					const attack = champ.attacks.ult[i];
-					content += addAttackData(champ, attack, true);
-				}
-			}
-		}
-	} else {
-		content += unknown;
-	}
+		for (const attack of champ?.attacks?.base ?? [])
+			content += addAttackData(champ, attack, false);
+		for (const attack of champ?.attacks?.ult ?? [])
+			content += addAttackData(champ, attack, true);
+	} else content += unknown;
+
 	content += `<h1 id="abilities">Abilities</h1>`;
 	if (champ.abilities != null) {
-		if (champ.abilities != null && champ.abilities.length > 0) {
-			for (let i = 0; i < champ.abilities.length; i++) {
-				const ability = champ.abilities[i];
-				content += addAbilityData(champ, ability);
-			}
-		}
-	} else {
-		content += unknown;
-	}
+		for (const ability of champ?.abilities ?? [])
+			content += addAbilityData(champ, ability);
+	} else content += unknown;
 
 	content += `<h1 id="specialisations">Specialisations</h1>`;
 	if (champ.specs != null && champ.specs.length > 0) {
-		for (let i = 0; i < champ.specs.length; i++) {
-			const spec = champ.specs[i];
+		for (const spec of champ?.specs ?? [])
 			content += addAbilityData(champ, spec);
-		}
 	} else {
 		content += unknown;
 	}
@@ -249,8 +238,8 @@ function displayWiki(i) {
 			content += unknown;
 		} else {
 			content += `<ul>`;
-			for (let i = 0; i < champ.legs.effects.length; i++)
-				content += `<li>${champ.legs.effects[i]}</li>`;
+			for (const effect of champ?.legs?.effects ?? [])
+				content += `<li>${effect}</li>`;
 			content += `</ul>`;
 			content += addLegendaryDropdown(`DPS`, champ.legs.dps);
 			content += addLegendaryDropdown(`Non-DPS`, champ.legs.nondps);
@@ -367,9 +356,9 @@ function addAbilityData(champ, ability) {
 		addAbilityImages(champ, ability) +
 		` <strong>${dealWithColours(ability.name)}</strong>`;
 	let reqLevel = -1;
-	for (let i = 0; i < ability.raw.length; i++) {
-		if (ability.raw[i].required_level != null) {
-			reqLevel = ability.raw[i].required_level;
+	for (const raw of ability?.raw ?? []) {
+		if (raw.required_level != null) {
+			reqLevel = raw.required_level;
 			break;
 		}
 	}
@@ -423,10 +412,7 @@ function addAbilityData(champ, ability) {
 	}
 
 	let rawContents = ``;
-	for (let i = 0; i < ability.raw.length; i++) {
-		rawContents += JSON.stringify(ability.raw[i], null, 4);
-		if (i < ability.raw.length - 1) rawContents += `,<br/>`;
-	}
+	for (const raw of ability?.raw ?? []) rawContents += JSON.stringify(raw, null, 4);
 
 	content += addDetailsBlock(`Raw Data`, rawContents);
 	content += `</div></div>`;
@@ -441,7 +427,8 @@ function addUpgradeDataLine(level, effect, cumulative, longLevel, longEffect) {
 		`    ` +
 		(typeof cumulative === "number" ?
 			sn((cumulative - 1) * 100) + "%"
-		:	cumulative).padStart(10) +
+		:	cumulative
+		).padStart(10) +
 		`<br/>`
 	);
 }
@@ -503,8 +490,7 @@ function addItemData(champ, slots) {
 			const slot = slots[i];
 			if (i > 0) rawContents += `<br/>`;
 			rawContents += `Slot: ` + (i + 1) + `<br/>`;
-			for (let k = 0; k < slot.items.length; k++) {
-				const item = slot.items[k];
+			for (const item of slot?.items ?? []) {
 				rawContents += splitItemDescription(
 					`${item.name}:`.padStart(longName - 1),
 					item.description,
@@ -545,8 +531,7 @@ function addFeatData(champ, feats, spoils) {
 			`<span class="featTableDate"><span class="featTableInner"><strong>Date</strong></span></span>`
 		:	``) +
 		`</span>`;
-	for (let i = 0; i < feats.length; i++) {
-		const feat = feats[i];
+	for (const feat of feats ?? []) {
 		const tt = addFeatTooltipData(feat);
 		content +=
 			`<span class="featTableRow"><span class="featTableIcon${feat.rarity}"><img src="images/feats/${feat.graphicId}.png" alt="${feat.name} Icon" />${tt}${feat.name}</span><span class="featTableEffect"><span class="featTableInner">${feat.effect}</span></span><span class="featTableSource"><span class="featTableInner">${feat.source}</span></span>` +
@@ -562,8 +547,7 @@ function addFeatData(champ, feats, spoils) {
 }
 
 function addFeatTooltipData(feat) {
-	const id = feat.id != null ? `ID: ${feat.id}` : ``;
-	let tt = `<span class="featTooltipContents">${id}<strong>${feat.name}</strong>${feat.desc}`;
+	let tt = `<span class="featTooltipContents">ID: ${feat.id}<strong>${feat.name}</strong>${feat.desc}`;
 	if (feat.effects != null && feat.effects.length > 0) {
 		tt += `<code>`;
 		for (let i = 0; i < feat.effects.length; i++) {
@@ -582,11 +566,11 @@ function addLegendaryDropdown(legsType, legsApplic) {
 	const names = Object.keys(legsApplic);
 	let longName = 0;
 	let rawContent = ``;
-	for (let i = 0; i < names.length; i++)
-		if (names[i].length > longName) longName = names[i].length;
-	for (let i = 0; i < names.length; i++) {
-		rawContent += names[i].padStart(longName) + `: `;
-		const applicables = legsApplic[names[i]];
+	for (const name of names ?? [])
+		if (name.length > longName) longName = name.length;
+	for (const name of names ?? []) {
+		rawContent += name.padStart(longName) + `: `;
+		const applicables = legsApplic[name];
 		if (typeof applicables === `string` || typeof applicables === `number`)
 			rawContent += applicables;
 		else rawContent += applicables[0];
@@ -619,17 +603,14 @@ function addSkinImages(champ, skins) {
 	let spoiler = content;
 	let addedspoiler = false;
 	content += `<span class="skinsPortraitsImage"><img src="images/${champ.fName}/portraits/portrait.png" alt="${champ.name} No Skin Portrait" />No Skin</span>`;
-	for (let i = 0; i < skins.length; i++) {
-		const skin = skins[i];
+	for (const skin of skins ?? []) {
 		const crayon = addCrayonEegg(champ, skin);
 		const crossedOut = crayon === `` ? `` : ` crossedOut`;
 		const skintxt = `<span class="skinsPortraitsImage${crossedOut}"><img src="images/${champ.fName}/skins/${skin.id}.png" alt="${champ.name} ${skin.name} Portrait" />${skin.name}${crayon}</span>`;
 		if (skin.spoiler != null && skin.spoiler) {
 			spoiler += skintxt;
 			if (!addedspoiler) addedspoiler = true;
-		} else {
-			content += skintxt;
-		}
+		} else content += skintxt;
 	}
 	if (addedspoiler && getSpoilersSetting()) {
 		content += `</span></p><h1 id="skinsSpoilers">Spoiler Skin Portraits</h1>`;
@@ -645,29 +626,6 @@ function addCrayonEegg(champ, skin) {
 	if (champ.name === `Catti-brie` && skin.name === `Dwarf Glitch`)
 		return `${pref}Cattastro-brie${suff}`;
 	return ``;
-}
-
-function useableDesc(thing) {
-	if (thing != null && typeof thing === `string` && thing !== ``) return true;
-	return false;
-}
-
-function parseEffects(abilities) {
-	const es = `effect_string`;
-	const effects = [];
-	customFilter(abilities, effects);
-	return effects;
-}
-
-function customFilter(object, result) {
-	if (object === null) return;
-
-	if (Object.prototype.hasOwnProperty.call(object, `effect_string`))
-		result.push(object.effect_string);
-
-	for (let i = 0; i < Object.keys(object).length; i++)
-		if (typeof object[Object.keys(object)[i]] === `object`)
-			customFilter(object[Object.keys(object)[i]], result);
 }
 
 function sortArray(unordered) {
@@ -710,39 +668,24 @@ function calcChampPadding(stat, champ) {
 	return 8;
 }
 
-function addFormation(fName) {
-	let content = ``;
-	const image = `images/${fName}/formation.png`;
-	const http = new XMLHttpRequest();
-	http.open("HEAD", image, false);
-	http.send();
-	if (http.status === 200) {
-		content += `<h1 id="formation">Formation</h1>`;
-		content += `<p><img src="${image}" alt="Formation Layout" /></p>`;
-	}
-	return content;
-}
-
 function addAttackImages(champ, attack) {
 	if (attack.graphic_id != null && attack.graphic_id > 0)
 		return `<img src="images/${champ.fName}/attacks/${attack.id}.png" alt="${attack.name} Icon">`;
 	let images = ``;
-	for (let i = 0; i < attack.damage_types.length; i++) {
-		const dmg = attack.damage_types[i];
+	for (const dmg of attack?.damage_types ?? [])
 		images +=
 			`<img src="images/${dmg}.png" alt="` +
 			capitalise(dmg) +
 			` Damage Icon">`;
-	}
 	return images;
 }
 
 function addAbilityImages(champ, ability) {
-	const graphicId = ability.graphicId;
 	let reqLevel = -3;
-	for (let i = 0; i < ability.raw.length; i++)
-		if (ability.raw[i].required_level != null)
-			reqLevel = ability.raw[i].required_level;
+	for (const raw of ability?.raw ?? []) {
+		if (raw.required_level != null)
+			reqLevel = raw.required_level;
+	}
 	if (ability.raw.length === 2 && ability.graphicId > 0 && reqLevel > 0)
 		return `<img src="images/${champ.fName}/abilities/${ability.id}.png" alt="${ability.name} Icon">`;
 	return ``;
@@ -755,7 +698,6 @@ function splitItemDescription(start, description, longName) {
 	let retVal = ``;
 	let line = start;
 	let i = 0;
-	let first = true;
 	while (i < desc.length) {
 		if (line.length + 1 + desc[i].length <= limit) {
 			line += (line !== `` ? ` ` : ``) + desc[i];
@@ -763,7 +705,6 @@ function splitItemDescription(start, description, longName) {
 			retVal += (retVal !== `` ? `<br/>` : ``) + line;
 			line = spacing + desc[i];
 		}
-		first = false;
 		i++;
 	}
 	retVal += (retVal !== `` ? `<br/>` : ``) + line;
