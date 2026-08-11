@@ -1,4 +1,4 @@
-const v=2.001; // prettier-ignore
+const v=2.002; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -562,7 +562,8 @@ function addFeatData(champ, feats, spoils) {
 }
 
 function addFeatTooltipData(feat) {
-	let tt = `<span class="featTooltipContents"><strong>${feat.name}</strong>${feat.desc}`;
+	const id = feat.id != null ? `ID: ${feat.id}` : ``;
+	let tt = `<span class="featTooltipContents">${id}<strong>${feat.name}</strong>${feat.desc}`;
 	if (feat.effects != null && feat.effects.length > 0) {
 		tt += `<code>`;
 		for (let i = 0; i < feat.effects.length; i++) {
