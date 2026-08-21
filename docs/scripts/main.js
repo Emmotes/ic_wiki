@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const v=2.004; // prettier-ignore
+const v=2.100; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -256,64 +256,126 @@ function displayWiki(i) {
 
 function createFullStatsTable(champ) {
 	return (
-		`<p><span class="champStatsTableColumn"><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Seat</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">` +
-		(champ.spoiler ? champ.seatSpoiler : champ.seat) +
-		`</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Stat</strong></span></span><span class="champStatsTableStatsHeader"><span style="margin-left:8px;"><strong>Value</strong></span></span><span class="champStatsTableTrialsHeader"><span style="margin-left:8px;"><strong>Day 1 Trials</strong></span></span><span class="champStatsTablePatronsHeader"><span style="margin-left:8px;"><strong>Patrons</strong></span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Species</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.species}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Strength</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:` +
-		calcChampPadding(0, champ) +
-		`px;">${champ.stats[0]}` +
-		(champ.statsFeats[0] > champ.stats[0] ?
-			` (${champ.statsFeats[0]} with feat)`
-		:	``) +
-		`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">` +
-		calcDay1Trials(0, champ) +
-		`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[0]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Class</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.classes}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Dexterity</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:` +
-		calcChampPadding(1, champ) +
-		`px;">${champ.stats[1]}` +
-		(champ.statsFeats[1] > champ.stats[1] ?
-			` (${champ.statsFeats[1]} with feat)`
-		:	``) +
-		`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">` +
-		calcDay1Trials(1, champ) +
-		`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[1]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Roles</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.roles}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Constitution</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:` +
-		calcChampPadding(2, champ) +
-		`px;">${champ.stats[2]}` +
-		(champ.statsFeats[2] > champ.stats[2] ?
-			` (${champ.statsFeats[2]} with feat)`
-		:	``) +
-		`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">` +
-		calcDay1Trials(2, champ) +
-		`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[2]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Age</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.age}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Intelligence</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:` +
-		calcChampPadding(3, champ) +
-		`px;">${champ.stats[3]}` +
-		(champ.statsFeats[3] > champ.stats[3] ?
-			` (${champ.statsFeats[3]} with feat)`
-		:	``) +
-		`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">` +
-		calcDay1Trials(3, champ) +
-		`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[3]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Gender</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">` +
-		(champ.gender === `` ? `Nonbinary` : champ.gender) +
-		`</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Wisdom</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:` +
-		calcChampPadding(4, champ) +
-		`px;">${champ.stats[4]}` +
-		(champ.statsFeats[4] > champ.stats[4] ?
-			` (${champ.statsFeats[4]} with feat)`
-		:	``) +
-		`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">` +
-		calcDay1Trials(4, champ) +
-		`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.patrons[4]}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Alignment</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.alignment}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Charisma</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:` +
-		calcChampPadding(5, champ) +
-		`px;">${champ.stats[5]}` +
-		(champ.statsFeats[5] > champ.stats[5] ?
-			` (${champ.statsFeats[5]} with feat)`
-		:	``) +
-		`</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">` +
-		calcDay1Trials(5, champ) +
-		`</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;"> </span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Affiliation</strong>:</span></span><span class="champStatsTableInfo"><span style="margin-left:8px;">${champ.affiliations}</span></span><span class="champStatsTableStatHeader"><span style="margin-right:4px;"><strong>Total</strong>:</span></span><span class="champStatsTableStats"><span style="margin-left:8px;">${champ.totalStats}</span></span><span class="champStatsTableTrials"><span style="margin-left:8px;">Champion ID:</span></span><span class="champStatsTablePatrons"><span style="margin-left:8px;">${champ.id}</span></span></span></span></p>`
+		`<p>` +
+		`<span class="champStatsTableGrid">` +
+		createStatsGridRow(
+			`${strong(`Seat`)}:`,
+			champ.spoiler ? champ.seatSpoiler : champ.seat,
+			strong(`Stat`),
+			strong(`Value`),
+			strong(`Day 1 Trials`),
+			strong(`Patrons`),
+			strong(`Skylla Patrons`),
+		) +
+		createStatsGridRow(
+			`${strong(`Species`)}:`,
+			champ.species,
+			`${strong(`Strength`)}:`,
+			addStatLine(champ, 0),
+			calcDay1Trials(0, champ),
+			champ.patrons[0],
+			champ.skylla[0],
+		) +
+		createStatsGridRow(
+			`${strong(`Classes`)}:`,
+			champ.classes,
+			`${strong(`Dexterity`)}:`,
+			addStatLine(champ, 1),
+			calcDay1Trials(1, champ),
+			champ.patrons[1],
+			champ.skylla[1],
+		) +
+		createStatsGridRow(
+			`${strong(`Roles`)}:`,
+			champ.roles,
+			`${strong(`Constitution`)}:`,
+			addStatLine(champ, 2),
+			calcDay1Trials(2, champ),
+			champ.patrons[2],
+			champ.skylla[2],
+		) +
+		createStatsGridRow(
+			`${strong(`Age`)}:`,
+			champ.age,
+			`${strong(`Intelligence`)}:`,
+			addStatLine(champ, 3),
+			calcDay1Trials(3, champ),
+			champ.patrons[3],
+			champ.skylla[3],
+		) +
+		createStatsGridRow(
+			`${strong(`Gender`)}:`,
+			champ.gender === `` ? `Nonbinary` : champ.gender,
+			`${strong(`Wisdom`)}:`,
+			addStatLine(champ, 4),
+			calcDay1Trials(4, champ),
+			champ.patrons[4],
+			champ.skylla[4],
+		) +
+		createStatsGridRow(
+			`${strong(`Alignment`)}:`,
+			champ.alignment,
+			`${strong(`Charisma`)}:`,
+			addStatLine(champ, 5),
+			calcDay1Trials(5, champ),
+			``,
+			``,
+		) +
+		createStatsGridRow(
+			`${strong(`Affiliation`)}:`,
+			champ.affiliations,
+			`${strong(`Total`)}:`,
+			champ.totalStats,
+			``,
+			`${strong(`Champion ID`)}:`,
+			champ.id,
+		) +
+		`</span>` +
+		`</p>`
 	);
 }
 
 function createSmallStatsTable(champ) {
-	return `<p><span class="champStatsTableColumn"><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Seat</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.seatSpoiler}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Species</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.species}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Class</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.classes}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Roles</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.roles}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Age</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.age}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Gender</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.gender}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Alignment</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.alignment}</span></span></span><span class="champStatsTableRow"><span class="champStatsTableInfoHeader"><span style="margin-right:4px;"><strong>Affiliation</strong>:</span></span><span class="champStatsTableInfoSmall"><span style="margin-left:8px;">${champ.affiliations}</span></span></span></span></p>`;
+	return (
+		`<p>` +
+		`<span class="champStatsTableGridSmall">` +
+		createStatsGridRow(`${strong(`Seat`)}:`, champ.seatSpoiler) +
+		createStatsGridRow(`${strong(`Species`)}:`, champ.species) +
+		createStatsGridRow(`${strong(`Classes`)}:`, champ.classes) +
+		createStatsGridRow(`${strong(`Roles`)}:`, champ.roles) +
+		createStatsGridRow(`${strong(`Age`)}:`, champ.age) +
+		createStatsGridRow(`${strong(`Gender`)}:`, champ.gender) +
+		createStatsGridRow(`${strong(`Alignment`)}:`, champ.alignment) +
+		createStatsGridRow(`${strong(`Affiliation`)}:`, champ.affiliations) +
+		`</span>` +
+		`</p>`
+	);
+}
+
+function createStatsGridRow(col1, col2, col3, col4, col5, col6, col7) {
+	return (
+		`<span>${col1}</span>` +
+		`<span>${col2}</span>` +
+		`<span>${col3}</span>` +
+		`<span>${col4}</span>` +
+		`<span>${col5}</span>` +
+		`<span>${col6}</span>` +
+		`<span>${col7}</span>`
+	);
+}
+
+function strong(txt) {
+	return `<strong style="font-size:1.1em">${txt}</strong>`;
+}
+
+function addStatLine(champ, index) {
+	return (
+		(champ.stats[index] < 10 ? `&nbsp;&nbsp;` : ``) +
+		champ.stats[index] +
+		(champ.statsFeats[index] > champ.stats[index] ?
+			` (${champ.statsFeats[index]} with feat)`
+		:	``)
+	);
 }
 
 function addAttackData(champ, attack, ult) {
@@ -653,12 +715,6 @@ function calcDay1Trials(stat, champ) {
 	return `-`;
 }
 
-function calcChampPadding(stat, champ) {
-	const statVal = champ.stats[stat];
-	if (statVal < 10) return 16;
-	return 8;
-}
-
 function addAttackImages(champ, attack) {
 	if (attack.graphic_id != null && attack.graphic_id > 0)
 		return `<img src="images/${champ.fName}/attacks/${attack.id}.png" alt="${attack.name} Icon">`;
@@ -673,8 +729,13 @@ function addAttackImages(champ, attack) {
 
 function addAbilityImages(champ, ability) {
 	let reqLevel = -3;
-	for (const raw of ability?.raw ?? [])
-		if (raw.required_level != null) reqLevel = raw.required_level;
+	try {
+		for (const raw of ability?.raw ?? [])
+			if (raw.required_level != null) reqLevel = raw.required_level;
+	} catch (error) {
+		console.log(ability?.raw ?? []);
+		console.err(error);
+	}
 	if (ability.raw.length === 2 && ability.graphicId > 0 && reqLevel > 0)
 		return `<img src="images/${champ.fName}/abilities/${ability.id}.png" alt="${ability.name} Icon">`;
 	return ``;
