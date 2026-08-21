@@ -320,52 +320,6 @@ pre {
 	text-shadow: 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack), 0 0 3px var(--MeskiBlack);
 }
 
-.champStatsTableColumn {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-	margin: 1px;
-	width: 850px;
-	font-size: 0.8em;
-	margin-top: 1px;
-	margin-bottom: 1px;
-}
-
-.champStatsTableRow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-	height: 25px;
-	background-color: var(--Sooty);
-	border: 1px solid var(--Black);
-	margin: 2px;
-}
-
-.champStatsTableInfoHeader {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 95px;
-	height: 100%;
-	margin: 0px;
-	font-size: 1.1em;
-}
-
-.champStatsTableInfoSmall {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	width: 200px;
-	height: 100%;
-	margin: 0px;
-	background-color: var(--EerieBlack);
-	border-left: 1px solid var(--Black);
-}
-
 .champStatsTableGrid,.champStatsTableGridSmall {
 	display: grid;
 	width: 900px;
@@ -391,7 +345,7 @@ pre {
 
 .champStatsTableGrid > :nth-child(7n + 1),
 .champStatsTableGrid > :nth-child(7n + 3),
-.champStatsTableGridSmall > :nth-child(7n + 1) {
+.champStatsTableGridSmall > :nth-child(2n + 1) {
 	justify-content: flex-end;
 	border: 1px solid var(--Black);
 	padding-left: 0;
@@ -400,14 +354,18 @@ pre {
 
 .champStatsTableGrid > :nth-child(7n + 2),
 .champStatsTableGrid > :nth-child(7n + 4),
-.champStatsTableGrid > :nth-child(7n + 6),
-.champStatsTableGridSmall > :nth-child(7n + 2) {
+.champStatsTableGrid > :nth-child(7n + 6) {
 	background-color: var(--EerieBlack);
 }
 
 .champStatsTableGrid > :nth-child(7n + 5),
 .champStatsTableGrid > :nth-child(7n + 7) {
 	border: 1px solid var(--Black);
+}
+
+.champStatsTableGridSmall > :nth-child(2n + 2) {
+	background-color: var(--EerieBlack);
+	border-right: 1px solid var(--Black);
 }
 
 .formationBorder {

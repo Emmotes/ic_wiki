@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const v=2.100; // prettier-ignore
+const v=2.101; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -258,7 +258,7 @@ function createFullStatsTable(champ) {
 	return (
 		`<p>` +
 		`<span class="champStatsTableGrid">` +
-		createStatsGridRow(
+		createStatsGridRow([
 			`${strong(`Seat`)}:`,
 			champ.spoiler ? champ.seatSpoiler : champ.seat,
 			strong(`Stat`),
@@ -266,8 +266,8 @@ function createFullStatsTable(champ) {
 			strong(`Day 1 Trials`),
 			strong(`Patrons`),
 			strong(`Skylla Patrons`),
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Species`)}:`,
 			champ.species,
 			`${strong(`Strength`)}:`,
@@ -275,8 +275,8 @@ function createFullStatsTable(champ) {
 			calcDay1Trials(0, champ),
 			champ.patrons[0],
 			champ.skylla[0],
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Classes`)}:`,
 			champ.classes,
 			`${strong(`Dexterity`)}:`,
@@ -284,8 +284,8 @@ function createFullStatsTable(champ) {
 			calcDay1Trials(1, champ),
 			champ.patrons[1],
 			champ.skylla[1],
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Roles`)}:`,
 			champ.roles,
 			`${strong(`Constitution`)}:`,
@@ -293,8 +293,8 @@ function createFullStatsTable(champ) {
 			calcDay1Trials(2, champ),
 			champ.patrons[2],
 			champ.skylla[2],
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Age`)}:`,
 			champ.age,
 			`${strong(`Intelligence`)}:`,
@@ -302,8 +302,8 @@ function createFullStatsTable(champ) {
 			calcDay1Trials(3, champ),
 			champ.patrons[3],
 			champ.skylla[3],
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Gender`)}:`,
 			champ.gender === `` ? `Nonbinary` : champ.gender,
 			`${strong(`Wisdom`)}:`,
@@ -311,8 +311,8 @@ function createFullStatsTable(champ) {
 			calcDay1Trials(4, champ),
 			champ.patrons[4],
 			champ.skylla[4],
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Alignment`)}:`,
 			champ.alignment,
 			`${strong(`Charisma`)}:`,
@@ -320,8 +320,8 @@ function createFullStatsTable(champ) {
 			calcDay1Trials(5, champ),
 			``,
 			``,
-		) +
-		createStatsGridRow(
+		]) +
+		createStatsGridRow([
 			`${strong(`Affiliation`)}:`,
 			champ.affiliations,
 			`${strong(`Total`)}:`,
@@ -329,7 +329,7 @@ function createFullStatsTable(champ) {
 			``,
 			`${strong(`Champion ID`)}:`,
 			champ.id,
-		) +
+		]) +
 		`</span>` +
 		`</p>`
 	);
@@ -339,29 +339,21 @@ function createSmallStatsTable(champ) {
 	return (
 		`<p>` +
 		`<span class="champStatsTableGridSmall">` +
-		createStatsGridRow(`${strong(`Seat`)}:`, champ.seatSpoiler) +
-		createStatsGridRow(`${strong(`Species`)}:`, champ.species) +
-		createStatsGridRow(`${strong(`Classes`)}:`, champ.classes) +
-		createStatsGridRow(`${strong(`Roles`)}:`, champ.roles) +
-		createStatsGridRow(`${strong(`Age`)}:`, champ.age) +
-		createStatsGridRow(`${strong(`Gender`)}:`, champ.gender) +
-		createStatsGridRow(`${strong(`Alignment`)}:`, champ.alignment) +
-		createStatsGridRow(`${strong(`Affiliation`)}:`, champ.affiliations) +
+		createStatsGridRow([`${strong(`Seat`)}:`, champ.seatSpoiler]) +
+		createStatsGridRow([`${strong(`Species`)}:`, champ.species]) +
+		createStatsGridRow([`${strong(`Classes`)}:`, champ.classes]) +
+		createStatsGridRow([`${strong(`Roles`)}:`, champ.roles]) +
+		createStatsGridRow([`${strong(`Age`)}:`, champ.age]) +
+		createStatsGridRow([`${strong(`Gender`)}:`, champ.gender]) +
+		createStatsGridRow([`${strong(`Alignment`)}:`, champ.alignment]) +
+		createStatsGridRow([`${strong(`Affiliation`)}:`, champ.affiliations]) +
 		`</span>` +
 		`</p>`
 	);
 }
 
-function createStatsGridRow(col1, col2, col3, col4, col5, col6, col7) {
-	return (
-		`<span>${col1}</span>` +
-		`<span>${col2}</span>` +
-		`<span>${col3}</span>` +
-		`<span>${col4}</span>` +
-		`<span>${col5}</span>` +
-		`<span>${col6}</span>` +
-		`<span>${col7}</span>`
-	);
+function createStatsGridRow(cols) {
+	return `<span>${cols.join(`</span><span>`)}</span>`;
 }
 
 function strong(txt) {
@@ -729,13 +721,8 @@ function addAttackImages(champ, attack) {
 
 function addAbilityImages(champ, ability) {
 	let reqLevel = -3;
-	try {
-		for (const raw of ability?.raw ?? [])
-			if (raw.required_level != null) reqLevel = raw.required_level;
-	} catch (error) {
-		console.log(ability?.raw ?? []);
-		console.err(error);
-	}
+	for (const raw of ability?.raw ?? [])
+		if (raw.required_level != null) reqLevel = raw.required_level;
 	if (ability.raw.length === 2 && ability.graphicId > 0 && reqLevel > 0)
 		return `<img src="images/${champ.fName}/abilities/${ability.id}.png" alt="${ability.name} Icon">`;
 	return ``;
