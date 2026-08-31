@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const v=2.101; // prettier-ignore
+const v=2.102; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -327,7 +327,7 @@ function createFullStatsTable(champ) {
 			`${strong(`Total`)}:`,
 			champ.totalStats,
 			``,
-			`${strong(`Champion ID`)}:`,
+			`Champion ID:`,
 			champ.id,
 		]) +
 		`</span>` +
@@ -353,7 +353,15 @@ function createSmallStatsTable(champ) {
 }
 
 function createStatsGridRow(cols) {
-	return `<span>${cols.join(`</span><span>`)}</span>`;
+	let txt = ``;
+	for (const col of cols) {
+		const style =
+			col === `Champion ID:` ?
+				` style="justify-content:flex-end;padding-right:6px;"`
+			:	``;
+		txt += `<span${style}>${col}</span>`;
+	}
+	return txt;
 }
 
 function strong(txt) {
