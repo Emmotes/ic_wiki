@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const v=2.102; // prettier-ignore
+const v=2.103; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -731,7 +731,7 @@ function addAbilityImages(champ, ability) {
 	let reqLevel = -3;
 	for (const raw of ability?.raw ?? [])
 		if (raw.required_level != null) reqLevel = raw.required_level;
-	if (ability.raw.length === 2 && ability.graphicId > 0 && reqLevel > 0)
+	if (ability.graphicId > 0 && reqLevel > 0)
 		return `<img src="images/${champ.fName}/abilities/${ability.id}.png" alt="${ability.name} Icon">`;
 	return ``;
 }
