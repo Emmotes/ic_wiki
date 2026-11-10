@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const v=2.103; // prettier-ignore
+const v=2.104; // prettier-ignore
 const LSKEY_data = `wikiData`;
 const LSKEY_spoilers = `wikiSpoilers`;
 const LSKEY_unsticky = `wikiUnstickyChamps`;
@@ -183,7 +183,7 @@ function displayWiki(i) {
 		content += `<p>${name} will be the new champion in the ${champ.eventName} event on ${champ.eventDate}.</p>`;
 	if (champ.stats != null) content += createFullStatsTable(champ);
 	else content += createSmallStatsTable(champ);
-	const formationURL = `images/${fName}/formation/formation.png`;
+	const formationURL = `images/${fName}/formation/formation.svg`;
 	const formationExists = champ.formation;
 	if (formationExists)
 		content += `<h1 id="formation">Formation</h1><p><span class="formationBorder"><img src="${formationURL}" alt="Formation Layout" /></span></p>`;
